@@ -17,21 +17,32 @@ h1 {
     background-color:white;
     min-width: 66%;
     height: 100vh;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 
 }
 .yellow_colour {
     background-color: #ddb30e;
     min-width: 34%;
     height: 100vh; 
+    z-index: 1;
 }
 
 h1 {
     z-index: 1;
-    border: solid black 2px;
-    display: block;
+    border: solid black 4px;
+    display: inline;
     max-width: 10%;
     text-align: center;
-    padding: 1%;
+    padding: 1rem;
+    font-size: 100px;
+    margin-right: -3.95ch;
 }
 
+.name {
+    margin-top: 62vh;
+    z-index: 0;
+}
 
