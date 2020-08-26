@@ -44,7 +44,6 @@ h1 {
   font-family: "Raleway", sans-serif;
   display: block;
   font-size: 25px;
-  margin-bottom: 1em;
 }
 
 .right_align {
@@ -56,4 +55,15 @@ h1 {
 .graphic_design {
   margin-top: 54vh;
   margin-right: -36ch;
+}
+
+.about_me_container {
+  display: flex;
+}
+
+h3 {
+  display: inline;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 400px) {
 }
