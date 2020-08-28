@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-image: url("../images/background.png");
 }
 
 .background_flex_container {
