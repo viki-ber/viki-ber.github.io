@@ -3,14 +3,46 @@ body {
 }
 
 main {
-  background: linear-gradient(
-    to left,
-    #ddb30e 0%,
-    #ddb30e 30%,
-    #000000 30%,
-    white 30%,
-    white 100%
-  );
-  background-repeat: no-repeat;
+  background: #ddb30e;
   min-height: 100vh;
+  overflow: auto;
+}
+
+h1 {
+  border: 3px black solid;
+  padding: 2%;
+  font-size: 10vw;
+  display: block;
+}
+
+.name_box {
+  width: 60vw;
+  margin: 20vw auto auto auto;
+}
+
+@media screen and (min-width: 640px) {
+  main {
+    background: linear-gradient(
+      to left,
+      #ddb30e 0%,
+      #ddb30e 30%,
+      #000000 30%,
+      white 30%,
+      white 100%
+    );
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    overflow: auto;
+  }
+
+  .name_box {
+    /*width: 60ch;*/
+    width: 48vw;
+    margin-top: 60vh;
+    margin-left: 50vw;
+  }
+
+  h1 {
+    font-size: 8vw;
+  }
 }
