@@ -35,9 +35,22 @@ h2 {
 
 .name_box {
   width: 52vw;
-  margin: 20vw auto auto auto;
+  margin: 50vw auto auto auto;
+  z-index: 1;
 }
 
+.contact {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.2);
+
+  padding: 1vw 10vw 1vw 10vw;
+}
+
+p {
+  margin: 0;
+}
 /* Desktop view */
 
 @media screen and (min-width: 640px) {
@@ -68,5 +81,20 @@ h2 {
 
   h2 {
     font-size: 2.5vw;
+  }
+
+  .contact {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    top: 50%;
+    left: 0;
+    padding: 10vw 1vw 10vw 1vw;
+    transform: translateX(0);
+    transform: translateY(-50%);
+    background-color: white;
+  }
+
+  .contact:hover {
+    cursor: pointer;
   }
 }
