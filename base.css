@@ -13,10 +13,11 @@ main {
 
 h1 {
   border: 3px black solid;
-  padding: 2%;
+  padding: 4px;
   font-size: 10vw;
-  display: block;
   margin: 0;
+  text-transform: uppercase;
+  line-height: 1em;
 }
 
 h2 {
@@ -34,9 +35,8 @@ h2 {
 }
 
 .name_box {
-  width: 52vw;
+  width: min-content; /* Set width to minimum space required to properly render content */
   margin: 50vw auto auto auto;
-  z-index: 1;
 }
 
 /* Contact tab*/
@@ -46,7 +46,6 @@ h2 {
   left: 50%;
   transform: translateX(-50%);
   /* background-color: rgba(0, 0, 0, 0.2); */
-
   padding: 1vw 10vw 1vw 10vw;
   z-index: 1;
   text-decoration: underline;
@@ -94,14 +93,13 @@ p {
   }
 
   .name_box {
-    /*width: 60ch;*/
-    width: 42vw;
     margin-top: 60vh;
     margin-left: 45.5vw;
   }
 
   h1 {
     font-size: 8vw;
+    padding: 16px;
   }
 
   h2 {
