@@ -75,6 +75,9 @@ p {
 #menu-toggle:checked + #menu {
   max-height: 100px;
 }
+
+/* Arrow */
+
 /* Desktop view */
 
 @media screen and (min-width: 640px) {
@@ -93,7 +96,13 @@ p {
   }
 
   .name_box {
+<<<<<<< Updated upstream
     margin-top: 60vh;
+=======
+    /*width: 60ch;*/
+    width: 42vw;
+    margin-top: 45vh;
+>>>>>>> Stashed changes
     margin-left: 45.5vw;
   }
 
