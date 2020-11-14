@@ -1,0 +1,473 @@
+/* GLOBAL STYLES ------------------------------------------------------------ */
+
+body {
+  margin: 0;
+  font-family: "Nunito";
+}
+
+.body-container {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  margin-bottom: 150px;
+}
+
+a:link:not(#exclude),
+a:visited:not(#exclude) {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+/* PAGE GLOBAL GRID SYSTEM -------------------------------------------------- */
+
+.adjust-for-grid-left {
+  margin-left: 8px;
+}
+
+.adjust-for-grid-right {
+  margin-right: 8px;
+}
+
+.grid-row {
+  /* border: 1px solid black; */
+  display: flex;
+  width: 100%;
+}
+
+.grid-left-column {
+  /* border: 1px solid black; */
+  width: 25%;
+}
+
+.grid-right-column {
+  /* border: 1px solid black; */
+  width: 75%;
+}
+
+.grid-top-margin {
+  margin-top: 4em;
+}
+
+/* GLOBAL TOP BAR ----------------------------------------------------------- */
+
+.top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  /* border: 1px solid black; */
+  height: 114px;
+  width: 100%;
+}
+
+.top-menu-container {
+  display: flex;
+  /* border: 1px solid black; */
+}
+
+.top-menu-item {
+  font-family: "Bebas Neue", cursive;
+  font-size: 25px;
+  /* border: 1px solid black; */
+  margin-right: 1em;
+  text-transform: uppercase;
+}
+
+.top-menu-item a::before,
+.top-menu-item a::after {
+  display: inline-block;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s;
+}
+
+.top-menu-item a::before {
+  margin-right: 10px;
+  content: "[";
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+.top-menu-item a::after {
+  margin-left: 10px;
+  content: "]";
+  -webkit-transform: translateX(-20px);
+  -moz-transform: translateX(-20px);
+  transform: translateX(-20px);
+}
+
+.top-menu-item a:hover::before,
+.top-menu-item a:hover::after,
+.top-menu-item a:focus::before,
+.top-menu-item a:focus::after {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+.logo-container {
+  display: flex;
+  /* border: 1px solid black; */
+}
+
+.logo-container > a {
+  width: 30px;
+  height: 30px;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.logo-container > a:hover {
+  opacity: 1;
+}
+
+.logo-instagram {
+  background-image: url("img/insta_logo.png");
+}
+
+.logo-linkedin {
+  margin-right: 1em;
+  background-image: url("img/linkedin_logo.png");
+}
+
+/* LEFT BAR ----------------------------------------------------------------- */
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid black; */
+}
+
+.left-container-logo {
+  width: 244px;
+  height: 114px;
+  background-image: url("img/logo_v2.png");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.left-container-menu {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid black; */
+}
+
+.left-menu-item {
+  font-weight: 500;
+  /* border: 1px solid black; */
+  margin-bottom: 14px;
+  margin-left: 2em;
+  cursor: pointer;
+}
+
+.left-menu-item:hover {
+  font-weight: 800;
+}
+
+.left-menu-item-selected {
+  font-weight: 800;
+}
+
+/* Main area */
+
+.right-container {
+  display: flex;
+  /* border: 1px solid black; */
+  flex-direction: column;
+  margin-left: 2em;
+}
+
+.main-body {
+  margin-top: 2em;
+  /* border: 1px solid black; */
+  width: 100%;
+}
+
+/* HOME PAGE IMAGE GRID ----------------------------------------------------- */
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+
+.column-one {
+  flex: 99%;
+  max-width: 100%;
+  padding: 0 4px;
+}
+
+.column-one img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  opacity: 0.7;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.column-one img:hover {
+  opacity: 1;
+}
+
+.column-two {
+  flex: 49%;
+  max-width: 50%;
+  padding: 0 4px;
+}
+
+.column-two img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  opacity: 0.7;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.column-two-fixed-height img {
+  height: 380px;
+  object-fit: cover;
+}
+
+.column-two img:hover {
+  opacity: 1;
+}
+
+/* Create three equal columns that sits next to each other */
+.column-three {
+  flex: 30%;
+  max-width: 33%;
+  padding: 0 4px;
+}
+
+.column-three img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  opacity: 0.7;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.column-three img:hover {
+  opacity: 1;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/* ABOUT PAGE --------------------------------------------------------------- */
+
+.about-container {
+  display: flex;
+  padding-top: 5em;
+  justify-content: flex-end;
+  /* border: 1px solid black; */
+}
+
+.about-box {
+  border: 3px solid #ddb30e;
+  display: flex;
+  width: 80%;
+  /* border: 1px solid black; */
+}
+
+.about-text {
+  padding-top: 5em;
+  padding-right: 5em;
+  padding-bottom: 5em;
+  padding-left: 2em;
+  width: 70%;
+  font-size: 16px;
+  /* border: 1px solid black; */
+}
+
+.about-photo {
+  width: 400px;
+  height: 400px;
+  margin-left: -250px;
+  margin-top: -50px;
+  border-radius: 50%;
+  filter: grayscale(100%);
+  background-image: url("img/about.png");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  /* border: 1px solid black; */
+}
+
+/* CONTACT PAGE ------------------------------------------------------------- */
+
+.contact-box {
+  margin-top: 5em;
+  margin-left: 5em;
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  height: 380px;
+  background-image: linear-gradient(
+    to right,
+    rgba(221, 179, 14, 1) 45%,
+    rgba(255, 0, 0, 0) 45%
+  );
+  /* border: 1px solid black; */
+}
+
+.contact-content {
+  margin-top: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  border: 3px solid black;
+  margin-left: 5%;
+}
+
+.contact-text {
+  width: 30%;
+  margin-left: 5%;
+  text-align: center;
+  /* border: 1px solid black; */
+}
+
+.email-link {
+  font-family: "Bebas Neue", cursive;
+}
+
+/* PROJECT PAGE ------------------------------------------------------------- */
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid black;
+}
+
+.project-header h1 {
+  font-family: "Bebas Neue", cursive;
+  margin-bottom: 0px;
+  font-size: 3.5em;
+}
+
+/* COLLAPSIBLE DETAILS START */
+.project-details {
+  max-height: 0;
+  overflow: hidden;
+  background-color: rgba(221, 179, 14, 1);
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+  margin-bottom: 1em;
+  display: flex;
+}
+
+.extender {
+  cursor: pointer;
+  opacity: 0.45;
+  transition: opacity 0.1s;
+}
+
+.extender:hover {
+  opacity: 1;
+}
+
+input#menu {
+  display: none;
+}
+
+input:checked ~ .project-details {
+  transition: max-height 1s ease-in-out;
+  max-height: 100%;
+}
+
+.project-details-text {
+  padding: 2em;
+  width: 60%;
+}
+
+.project-details-text a {
+  text-decoration: underline !important;
+  opacity: 0.65;
+}
+
+.project-details-text a:hover {
+  opacity: 1;
+}
+
+.project-details-facts-container {
+  /* SHORT FACTS ON THE RIGHT */
+  padding-right: 2em;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.project-details-fact {
+  border-bottom: 2px solid black;
+  margin-top: 1em;
+  padding-bottom: 1em;
+  list-style-type: none;
+}
+
+.project-details-fact strong {
+  text-transform: uppercase;
+}
+
+/* COLLAPSIBLE DETAILS END */
+
+.main-body h1 {
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.project-image-box {
+  /* border-bottom: 2px solid gray; */
+  /* margin-bottom: 4em; */
+}
+
+.project-image {
+  object-fit: cover;
+  width: 100%;
+  display: block;
+}
+
+.project-image-description {
+  margin-bottom: 1em;
+}
+
+.youtube-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+.youtube-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
