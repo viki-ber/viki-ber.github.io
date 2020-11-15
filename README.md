@@ -32,7 +32,7 @@ Use `ffmpeg` to encode and scale `.mov` videos to compressed `.mp4` videos. The 
 
 ```sh
 ffmpeg -an -i <name of input>.mov -vcodec libx264 -pix_fmt yuv420p -profile:v baseline -level 3 -vf scale=1200:-2 <name of output>.mp4
-``
+```
  
 __Build command:__ `npm run build`
 
