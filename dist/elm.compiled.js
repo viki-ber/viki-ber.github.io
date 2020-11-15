@@ -9986,7 +9986,7 @@ var $author$project$Content$projects = _List_fromArray(
 				{g: '/img/graphic_profile_light.jpg'},
 				{g: '/img/graphic_profile_dark.jpg'},
 				{g: '/img/mockup_2.jpg'},
-				{g: '/img/trailer.webm'}
+				{g: '/img/trailer.mp4'}
 			]),
 		u: '<strong>Lorem</strong> ipsum dolor sit amet consectetur, adipisicing elit. Totam consectetur atque unde at numquamaccusantium deleniti nihil <i>error reprehenderit expedita</i> eligendi aliquid dicta quia distinctio, esse culpa minus. <br /> <br /> Cumque, totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut in nulla aliquid adipisci corrupti quis fuga ducimus rem aspernatur <a href=\"#\">esse mollitia reprehenderit</a> consequatur minima illum placeat, id libero atque? <br /> <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque iusto odit fugiat rem nihil praesentium ullam magnam nemo, debitis, quibusdam laboriosam sunt optio, quod dignissimos repellendus vitae voluptatum eligendi voluptates?',
 		v: '/img/business_cards.jpg',
@@ -10230,7 +10230,7 @@ var $elm$html$Html$Attributes$style = $elm$virtual_dom$VirtualDom$style;
 var $elm$html$Html$Attributes$type_ = $elm$html$Html$Attributes$stringProperty('type');
 var $elm$html$Html$video = _VirtualDom_node('video');
 var $author$project$Pages$Projects$Id_String$renderMedia = function (name) {
-	return A2($elm$core$String$contains, '.webm', name) ? A2(
+	return A2($elm$core$String$contains, '.mp4', name) ? A2(
 		$elm$html$Html$video,
 		_List_fromArray(
 			[
@@ -10251,9 +10251,9 @@ var $author$project$Pages$Projects$Id_String$renderMedia = function (name) {
 				$elm$html$Html$source,
 				_List_fromArray(
 					[
-						$elm$html$Html$Attributes$id('webm'),
+						$elm$html$Html$Attributes$id('mp4'),
 						$elm$html$Html$Attributes$src(name),
-						$elm$html$Html$Attributes$type_('video/webm')
+						$elm$html$Html$Attributes$type_('video/mp4')
 					]),
 				_List_Nil)
 			])) : (A2($elm$core$String$contains, 'youtube.com', name) ? A2(
