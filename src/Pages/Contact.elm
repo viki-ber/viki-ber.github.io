@@ -34,7 +34,7 @@ page =
 
 view : Url Params -> Document Msg
 view { params } =
-    { title = "Homepage"
+    { title = Content.contact.title
     , body =
         [ div [ class "grid-row" ]
             [ div [ class "main-body" ]
