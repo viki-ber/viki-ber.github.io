@@ -15,6 +15,12 @@ body {
   margin-bottom: 150px;
 }
 
+@media all and (max-width: 1199px) {
+  .body-container {
+    width: 100%;
+  }
+}
+
 a:link:not(#exclude),
 a:visited:not(#exclude) {
   text-decoration: none;
@@ -38,14 +44,32 @@ a:visited:not(#exclude) {
   width: 100%;
 }
 
+@media all and (max-width: 1199px) {
+  .grid-row {
+    flex-direction: column;
+  }
+}
+
 .grid-left-column {
   /* border: 1px solid black; */
   width: 25%;
 }
 
+@media all and (max-width: 1199px) {
+  .grid-left-column {
+    width: 100%;
+  }
+}
+
 .grid-right-column {
   /* border: 1px solid black; */
   width: 75%;
+}
+
+@media all and (max-width: 1199px) {
+  .grid-right-column {
+    width: 100%;
+  }
 }
 
 .grid-top-margin {
@@ -74,6 +98,17 @@ a:visited:not(#exclude) {
   /* border: 1px solid black; */
   margin-right: 1em;
   text-transform: uppercase;
+}
+
+@media all and (max-width: 1199px) {
+  .top-menu-item {
+    font-size: 23px;
+    margin-right: 0em;
+  }
+}
+
+.top-menu-item:last-child {
+  margin-right: 0;
 }
 
 .top-menu-item a::before,
@@ -126,6 +161,13 @@ a:visited:not(#exclude) {
   transition: 0.2s;
 }
 
+@media all and (max-width: 1199px) {
+  .logo-container > a {
+    width: 26px;
+    height: 26px;
+  }
+}
+
 .logo-container > a:hover {
   opacity: 1;
 }
@@ -154,6 +196,14 @@ a:visited:not(#exclude) {
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+@media all and (max-width: 1199px) {
+  .left-container-logo {
+    width: 350px;
+    height: 163px;
+    margin: auto;
+  }
 }
 
 .left-container-menu {
@@ -202,12 +252,26 @@ a:visited:not(#exclude) {
   padding: 0 4px;
 }
 
+@media all and (max-width: 1199px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
 /* Create two equal columns that sits next to each other */
 
 .column-one {
   flex: 99%;
   max-width: 100%;
   padding: 0 4px;
+}
+
+@media all and (max-width: 1199px) {
+  .column-one {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .column-one img {
@@ -229,6 +293,14 @@ a:visited:not(#exclude) {
   padding: 0 4px;
 }
 
+@media all and (max-width: 1199px) {
+  .column-two {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+  }
+}
+
 .column-two img {
   margin-top: 8px;
   vertical-align: middle;
@@ -243,6 +315,12 @@ a:visited:not(#exclude) {
   object-fit: cover;
 }
 
+@media all and (max-width: 1199px) {
+  .column-two-fixed-height img {
+    height: auto;
+  }
+}
+
 .column-two img:hover {
   opacity: 1;
 }
@@ -251,7 +329,17 @@ a:visited:not(#exclude) {
 .column-three {
   flex: 30%;
   max-width: 33%;
-  padding: 0 4px;
+  padding-top: 0;
+  padding-right: 4px;
+  padding-left: 4px;
+  padding-bottom: 0;
+}
+
+@media all and (max-width: 1199px) {
+  .column-three {
+    max-width: 100%;
+    padding: 0;
+  }
 }
 
 .column-three img {
@@ -265,22 +353,6 @@ a:visited:not(#exclude) {
 
 .column-three img:hover {
   opacity: 1;
-}
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
 }
 
 /* ABOUT PAGE --------------------------------------------------------------- */
@@ -297,6 +369,14 @@ a:visited:not(#exclude) {
   display: flex;
   width: 80%;
   /* border: 1px solid black; */
+}
+
+@media all and (max-width: 1199px) {
+  .about-box {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 8px;
+  }
 }
 
 .about-text {
@@ -323,6 +403,16 @@ a:visited:not(#exclude) {
   /* border: 1px solid black; */
 }
 
+@media all and (max-width: 1199px) {
+  .about-photo {
+    margin-top: -50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 300px;
+  }
+}
+
 /* CONTACT PAGE ------------------------------------------------------------- */
 
 .contact-box {
@@ -340,6 +430,18 @@ a:visited:not(#exclude) {
   /* border: 1px solid black; */
 }
 
+@media all and (max-width: 1199px) {
+  .contact-box {
+    margin: auto;
+    width: 80%;
+    background-image: linear-gradient(
+      to right,
+      rgba(221, 179, 14, 1) 90%,
+      rgba(255, 0, 0, 0) 90%
+    );
+  }
+}
+
 .contact-content {
   margin-top: 2em;
   padding-top: 2em;
@@ -355,6 +457,12 @@ a:visited:not(#exclude) {
   /* border: 1px solid black; */
 }
 
+@media all and (max-width: 1199px) {
+  .contact-text {
+    width: 80%;
+  }
+}
+
 .email-link {
   font-family: "Bebas Neue", cursive;
 }
@@ -367,10 +475,23 @@ a:visited:not(#exclude) {
   border-bottom: 3px solid black;
 }
 
+@media all and (max-width: 1199px) {
+  .project-header {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+
 .project-header h1 {
   font-family: "Bebas Neue", cursive;
   margin-bottom: 0px;
   font-size: 3.5em;
+}
+
+@media all and (max-width: 1199px) {
+  .project-header h1 {
+    font-size: 2.5em;
+  }
 }
 
 /* COLLAPSIBLE DETAILS START */
