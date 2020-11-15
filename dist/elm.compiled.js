@@ -10008,7 +10008,7 @@ var $author$project$Content$projects = _List_fromArray(
 				{g: '/img/beer_mats.jpg'}
 			]),
 		u: '<strong>Lorem</strong> ipsum dolor sit amet consectetur, adipisicing elit. Totam consectetur atque unde at numquamaccusantium deleniti nihil <i>error reprehenderit expedita</i> eligendi aliquid dicta quia distinctio, esse culpa minus. <br /> <br /> Cumque, totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut in nulla aliquid adipisci corrupti quis fuga ducimus rem aspernatur <a href=\"#\">esse mollitia reprehenderit</a> consequatur minima illum placeat, id libero atque? <br /> <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque iusto odit fugiat rem nihil praesentium ullam magnam nemo, debitis, quibusdam laboriosam sunt optio, quod dignissimos repellendus vitae voluptatum eligendi voluptates?',
-		v: '/img/beer_mats.jpg',
+		v: 'https://via.placeholder.com/150x200',
 		y: _List_fromArray(
 			[
 				{b: 'Duration', d: '1 week'},
@@ -10027,7 +10027,7 @@ var $author$project$Content$projects = _List_fromArray(
 				{g: '/img/magazine_3.jpg'}
 			]),
 		u: '<strong>Lorem</strong> ipsum dolor sit amet consectetur, adipisicing elit. Totam consectetur atque unde at numquamaccusantium deleniti nihil <i>error reprehenderit expedita</i> eligendi aliquid dicta quia distinctio, esse culpa minus. <br /> <br /> Cumque, totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut in nulla aliquid adipisci corrupti quis fuga ducimus rem aspernatur <a href=\"#\">esse mollitia reprehenderit</a> consequatur minima illum placeat, id libero atque? <br /> <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque iusto odit fugiat rem nihil praesentium ullam magnam nemo, debitis, quibusdam laboriosam sunt optio, quod dignissimos repellendus vitae voluptatum eligendi voluptates?',
-		v: '/img/magazine_2.jpg',
+		v: 'https://via.placeholder.com/300',
 		y: _List_fromArray(
 			[
 				{b: 'Duration', d: 'Around 5 days'},
@@ -10046,7 +10046,7 @@ var $author$project$Content$projects = _List_fromArray(
 				{g: '/img/magazine_3.jpg'}
 			]),
 		u: '<strong>Lorem</strong> ipsum dolor sit amet consectetur, adipisicing elit. Totam consectetur atque unde at numquamaccusantium deleniti nihil <i>error reprehenderit expedita</i> eligendi aliquid dicta quia distinctio, esse culpa minus. <br /> <br /> Cumque, totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut in nulla aliquid adipisci corrupti quis fuga ducimus rem aspernatur <a href=\"#\">esse mollitia reprehenderit</a> consequatur minima illum placeat, id libero atque? <br /> <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque iusto odit fugiat rem nihil praesentium ullam magnam nemo, debitis, quibusdam laboriosam sunt optio, quod dignissimos repellendus vitae voluptatum eligendi voluptates?',
-		v: '/img/letterhead_and_envelope_mockup_hop_brothers.jpg',
+		v: 'https://via.placeholder.com/300x400',
 		y: _List_fromArray(
 			[
 				{b: 'Duration', d: 'Around 5 days'},
@@ -10065,7 +10065,7 @@ var $author$project$Content$projects = _List_fromArray(
 				{g: '/img/magazine_3.jpg'}
 			]),
 		u: '<strong>Lorem</strong> ipsum dolor sit amet consectetur, adipisicing elit. Totam consectetur atque unde at numquamaccusantium deleniti nihil <i>error reprehenderit expedita</i> eligendi aliquid dicta quia distinctio, esse culpa minus. <br /> <br /> Cumque, totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut in nulla aliquid adipisci corrupti quis fuga ducimus rem aspernatur <a href=\"#\">esse mollitia reprehenderit</a> consequatur minima illum placeat, id libero atque? <br /> <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque iusto odit fugiat rem nihil praesentium ullam magnam nemo, debitis, quibusdam laboriosam sunt optio, quod dignissimos repellendus vitae voluptatum eligendi voluptates?',
-		v: '/img/cap_mockup.jpg',
+		v: 'https://via.placeholder.com/700x350',
 		y: _List_fromArray(
 			[
 				{b: 'Duration', d: 'Around 5 days'},
@@ -10084,7 +10084,7 @@ var $author$project$Content$projects = _List_fromArray(
 				{g: '/img/magazine_3.jpg'}
 			]),
 		u: '<strong>Lorem</strong> ipsum dolor sit amet consectetur, adipisicing elit. Totam consectetur atque unde at numquamaccusantium deleniti nihil <i>error reprehenderit expedita</i> eligendi aliquid dicta quia distinctio, esse culpa minus. <br /> <br /> Cumque, totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut in nulla aliquid adipisci corrupti quis fuga ducimus rem aspernatur <a href=\"#\">esse mollitia reprehenderit</a> consequatur minima illum placeat, id libero atque? <br /> <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque iusto odit fugiat rem nihil praesentium ullam magnam nemo, debitis, quibusdam laboriosam sunt optio, quod dignissimos repellendus vitae voluptatum eligendi voluptates?',
-		v: '/img/butterfly_mock.jpg',
+		v: 'https://via.placeholder.com/550x400',
 		y: _List_fromArray(
 			[
 				{b: 'Duration', d: 'Around 5 days'},
@@ -10103,7 +10103,7 @@ var $author$project$Content$projects = _List_fromArray(
 				{g: '/img/magazine_3.jpg'}
 			]),
 		u: '<strong>Lorem</strong> ipsum dolor sit amet consectetur, adipisicing elit. Totam consectetur atque unde at numquamaccusantium deleniti nihil <i>error reprehenderit expedita</i> eligendi aliquid dicta quia distinctio, esse culpa minus. <br /> <br /> Cumque, totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut in nulla aliquid adipisci corrupti quis fuga ducimus rem aspernatur <a href=\"#\">esse mollitia reprehenderit</a> consequatur minima illum placeat, id libero atque? <br /> <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque iusto odit fugiat rem nihil praesentium ullam magnam nemo, debitis, quibusdam laboriosam sunt optio, quod dignissimos repellendus vitae voluptatum eligendi voluptates?',
-		v: '/img/motorcycle.jpg',
+		v: 'https://via.placeholder.com/640x460',
 		y: _List_fromArray(
 			[
 				{b: 'Duration', d: 'Around 5 days'},
@@ -10122,7 +10122,7 @@ var $author$project$Content$projects = _List_fromArray(
 				{g: '/img/magazine_3.jpg'}
 			]),
 		u: '<strong>Lorem</strong> ipsum dolor sit amet consectetur, adipisicing elit. Totam consectetur atque unde at numquamaccusantium deleniti nihil <i>error reprehenderit expedita</i> eligendi aliquid dicta quia distinctio, esse culpa minus. <br /> <br /> Cumque, totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut in nulla aliquid adipisci corrupti quis fuga ducimus rem aspernatur <a href=\"#\">esse mollitia reprehenderit</a> consequatur minima illum placeat, id libero atque? <br /> <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque iusto odit fugiat rem nihil praesentium ullam magnam nemo, debitis, quibusdam laboriosam sunt optio, quod dignissimos repellendus vitae voluptatum eligendi voluptates?',
-		v: '/img/retro_stuff.jpg',
+		v: 'https://via.placeholder.com/750x500',
 		y: _List_fromArray(
 			[
 				{b: 'Duration', d: 'Around 5 days'},
@@ -10141,7 +10141,7 @@ var $author$project$Content$projects = _List_fromArray(
 				{g: '/img/magazine_3.jpg'}
 			]),
 		u: '<strong>Lorem</strong> ipsum dolor sit amet consectetur, adipisicing elit. Totam consectetur atque unde at numquamaccusantium deleniti nihil <i>error reprehenderit expedita</i> eligendi aliquid dicta quia distinctio, esse culpa minus. <br /> <br /> Cumque, totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut in nulla aliquid adipisci corrupti quis fuga ducimus rem aspernatur <a href=\"#\">esse mollitia reprehenderit</a> consequatur minima illum placeat, id libero atque? <br /> <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque iusto odit fugiat rem nihil praesentium ullam magnam nemo, debitis, quibusdam laboriosam sunt optio, quod dignissimos repellendus vitae voluptatum eligendi voluptates?',
-		v: '/img/maharajas_tears.jpg',
+		v: 'https://via.placeholder.com/300x400',
 		y: _List_fromArray(
 			[
 				{b: 'Duration', d: 'Around 5 days'},
@@ -10160,7 +10160,7 @@ var $author$project$Content$projects = _List_fromArray(
 				{g: '/img/magazine_3.jpg'}
 			]),
 		u: '<strong>Lorem</strong> ipsum dolor sit amet consectetur, adipisicing elit. Totam consectetur atque unde at numquamaccusantium deleniti nihil <i>error reprehenderit expedita</i> eligendi aliquid dicta quia distinctio, esse culpa minus. <br /> <br /> Cumque, totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut in nulla aliquid adipisci corrupti quis fuga ducimus rem aspernatur <a href=\"#\">esse mollitia reprehenderit</a> consequatur minima illum placeat, id libero atque? <br /> <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque iusto odit fugiat rem nihil praesentium ullam magnam nemo, debitis, quibusdam laboriosam sunt optio, quod dignissimos repellendus vitae voluptatum eligendi voluptates?',
-		v: '/img/urbana.jpg',
+		v: 'https://via.placeholder.com/400x400',
 		y: _List_fromArray(
 			[
 				{b: 'Duration', d: 'Around 5 days'},
@@ -10179,7 +10179,7 @@ var $author$project$Content$projects = _List_fromArray(
 				{g: '/img/magazine_3.jpg'}
 			]),
 		u: '<strong>Lorem</strong> ipsum dolor sit amet consectetur, adipisicing elit. Totam consectetur atque unde at numquamaccusantium deleniti nihil <i>error reprehenderit expedita</i> eligendi aliquid dicta quia distinctio, esse culpa minus. <br /> <br /> Cumque, totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut in nulla aliquid adipisci corrupti quis fuga ducimus rem aspernatur <a href=\"#\">esse mollitia reprehenderit</a> consequatur minima illum placeat, id libero atque? <br /> <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque iusto odit fugiat rem nihil praesentium ullam magnam nemo, debitis, quibusdam laboriosam sunt optio, quod dignissimos repellendus vitae voluptatum eligendi voluptates?',
-		v: '/img/urbana.jpg',
+		v: 'https://via.placeholder.com/631x401',
 		y: _List_fromArray(
 			[
 				{b: 'Duration', d: 'Around 5 days'},
