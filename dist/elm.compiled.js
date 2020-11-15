@@ -9979,7 +9979,7 @@ var $author$project$Content$projects = _List_fromArray(
 	[
 		{
 		t: _List_fromArray(
-			['Stencil', 'Branding', 'Illustration', 'UX/UI', 'Graphic Design', 'Print', 'All']),
+			['Branding', 'UX/UI', 'Graphic Design', 'All']),
 		n: _List_fromArray(
 			[
 				{g: '/img/first.jpg'},
@@ -9989,15 +9989,15 @@ var $author$project$Content$projects = _List_fromArray(
 				{g: '/img/trailer.mp4'}
 			]),
 		u: '<strong>Lorem</strong> ipsum dolor sit amet consectetur, adipisicing elit. Totam consectetur atque unde at numquamaccusantium deleniti nihil <i>error reprehenderit expedita</i> eligendi aliquid dicta quia distinctio, esse culpa minus. <br /> <br /> Cumque, totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut in nulla aliquid adipisci corrupti quis fuga ducimus rem aspernatur <a href=\"#\">esse mollitia reprehenderit</a> consequatur minima illum placeat, id libero atque? <br /> <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque iusto odit fugiat rem nihil praesentium ullam magnam nemo, debitis, quibusdam laboriosam sunt optio, quod dignissimos repellendus vitae voluptatum eligendi voluptates?',
-		v: '/img/business_cards.jpg',
+		v: '/img/first.jpg',
 		y: _List_fromArray(
 			[
 				{b: 'Duration', d: '1 week'},
 				{b: 'Date', d: 'YYYY-MM-DD'},
 				{b: 'Tools', d: 'Free-hand, Sketch, Photoshop'}
 			]),
-		z: 'loremipsum',
-		b: 'Lorem Ipsum'
+		z: 'terraventure',
+		b: 'Terra Venture'
 	},
 		{
 		t: _List_fromArray(
