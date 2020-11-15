@@ -39,10 +39,10 @@ type alias Project =
 
 projects : List Project
 projects =
-    [ { name = "Lorem Ipsum"
-      , id = "loremipsum"
-      , categories = [ "Stencil", "Branding", "Illustration", "UX/UI", "Graphic Design", "Print", "All" ]
-      , display = "/img/business_cards.jpg"
+    [ { name = "Terra Venture"
+      , id = "terraventure"
+      , categories = [ "Branding", "UX/UI", "Graphic Design", "All" ]
+      , display = "/img/first.jpg"
       , description = "<strong>Lorem</strong> ipsum dolor sit amet consectetur, adipisicing elit. Totam consectetur atque unde at numquamaccusantium deleniti nihil <i>error reprehenderit expedita</i> eligendi aliquid dicta quia distinctio, esse culpa minus. <br /> <br /> Cumque, totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut in nulla aliquid adipisci corrupti quis fuga ducimus rem aspernatur <a href=\"#\">esse mollitia reprehenderit</a> consequatur minima illum placeat, id libero atque? <br /> <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque iusto odit fugiat rem nihil praesentium ullam magnam nemo, debitis, quibusdam laboriosam sunt optio, quod dignissimos repellendus vitae voluptatum eligendi voluptates?"
       , facts =
             [ { name = "Duration"
