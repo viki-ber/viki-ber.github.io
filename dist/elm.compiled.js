@@ -10237,6 +10237,7 @@ var $author$project$Pages$Projects$Id_String$renderMedia = function (name) {
 				A2($elm$html$Html$Attributes$attribute, 'controls', 'controls'),
 				A2($elm$html$Html$Attributes$attribute, 'autoplay', 'true'),
 				A2($elm$html$Html$Attributes$attribute, 'loop', 'true'),
+				A2($elm$html$Html$Attributes$attribute, 'playsinline', 'true'),
 				A2(
 				$elm$html$Html$Attributes$property,
 				'muted',
