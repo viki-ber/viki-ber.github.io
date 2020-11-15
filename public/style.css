@@ -475,13 +475,6 @@ a:visited:not(#exclude) {
   border-bottom: 3px solid black;
 }
 
-@media all and (max-width: 1199px) {
-  .project-header {
-    margin-left: 8px;
-    margin-right: 8px;
-  }
-}
-
 .project-header h1 {
   font-family: "Bebas Neue", cursive;
   margin-bottom: 0px;
@@ -491,6 +484,8 @@ a:visited:not(#exclude) {
 @media all and (max-width: 1199px) {
   .project-header h1 {
     font-size: 2.5em;
+    padding-left: 8px;
+    padding-right: 8px;
   }
 }
 
@@ -502,6 +497,12 @@ a:visited:not(#exclude) {
   transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
   margin-bottom: 1em;
   display: flex;
+}
+
+@media all and (max-width: 1199px) {
+  .project-details {
+    flex-direction: column-reverse;
+  }
 }
 
 .extender {
@@ -520,12 +521,18 @@ input#menu {
 
 input:checked ~ .project-details {
   transition: max-height 1s ease-in-out;
-  max-height: 100%;
+  max-height: 10000px;
 }
 
 .project-details-text {
   padding: 2em;
   width: 60%;
+}
+
+@media all and (max-width: 1199px) {
+  .project-details-text {
+    width: 80%;
+  }
 }
 
 .project-details-text a {
@@ -543,6 +550,18 @@ input:checked ~ .project-details {
   display: flex;
   flex-direction: column;
   width: 40%;
+}
+
+@media all and (max-width: 1199px) {
+  .project-details-facts-container {
+    width: 90%;
+    margin: auto;
+    padding-right: 0;
+  }
+
+  .project-details-facts-container ul {
+    padding-left: 0;
+  }
 }
 
 .project-details-fact {
