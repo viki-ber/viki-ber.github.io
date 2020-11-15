@@ -9862,7 +9862,7 @@ var $author$project$Pages$Contact$view = function (_v0) {
 							]))
 					]))
 			]),
-		aP: 'Homepage'
+		aP: $author$project$Content$contact.aP
 	};
 };
 var $author$project$Pages$Contact$page = $author$project$Spa$Page$static(
