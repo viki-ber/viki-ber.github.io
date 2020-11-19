@@ -11116,7 +11116,7 @@ var $author$project$Pages$Top$view = function (model) {
 						$elm$html$Html$div,
 						_List_fromArray(
 							[
-								$elm$html$Html$Attributes$class('grid-left-column')
+								$elm$html$Html$Attributes$class('main-body')
 							]),
 						_List_fromArray(
 							[
@@ -11126,34 +11126,16 @@ var $author$project$Pages$Top$view = function (model) {
 									[
 										$elm$html$Html$Attributes$class('left-container-menu')
 									]),
-								$author$project$Pages$Top$listCategories(model))
-							])),
-						A2(
-						$elm$html$Html$div,
-						_List_fromArray(
-							[
-								$elm$html$Html$Attributes$class('grid-right-column')
-							]),
-						_List_fromArray(
-							[
+								$author$project$Pages$Top$listCategories(model)),
+								$author$project$Pages$Top$displayCategoryHeader(model),
 								A2(
 								$elm$html$Html$div,
 								_List_fromArray(
 									[
-										$elm$html$Html$Attributes$class('main-body')
+										$elm$html$Html$Attributes$class('row')
 									]),
-								_List_fromArray(
-									[
-										$author$project$Pages$Top$displayCategoryHeader(model),
-										A2(
-										$elm$html$Html$div,
-										_List_fromArray(
-											[
-												$elm$html$Html$Attributes$class('row')
-											]),
-										$author$project$Pages$Top$displayProjects(
-											$author$project$Pages$Top$filterProjects(model)))
-									]))
+								$author$project$Pages$Top$displayProjects(
+									$author$project$Pages$Top$filterProjects(model)))
 							]))
 					]))
 			]),
@@ -11579,24 +11561,6 @@ var $author$project$Main$update = F2(
 					A2($elm$core$Platform$Cmd$map, $author$project$Main$Pages, pageCmd));
 		}
 	});
-var $author$project$Components$Grid$left = function (content) {
-	return A2(
-		$elm$html$Html$div,
-		_List_fromArray(
-			[
-				$elm$html$Html$Attributes$class('grid-left-column')
-			]),
-		content);
-};
-var $author$project$Components$Grid$right = function (content) {
-	return A2(
-		$elm$html$Html$div,
-		_List_fromArray(
-			[
-				$elm$html$Html$Attributes$class('grid-right-column')
-			]),
-		content);
-};
 var $author$project$Components$Grid$row = function (content) {
 	return A2(
 		$elm$html$Html$div,
@@ -11609,25 +11573,20 @@ var $author$project$Components$Grid$row = function (content) {
 var $author$project$Components$Header$view = $author$project$Components$Grid$row(
 	_List_fromArray(
 		[
-			$author$project$Components$Grid$left(
+			A2(
+			$elm$html$Html$div,
+			_List_fromArray(
+				[
+					$elm$html$Html$Attributes$class('top-container')
+				]),
 			_List_fromArray(
 				[
 					A2(
 					$elm$html$Html$div,
 					_List_fromArray(
 						[
-							$elm$html$Html$Attributes$class('left-container-logo')
-						]),
-					_List_Nil)
-				])),
-			$author$project$Components$Grid$right(
-			_List_fromArray(
-				[
-					A2(
-					$elm$html$Html$div,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$class('top-container')
+							$elm$html$Html$Attributes$class('top-menu-container'),
+							$elm$html$Html$Attributes$class('adjust-for-grid-left')
 						]),
 					_List_fromArray(
 						[
@@ -11635,78 +11594,27 @@ var $author$project$Components$Header$view = $author$project$Components$Grid$row
 							$elm$html$Html$div,
 							_List_fromArray(
 								[
-									$elm$html$Html$Attributes$class('top-menu-container'),
-									$elm$html$Html$Attributes$class('adjust-for-grid-left')
+									$elm$html$Html$Attributes$class('top-menu-item')
 								]),
 							_List_fromArray(
 								[
 									A2(
-									$elm$html$Html$div,
+									$elm$html$Html$a,
 									_List_fromArray(
 										[
-											$elm$html$Html$Attributes$class('top-menu-item')
+											$elm$html$Html$Attributes$href(
+											$author$project$Spa$Generated$Route$toString($author$project$Spa$Generated$Route$Top))
 										]),
 									_List_fromArray(
 										[
-											A2(
-											$elm$html$Html$a,
-											_List_fromArray(
-												[
-													$elm$html$Html$Attributes$href(
-													$author$project$Spa$Generated$Route$toString($author$project$Spa$Generated$Route$Top))
-												]),
-											_List_fromArray(
-												[
-													$elm$html$Html$text('Projects')
-												]))
-										])),
-									A2(
-									$elm$html$Html$div,
-									_List_fromArray(
-										[
-											$elm$html$Html$Attributes$class('top-menu-item')
-										]),
-									_List_fromArray(
-										[
-											A2(
-											$elm$html$Html$a,
-											_List_fromArray(
-												[
-													$elm$html$Html$Attributes$href(
-													$author$project$Spa$Generated$Route$toString($author$project$Spa$Generated$Route$About))
-												]),
-											_List_fromArray(
-												[
-													$elm$html$Html$text('About')
-												]))
-										])),
-									A2(
-									$elm$html$Html$div,
-									_List_fromArray(
-										[
-											$elm$html$Html$Attributes$class('top-menu-item')
-										]),
-									_List_fromArray(
-										[
-											A2(
-											$elm$html$Html$a,
-											_List_fromArray(
-												[
-													$elm$html$Html$Attributes$href(
-													$author$project$Spa$Generated$Route$toString($author$project$Spa$Generated$Route$Contact))
-												]),
-											_List_fromArray(
-												[
-													$elm$html$Html$text('Contact')
-												]))
+											$elm$html$Html$text('Projects')
 										]))
 								])),
 							A2(
 							$elm$html$Html$div,
 							_List_fromArray(
 								[
-									$elm$html$Html$Attributes$class('logo-container'),
-									$elm$html$Html$Attributes$class('adjust-for-grid-right')
+									$elm$html$Html$Attributes$class('top-menu-item')
 								]),
 							_List_fromArray(
 								[
@@ -11714,41 +11622,105 @@ var $author$project$Components$Header$view = $author$project$Components$Grid$row
 									$elm$html$Html$a,
 									_List_fromArray(
 										[
-											$elm$html$Html$Attributes$class('logo-linkedin'),
-											$elm$html$Html$Attributes$href('https://se.linkedin.com/in/viktorija-bernataviciute-72456785')
+											$elm$html$Html$Attributes$href(
+											$author$project$Spa$Generated$Route$toString($author$project$Spa$Generated$Route$About))
 										]),
-									_List_Nil),
+									_List_fromArray(
+										[
+											$elm$html$Html$text('About')
+										]))
+								])),
+							A2(
+							$elm$html$Html$div,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$class('top-menu-item')
+								]),
+							_List_fromArray(
+								[
 									A2(
 									$elm$html$Html$a,
 									_List_fromArray(
 										[
-											$elm$html$Html$Attributes$class('logo-instagram'),
-											$elm$html$Html$Attributes$href('https://www.instagram.com/viktorija.graphics/')
+											$elm$html$Html$Attributes$href(
+											$author$project$Spa$Generated$Route$toString($author$project$Spa$Generated$Route$Contact))
 										]),
-									_List_Nil)
+									_List_fromArray(
+										[
+											$elm$html$Html$text('Contact')
+										]))
 								]))
+						])),
+					A2(
+					$elm$html$Html$div,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$class('logo-container'),
+							$elm$html$Html$Attributes$class('adjust-for-grid-right')
+						]),
+					_List_fromArray(
+						[
+							A2(
+							$elm$html$Html$a,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$class('logo-linkedin'),
+									$elm$html$Html$Attributes$href('https://se.linkedin.com/in/viktorija-bernataviciute-72456785')
+								]),
+							_List_Nil),
+							A2(
+							$elm$html$Html$a,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$class('logo-instagram'),
+									$elm$html$Html$Attributes$href('https://www.instagram.com/viktorija.graphics/')
+								]),
+							_List_Nil)
 						]))
 				]))
 		]));
+var $author$project$Shared$displayBody = function (page) {
+	return (page.aP === 'Main page') ? _List_fromArray(
+		[
+			A2(
+			$elm$html$Html$div,
+			_List_fromArray(
+				[
+					$elm$html$Html$Attributes$class('filler')
+				]),
+			_List_Nil),
+			A2(
+			$elm$html$Html$div,
+			_List_fromArray(
+				[
+					$elm$html$Html$Attributes$class('body-container')
+				]),
+			_List_fromArray(
+				[
+					$author$project$Components$Header$view,
+					A2($elm$html$Html$div, _List_Nil, page.bT)
+				]))
+		]) : _List_fromArray(
+		[
+			A2(
+			$elm$html$Html$div,
+			_List_fromArray(
+				[
+					$elm$html$Html$Attributes$class('body-container')
+				]),
+			_List_fromArray(
+				[
+					$author$project$Components$Header$view,
+					A2($elm$html$Html$div, _List_Nil, page.bT)
+				]))
+		]);
+};
 var $author$project$Shared$view = F2(
 	function (_v0, model) {
 		var page = _v0.J;
 		var toMsg = _v0.cz;
 		return {
-			bT: _List_fromArray(
-				[
-					A2(
-					$elm$html$Html$div,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$class('body-container')
-						]),
-					_List_fromArray(
-						[
-							$author$project$Components$Header$view,
-							A2($elm$html$Html$div, _List_Nil, page.bT)
-						]))
-				]),
+			bT: $author$project$Shared$displayBody(page),
 			aP: page.aP
 		};
 	});
