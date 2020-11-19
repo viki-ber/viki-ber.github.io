@@ -62,16 +62,28 @@ subscriptions model =
 -- VIEW
 
 
+displayBody page =
+    if page.title == "Main page" then
+        [ div [ class "filler" ] []
+        , div [ class "body-container" ]
+            [ Components.Header.view
+            , div [] page.body
+            ]
+        ]
+
+    else
+        [ div [ class "body-container" ]
+            [ Components.Header.view
+            , div [] page.body
+            ]
+        ]
+
+
 view :
     { page : Document msg, toMsg : Msg -> msg }
     -> Model
     -> Document msg
 view { page, toMsg } model =
     { title = page.title
-    , body =
-        [ div [ class "body-container" ]
-            [ Components.Header.view
-            , div [] page.body
-            ]
-        ]
+    , body = displayBody page
     }

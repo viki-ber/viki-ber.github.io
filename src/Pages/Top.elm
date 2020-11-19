@@ -223,15 +223,14 @@ view model =
     { title = Content.top.title
     , body =
         [ div [ class "grid-row", class "grid-top-margin" ]
-            [ div [ class "grid-left-column" ]
+            -- [ div [ class "grid-left-column" ]
+            --     [ div [ class "left-container-menu" ] (listCategories model)
+            --     ]
+            [ div [ class "main-body" ]
                 [ div [ class "left-container-menu" ] (listCategories model)
-                ]
-            , div [ class "grid-right-column" ]
-                [ div [ class "main-body" ]
-                    [ displayCategoryHeader model
-                    , div [ class "row" ]
-                        (displayProjects (filterProjects model))
-                    ]
+                , displayCategoryHeader model
+                , div [ class "row" ]
+                    (displayProjects (filterProjects model))
                 ]
             ]
         ]
