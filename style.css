@@ -544,12 +544,12 @@ input:checked ~ .project-details {
   }
 }
 
-.project-details-text a {
+.project-details a {
   text-decoration: underline !important;
   opacity: 0.65;
 }
 
-.project-details-text a:hover {
+.project-details a:hover {
   opacity: 1;
 }
 

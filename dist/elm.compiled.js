@@ -784,11 +784,11 @@ function _Debug_crash_UNUSED(identifier, fact1, fact2, fact3, fact4)
 
 function _Debug_regionToString(region)
 {
-	if (region.aL.ae === region.aZ.ae)
+	if (region.aL._ === region.aZ._)
 	{
-		return 'on line ' + region.aL.ae;
+		return 'on line ' + region.aL._;
 	}
-	return 'on lines ' + region.aL.ae + ' through ' + region.aZ.ae;
+	return 'on lines ' + region.aL._ + ' through ' + region.aZ._;
 }
 
 
@@ -2704,7 +2704,7 @@ var _VirtualDom_mapEventTuple = F2(function(func, tuple)
 var _VirtualDom_mapEventRecord = F2(function(func, record)
 {
 	return {
-		L: func(record.L),
+		E: func(record.E),
 		aM: record.aM,
 		aJ: record.aJ
 	}
@@ -2974,7 +2974,7 @@ function _VirtualDom_makeCallback(eventNode, initialHandler)
 		// 3 = Custom
 
 		var value = result.a;
-		var message = !tag ? value : tag < 3 ? value.a : value.L;
+		var message = !tag ? value : tag < 3 ? value.a : value.E;
 		var stopPropagation = tag == 1 ? value.b : tag == 3 && value.aM;
 		var currentEventNode = (
 			stopPropagation && event.stopPropagation(),
@@ -4951,25 +4951,25 @@ var $elm$core$Array$treeFromBuilder = F2(
 	});
 var $elm$core$Array$builderToArray = F2(
 	function (reverseNodeList, builder) {
-		if (!builder.j) {
+		if (!builder.g) {
 			return A4(
 				$elm$core$Array$Array_elm_builtin,
-				$elm$core$Elm$JsArray$length(builder.k),
+				$elm$core$Elm$JsArray$length(builder.h),
 				$elm$core$Array$shiftStep,
 				$elm$core$Elm$JsArray$empty,
-				builder.k);
+				builder.h);
 		} else {
-			var treeLen = builder.j * $elm$core$Array$branchFactor;
+			var treeLen = builder.g * $elm$core$Array$branchFactor;
 			var depth = $elm$core$Basics$floor(
 				A2($elm$core$Basics$logBase, $elm$core$Array$branchFactor, treeLen - 1));
-			var correctNodeList = reverseNodeList ? $elm$core$List$reverse(builder.l) : builder.l;
-			var tree = A2($elm$core$Array$treeFromBuilder, correctNodeList, builder.j);
+			var correctNodeList = reverseNodeList ? $elm$core$List$reverse(builder.i) : builder.i;
+			var tree = A2($elm$core$Array$treeFromBuilder, correctNodeList, builder.g);
 			return A4(
 				$elm$core$Array$Array_elm_builtin,
-				$elm$core$Elm$JsArray$length(builder.k) + treeLen,
+				$elm$core$Elm$JsArray$length(builder.h) + treeLen,
 				A2($elm$core$Basics$max, 5, depth * $elm$core$Array$shiftStep),
 				tree,
-				builder.k);
+				builder.h);
 		}
 	});
 var $elm$core$Basics$idiv = _Basics_idiv;
@@ -4982,7 +4982,7 @@ var $elm$core$Array$initializeHelp = F5(
 				return A2(
 					$elm$core$Array$builderToArray,
 					false,
-					{l: nodeList, j: (len / $elm$core$Array$branchFactor) | 0, k: tail});
+					{i: nodeList, g: (len / $elm$core$Array$branchFactor) | 0, h: tail});
 			} else {
 				var leaf = $elm$core$Array$Leaf(
 					A3($elm$core$Elm$JsArray$initialize, $elm$core$Array$branchFactor, fromIndex, fn));
@@ -5335,7 +5335,7 @@ var $elm$core$Basics$composeR = F3(
 	});
 var $author$project$Main$Model = F2(
 	function (shared, page) {
-		return {J: page, F: shared};
+		return {C: page, x: shared};
 	});
 var $author$project$Main$Pages = function (a) {
 	return {$: 3, a: a};
@@ -5347,7 +5347,7 @@ var $elm$core$Platform$Cmd$batch = _Platform_batch;
 var $author$project$Spa$Generated$Route$NotFound = {$: 3};
 var $elm$url$Url$Parser$State = F5(
 	function (visited, unvisited, params, frag, value) {
-		return {P: frag, cn: params, N: unvisited, d: value, T: visited};
+		return {I: frag, cn: params, G: unvisited, S: value, M: visited};
 	});
 var $elm$url$Url$Parser$getFirstMatch = function (states) {
 	getFirstMatch:
@@ -5357,12 +5357,12 @@ var $elm$url$Url$Parser$getFirstMatch = function (states) {
 		} else {
 			var state = states.a;
 			var rest = states.b;
-			var _v1 = state.N;
+			var _v1 = state.G;
 			if (!_v1.b) {
-				return $elm$core$Maybe$Just(state.d);
+				return $elm$core$Maybe$Just(state.S);
 			} else {
 				if ((_v1.a === '') && (!_v1.b.b)) {
-					return $elm$core$Maybe$Just(state.d);
+					return $elm$core$Maybe$Just(state.S);
 				} else {
 					var $temp$states = rest;
 					states = $temp$states;
@@ -5988,11 +5988,11 @@ var $author$project$Spa$Generated$Route$Top = {$: 0};
 var $elm$url$Url$Parser$Parser = $elm$core$Basics$identity;
 var $elm$url$Url$Parser$mapState = F2(
 	function (func, _v0) {
-		var visited = _v0.T;
-		var unvisited = _v0.N;
+		var visited = _v0.M;
+		var unvisited = _v0.G;
 		var params = _v0.cn;
-		var frag = _v0.P;
-		var value = _v0.d;
+		var frag = _v0.I;
+		var value = _v0.S;
 		return A5(
 			$elm$url$Url$Parser$State,
 			visited,
@@ -6005,11 +6005,11 @@ var $elm$url$Url$Parser$map = F2(
 	function (subValue, _v0) {
 		var parseArg = _v0;
 		return function (_v1) {
-			var visited = _v1.T;
-			var unvisited = _v1.N;
+			var visited = _v1.M;
+			var unvisited = _v1.G;
 			var params = _v1.cn;
-			var frag = _v1.P;
-			var value = _v1.d;
+			var frag = _v1.I;
+			var value = _v1.S;
 			return A2(
 				$elm$core$List$map,
 				$elm$url$Url$Parser$mapState(value),
@@ -6046,11 +6046,11 @@ var $elm$url$Url$Parser$oneOf = function (parsers) {
 };
 var $elm$url$Url$Parser$s = function (str) {
 	return function (_v0) {
-		var visited = _v0.T;
-		var unvisited = _v0.N;
+		var visited = _v0.M;
+		var unvisited = _v0.G;
 		var params = _v0.cn;
-		var frag = _v0.P;
-		var value = _v0.d;
+		var frag = _v0.I;
+		var value = _v0.S;
 		if (!unvisited.b) {
 			return _List_Nil;
 		} else {
@@ -6083,11 +6083,11 @@ var $elm$url$Url$Parser$slash = F2(
 var $elm$url$Url$Parser$custom = F2(
 	function (tipe, stringToSomething) {
 		return function (_v0) {
-			var visited = _v0.T;
-			var unvisited = _v0.N;
+			var visited = _v0.M;
+			var unvisited = _v0.G;
 			var params = _v0.cn;
-			var frag = _v0.P;
-			var value = _v0.d;
+			var frag = _v0.I;
+			var value = _v0.S;
 			if (!unvisited.b) {
 				return _List_Nil;
 			} else {
@@ -6139,7 +6139,7 @@ var $author$project$Spa$Generated$Route$routes = $elm$url$Url$Parser$oneOf(
 			A2(
 				$elm$url$Url$Parser$map,
 				function (id) {
-					return {z: id};
+					return {aE: id};
 				},
 				A2(
 					$elm$url$Url$Parser$slash,
@@ -6216,9 +6216,9 @@ var $author$project$Spa$Page$static = function (page) {
 			function (_v0, url) {
 				return _Utils_Tuple2(url, $elm$core$Platform$Cmd$none);
 			}),
-		ar: $elm$core$Basics$always(
+		am: $elm$core$Basics$always(
 			A2($elm$core$Basics$composeR, $elm$core$Basics$identity, $author$project$Spa$Page$ignoreEffect)),
-		az: $elm$core$Basics$always($elm$core$Basics$identity),
+		au: $elm$core$Basics$always($elm$core$Basics$identity),
 		cw: function (_v1) {
 			return $elm$core$Platform$Sub$none;
 		},
@@ -6229,7 +6229,7 @@ var $author$project$Spa$Page$static = function (page) {
 		cC: page.cC
 	};
 };
-var $author$project$Content$about = {n: 'This is me.<br /><br />Chef, turned food developer, turned graphic designer. <br /><br />Ever since I can remember, art has always played a huge part in my life - spending hours drawing in my room, visiting art galleries and exhibitions, as well as finishing one of Lithuania’s most prestigious art schools. <br /><br />When my career took me on a route working with food, I embraced it as a creative form of expression and truly enjoyed every moment of it.<br /><br />However, my passion for art, and especially graphic design, has never left me. And so here I am today - with a strong determination to learn and face challenges on the route to being the best designer that I can be.<br />', aP: 'About Page'};
+var $author$project$Content$about = {N: 'This is me.<br /><br />Chef, turned food developer, turned graphic designer. <br /><br />Ever since I can remember, art has always played a huge part in my life - spending hours drawing in my room, visiting art galleries and exhibitions, as well as finishing one of Lithuania’s most prestigious art schools. <br /><br />When my career took me on a route working with food, I embraced it as a creative form of expression and truly enjoyed every moment of it.<br /><br />However, my passion for art, and especially graphic design, has never left me. And so here I am today - with a strong determination to learn and face challenges on the route to being the best designer that I can be.<br />', aP: 'About Me'};
 var $elm$json$Json$Encode$string = _Json_wrap;
 var $elm$html$Html$Attributes$stringProperty = F2(
 	function (key, string) {
@@ -6313,7 +6313,7 @@ var $elm$parser$Parser$Advanced$fromState = F2(
 		return A2(
 			$elm$parser$Parser$Advanced$AddRight,
 			$elm$parser$Parser$Advanced$Empty,
-			A4($elm$parser$Parser$Advanced$DeadEnd, s.bw, s.aV, x, s.e));
+			A4($elm$parser$Parser$Advanced$DeadEnd, s.bw, s.aV, x, s.c));
 	});
 var $elm$parser$Parser$Advanced$isSubChar = _Parser_isSubChar;
 var $elm$core$Basics$negate = function (n) {
@@ -6322,7 +6322,7 @@ var $elm$core$Basics$negate = function (n) {
 var $elm$parser$Parser$Advanced$chompIf = F2(
 	function (isGood, expecting) {
 		return function (s) {
-			var newOffset = A3($elm$parser$Parser$Advanced$isSubChar, isGood, s.c, s.a);
+			var newOffset = A3($elm$parser$Parser$Advanced$isSubChar, isGood, s.b, s.a);
 			return _Utils_eq(newOffset, -1) ? A2(
 				$elm$parser$Parser$Advanced$Bad,
 				false,
@@ -6330,11 +6330,11 @@ var $elm$parser$Parser$Advanced$chompIf = F2(
 				$elm$parser$Parser$Advanced$Good,
 				true,
 				0,
-				{aV: 1, e: s.e, f: s.f, c: s.c + 1, bw: s.bw + 1, a: s.a}) : A3(
+				{aV: 1, c: s.c, d: s.d, b: s.b + 1, bw: s.bw + 1, a: s.a}) : A3(
 				$elm$parser$Parser$Advanced$Good,
 				true,
 				0,
-				{aV: s.aV + 1, e: s.e, f: s.f, c: newOffset, bw: s.bw, a: s.a}));
+				{aV: s.aV + 1, c: s.c, d: s.d, b: newOffset, bw: s.bw, a: s.a}));
 		};
 	});
 var $elm$parser$Parser$chompIf = function (isGood) {
@@ -6348,9 +6348,9 @@ var $elm$parser$Parser$Advanced$chompWhileHelp = F5(
 			if (_Utils_eq(newOffset, -1)) {
 				return A3(
 					$elm$parser$Parser$Advanced$Good,
-					_Utils_cmp(s0.c, offset) < 0,
+					_Utils_cmp(s0.b, offset) < 0,
 					0,
-					{aV: col, e: s0.e, f: s0.f, c: offset, bw: row, a: s0.a});
+					{aV: col, c: s0.c, d: s0.d, b: offset, bw: row, a: s0.a});
 			} else {
 				if (_Utils_eq(newOffset, -2)) {
 					var $temp$isGood = isGood,
@@ -6382,7 +6382,7 @@ var $elm$parser$Parser$Advanced$chompWhileHelp = F5(
 	});
 var $elm$parser$Parser$Advanced$chompWhile = function (isGood) {
 	return function (s) {
-		return A5($elm$parser$Parser$Advanced$chompWhileHelp, isGood, s.c, s.bw, s.aV, s);
+		return A5($elm$parser$Parser$Advanced$chompWhileHelp, isGood, s.b, s.bw, s.aV, s);
 	};
 };
 var $elm$parser$Parser$chompWhile = $elm$parser$Parser$Advanced$chompWhile;
@@ -6447,7 +6447,7 @@ var $elm$parser$Parser$Advanced$mapChompedString = F2(
 					p,
 					A2(
 						func,
-						A3($elm$core$String$slice, s0.c, s1.c, s0.a),
+						A3($elm$core$String$slice, s0.b, s1.b, s0.a),
 						a),
 					s1);
 			}
@@ -6529,18 +6529,18 @@ var $elm$parser$Parser$Advanced$chompUntil = function (_v0) {
 	var str = _v0.a;
 	var expecting = _v0.b;
 	return function (s) {
-		var _v1 = A5($elm$parser$Parser$Advanced$findSubString, str, s.c, s.bw, s.aV, s.a);
+		var _v1 = A5($elm$parser$Parser$Advanced$findSubString, str, s.b, s.bw, s.aV, s.a);
 		var newOffset = _v1.a;
 		var newRow = _v1.b;
 		var newCol = _v1.c;
 		return _Utils_eq(newOffset, -1) ? A2(
 			$elm$parser$Parser$Advanced$Bad,
 			false,
-			A4($elm$parser$Parser$Advanced$fromInfo, newRow, newCol, expecting, s.e)) : A3(
+			A4($elm$parser$Parser$Advanced$fromInfo, newRow, newCol, expecting, s.c)) : A3(
 			$elm$parser$Parser$Advanced$Good,
-			_Utils_cmp(s.c, newOffset) < 0,
+			_Utils_cmp(s.b, newOffset) < 0,
 			0,
-			{aV: newCol, e: s.e, f: s.f, c: newOffset, bw: newRow, a: s.a});
+			{aV: newCol, c: s.c, d: s.d, b: newOffset, bw: newRow, a: s.a});
 	};
 };
 var $elm$parser$Parser$Expecting = function (a) {
@@ -6571,7 +6571,7 @@ var $elm$parser$Parser$Advanced$token = function (_v0) {
 	var expecting = _v0.b;
 	var progress = !$elm$core$String$isEmpty(str);
 	return function (s) {
-		var _v1 = A5($elm$parser$Parser$Advanced$isSubString, str, s.c, s.bw, s.aV, s.a);
+		var _v1 = A5($elm$parser$Parser$Advanced$isSubString, str, s.b, s.bw, s.aV, s.a);
 		var newOffset = _v1.a;
 		var newRow = _v1.b;
 		var newCol = _v1.c;
@@ -6582,7 +6582,7 @@ var $elm$parser$Parser$Advanced$token = function (_v0) {
 			$elm$parser$Parser$Advanced$Good,
 			progress,
 			0,
-			{aV: newCol, e: s.e, f: s.f, c: newOffset, bw: newRow, a: s.a});
+			{aV: newCol, c: s.c, d: s.d, b: newOffset, bw: newRow, a: s.a});
 	};
 };
 var $elm$parser$Parser$token = function (str) {
@@ -9209,7 +9209,7 @@ var $elm$parser$Parser$Advanced$consumeBase = _Parser_consumeBase;
 var $elm$parser$Parser$Advanced$consumeBase16 = _Parser_consumeBase16;
 var $elm$parser$Parser$Advanced$bumpOffset = F2(
 	function (newOffset, s) {
-		return {aV: s.aV + (newOffset - s.c), e: s.e, f: s.f, c: newOffset, bw: s.bw, a: s.a};
+		return {aV: s.aV + (newOffset - s.b), c: s.c, d: s.d, b: newOffset, bw: s.bw, a: s.a};
 	});
 var $elm$parser$Parser$Advanced$chompBase10 = _Parser_chompBase10;
 var $elm$parser$Parser$Advanced$isAsciiCode = _Parser_isAsciiCode;
@@ -9245,7 +9245,7 @@ var $elm$parser$Parser$Advanced$finalizeInt = F5(
 			var toValue = handler.a;
 			return _Utils_eq(startOffset, endOffset) ? A2(
 				$elm$parser$Parser$Advanced$Bad,
-				_Utils_cmp(s.c, startOffset) < 0,
+				_Utils_cmp(s.b, startOffset) < 0,
 				A2($elm$parser$Parser$Advanced$fromState, s, invalid)) : A3(
 				$elm$parser$Parser$Advanced$Good,
 				true,
@@ -9262,16 +9262,16 @@ var $elm$parser$Parser$Advanced$finalizeFloat = F6(
 			return A2(
 				$elm$parser$Parser$Advanced$Bad,
 				true,
-				A4($elm$parser$Parser$Advanced$fromInfo, s.bw, s.aV - (floatOffset + s.c), invalid, s.e));
+				A4($elm$parser$Parser$Advanced$fromInfo, s.bw, s.aV - (floatOffset + s.b), invalid, s.c));
 		} else {
-			if (_Utils_eq(s.c, floatOffset)) {
+			if (_Utils_eq(s.b, floatOffset)) {
 				return A2(
 					$elm$parser$Parser$Advanced$Bad,
 					false,
 					A2($elm$parser$Parser$Advanced$fromState, s, expecting));
 			} else {
 				if (_Utils_eq(intOffset, floatOffset)) {
-					return A5($elm$parser$Parser$Advanced$finalizeInt, invalid, intSettings, s.c, intPair, s);
+					return A5($elm$parser$Parser$Advanced$finalizeInt, invalid, intSettings, s.b, intPair, s);
 				} else {
 					if (floatSettings.$ === 1) {
 						var x = floatSettings.a;
@@ -9282,7 +9282,7 @@ var $elm$parser$Parser$Advanced$finalizeFloat = F6(
 					} else {
 						var toValue = floatSettings.a;
 						var _v1 = $elm$core$String$toFloat(
-							A3($elm$core$String$slice, s.c, floatOffset, s.a));
+							A3($elm$core$String$slice, s.b, floatOffset, s.a));
 						if (_v1.$ === 1) {
 							return A2(
 								$elm$parser$Parser$Advanced$Bad,
@@ -9303,8 +9303,8 @@ var $elm$parser$Parser$Advanced$finalizeFloat = F6(
 	});
 var $elm$parser$Parser$Advanced$number = function (c) {
 	return function (s) {
-		if (A3($elm$parser$Parser$Advanced$isAsciiCode, 48, s.c, s.a)) {
-			var zeroOffset = s.c + 1;
+		if (A3($elm$parser$Parser$Advanced$isAsciiCode, 48, s.b, s.a)) {
+			var zeroOffset = s.b + 1;
 			var baseOffset = zeroOffset + 1;
 			return A3($elm$parser$Parser$Advanced$isAsciiCode, 120, zeroOffset, s.a) ? A5(
 				$elm$parser$Parser$Advanced$finalizeInt,
@@ -9339,7 +9339,7 @@ var $elm$parser$Parser$Advanced$number = function (c) {
 				c.a$,
 				c.a8,
 				c.a0,
-				A3($elm$parser$Parser$Advanced$consumeBase, 10, s.c, s.a),
+				A3($elm$parser$Parser$Advanced$consumeBase, 10, s.b, s.a),
 				s);
 		}
 	};
@@ -9660,7 +9660,7 @@ var $elm$parser$Parser$Advanced$run = F2(
 	function (_v0, src) {
 		var parse = _v0;
 		var _v1 = parse(
-			{aV: 1, e: _List_Nil, f: 1, c: 0, bw: 1, a: src});
+			{aV: 1, c: _List_Nil, d: 1, b: 0, bw: 1, a: src});
 		if (!_v1.$) {
 			var value = _v1.b;
 			return $elm$core$Result$Ok(value);
@@ -9797,7 +9797,7 @@ var $author$project$Pages$About$view = function (_v0) {
 													]),
 												_List_fromArray(
 													[
-														$author$project$Components$HtmlRenderer$htmlRenderer($author$project$Content$about.n)
+														$author$project$Components$HtmlRenderer$htmlRenderer($author$project$Content$about.N)
 													]))
 											]))
 									]))
@@ -9809,7 +9809,7 @@ var $author$project$Pages$About$view = function (_v0) {
 };
 var $author$project$Pages$About$page = $author$project$Spa$Page$static(
 	{cC: $author$project$Pages$About$view});
-var $author$project$Content$contact = {n: 'I am happy to hear about possible work orders or potential collaborations. If you would like to see my professional CV, do not hesitate to ask. You can drop me a line on:<br /><br /><span class=\"email-link\"><a href=\"mailto:hello@viktorija.graphics\">hello@viktorija.graphics</a></span><br /><br />You are also welcome to contact me via my social media accounts.', aP: 'Contact'};
+var $author$project$Content$contact = {N: 'I am happy to hear about possible work orders or potential collaborations. If you would like to see my professional CV, do not hesitate to ask. You can drop me a line on:<br /><br /><span class=\"email-link\"><a href=\"mailto:hello@viktorija.graphics\">hello@viktorija.graphics</a></span><br /><br />You are also welcome to contact me via my social media accounts.', aP: 'Contact Me'};
 var $author$project$Pages$Contact$view = function (_v0) {
 	var params = _v0.cn;
 	return {
@@ -9855,7 +9855,7 @@ var $author$project$Pages$Contact$view = function (_v0) {
 													]),
 												_List_fromArray(
 													[
-														$author$project$Components$HtmlRenderer$htmlRenderer($author$project$Content$contact.n)
+														$author$project$Components$HtmlRenderer$htmlRenderer($author$project$Content$contact.N)
 													]))
 											]))
 									]))
@@ -9910,7 +9910,7 @@ var $elm$core$Array$fromListHelp = F3(
 				return A2(
 					$elm$core$Array$builderToArray,
 					true,
-					{l: nodeList, j: nodeListSize, k: jsArray});
+					{i: nodeList, g: nodeListSize, h: jsArray});
 			} else {
 				var $temp$list = remainingItems,
 					$temp$nodeList = A2(
@@ -9974,220 +9974,52 @@ var $elm$core$Array$get = F2(
 			A2($elm$core$Elm$JsArray$unsafeGet, $elm$core$Array$bitMask & index, tail)) : $elm$core$Maybe$Just(
 			A3($elm$core$Array$getHelp, startShift, index, tree)));
 	});
-var $author$project$Pages$Projects$Id_String$notFound = {t: _List_Nil, n: _List_Nil, u: 'Not found', v: '', y: _List_Nil, z: 'not_found', b: 'NOT FOUND'};
+var $author$project$Pages$Projects$Id_String$notFound = {aw: _List_Nil, N: _List_Nil, az: 'Not found', aA: '', aC: _List_Nil, aE: 'not_found', A: 'NOT FOUND'};
 var $author$project$Content$projects = _List_fromArray(
 	[
 		{
-		t: _List_fromArray(
+		aw: _List_fromArray(
 			['Branding', 'UX/UI', 'Graphic Design', 'All']),
-		n: _List_fromArray(
+		N: _List_fromArray(
 			[
-				{g: '/img/first.jpg'},
-				{g: '/img/graphic_profile_light.jpg'},
-				{g: '/img/graphic_profile_dark.jpg'},
-				{g: '/img/mockup_2.jpg'},
-				{g: '/img/trailer.mp4'}
+				{u: '/img/first.jpg'},
+				{u: '/img/graphic_profile_light.jpg'},
+				{u: '/img/graphic_profile_dark.jpg'},
+				{u: '/img/mockup_2.jpg'},
+				{u: '/img/trailer.mp4'}
 			]),
-		u: '<strong>Lorem</strong> ipsum dolor sit amet consectetur, adipisicing elit. Totam consectetur atque unde at numquamaccusantium deleniti nihil <i>error reprehenderit expedita</i> eligendi aliquid dicta quia distinctio, esse culpa minus. <br /> <br /> Cumque, totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut in nulla aliquid adipisci corrupti quis fuga ducimus rem aspernatur <a href=\"#\">esse mollitia reprehenderit</a> consequatur minima illum placeat, id libero atque? <br /> <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque iusto odit fugiat rem nihil praesentium ullam magnam nemo, debitis, quibusdam laboriosam sunt optio, quod dignissimos repellendus vitae voluptatum eligendi voluptates?',
-		v: '/img/first.jpg',
-		y: _List_fromArray(
+		az: '<strong>Lorem</strong> ipsum dolor sit amet consectetur, adipisicing elit. Totam consectetur atque unde at numquamaccusantium deleniti nihil <i>error reprehenderit expedita</i> eligendi aliquid dicta quia distinctio, esse culpa minus. <br /> <br /> Cumque, totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut in nulla aliquid adipisci corrupti quis fuga ducimus rem aspernatur <a href=\"#\">esse mollitia reprehenderit</a> consequatur minima illum placeat, id libero atque? <br /> <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque iusto odit fugiat rem nihil praesentium ullam magnam nemo, debitis, quibusdam laboriosam sunt optio, quod dignissimos repellendus vitae voluptatum eligendi voluptates?',
+		aA: '/img/first.jpg',
+		aC: _List_fromArray(
 			[
-				{b: 'Duration', d: '1 week'},
-				{b: 'Date', d: 'YYYY-MM-DD'},
-				{b: 'Tools', d: 'Free-hand, Sketch, Photoshop'}
+				{A: 'Duration', S: '1 week'},
+				{A: 'Date', S: 'YYYY-MM-DD'},
+				{A: 'Tools', S: 'Free-hand, Sketch, Photoshop'}
 			]),
-		z: 'terraventure',
-		b: 'Terra Venture'
+		aE: 'terraventure',
+		A: 'Terra Venture'
 	},
 		{
-		t: _List_fromArray(
-			['Branding', 'Illustration', 'UX/UI', 'Graphic Design', 'Print', 'All']),
-		n: _List_fromArray(
+		aw: _List_fromArray(
+			['Branding', 'UX/UI', 'Graphic Design', 'All']),
+		N: _List_fromArray(
 			[
-				{g: '/img/beer_mats.jpg'},
-				{g: '/img/beer_mats.jpg'}
+				{u: '/img/esca/logo.mp4'},
+				{u: '/img/esca/page2.jpg'},
+				{u: '/img/esca/micro.mp4'},
+				{u: '/img/esca/ui_movie.mp4'},
+				{u: '/img/esca/page3.jpg'}
 			]),
-		u: '<strong>Lorem</strong> ipsum dolor sit amet consectetur, adipisicing elit. Totam consectetur atque unde at numquamaccusantium deleniti nihil <i>error reprehenderit expedita</i> eligendi aliquid dicta quia distinctio, esse culpa minus. <br /> <br /> Cumque, totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut in nulla aliquid adipisci corrupti quis fuga ducimus rem aspernatur <a href=\"#\">esse mollitia reprehenderit</a> consequatur minima illum placeat, id libero atque? <br /> <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque iusto odit fugiat rem nihil praesentium ullam magnam nemo, debitis, quibusdam laboriosam sunt optio, quod dignissimos repellendus vitae voluptatum eligendi voluptates?',
-		v: 'https://via.placeholder.com/150x200',
-		y: _List_fromArray(
+		az: 'The brief for this project was to create a branding and an e-commerce website for a company selling premium food products',
+		aA: '/img/esca/display.png',
+		aC: _List_fromArray(
 			[
-				{b: 'Duration', d: '1 week'},
-				{b: 'Date', d: 'YYYY-MM-DD'},
-				{b: 'Tools', d: 'Free-hand, Sketch, Photoshop'}
+				{A: 'Date:', S: 'October 2020'},
+				{A: 'Tools:', S: 'Photoshop, XD, Illustrator, Rotato'},
+				{A: 'Try:', S: '<a href=\'https://xd.adobe.com/view/037c0fc6-01c4-41d5-a0d8-a77733748a4b-562f/\'>Interactive Prototype</a>'}
 			]),
-		z: 'loremipsum',
-		b: 'Lorem Ipsum'
-	},
-		{
-		t: _List_fromArray(
-			['Branding', 'Illustration', 'UX/UI', 'Graphic Design', 'All']),
-		n: _List_fromArray(
-			[
-				{g: '/img/magazine_2.jpg'},
-				{g: '/img/magazine_3.jpg'}
-			]),
-		u: '<strong>Lorem</strong> ipsum dolor sit amet consectetur, adipisicing elit. Totam consectetur atque unde at numquamaccusantium deleniti nihil <i>error reprehenderit expedita</i> eligendi aliquid dicta quia distinctio, esse culpa minus. <br /> <br /> Cumque, totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut in nulla aliquid adipisci corrupti quis fuga ducimus rem aspernatur <a href=\"#\">esse mollitia reprehenderit</a> consequatur minima illum placeat, id libero atque? <br /> <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque iusto odit fugiat rem nihil praesentium ullam magnam nemo, debitis, quibusdam laboriosam sunt optio, quod dignissimos repellendus vitae voluptatum eligendi voluptates?',
-		v: 'https://via.placeholder.com/300',
-		y: _List_fromArray(
-			[
-				{b: 'Duration', d: 'Around 5 days'},
-				{b: 'Date', d: 'YYYY-MM-DD'},
-				{b: 'Tools', d: 'Illustrator, Photoshop'}
-			]),
-		z: 'magazine',
-		b: 'Sweet magazine project'
-	},
-		{
-		t: _List_fromArray(
-			['Branding', 'Illustration', 'UX/UI', 'All']),
-		n: _List_fromArray(
-			[
-				{g: '/img/magazine_2.jpg'},
-				{g: '/img/magazine_3.jpg'}
-			]),
-		u: '<strong>Lorem</strong> ipsum dolor sit amet consectetur, adipisicing elit. Totam consectetur atque unde at numquamaccusantium deleniti nihil <i>error reprehenderit expedita</i> eligendi aliquid dicta quia distinctio, esse culpa minus. <br /> <br /> Cumque, totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut in nulla aliquid adipisci corrupti quis fuga ducimus rem aspernatur <a href=\"#\">esse mollitia reprehenderit</a> consequatur minima illum placeat, id libero atque? <br /> <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque iusto odit fugiat rem nihil praesentium ullam magnam nemo, debitis, quibusdam laboriosam sunt optio, quod dignissimos repellendus vitae voluptatum eligendi voluptates?',
-		v: 'https://via.placeholder.com/300x400',
-		y: _List_fromArray(
-			[
-				{b: 'Duration', d: 'Around 5 days'},
-				{b: 'Date', d: 'YYYY-MM-DD'},
-				{b: 'Tools', d: 'Illustrator, Photoshop'}
-			]),
-		z: 'letterhead',
-		b: 'Letterhead'
-	},
-		{
-		t: _List_fromArray(
-			['Branding', 'Illustration', 'All']),
-		n: _List_fromArray(
-			[
-				{g: '/img/magazine_2.jpg'},
-				{g: '/img/magazine_3.jpg'}
-			]),
-		u: '<strong>Lorem</strong> ipsum dolor sit amet consectetur, adipisicing elit. Totam consectetur atque unde at numquamaccusantium deleniti nihil <i>error reprehenderit expedita</i> eligendi aliquid dicta quia distinctio, esse culpa minus. <br /> <br /> Cumque, totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut in nulla aliquid adipisci corrupti quis fuga ducimus rem aspernatur <a href=\"#\">esse mollitia reprehenderit</a> consequatur minima illum placeat, id libero atque? <br /> <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque iusto odit fugiat rem nihil praesentium ullam magnam nemo, debitis, quibusdam laboriosam sunt optio, quod dignissimos repellendus vitae voluptatum eligendi voluptates?',
-		v: 'https://via.placeholder.com/700x350',
-		y: _List_fromArray(
-			[
-				{b: 'Duration', d: 'Around 5 days'},
-				{b: 'Date', d: 'YYYY-MM-DD'},
-				{b: 'Tools', d: 'Illustrator, Photoshop'}
-			]),
-		z: 'capsmockup',
-		b: 'Caps Mockup'
-	},
-		{
-		t: _List_fromArray(
-			['Branding', 'All']),
-		n: _List_fromArray(
-			[
-				{g: '/img/magazine_2.jpg'},
-				{g: '/img/magazine_3.jpg'}
-			]),
-		u: '<strong>Lorem</strong> ipsum dolor sit amet consectetur, adipisicing elit. Totam consectetur atque unde at numquamaccusantium deleniti nihil <i>error reprehenderit expedita</i> eligendi aliquid dicta quia distinctio, esse culpa minus. <br /> <br /> Cumque, totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut in nulla aliquid adipisci corrupti quis fuga ducimus rem aspernatur <a href=\"#\">esse mollitia reprehenderit</a> consequatur minima illum placeat, id libero atque? <br /> <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque iusto odit fugiat rem nihil praesentium ullam magnam nemo, debitis, quibusdam laboriosam sunt optio, quod dignissimos repellendus vitae voluptatum eligendi voluptates?',
-		v: 'https://via.placeholder.com/550x400',
-		y: _List_fromArray(
-			[
-				{b: 'Duration', d: 'Around 5 days'},
-				{b: 'Date', d: 'YYYY-MM-DD'},
-				{b: 'Tools', d: 'Illustrator, Photoshop'}
-			]),
-		z: 'magazine2',
-		b: 'Sweet magazine project'
-	},
-		{
-		t: _List_fromArray(
-			['All']),
-		n: _List_fromArray(
-			[
-				{g: '/img/magazine_2.jpg'},
-				{g: '/img/magazine_3.jpg'}
-			]),
-		u: '<strong>Lorem</strong> ipsum dolor sit amet consectetur, adipisicing elit. Totam consectetur atque unde at numquamaccusantium deleniti nihil <i>error reprehenderit expedita</i> eligendi aliquid dicta quia distinctio, esse culpa minus. <br /> <br /> Cumque, totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut in nulla aliquid adipisci corrupti quis fuga ducimus rem aspernatur <a href=\"#\">esse mollitia reprehenderit</a> consequatur minima illum placeat, id libero atque? <br /> <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque iusto odit fugiat rem nihil praesentium ullam magnam nemo, debitis, quibusdam laboriosam sunt optio, quod dignissimos repellendus vitae voluptatum eligendi voluptates?',
-		v: 'https://via.placeholder.com/640x460',
-		y: _List_fromArray(
-			[
-				{b: 'Duration', d: 'Around 5 days'},
-				{b: 'Date', d: 'YYYY-MM-DD'},
-				{b: 'Tools', d: 'Illustrator, Photoshop'}
-			]),
-		z: 'magazine2',
-		b: 'Sweet magazine project'
-	},
-		{
-		t: _List_fromArray(
-			['All']),
-		n: _List_fromArray(
-			[
-				{g: '/img/magazine_2.jpg'},
-				{g: '/img/magazine_3.jpg'}
-			]),
-		u: '<strong>Lorem</strong> ipsum dolor sit amet consectetur, adipisicing elit. Totam consectetur atque unde at numquamaccusantium deleniti nihil <i>error reprehenderit expedita</i> eligendi aliquid dicta quia distinctio, esse culpa minus. <br /> <br /> Cumque, totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut in nulla aliquid adipisci corrupti quis fuga ducimus rem aspernatur <a href=\"#\">esse mollitia reprehenderit</a> consequatur minima illum placeat, id libero atque? <br /> <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque iusto odit fugiat rem nihil praesentium ullam magnam nemo, debitis, quibusdam laboriosam sunt optio, quod dignissimos repellendus vitae voluptatum eligendi voluptates?',
-		v: 'https://via.placeholder.com/750x500',
-		y: _List_fromArray(
-			[
-				{b: 'Duration', d: 'Around 5 days'},
-				{b: 'Date', d: 'YYYY-MM-DD'},
-				{b: 'Tools', d: 'Illustrator, Photoshop'}
-			]),
-		z: 'magazine2',
-		b: 'Sweet magazine project'
-	},
-		{
-		t: _List_fromArray(
-			['All']),
-		n: _List_fromArray(
-			[
-				{g: '/img/magazine_2.jpg'},
-				{g: '/img/magazine_3.jpg'}
-			]),
-		u: '<strong>Lorem</strong> ipsum dolor sit amet consectetur, adipisicing elit. Totam consectetur atque unde at numquamaccusantium deleniti nihil <i>error reprehenderit expedita</i> eligendi aliquid dicta quia distinctio, esse culpa minus. <br /> <br /> Cumque, totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut in nulla aliquid adipisci corrupti quis fuga ducimus rem aspernatur <a href=\"#\">esse mollitia reprehenderit</a> consequatur minima illum placeat, id libero atque? <br /> <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque iusto odit fugiat rem nihil praesentium ullam magnam nemo, debitis, quibusdam laboriosam sunt optio, quod dignissimos repellendus vitae voluptatum eligendi voluptates?',
-		v: 'https://via.placeholder.com/300x400',
-		y: _List_fromArray(
-			[
-				{b: 'Duration', d: 'Around 5 days'},
-				{b: 'Date', d: 'YYYY-MM-DD'},
-				{b: 'Tools', d: 'Illustrator, Photoshop'}
-			]),
-		z: 'magazine2',
-		b: 'Sweet magazine project'
-	},
-		{
-		t: _List_fromArray(
-			['All']),
-		n: _List_fromArray(
-			[
-				{g: '/img/magazine_2.jpg'},
-				{g: '/img/magazine_3.jpg'}
-			]),
-		u: '<strong>Lorem</strong> ipsum dolor sit amet consectetur, adipisicing elit. Totam consectetur atque unde at numquamaccusantium deleniti nihil <i>error reprehenderit expedita</i> eligendi aliquid dicta quia distinctio, esse culpa minus. <br /> <br /> Cumque, totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut in nulla aliquid adipisci corrupti quis fuga ducimus rem aspernatur <a href=\"#\">esse mollitia reprehenderit</a> consequatur minima illum placeat, id libero atque? <br /> <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque iusto odit fugiat rem nihil praesentium ullam magnam nemo, debitis, quibusdam laboriosam sunt optio, quod dignissimos repellendus vitae voluptatum eligendi voluptates?',
-		v: 'https://via.placeholder.com/400x400',
-		y: _List_fromArray(
-			[
-				{b: 'Duration', d: 'Around 5 days'},
-				{b: 'Date', d: 'YYYY-MM-DD'},
-				{b: 'Tools', d: 'Illustrator, Photoshop'}
-			]),
-		z: 'magazine2',
-		b: 'Sweet magazine project'
-	},
-		{
-		t: _List_fromArray(
-			['All']),
-		n: _List_fromArray(
-			[
-				{g: '/img/magazine_2.jpg'},
-				{g: '/img/magazine_3.jpg'}
-			]),
-		u: '<strong>Lorem</strong> ipsum dolor sit amet consectetur, adipisicing elit. Totam consectetur atque unde at numquamaccusantium deleniti nihil <i>error reprehenderit expedita</i> eligendi aliquid dicta quia distinctio, esse culpa minus. <br /> <br /> Cumque, totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut in nulla aliquid adipisci corrupti quis fuga ducimus rem aspernatur <a href=\"#\">esse mollitia reprehenderit</a> consequatur minima illum placeat, id libero atque? <br /> <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque iusto odit fugiat rem nihil praesentium ullam magnam nemo, debitis, quibusdam laboriosam sunt optio, quod dignissimos repellendus vitae voluptatum eligendi voluptates?',
-		v: 'https://via.placeholder.com/631x401',
-		y: _List_fromArray(
-			[
-				{b: 'Duration', d: 'Around 5 days'},
-				{b: 'Date', d: 'YYYY-MM-DD'},
-				{b: 'Tools', d: 'Illustrator, Photoshop'}
-			]),
-		z: 'magazine2',
-		b: 'Sweet magazine project'
+		aE: 'esca',
+		A: 'Esca'
 	}
 	]);
 var $author$project$Pages$Projects$Id_String$getProject = function (id) {
@@ -10201,7 +10033,7 @@ var $author$project$Pages$Projects$Id_String$getProject = function (id) {
 				A2(
 					$elm$core$List$filter,
 					function (x) {
-						return _Utils_eq(x.z, id);
+						return _Utils_eq(x.aE, id);
 					},
 					$author$project$Content$projects))));
 };
@@ -10297,12 +10129,12 @@ var $author$project$Pages$Projects$Id_String$content = function (media) {
 		A2(
 			$elm$core$List$map,
 			function (x) {
-				return $author$project$Pages$Projects$Id_String$renderMedia(x.g);
+				return $author$project$Pages$Projects$Id_String$renderMedia(x.u);
 			},
-			media.n));
+			media.N));
 };
+var $elm$html$Html$b = _VirtualDom_node('b');
 var $elm$html$Html$li = _VirtualDom_node('li');
-var $elm$html$Html$strong = _VirtualDom_node('strong');
 var $elm$html$Html$ul = _VirtualDom_node('ul');
 var $author$project$Pages$Projects$Id_String$factsContainer = function (project) {
 	return A2(
@@ -10328,16 +10160,16 @@ var $author$project$Pages$Projects$Id_String$factsContainer = function (project)
 							_List_fromArray(
 								[
 									A2(
-									$elm$html$Html$strong,
+									$elm$html$Html$b,
 									_List_Nil,
 									_List_fromArray(
 										[
-											$elm$html$Html$text(x.b)
+											$elm$html$Html$text(x.A)
 										])),
-									$elm$html$Html$text(' ' + x.d)
+									$author$project$Components$HtmlRenderer$htmlRenderer(x.S)
 								]));
 					},
-					project.y))
+					project.aC))
 			]));
 };
 var $elm$html$Html$Attributes$for = $elm$html$Html$Attributes$stringProperty('htmlFor');
@@ -10359,7 +10191,7 @@ var $author$project$Pages$Projects$Id_String$presentProject = function (project)
 					_List_Nil,
 					_List_fromArray(
 						[
-							$elm$html$Html$text(project.b)
+							$elm$html$Html$text(project.A)
 						])),
 					A2(
 					$elm$html$Html$label,
@@ -10403,7 +10235,7 @@ var $author$project$Pages$Projects$Id_String$presentProject = function (project)
 						]),
 					_List_fromArray(
 						[
-							$author$project$Components$HtmlRenderer$htmlRenderer(project.u)
+							$author$project$Components$HtmlRenderer$htmlRenderer(project.az)
 						])),
 					$author$project$Pages$Projects$Id_String$factsContainer(project)
 				])),
@@ -10431,10 +10263,10 @@ var $author$project$Pages$Projects$Id_String$view = function (_v0) {
 								$elm$html$Html$Attributes$class('main-body')
 							]),
 						$author$project$Pages$Projects$Id_String$presentProject(
-							$author$project$Pages$Projects$Id_String$getProject(params.z)))
+							$author$project$Pages$Projects$Id_String$getProject(params.aE)))
 					]))
 			]),
-		aP: $author$project$Pages$Projects$Id_String$getProject(params.z).b
+		aP: $author$project$Pages$Projects$Id_String$getProject(params.aE).A
 	};
 };
 var $author$project$Pages$Projects$Id_String$page = $author$project$Spa$Page$static(
@@ -10455,7 +10287,7 @@ var $author$project$Pages$Top$init = function (_v0) {
 	var params = _v0.cn;
 	var query = _v0.br;
 	return {
-		S: $author$project$Pages$Top$parseQueryString(
+		L: $author$project$Pages$Top$parseQueryString(
 			A2($elm$core$Dict$get, 'filter', query))
 	};
 };
@@ -10467,9 +10299,9 @@ var $author$project$Spa$Page$sandbox = function (page) {
 					page.b6(url),
 					$elm$core$Platform$Cmd$none);
 			}),
-		ar: $elm$core$Basics$always(
+		am: $elm$core$Basics$always(
 			A2($elm$core$Basics$composeR, $elm$core$Basics$identity, $author$project$Spa$Page$ignoreEffect)),
-		az: $elm$core$Basics$always($elm$core$Basics$identity),
+		au: $elm$core$Basics$always($elm$core$Basics$identity),
 		cw: function (_v1) {
 			return $elm$core$Platform$Sub$none;
 		},
@@ -10487,11 +10319,11 @@ var $author$project$Pages$Top$update = F2(
 		var x = msg;
 		return _Utils_update(
 			model,
-			{S: x});
+			{L: x});
 	});
 var $elm$html$Html$span = _VirtualDom_node('span');
 var $author$project$Pages$Top$displayCategoryHeader = function (model) {
-	return (!(model.S === 'All')) ? A2(
+	return (!(model.L === 'All')) ? A2(
 		$elm$html$Html$div,
 		_List_fromArray(
 			[
@@ -10506,7 +10338,7 @@ var $author$project$Pages$Top$displayCategoryHeader = function (model) {
 				_List_Nil,
 				_List_fromArray(
 					[
-						$elm$html$Html$text(model.S)
+						$elm$html$Html$text(model.L)
 					]))
 			])) : A2($elm$html$Html$span, _List_Nil, _List_Nil);
 };
@@ -10537,7 +10369,7 @@ var $author$project$Spa$Generated$Route$toString = function (route) {
 				return _List_fromArray(
 					['not-found']);
 			default:
-				var id = route.a.z;
+				var id = route.a.aE;
 				return _List_fromArray(
 					['projects', id]);
 		}
@@ -10561,7 +10393,7 @@ var $author$project$Pages$Top$displayProject = function (project) {
 						$elm$html$Html$Attributes$href(
 						$author$project$Spa$Generated$Route$toString(
 							$author$project$Spa$Generated$Route$Projects__Id_String(
-								{z: project.z})))
+								{aE: project.aE})))
 					]),
 				_List_fromArray(
 					[
@@ -10569,7 +10401,7 @@ var $author$project$Pages$Top$displayProject = function (project) {
 						$elm$html$Html$img,
 						_List_fromArray(
 							[
-								$elm$html$Html$Attributes$src(project.v)
+								$elm$html$Html$Attributes$src(project.aA)
 							]),
 						_List_Nil)
 					]))
@@ -10953,7 +10785,7 @@ var $author$project$Pages$Top$filterProjects = function (model) {
 	return A2(
 		$elm$core$List$filter,
 		function (x) {
-			return A2($elm$core$List$member, model.S, x.t);
+			return A2($elm$core$List$member, model.L, x.aw);
 		},
 		$author$project$Content$projects);
 };
@@ -10993,7 +10825,7 @@ var $author$project$Pages$Top$listCategory = F2(
 				[
 					$elm$html$Html$Attributes$class('left-menu-item'),
 					$elm$html$Html$Events$onClick(project),
-					_Utils_eq(model.S, project) ? $elm$html$Html$Attributes$class('left-menu-item-selected') : $elm$html$Html$Attributes$class('')
+					_Utils_eq(model.L, project) ? $elm$html$Html$Attributes$class('left-menu-item-selected') : $elm$html$Html$Attributes$class('')
 				]),
 			_List_fromArray(
 				[
@@ -11014,7 +10846,7 @@ var $author$project$Pages$Top$listCategory = F2(
 										A2(
 											$elm$core$List$map,
 											function (x) {
-												return x.t;
+												return x.aw;
 											},
 											$author$project$Content$projects)))) + ')'))
 						]))
@@ -11085,7 +10917,7 @@ var $author$project$Pages$Top$mergeCategories = $elm_community$list_extra$List$E
 		A2(
 			$elm$core$List$map,
 			function (project) {
-				return project.t;
+				return project.aw;
 			},
 			$author$project$Content$projects)));
 var $elm$core$List$sortBy = _List_sortBy;
@@ -11098,7 +10930,7 @@ var $author$project$Pages$Top$listCategories = function (model) {
 		$author$project$Pages$Top$listCategory(model),
 		$elm$core$List$sort($author$project$Pages$Top$mergeCategories));
 };
-var $author$project$Content$top = {n: 'lorem ipsum dolor sit amet', aP: 'Main page'};
+var $author$project$Content$top = {N: 'lorem ipsum dolor sit amet', aP: 'My Portfolio'};
 var $author$project$Pages$Top$view = function (model) {
 	return {
 		bT: _List_fromArray(
@@ -11265,7 +11097,7 @@ var $author$project$Spa$Generated$Pages$upgrade = F3(
 					$elm$core$Tuple$mapBoth,
 					toModel,
 					$elm$core$Platform$Cmd$map(toMsg),
-					A2(page.ar, shared, model));
+					A2(page.am, shared, model));
 			});
 		var init_ = F2(
 			function (params, shared) {
@@ -11280,11 +11112,11 @@ var $author$project$Spa$Generated$Pages$upgrade = F3(
 			});
 		var bundle_ = function (model) {
 			return {
-				ar: function (_v0) {
+				am: function (_v0) {
 					return load_(model);
 				},
-				az: function (_v1) {
-					return page.az(model);
+				au: function (_v1) {
+					return page.au(model);
 				},
 				cw: function (_v2) {
 					return A2(
@@ -11300,28 +11132,28 @@ var $author$project$Spa$Generated$Pages$upgrade = F3(
 				}
 			};
 		};
-		return {O: bundle_, b6: init_, cA: update_};
+		return {H: bundle_, b6: init_, cA: update_};
 	});
 var $author$project$Spa$Generated$Pages$pages = {
-	al: A3($author$project$Spa$Generated$Pages$upgrade, $author$project$Spa$Generated$Pages$About__Model, $author$project$Spa$Generated$Pages$About__Msg, $author$project$Pages$About$page),
-	ao: A3($author$project$Spa$Generated$Pages$upgrade, $author$project$Spa$Generated$Pages$Contact__Model, $author$project$Spa$Generated$Pages$Contact__Msg, $author$project$Pages$Contact$page),
-	at: A3($author$project$Spa$Generated$Pages$upgrade, $author$project$Spa$Generated$Pages$NotFound__Model, $author$project$Spa$Generated$Pages$NotFound__Msg, $author$project$Pages$NotFound$page),
-	ax: A3($author$project$Spa$Generated$Pages$upgrade, $author$project$Spa$Generated$Pages$Projects__Id_String__Model, $author$project$Spa$Generated$Pages$Projects__Id_String__Msg, $author$project$Pages$Projects$Id_String$page),
-	aA: A3($author$project$Spa$Generated$Pages$upgrade, $author$project$Spa$Generated$Pages$Top__Model, $author$project$Spa$Generated$Pages$Top__Msg, $author$project$Pages$Top$page)
+	ag: A3($author$project$Spa$Generated$Pages$upgrade, $author$project$Spa$Generated$Pages$About__Model, $author$project$Spa$Generated$Pages$About__Msg, $author$project$Pages$About$page),
+	aj: A3($author$project$Spa$Generated$Pages$upgrade, $author$project$Spa$Generated$Pages$Contact__Model, $author$project$Spa$Generated$Pages$Contact__Msg, $author$project$Pages$Contact$page),
+	ao: A3($author$project$Spa$Generated$Pages$upgrade, $author$project$Spa$Generated$Pages$NotFound__Model, $author$project$Spa$Generated$Pages$NotFound__Msg, $author$project$Pages$NotFound$page),
+	as: A3($author$project$Spa$Generated$Pages$upgrade, $author$project$Spa$Generated$Pages$Projects__Id_String__Model, $author$project$Spa$Generated$Pages$Projects__Id_String__Msg, $author$project$Pages$Projects$Id_String$page),
+	av: A3($author$project$Spa$Generated$Pages$upgrade, $author$project$Spa$Generated$Pages$Top__Model, $author$project$Spa$Generated$Pages$Top__Msg, $author$project$Pages$Top$page)
 };
 var $author$project$Spa$Generated$Pages$init = function (route) {
 	switch (route.$) {
 		case 0:
-			return $author$project$Spa$Generated$Pages$pages.aA.b6(0);
+			return $author$project$Spa$Generated$Pages$pages.av.b6(0);
 		case 1:
-			return $author$project$Spa$Generated$Pages$pages.al.b6(0);
+			return $author$project$Spa$Generated$Pages$pages.ag.b6(0);
 		case 2:
-			return $author$project$Spa$Generated$Pages$pages.ao.b6(0);
+			return $author$project$Spa$Generated$Pages$pages.aj.b6(0);
 		case 3:
-			return $author$project$Spa$Generated$Pages$pages.at.b6(0);
+			return $author$project$Spa$Generated$Pages$pages.ao.b6(0);
 		default:
 			var params = route.a;
-			return $author$project$Spa$Generated$Pages$pages.ax.b6(params);
+			return $author$project$Spa$Generated$Pages$pages.as.b6(params);
 	}
 };
 var $author$project$Main$init = F3(
@@ -11351,19 +11183,19 @@ var $author$project$Spa$Generated$Pages$bundle = function (bigModel) {
 	switch (bigModel.$) {
 		case 0:
 			var model = bigModel.a;
-			return $author$project$Spa$Generated$Pages$pages.aA.O(model);
+			return $author$project$Spa$Generated$Pages$pages.av.H(model);
 		case 1:
 			var model = bigModel.a;
-			return $author$project$Spa$Generated$Pages$pages.al.O(model);
+			return $author$project$Spa$Generated$Pages$pages.ag.H(model);
 		case 2:
 			var model = bigModel.a;
-			return $author$project$Spa$Generated$Pages$pages.ao.O(model);
+			return $author$project$Spa$Generated$Pages$pages.aj.H(model);
 		case 3:
 			var model = bigModel.a;
-			return $author$project$Spa$Generated$Pages$pages.at.O(model);
+			return $author$project$Spa$Generated$Pages$pages.ao.H(model);
 		default:
 			var model = bigModel.a;
-			return $author$project$Spa$Generated$Pages$pages.ax.O(model);
+			return $author$project$Spa$Generated$Pages$pages.as.H(model);
 	}
 };
 var $author$project$Spa$Generated$Pages$subscriptions = function (model) {
@@ -11376,11 +11208,11 @@ var $author$project$Main$subscriptions = function (model) {
 				A2(
 				$elm$core$Platform$Sub$map,
 				$author$project$Main$Shared,
-				$author$project$Shared$subscriptions(model.F)),
+				$author$project$Shared$subscriptions(model.x)),
 				A2(
 				$elm$core$Platform$Sub$map,
 				$author$project$Main$Pages,
-				$author$project$Spa$Generated$Pages$subscriptions(model.J))
+				$author$project$Spa$Generated$Pages$subscriptions(model.C))
 			]));
 };
 var $author$project$Spa$Document$toBrowserDocument = function (doc) {
@@ -11389,11 +11221,11 @@ var $author$project$Spa$Document$toBrowserDocument = function (doc) {
 var $author$project$Main$NoOp = {$: 4};
 var $elm$browser$Browser$Navigation$load = _Browser_load;
 var $author$project$Spa$Generated$Pages$load = function (model) {
-	return $author$project$Spa$Generated$Pages$bundle(model).ar(0);
+	return $author$project$Spa$Generated$Pages$bundle(model).am(0);
 };
 var $elm$browser$Browser$Navigation$pushUrl = _Browser_pushUrl;
 var $author$project$Spa$Generated$Pages$save = function (model) {
-	return $author$project$Spa$Generated$Pages$bundle(model).az(0);
+	return $author$project$Spa$Generated$Pages$bundle(model).au(0);
 };
 var $elm$browser$Browser$Dom$setViewport = _Browser_setViewport;
 var $elm$url$Url$addPort = F2(
@@ -11454,7 +11286,7 @@ var $author$project$Spa$Generated$Pages$update = F2(
 					if (!_v0.b.$) {
 						var msg = _v0.a.a;
 						var model = _v0.b.a;
-						return A2($author$project$Spa$Generated$Pages$pages.aA.cA, msg, model);
+						return A2($author$project$Spa$Generated$Pages$pages.av.cA, msg, model);
 					} else {
 						break _v0$5;
 					}
@@ -11462,7 +11294,7 @@ var $author$project$Spa$Generated$Pages$update = F2(
 					if (_v0.b.$ === 1) {
 						var msg = _v0.a.a;
 						var model = _v0.b.a;
-						return A2($author$project$Spa$Generated$Pages$pages.al.cA, msg, model);
+						return A2($author$project$Spa$Generated$Pages$pages.ag.cA, msg, model);
 					} else {
 						break _v0$5;
 					}
@@ -11470,7 +11302,7 @@ var $author$project$Spa$Generated$Pages$update = F2(
 					if (_v0.b.$ === 2) {
 						var msg = _v0.a.a;
 						var model = _v0.b.a;
-						return A2($author$project$Spa$Generated$Pages$pages.ao.cA, msg, model);
+						return A2($author$project$Spa$Generated$Pages$pages.aj.cA, msg, model);
 					} else {
 						break _v0$5;
 					}
@@ -11478,7 +11310,7 @@ var $author$project$Spa$Generated$Pages$update = F2(
 					if (_v0.b.$ === 3) {
 						var msg = _v0.a.a;
 						var model = _v0.b.a;
-						return A2($author$project$Spa$Generated$Pages$pages.at.cA, msg, model);
+						return A2($author$project$Spa$Generated$Pages$pages.ao.cA, msg, model);
 					} else {
 						break _v0$5;
 					}
@@ -11486,7 +11318,7 @@ var $author$project$Spa$Generated$Pages$update = F2(
 					if (_v0.b.$ === 4) {
 						var msg = _v0.a.a;
 						var model = _v0.b.a;
-						return A2($author$project$Spa$Generated$Pages$pages.ax.cA, msg, model);
+						return A2($author$project$Spa$Generated$Pages$pages.as.cA, msg, model);
 					} else {
 						break _v0$5;
 					}
@@ -11509,7 +11341,7 @@ var $author$project$Main$update = F2(
 								[
 									A2(
 									$elm$browser$Browser$Navigation$pushUrl,
-									model.F.b8,
+									model.x.b8,
 									$elm$url$Url$toString(url)),
 									A2(
 									$elm$core$Task$perform,
@@ -11526,7 +11358,7 @@ var $author$project$Main$update = F2(
 				}
 			case 1:
 				var url = msg.a;
-				var original = model.F;
+				var original = model.x;
 				var shared = _Utils_update(
 					original,
 					{cB: url});
@@ -11540,22 +11372,22 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							J: page,
-							F: A2($author$project$Spa$Generated$Pages$save, page, shared)
+							C: page,
+							x: A2($author$project$Spa$Generated$Pages$save, page, shared)
 						}),
 					A2($elm$core$Platform$Cmd$map, $author$project$Main$Pages, pageCmd));
 			case 2:
 				var sharedMsg = msg.a;
-				var _v3 = A2($author$project$Shared$update, sharedMsg, model.F);
+				var _v3 = A2($author$project$Shared$update, sharedMsg, model.x);
 				var shared = _v3.a;
 				var sharedCmd = _v3.b;
-				var _v4 = A2($author$project$Spa$Generated$Pages$load, model.J, shared);
+				var _v4 = A2($author$project$Spa$Generated$Pages$load, model.C, shared);
 				var page = _v4.a;
 				var pageCmd = _v4.b;
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
-						{J: page, F: shared}),
+						{C: page, x: shared}),
 					$elm$core$Platform$Cmd$batch(
 						_List_fromArray(
 							[
@@ -11564,14 +11396,14 @@ var $author$project$Main$update = F2(
 							])));
 			default:
 				var pageMsg = msg.a;
-				var _v5 = A2($author$project$Spa$Generated$Pages$update, pageMsg, model.J);
+				var _v5 = A2($author$project$Spa$Generated$Pages$update, pageMsg, model.C);
 				var page = _v5.a;
 				var pageCmd = _v5.b;
-				var shared = A2($author$project$Spa$Generated$Pages$save, page, model.F);
+				var shared = A2($author$project$Spa$Generated$Pages$save, page, model.x);
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
-						{J: page, F: shared}),
+						{C: page, x: shared}),
 					A2($elm$core$Platform$Cmd$map, $author$project$Main$Pages, pageCmd));
 		}
 	});
@@ -11668,7 +11500,7 @@ var $author$project$Components$Header$view = $author$project$Components$Grid$row
 				]))
 		]));
 var $author$project$Shared$displayBody = function (page) {
-	return (page.aP === 'Main page') ? _List_fromArray(
+	return (page.aP === 'My Portfolio') ? _List_fromArray(
 		[
 			A2(
 			$elm$html$Html$div,
@@ -11714,7 +11546,7 @@ var $author$project$Shared$displayBody = function (page) {
 };
 var $author$project$Shared$view = F2(
 	function (_v0, model) {
-		var page = _v0.J;
+		var page = _v0.C;
 		var toMsg = _v0.cz;
 		return {
 			bT: $author$project$Shared$displayBody(page),
@@ -11728,13 +11560,13 @@ var $author$project$Main$view = function (model) {
 	return A2(
 		$author$project$Shared$view,
 		{
-			J: A2(
+			C: A2(
 				$author$project$Spa$Document$map,
 				$author$project$Main$Pages,
-				$author$project$Spa$Generated$Pages$view(model.J)),
+				$author$project$Spa$Generated$Pages$view(model.C)),
 			cz: $author$project$Main$Shared
 		},
-		model.F);
+		model.x);
 };
 var $author$project$Main$main = $elm$browser$Browser$application(
 	{
