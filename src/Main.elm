@@ -1,11 +1,13 @@
 module Main exposing (main)
 
 import Browser
+import Browser.Dom as Dom
 import Browser.Navigation as Nav
 import Shared exposing (Flags)
 import Spa.Document as Document exposing (Document)
 import Spa.Generated.Pages as Pages
 import Spa.Generated.Route as Route exposing (Route)
+import Task
 import Url exposing (Url)
 
 
@@ -57,14 +59,27 @@ type Msg
     | UrlChanged Url
     | Shared Shared.Msg
     | Pages Pages.Msg
+    | NoOp
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
+        NoOp ->
+            ( model
+            , Cmd.none
+            )
+
         LinkClicked (Browser.Internal url) ->
             ( model
-            , Nav.pushUrl model.shared.key (Url.toString url)
+            , Cmd.batch
+                [ Nav.pushUrl
+                    model.shared.key
+                    (Url.toString url)
+                , Task.perform
+                    (\_ -> NoOp)
+                    (Dom.setViewport 0 0)
+                ]
             )
 
         LinkClicked (Browser.External href) ->

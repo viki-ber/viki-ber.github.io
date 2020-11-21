@@ -11,9 +11,9 @@ module Shared exposing
 import Browser.Navigation exposing (Key)
 import Components.Header
 import Html exposing (..)
-import Html.Attributes exposing (class, href)
+import Html.Attributes exposing (class, href, src)
 import Spa.Document exposing (Document)
-import Spa.Generated.Route as Route
+import Spa.Generated.Route as Route exposing (Route)
 import Url exposing (Url)
 
 
@@ -64,7 +64,9 @@ subscriptions model =
 
 displayBody page =
     if page.title == "Main page" then
-        [ div [ class "filler" ] []
+        [ div [ class "filler" ]
+            [ div [ class "logo" ] []
+            ]
         , div [ class "body-container" ]
             [ Components.Header.view
             , div [] page.body

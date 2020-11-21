@@ -223,9 +223,6 @@ view model =
     { title = Content.top.title
     , body =
         [ div [ class "grid-row", class "grid-top-margin" ]
-            -- [ div [ class "grid-left-column" ]
-            --     [ div [ class "left-container-menu" ] (listCategories model)
-            --     ]
             [ div [ class "main-body" ]
                 [ div [ class "left-container-menu" ] (listCategories model)
                 , displayCategoryHeader model
