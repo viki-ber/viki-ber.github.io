@@ -11386,6 +11386,7 @@ var $author$project$Main$subscriptions = function (model) {
 var $author$project$Spa$Document$toBrowserDocument = function (doc) {
 	return {bT: doc.bT, aP: doc.aP};
 };
+var $author$project$Main$NoOp = {$: 4};
 var $elm$browser$Browser$Navigation$load = _Browser_load;
 var $author$project$Spa$Generated$Pages$load = function (model) {
 	return $author$project$Spa$Generated$Pages$bundle(model).ar(0);
@@ -11394,6 +11395,7 @@ var $elm$browser$Browser$Navigation$pushUrl = _Browser_pushUrl;
 var $author$project$Spa$Generated$Pages$save = function (model) {
 	return $author$project$Spa$Generated$Pages$bundle(model).az(0);
 };
+var $elm$browser$Browser$Dom$setViewport = _Browser_setViewport;
 var $elm$url$Url$addPort = F2(
 	function (maybePort, starter) {
 		if (maybePort.$ === 1) {
@@ -11495,15 +11497,27 @@ var $author$project$Spa$Generated$Pages$update = F2(
 var $author$project$Main$update = F2(
 	function (msg, model) {
 		switch (msg.$) {
+			case 4:
+				return _Utils_Tuple2(model, $elm$core$Platform$Cmd$none);
 			case 0:
 				if (!msg.a.$) {
 					var url = msg.a.a;
 					return _Utils_Tuple2(
 						model,
-						A2(
-							$elm$browser$Browser$Navigation$pushUrl,
-							model.F.b8,
-							$elm$url$Url$toString(url)));
+						$elm$core$Platform$Cmd$batch(
+							_List_fromArray(
+								[
+									A2(
+									$elm$browser$Browser$Navigation$pushUrl,
+									model.F.b8,
+									$elm$url$Url$toString(url)),
+									A2(
+									$elm$core$Task$perform,
+									function (_v1) {
+										return $author$project$Main$NoOp;
+									},
+									A2($elm$browser$Browser$Dom$setViewport, 0, 0))
+								])));
 				} else {
 					var href = msg.a.a;
 					return _Utils_Tuple2(
@@ -11516,12 +11530,12 @@ var $author$project$Main$update = F2(
 				var shared = _Utils_update(
 					original,
 					{cB: url});
-				var _v1 = A2(
+				var _v2 = A2(
 					$author$project$Spa$Generated$Pages$init,
 					$author$project$Main$fromUrl(url),
 					shared);
-				var page = _v1.a;
-				var pageCmd = _v1.b;
+				var page = _v2.a;
+				var pageCmd = _v2.b;
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
@@ -11532,12 +11546,12 @@ var $author$project$Main$update = F2(
 					A2($elm$core$Platform$Cmd$map, $author$project$Main$Pages, pageCmd));
 			case 2:
 				var sharedMsg = msg.a;
-				var _v2 = A2($author$project$Shared$update, sharedMsg, model.F);
-				var shared = _v2.a;
-				var sharedCmd = _v2.b;
-				var _v3 = A2($author$project$Spa$Generated$Pages$load, model.J, shared);
-				var page = _v3.a;
-				var pageCmd = _v3.b;
+				var _v3 = A2($author$project$Shared$update, sharedMsg, model.F);
+				var shared = _v3.a;
+				var sharedCmd = _v3.b;
+				var _v4 = A2($author$project$Spa$Generated$Pages$load, model.J, shared);
+				var page = _v4.a;
+				var pageCmd = _v4.b;
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
@@ -11550,9 +11564,9 @@ var $author$project$Main$update = F2(
 							])));
 			default:
 				var pageMsg = msg.a;
-				var _v4 = A2($author$project$Spa$Generated$Pages$update, pageMsg, model.J);
-				var page = _v4.a;
-				var pageCmd = _v4.b;
+				var _v5 = A2($author$project$Spa$Generated$Pages$update, pageMsg, model.J);
+				var page = _v5.a;
+				var pageCmd = _v5.b;
 				var shared = A2($author$project$Spa$Generated$Pages$save, page, model.F);
 				return _Utils_Tuple2(
 					_Utils_update(
@@ -11577,7 +11591,8 @@ var $author$project$Components$Header$view = $author$project$Components$Grid$row
 			$elm$html$Html$div,
 			_List_fromArray(
 				[
-					$elm$html$Html$Attributes$class('top-container')
+					$elm$html$Html$Attributes$class('top-container'),
+					$elm$html$Html$Attributes$id('home')
 				]),
 			_List_fromArray(
 				[
@@ -11585,8 +11600,7 @@ var $author$project$Components$Header$view = $author$project$Components$Grid$row
 					$elm$html$Html$div,
 					_List_fromArray(
 						[
-							$elm$html$Html$Attributes$class('top-menu-container'),
-							$elm$html$Html$Attributes$class('adjust-for-grid-left')
+							$elm$html$Html$Attributes$class('top-menu-container')
 						]),
 					_List_fromArray(
 						[
@@ -11650,32 +11664,6 @@ var $author$project$Components$Header$view = $author$project$Components$Grid$row
 											$elm$html$Html$text('Contact')
 										]))
 								]))
-						])),
-					A2(
-					$elm$html$Html$div,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$class('logo-container'),
-							$elm$html$Html$Attributes$class('adjust-for-grid-right')
-						]),
-					_List_fromArray(
-						[
-							A2(
-							$elm$html$Html$a,
-							_List_fromArray(
-								[
-									$elm$html$Html$Attributes$class('logo-linkedin'),
-									$elm$html$Html$Attributes$href('https://se.linkedin.com/in/viktorija-bernataviciute-72456785')
-								]),
-							_List_Nil),
-							A2(
-							$elm$html$Html$a,
-							_List_fromArray(
-								[
-									$elm$html$Html$Attributes$class('logo-instagram'),
-									$elm$html$Html$Attributes$href('https://www.instagram.com/viktorija.graphics/')
-								]),
-							_List_Nil)
 						]))
 				]))
 		]));
@@ -11688,7 +11676,16 @@ var $author$project$Shared$displayBody = function (page) {
 				[
 					$elm$html$Html$Attributes$class('filler')
 				]),
-			_List_Nil),
+			_List_fromArray(
+				[
+					A2(
+					$elm$html$Html$div,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$class('logo')
+						]),
+					_List_Nil)
+				])),
 			A2(
 			$elm$html$Html$div,
 			_List_fromArray(
