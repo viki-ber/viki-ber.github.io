@@ -63,7 +63,7 @@ subscriptions model =
 
 
 displayBody page =
-    if page.title == "Main page" then
+    if page.title == "My Portfolio" then
         [ div [ class "filler" ]
             [ div [ class "logo" ] []
             ]

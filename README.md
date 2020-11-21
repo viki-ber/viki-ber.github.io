@@ -10,17 +10,18 @@ You can get this site up and running with one command:
 npm start
 ```
 
+To manage content edit the file `src/content.elm`
+
 ### Other commands to know
 
 There are a handful of commands in the [package.json](./package.json).
 
-Command | Description
-:-- | :--
-`npm run dev` | Run a dev server and automatically build changes.
-`npm run test:watch` | Run tests as you code.
-`npm run build` | Build the site for production.
-`npm run test` | Run the test suite once, great for CI
-
+| Command              | Description                                       |
+| :------------------- | :------------------------------------------------ |
+| `npm run dev`        | Run a dev server and automatically build changes. |
+| `npm run test:watch` | Run tests as you code.                            |
+| `npm run build`      | Build the site for production.                    |
+| `npm run test`       | Run the test suite once, great for CI             |
 
 ## Deploying
 
@@ -33,7 +34,7 @@ Use `ffmpeg` to encode and scale `.mov` videos to compressed `.mp4` videos. The 
 ```sh
 ffmpeg -an -i <name of input>.mov -vcodec libx264 -pix_fmt yuv420p -profile:v baseline -level 3 -vf scale=1200:-2 <name of output>.mp4
 ```
- 
-__Build command:__ `npm run build`
 
-__Publish directory:__ `public`
+**Build command:** `npm run build`
+
+**Publish directory:** `public`

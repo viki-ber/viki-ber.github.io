@@ -54,8 +54,8 @@ factsContainer project =
             (List.map
                 (\x ->
                     li [ class "project-details-fact" ]
-                        [ strong [] [ text x.name ]
-                        , text (" " ++ x.value)
+                        [ b [] [ text x.name ]
+                        ,  ( (Components.HtmlRenderer.htmlRenderer x.value))
                         ]
                 )
                 project.facts
