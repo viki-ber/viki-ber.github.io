@@ -43,16 +43,16 @@ projects =
       , id = "terraventure"
       , categories = [ "Branding", "UX/UI", "Graphic Design", "All" ]
       , display = "/img/first.jpg"
-      , description = "<strong>Lorem</strong> ipsum dolor sit amet consectetur, adipisicing elit. Totam consectetur atque unde at numquamaccusantium deleniti nihil <i>error reprehenderit expedita</i> eligendi aliquid dicta quia distinctio, esse culpa minus. <br /> <br /> Cumque, totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut in nulla aliquid adipisci corrupti quis fuga ducimus rem aspernatur <a href=\"#\">esse mollitia reprehenderit</a> consequatur minima illum placeat, id libero atque? <br /> <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque iusto odit fugiat rem nihil praesentium ullam magnam nemo, debitis, quibusdam laboriosam sunt optio, quod dignissimos repellendus vitae voluptatum eligendi voluptates?"
+      , description = "<strong></strong> This brief asked to create a branding and UI design for a movie streaming service specialising in outdoor adventure movies. Main inspiration for the design came from modern outdoor, travel and adventure magazines."
       , facts =
-            [ { name = "Duration"
-              , value = "1 week"
-              }
-            , { name = "Date"
-              , value = "YYYY-MM-DD"
+            [  { name = "Date"
+              , value = "October 2020"
               }
             , { name = "Tools"
-              , value = "Free-hand, Sketch, Photoshop"
+              , value = "Photoshop, Illustrator, XD, Rotato"
+              }
+              , { name = "Try:"
+              , value = "<a href='https://xd.adobe.com/view/7e240d0c-6c57-4a8c-9c84-46f290a352e8-2b77/'>Interactive Prototype</a>"
               }
             ]
       , content =
