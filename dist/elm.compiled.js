@@ -9688,6 +9688,7 @@ var $hecrj$html_parser$Html$Parser$run = function (str) {
 		A2($hecrj$html_parser$Html$Parser$oneOrMore, 'node', $hecrj$html_parser$Html$Parser$node),
 		str);
 };
+var $elm$html$Html$span = _VirtualDom_node('span');
 var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
 var $elm$virtual_dom$VirtualDom$node = function (tag) {
@@ -9742,7 +9743,7 @@ var $author$project$Components$HtmlRenderer$htmlRenderer = function (raw) {
 				]);
 		}
 	}();
-	return A2($elm$html$Html$div, _List_Nil, innerHtml);
+	return A2($elm$html$Html$span, _List_Nil, innerHtml);
 };
 var $author$project$Pages$About$view = function (_v0) {
 	var params = _v0.cn;
@@ -9886,6 +9887,7 @@ var $author$project$Pages$NotFound$view = function (_v0) {
 };
 var $author$project$Pages$NotFound$page = $author$project$Spa$Page$static(
 	{cC: $author$project$Pages$NotFound$view});
+var $elm$html$Html$a = _VirtualDom_node('a');
 var $elm$core$List$filter = F2(
 	function (isGood, list) {
 		return A3(
@@ -10037,6 +10039,12 @@ var $author$project$Pages$Projects$Id_String$getProject = function (id) {
 					},
 					$author$project$Content$projects))));
 };
+var $elm$html$Html$Attributes$href = function (url) {
+	return A2(
+		$elm$html$Html$Attributes$stringProperty,
+		'href',
+		_VirtualDom_noJavaScriptUri(url));
+};
 var $elm$json$Json$Encode$bool = _Json_wrap;
 var $elm$html$Html$Attributes$id = $elm$html$Html$Attributes$stringProperty('id');
 var $elm$html$Html$iframe = _VirtualDom_node('iframe');
@@ -10164,7 +10172,7 @@ var $author$project$Pages$Projects$Id_String$factsContainer = function (project)
 									_List_Nil,
 									_List_fromArray(
 										[
-											$elm$html$Html$text(x.A)
+											$elm$html$Html$text(x.A + ' ')
 										])),
 									$author$project$Components$HtmlRenderer$htmlRenderer(x.S)
 								]));
@@ -10264,6 +10272,35 @@ var $author$project$Pages$Projects$Id_String$view = function (_v0) {
 							]),
 						$author$project$Pages$Projects$Id_String$presentProject(
 							$author$project$Pages$Projects$Id_String$getProject(params.aE)))
+					])),
+				A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('menu-container')
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$div,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('menu-item'),
+								$elm$html$Html$Attributes$class('back-to-top')
+							]),
+						_List_fromArray(
+							[
+								A2(
+								$elm$html$Html$a,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$href('')
+									]),
+								_List_fromArray(
+									[
+										$elm$html$Html$text('Back to top')
+									]))
+							]))
 					]))
 			]),
 		aP: $author$project$Pages$Projects$Id_String$getProject(params.aE).A
@@ -10321,7 +10358,6 @@ var $author$project$Pages$Top$update = F2(
 			model,
 			{L: x});
 	});
-var $elm$html$Html$span = _VirtualDom_node('span');
 var $author$project$Pages$Top$displayCategoryHeader = function (model) {
 	return (!(model.L === 'All')) ? A2(
 		$elm$html$Html$div,
@@ -10345,13 +10381,6 @@ var $author$project$Pages$Top$displayCategoryHeader = function (model) {
 var $author$project$Pages$Top$calcRows = function (projects) {
 	return $elm$core$Basics$floor(
 		$elm$core$List$length($author$project$Content$projects) / 3);
-};
-var $elm$html$Html$a = _VirtualDom_node('a');
-var $elm$html$Html$Attributes$href = function (url) {
-	return A2(
-		$elm$html$Html$Attributes$stringProperty,
-		'href',
-		_VirtualDom_noJavaScriptUri(url));
 };
 var $elm$core$String$append = _String_append;
 var $author$project$Spa$Generated$Route$toString = function (route) {
@@ -11407,6 +11436,9 @@ var $author$project$Main$update = F2(
 					A2($elm$core$Platform$Cmd$map, $author$project$Main$Pages, pageCmd));
 		}
 	});
+var $author$project$Shared$shouldShowBanner = function (url) {
+	return ($elm$url$Url$toString(url) === 'http://localhost:8000/') || ($elm$url$Url$toString(url) === 'https://viktorija.graphics/');
+};
 var $author$project$Components$Grid$row = function (content) {
 	return A2(
 		$elm$html$Html$div,
@@ -11432,7 +11464,7 @@ var $author$project$Components$Header$view = $author$project$Components$Grid$row
 					$elm$html$Html$div,
 					_List_fromArray(
 						[
-							$elm$html$Html$Attributes$class('top-menu-container')
+							$elm$html$Html$Attributes$class('menu-container')
 						]),
 					_List_fromArray(
 						[
@@ -11440,7 +11472,7 @@ var $author$project$Components$Header$view = $author$project$Components$Grid$row
 							$elm$html$Html$div,
 							_List_fromArray(
 								[
-									$elm$html$Html$Attributes$class('top-menu-item')
+									$elm$html$Html$Attributes$class('menu-item')
 								]),
 							_List_fromArray(
 								[
@@ -11449,7 +11481,7 @@ var $author$project$Components$Header$view = $author$project$Components$Grid$row
 									_List_fromArray(
 										[
 											$elm$html$Html$Attributes$href(
-											$author$project$Spa$Generated$Route$toString($author$project$Spa$Generated$Route$Top))
+											$author$project$Spa$Generated$Route$toString($author$project$Spa$Generated$Route$Top) + '#')
 										]),
 									_List_fromArray(
 										[
@@ -11460,7 +11492,7 @@ var $author$project$Components$Header$view = $author$project$Components$Grid$row
 							$elm$html$Html$div,
 							_List_fromArray(
 								[
-									$elm$html$Html$Attributes$class('top-menu-item')
+									$elm$html$Html$Attributes$class('menu-item')
 								]),
 							_List_fromArray(
 								[
@@ -11480,7 +11512,7 @@ var $author$project$Components$Header$view = $author$project$Components$Grid$row
 							$elm$html$Html$div,
 							_List_fromArray(
 								[
-									$elm$html$Html$Attributes$class('top-menu-item')
+									$elm$html$Html$Attributes$class('menu-item')
 								]),
 							_List_fromArray(
 								[
@@ -11499,57 +11531,58 @@ var $author$project$Components$Header$view = $author$project$Components$Grid$row
 						]))
 				]))
 		]));
-var $author$project$Shared$displayBody = function (page) {
-	return (page.aP === 'My Portfolio') ? _List_fromArray(
-		[
-			A2(
-			$elm$html$Html$div,
-			_List_fromArray(
-				[
-					$elm$html$Html$Attributes$class('filler')
-				]),
-			_List_fromArray(
-				[
-					A2(
-					$elm$html$Html$div,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$class('logo')
-						]),
-					_List_Nil)
-				])),
-			A2(
-			$elm$html$Html$div,
-			_List_fromArray(
-				[
-					$elm$html$Html$Attributes$class('body-container')
-				]),
-			_List_fromArray(
-				[
-					$author$project$Components$Header$view,
-					A2($elm$html$Html$div, _List_Nil, page.bT)
-				]))
-		]) : _List_fromArray(
-		[
-			A2(
-			$elm$html$Html$div,
-			_List_fromArray(
-				[
-					$elm$html$Html$Attributes$class('body-container')
-				]),
-			_List_fromArray(
-				[
-					$author$project$Components$Header$view,
-					A2($elm$html$Html$div, _List_Nil, page.bT)
-				]))
-		]);
-};
+var $author$project$Shared$displayBody = F2(
+	function (page, model) {
+		return $author$project$Shared$shouldShowBanner(model.cB) ? _List_fromArray(
+			[
+				A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('filler')
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$div,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('logo')
+							]),
+						_List_Nil)
+					])),
+				A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('body-container')
+					]),
+				_List_fromArray(
+					[
+						$author$project$Components$Header$view,
+						A2($elm$html$Html$div, _List_Nil, page.bT)
+					]))
+			]) : _List_fromArray(
+			[
+				A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('body-container')
+					]),
+				_List_fromArray(
+					[
+						$author$project$Components$Header$view,
+						A2($elm$html$Html$div, _List_Nil, page.bT)
+					]))
+			]);
+	});
 var $author$project$Shared$view = F2(
 	function (_v0, model) {
 		var page = _v0.C;
 		var toMsg = _v0.cz;
 		return {
-			bT: $author$project$Shared$displayBody(page),
+			bT: A2($author$project$Shared$displayBody, page, model),
 			aP: page.aP
 		};
 	});

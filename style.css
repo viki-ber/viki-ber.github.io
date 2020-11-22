@@ -87,12 +87,12 @@ a:visited:not(#exclude) {
   justify-content: center;
 }
 
-.top-menu-container {
+.menu-container {
   display: flex;
   /* border: 1px solid black; */
 }
 
-.top-menu-item {
+.menu-item {
   font-family: "Bebas Neue", sans-serif;
   font-size: 3em;
   /* border: 1px solid black; */
@@ -101,18 +101,18 @@ a:visited:not(#exclude) {
 }
 
 @media all and (max-width: 1199px) {
-  .top-menu-item {
+  .menu-item {
     font-size: 23px;
     margin-right: 0em;
   }
 }
 
-.top-menu-item:last-child {
+.menu-item:last-child {
   margin-right: 0;
 }
 
-.top-menu-item a::before,
-.top-menu-item a::after {
+.menu-item a::before,
+.menu-item a::after {
   display: inline-block;
   opacity: 0;
   -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
@@ -120,7 +120,7 @@ a:visited:not(#exclude) {
   transition: transform 0.3s, opacity 0.2s;
 }
 
-.top-menu-item a::before {
+.menu-item a::before {
   margin-right: 10px;
   content: "[";
   -webkit-transform: translateX(20px);
@@ -128,7 +128,7 @@ a:visited:not(#exclude) {
   transform: translateX(20px);
 }
 
-.top-menu-item a::after {
+.menu-item a::after {
   margin-left: 10px;
   content: "]";
   -webkit-transform: translateX(-20px);
@@ -136,10 +136,10 @@ a:visited:not(#exclude) {
   transform: translateX(-20px);
 }
 
-.top-menu-item a:hover::before,
-.top-menu-item a:hover::after,
-.top-menu-item a:focus::before,
-.top-menu-item a:focus::after {
+.menu-item a:hover::before,
+.menu-item a:hover::after,
+.menu-item a:focus::before,
+.menu-item a:focus::after {
   opacity: 1;
   -webkit-transform: translateX(0px);
   -moz-transform: translateX(0px);
