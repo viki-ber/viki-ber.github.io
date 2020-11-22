@@ -64,7 +64,7 @@ projects =
               }
             , { graphic = "/img/mockup_2.jpg"
               }
-            , { graphic = "/img/trailer.mp4"
+            , { graphic = "/img/terraventure/movie2.mp4"
               }
             ]
       }
