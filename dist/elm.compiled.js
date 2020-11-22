@@ -9990,13 +9990,13 @@ var $author$project$Content$projects = _List_fromArray(
 				{r: '/img/mockup_2.jpg'},
 				{r: '/img/terraventure/movie2.mp4'}
 			]),
-		al: '<strong>Lorem</strong> ipsum dolor sit amet consectetur, adipisicing elit. Totam consectetur atque unde at numquamaccusantium deleniti nihil <i>error reprehenderit expedita</i> eligendi aliquid dicta quia distinctio, esse culpa minus. <br /> <br /> Cumque, totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut in nulla aliquid adipisci corrupti quis fuga ducimus rem aspernatur <a href=\"#\">esse mollitia reprehenderit</a> consequatur minima illum placeat, id libero atque? <br /> <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque iusto odit fugiat rem nihil praesentium ullam magnam nemo, debitis, quibusdam laboriosam sunt optio, quod dignissimos repellendus vitae voluptatum eligendi voluptates?',
+		al: '<strong></strong> This brief asked to create a branding and UI design for a movie streaming service specialising in outdoor adventure movies. Main inspiration for the design came from modern outdoor, travel and adventure magazines.',
 		am: '/img/first.jpg',
 		an: _List_fromArray(
 			[
-				{s: 'Duration', H: '1 week'},
-				{s: 'Date', H: 'YYYY-MM-DD'},
-				{s: 'Tools', H: 'Free-hand, Sketch, Photoshop'}
+				{s: 'Date', H: 'October 2020'},
+				{s: 'Tools', H: 'Photoshop, Illustrator, XD, Rotato'},
+				{s: 'Try:', H: '<a href=\'https://xd.adobe.com/view/7e240d0c-6c57-4a8c-9c84-46f290a352e8-2b77/\'>Interactive Prototype</a>'}
 			]),
 		ap: 'terraventure',
 		s: 'Terra Venture'
