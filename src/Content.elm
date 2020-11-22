@@ -97,6 +97,29 @@ projects =
               }
             , { graphic = "/img/esca/page3.jpg"
               }
+            ]
+      }
+              ,{ name = "It's fika time"
+      , id = "fika"
+      , categories = [  "Graphic Design", "All" ]
+      , display = "/img/fikatime/display.jpg"
+      , description = "This creative brief asked to produce any piece of design, adhering to only one constraint - the design had to be produced using only HTML and CSS languages. I chose to create a set of graphical elements inspired by Swedish folk art. These elements can then be mixed and matched to produce various patters that can be applied to different everyday objects. "
+      , facts =
+            [  { name = "Date:"
+              , value = "November 2020"
+              }
+            , { name = "Tools:"
+              , value = "HTML, CSS, Photoshop (for muckups only)"
+              }
+              
+            ]
+      , content =
+            [ { graphic = "/img/fikatime/image1.jpg"
+              }
+              
+              ,{ graphic = "/img/fikatime/image2.jpg"
+              }
+              
             
             ]
       }
