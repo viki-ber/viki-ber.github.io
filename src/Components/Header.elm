@@ -10,16 +10,10 @@ view : Html msg
 view =
     Components.Grid.row
         [ div [ class "top-container", id "home" ]
-            [ div [ class "top-menu-container" ]
-                --, class "adjust-for-grid-left" ]
-                [ div [ class "top-menu-item" ] [ a [ href (Route.toString Route.Top) ] [ text "Projects" ] ]
-                , div [ class "top-menu-item" ] [ a [ href (Route.toString Route.About) ] [ text "About" ] ]
-                , div [ class "top-menu-item" ] [ a [ href (Route.toString Route.Contact) ] [ text "Contact" ] ]
+            [ div [ class "menu-container" ]
+                [ div [ class "menu-item" ] [ a [ href (Route.toString Route.Top ++ "#") ] [ text "Projects" ] ] -- Yeah taking a ugly shortcut here to hide the main banner
+                , div [ class "menu-item" ] [ a [ href (Route.toString Route.About) ] [ text "About" ] ]
+                , div [ class "menu-item" ] [ a [ href (Route.toString Route.Contact) ] [ text "Contact" ] ]
                 ]
-
-            -- , div [ class "logo-container", class "adjust-for-grid-right" ]
-            --     [ a [ class "logo-linkedin", href "https://se.linkedin.com/in/viktorija-bernataviciute-72456785" ] []
-            --     , a [ class "logo-instagram", href "https://www.instagram.com/viktorija.graphics/" ] []
-            --     ]
             ]
         ]

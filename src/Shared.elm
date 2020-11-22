@@ -62,8 +62,13 @@ subscriptions model =
 -- VIEW
 
 
-displayBody page =
-    if page.title == "My Portfolio" then
+shouldShowBanner url =
+    -- Part of ugly shortcut to hide banner on non-direct links
+    Url.toString url == "http://localhost:8000/" || Url.toString url == "https://viktorija.graphics/"
+
+
+displayBody page model =
+    if shouldShowBanner model.url then
         [ div [ class "filler" ]
             [ div [ class "logo" ] []
             ]
@@ -87,5 +92,5 @@ view :
     -> Document msg
 view { page, toMsg } model =
     { title = page.title
-    , body = displayBody page
+    , body = displayBody page model
     }

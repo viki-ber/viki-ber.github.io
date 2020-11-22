@@ -16,4 +16,4 @@ htmlRenderer raw =
                 Err _ ->
                     [ text "ERROR RENDERING HTML" ]
     in
-    div [] innerHtml
+    span [] innerHtml

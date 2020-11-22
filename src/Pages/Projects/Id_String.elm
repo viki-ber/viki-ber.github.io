@@ -54,8 +54,8 @@ factsContainer project =
             (List.map
                 (\x ->
                     li [ class "project-details-fact" ]
-                        [ b [] [ text x.name ]
-                        ,  ( (Components.HtmlRenderer.htmlRenderer x.value))
+                        [ b [] [ text (x.name ++ " ") ]
+                        , Components.HtmlRenderer.htmlRenderer x.value
                         ]
                 )
                 project.facts
@@ -143,6 +143,9 @@ view { params } =
                 (presentProject
                     (getProject params.id)
                 )
+            ]
+        , div [ class "menu-container" ]
+            [ div [ class "menu-item", class "back-to-top" ] [ a [ href "" ] [ text "Back to top" ] ]
             ]
         ]
     }
