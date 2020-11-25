@@ -784,11 +784,11 @@ function _Debug_crash_UNUSED(identifier, fact1, fact2, fact3, fact4)
 
 function _Debug_regionToString(region)
 {
-	if (region.aL._ === region.aZ._)
+	if (region.aL.ae === region.aZ.ae)
 	{
-		return 'on line ' + region.aL._;
+		return 'on line ' + region.aL.ae;
 	}
-	return 'on lines ' + region.aL._ + ' through ' + region.aZ._;
+	return 'on lines ' + region.aL.ae + ' through ' + region.aZ.ae;
 }
 
 
@@ -2704,7 +2704,7 @@ var _VirtualDom_mapEventTuple = F2(function(func, tuple)
 var _VirtualDom_mapEventRecord = F2(function(func, record)
 {
 	return {
-		E: func(record.E),
+		G: func(record.G),
 		aM: record.aM,
 		aJ: record.aJ
 	}
@@ -2974,7 +2974,7 @@ function _VirtualDom_makeCallback(eventNode, initialHandler)
 		// 3 = Custom
 
 		var value = result.a;
-		var message = !tag ? value : tag < 3 ? value.a : value.E;
+		var message = !tag ? value : tag < 3 ? value.a : value.G;
 		var stopPropagation = tag == 1 ? value.b : tag == 3 && value.aM;
 		var currentEventNode = (
 			stopPropagation && event.stopPropagation(),
@@ -5335,7 +5335,7 @@ var $elm$core$Basics$composeR = F3(
 	});
 var $author$project$Main$Model = F2(
 	function (shared, page) {
-		return {C: page, y: shared};
+		return {D: page, y: shared};
 	});
 var $author$project$Main$Pages = function (a) {
 	return {$: 3, a: a};
@@ -5347,7 +5347,7 @@ var $elm$core$Platform$Cmd$batch = _Platform_batch;
 var $author$project$Spa$Generated$Route$NotFound = {$: 3};
 var $elm$url$Url$Parser$State = F5(
 	function (visited, unvisited, params, frag, value) {
-		return {K: frag, cn: params, G: unvisited, H: value, O: visited};
+		return {K: frag, cn: params, I: unvisited, z: value, O: visited};
 	});
 var $elm$url$Url$Parser$getFirstMatch = function (states) {
 	getFirstMatch:
@@ -5357,12 +5357,12 @@ var $elm$url$Url$Parser$getFirstMatch = function (states) {
 		} else {
 			var state = states.a;
 			var rest = states.b;
-			var _v1 = state.G;
+			var _v1 = state.I;
 			if (!_v1.b) {
-				return $elm$core$Maybe$Just(state.H);
+				return $elm$core$Maybe$Just(state.z);
 			} else {
 				if ((_v1.a === '') && (!_v1.b.b)) {
-					return $elm$core$Maybe$Just(state.H);
+					return $elm$core$Maybe$Just(state.z);
 				} else {
 					var $temp$states = rest;
 					states = $temp$states;
@@ -5989,10 +5989,10 @@ var $elm$url$Url$Parser$Parser = $elm$core$Basics$identity;
 var $elm$url$Url$Parser$mapState = F2(
 	function (func, _v0) {
 		var visited = _v0.O;
-		var unvisited = _v0.G;
+		var unvisited = _v0.I;
 		var params = _v0.cn;
 		var frag = _v0.K;
-		var value = _v0.H;
+		var value = _v0.z;
 		return A5(
 			$elm$url$Url$Parser$State,
 			visited,
@@ -6006,10 +6006,10 @@ var $elm$url$Url$Parser$map = F2(
 		var parseArg = _v0;
 		return function (_v1) {
 			var visited = _v1.O;
-			var unvisited = _v1.G;
+			var unvisited = _v1.I;
 			var params = _v1.cn;
 			var frag = _v1.K;
-			var value = _v1.H;
+			var value = _v1.z;
 			return A2(
 				$elm$core$List$map,
 				$elm$url$Url$Parser$mapState(value),
@@ -6047,10 +6047,10 @@ var $elm$url$Url$Parser$oneOf = function (parsers) {
 var $elm$url$Url$Parser$s = function (str) {
 	return function (_v0) {
 		var visited = _v0.O;
-		var unvisited = _v0.G;
+		var unvisited = _v0.I;
 		var params = _v0.cn;
 		var frag = _v0.K;
-		var value = _v0.H;
+		var value = _v0.z;
 		if (!unvisited.b) {
 			return _List_Nil;
 		} else {
@@ -6084,10 +6084,10 @@ var $elm$url$Url$Parser$custom = F2(
 	function (tipe, stringToSomething) {
 		return function (_v0) {
 			var visited = _v0.O;
-			var unvisited = _v0.G;
+			var unvisited = _v0.I;
 			var params = _v0.cn;
 			var frag = _v0.K;
-			var value = _v0.H;
+			var value = _v0.z;
 			if (!unvisited.b) {
 				return _List_Nil;
 			} else {
@@ -6139,7 +6139,7 @@ var $author$project$Spa$Generated$Route$routes = $elm$url$Url$Parser$oneOf(
 			A2(
 				$elm$url$Url$Parser$map,
 				function (id) {
-					return {ap: id};
+					return {ad: id};
 				},
 				A2(
 					$elm$url$Url$Parser$slash,
@@ -6229,7 +6229,7 @@ var $author$project$Spa$Page$static = function (page) {
 		cC: page.cC
 	};
 };
-var $author$project$Content$about = {J: 'This is me.<br /><br />Chef, turned food developer, turned graphic designer. <br /><br />Ever since I can remember, art has always played a huge part in my life - spending hours drawing in my room, visiting art galleries and exhibitions, as well as finishing one of Lithuania’s most prestigious art schools. <br /><br />When my career took me on a route working with food, I embraced it as a creative form of expression and truly enjoyed every moment of it.<br /><br />However, my passion for art, and especially graphic design, has never left me. And so here I am today - with a strong determination to learn and face challenges on the route to being the best designer that I can be.<br />', aP: 'About Me'};
+var $author$project$Content$about = {F: 'This is me.<br /><br />Chef, turned food developer, turned graphic designer. <br /><br />Ever since I can remember, art has always played a huge part in my life - spending hours drawing in my room, visiting art galleries and exhibitions, as well as finishing one of Lithuania’s most prestigious art schools. <br /><br />When my career took me on a route working with food, I embraced it as a creative form of expression and truly enjoyed every moment of it.<br /><br />However, my passion for art, and especially graphic design, has never left me. And so here I am today - with a strong determination to learn and face challenges on the route to being the best designer that I can be.<br />', aP: 'About Me'};
 var $elm$json$Json$Encode$string = _Json_wrap;
 var $elm$html$Html$Attributes$stringProperty = F2(
 	function (key, string) {
@@ -9798,7 +9798,7 @@ var $author$project$Pages$About$view = function (_v0) {
 													]),
 												_List_fromArray(
 													[
-														$author$project$Components$HtmlRenderer$htmlRenderer($author$project$Content$about.J)
+														$author$project$Components$HtmlRenderer$htmlRenderer($author$project$Content$about.F)
 													]))
 											]))
 									]))
@@ -9810,7 +9810,7 @@ var $author$project$Pages$About$view = function (_v0) {
 };
 var $author$project$Pages$About$page = $author$project$Spa$Page$static(
 	{cC: $author$project$Pages$About$view});
-var $author$project$Content$contact = {J: 'I am happy to hear about possible work orders or potential collaborations. If you would like to see my professional CV, do not hesitate to ask. You can drop me a line on:<br /><br /><span class=\"email-link\"><a href=\"mailto:hello@viktorija.graphics\">hello@viktorija.graphics</a></span><br /><br />You are also welcome to contact me via my social media accounts.', aP: 'Contact Me'};
+var $author$project$Content$contact = {F: 'I am happy to hear about possible work orders or potential collaborations. If you would like to see my professional CV, do not hesitate to ask. You can drop me a line on:<br /><br /><span class=\"email-link\"><a href=\"mailto:hello@viktorija.graphics\">hello@viktorija.graphics</a></span><br /><br />You are also welcome to contact me via my social media accounts.', aP: 'Contact Me'};
 var $author$project$Pages$Contact$view = function (_v0) {
 	var params = _v0.cn;
 	return {
@@ -9856,7 +9856,7 @@ var $author$project$Pages$Contact$view = function (_v0) {
 													]),
 												_List_fromArray(
 													[
-														$author$project$Components$HtmlRenderer$htmlRenderer($author$project$Content$contact.J)
+														$author$project$Components$HtmlRenderer$htmlRenderer($author$project$Content$contact.F)
 													]))
 											]))
 									]))
@@ -9976,70 +9976,89 @@ var $elm$core$Array$get = F2(
 			A2($elm$core$Elm$JsArray$unsafeGet, $elm$core$Array$bitMask & index, tail)) : $elm$core$Maybe$Just(
 			A3($elm$core$Array$getHelp, startShift, index, tree)));
 	});
-var $author$project$Pages$Projects$Id_String$notFound = {aj: _List_Nil, J: _List_Nil, al: 'Not found', am: '', an: _List_Nil, ap: 'not_found', s: 'NOT FOUND'};
+var $author$project$Pages$Projects$Id_String$notFound = {X: _List_Nil, F: _List_Nil, _: 'Not found', aa: '', ac: _List_Nil, ad: 'not_found', m: 'NOT FOUND'};
 var $author$project$Content$projects = _List_fromArray(
 	[
 		{
-		aj: _List_fromArray(
+		X: _List_fromArray(
 			['Branding', 'UX/UI', 'Graphic Design', 'All']),
-		J: _List_fromArray(
+		F: _List_fromArray(
 			[
-				{r: '/img/first.jpg'},
-				{r: '/img/graphic_profile_light.jpg'},
-				{r: '/img/graphic_profile_dark.jpg'},
-				{r: '/img/mockup_2.jpg'},
-				{r: '/img/terraventure/movie2.mp4'}
+				{k: '/img/first.jpg'},
+				{k: '/img/graphic_profile_light.jpg'},
+				{k: '/img/graphic_profile_dark.jpg'},
+				{k: '/img/mockup_2.jpg'},
+				{k: '/img/terraventure/movie2.mp4'}
 			]),
-		al: '<strong></strong> This brief asked to create a branding and UI design for a movie streaming service specialising in outdoor adventure movies. Main inspiration for the design came from modern outdoor, travel and adventure magazines.',
-		am: '/img/first.jpg',
-		an: _List_fromArray(
+		_: '<strong></strong> This brief asked to create a branding and UI design for a movie streaming service specialising in outdoor adventure movies. Main inspiration for the design came from modern outdoor, travel and adventure magazines.',
+		aa: '/img/first.jpg',
+		ac: _List_fromArray(
 			[
-				{s: 'Date', H: 'October 2020'},
-				{s: 'Tools', H: 'Photoshop, Illustrator, XD, Rotato'},
-				{s: 'Try:', H: '<a href=\'https://xd.adobe.com/view/7e240d0c-6c57-4a8c-9c84-46f290a352e8-2b77/\'>Interactive Prototype</a>'}
+				{m: 'Date', z: 'October 2020'},
+				{m: 'Tools', z: 'Photoshop, Illustrator, XD, Rotato'},
+				{m: 'Try:', z: '<a href=\'https://xd.adobe.com/view/7e240d0c-6c57-4a8c-9c84-46f290a352e8-2b77/\'>Interactive Prototype</a>'}
 			]),
-		ap: 'terraventure',
-		s: 'Terra Venture'
+		ad: 'terraventure',
+		m: 'Terra Venture'
 	},
 		{
-		aj: _List_fromArray(
+		X: _List_fromArray(
 			['Branding', 'UX/UI', 'Graphic Design', 'All']),
-		J: _List_fromArray(
+		F: _List_fromArray(
 			[
-				{r: '/img/esca/logo.mp4'},
-				{r: '/img/esca/page2.jpg'},
-				{r: '/img/esca/micro.mp4'},
-				{r: '/img/esca/ui_movie.mp4'},
-				{r: '/img/esca/page3.jpg'}
+				{k: '/img/esca/logo.mp4'},
+				{k: '/img/esca/page2.jpg'},
+				{k: '/img/esca/micro.mp4'},
+				{k: '/img/esca/ui_movie.mp4'},
+				{k: '/img/esca/page3.jpg'}
 			]),
-		al: 'The brief for this project was to create a branding and an e-commerce website for a company selling premium food products',
-		am: '/img/esca/display.png',
-		an: _List_fromArray(
+		_: 'The brief for this project was to create a branding and an e-commerce website for a company selling premium food products',
+		aa: '/img/esca/display.png',
+		ac: _List_fromArray(
 			[
-				{s: 'Date:', H: 'October 2020'},
-				{s: 'Tools:', H: 'Photoshop, XD, Illustrator, Rotato'},
-				{s: 'Try:', H: '<a href=\'https://xd.adobe.com/view/037c0fc6-01c4-41d5-a0d8-a77733748a4b-562f/\'>Interactive Prototype</a>'}
+				{m: 'Date:', z: 'October 2020'},
+				{m: 'Tools:', z: 'Photoshop, XD, Illustrator, Rotato'},
+				{m: 'Try:', z: '<a href=\'https://xd.adobe.com/view/037c0fc6-01c4-41d5-a0d8-a77733748a4b-562f/\'>Interactive Prototype</a>'}
 			]),
-		ap: 'esca',
-		s: 'Esca'
+		ad: 'esca',
+		m: 'Esca'
 	},
 		{
-		aj: _List_fromArray(
+		X: _List_fromArray(
 			['Graphic Design', 'All']),
-		J: _List_fromArray(
+		F: _List_fromArray(
 			[
-				{r: '/img/fikatime/image1.jpg'},
-				{r: '/img/fikatime/image2.jpg'}
+				{k: '/img/fikatime/image1.jpg'},
+				{k: '/img/fikatime/image2.jpg'}
 			]),
-		al: 'This creative brief asked to produce any piece of design, adhering to only one constraint - the design had to be produced using only HTML and CSS languages. I chose to create a set of graphical elements inspired by Swedish folk art. These elements can then be mixed and matched to produce various patters that can be applied to different everyday objects. ',
-		am: '/img/fikatime/display.jpg',
-		an: _List_fromArray(
+		_: 'This creative brief asked to produce any piece of design, adhering to only one constraint - the design had to be produced using only HTML and CSS languages. I chose to create a set of graphical elements inspired by Swedish folk art. These elements can then be mixed and matched to produce various patters that can be applied to different everyday objects. ',
+		aa: '/img/fikatime/display.jpg',
+		ac: _List_fromArray(
 			[
-				{s: 'Date:', H: 'November 2020'},
-				{s: 'Tools:', H: 'HTML, CSS, Photoshop (for muckups only)'}
+				{m: 'Date:', z: 'November 2020'},
+				{m: 'Tools:', z: 'HTML, CSS, Photoshop (for muckups only)'}
 			]),
-		ap: 'fika',
-		s: 'It\'s fika time'
+		ad: 'fika',
+		m: 'It\'s fika time'
+	},
+		{
+		X: _List_fromArray(
+			['Graphic Design', 'All', 'UX/UI']),
+		F: _List_fromArray(
+			[
+				{k: '/img/colourgrabber/movie1.mp4'},
+				{k: '/img/colourgrabber/image1.jpg'},
+				{k: '/img/colourgrabber/movie2.mp4'}
+			]),
+		_: 'In this brief I had to create a device specific graphic user interface and its assets. I chose to create an interface for a colour capturing application and used neumorphic style as inspiration for a clean and minimatistic look, where the captured colour is the main focus. ',
+		aa: '/img/colourgrabber/display.png',
+		ac: _List_fromArray(
+			[
+				{m: 'Date:', z: 'November 2020'},
+				{m: 'Tools:', z: 'XD'}
+			]),
+		ad: 'colourgrabber',
+		m: 'Colour Grabber'
 	}
 	]);
 var $author$project$Pages$Projects$Id_String$getProject = function (id) {
@@ -10053,7 +10072,7 @@ var $author$project$Pages$Projects$Id_String$getProject = function (id) {
 				A2(
 					$elm$core$List$filter,
 					function (x) {
-						return _Utils_eq(x.ap, id);
+						return _Utils_eq(x.ad, id);
 					},
 					$author$project$Content$projects))));
 };
@@ -10155,9 +10174,9 @@ var $author$project$Pages$Projects$Id_String$content = function (media) {
 		A2(
 			$elm$core$List$map,
 			function (x) {
-				return $author$project$Pages$Projects$Id_String$renderMedia(x.r);
+				return $author$project$Pages$Projects$Id_String$renderMedia(x.k);
 			},
-			media.J));
+			media.F));
 };
 var $elm$html$Html$b = _VirtualDom_node('b');
 var $elm$html$Html$li = _VirtualDom_node('li');
@@ -10190,12 +10209,12 @@ var $author$project$Pages$Projects$Id_String$factsContainer = function (project)
 									_List_Nil,
 									_List_fromArray(
 										[
-											$elm$html$Html$text(x.s + ' ')
+											$elm$html$Html$text(x.m + ' ')
 										])),
-									$author$project$Components$HtmlRenderer$htmlRenderer(x.H)
+									$author$project$Components$HtmlRenderer$htmlRenderer(x.z)
 								]));
 					},
-					project.an))
+					project.ac))
 			]));
 };
 var $elm$html$Html$Attributes$for = $elm$html$Html$Attributes$stringProperty('htmlFor');
@@ -10217,7 +10236,7 @@ var $author$project$Pages$Projects$Id_String$presentProject = function (project)
 					_List_Nil,
 					_List_fromArray(
 						[
-							$elm$html$Html$text(project.s)
+							$elm$html$Html$text(project.m)
 						])),
 					A2(
 					$elm$html$Html$label,
@@ -10261,7 +10280,7 @@ var $author$project$Pages$Projects$Id_String$presentProject = function (project)
 						]),
 					_List_fromArray(
 						[
-							$author$project$Components$HtmlRenderer$htmlRenderer(project.al)
+							$author$project$Components$HtmlRenderer$htmlRenderer(project._)
 						])),
 					$author$project$Pages$Projects$Id_String$factsContainer(project)
 				])),
@@ -10289,7 +10308,7 @@ var $author$project$Pages$Projects$Id_String$view = function (_v0) {
 								$elm$html$Html$Attributes$class('main-body')
 							]),
 						$author$project$Pages$Projects$Id_String$presentProject(
-							$author$project$Pages$Projects$Id_String$getProject(params.ap)))
+							$author$project$Pages$Projects$Id_String$getProject(params.ad)))
 					])),
 				A2(
 				$elm$html$Html$div,
@@ -10321,7 +10340,7 @@ var $author$project$Pages$Projects$Id_String$view = function (_v0) {
 							]))
 					]))
 			]),
-		aP: $author$project$Pages$Projects$Id_String$getProject(params.ap).s
+		aP: $author$project$Pages$Projects$Id_String$getProject(params.ad).m
 	};
 };
 var $author$project$Pages$Projects$Id_String$page = $author$project$Spa$Page$static(
@@ -10416,7 +10435,7 @@ var $author$project$Spa$Generated$Route$toString = function (route) {
 				return _List_fromArray(
 					['not-found']);
 			default:
-				var id = route.a.ap;
+				var id = route.a.ad;
 				return _List_fromArray(
 					['projects', id]);
 		}
@@ -10440,7 +10459,7 @@ var $author$project$Pages$Top$displayProject = function (project) {
 						$elm$html$Html$Attributes$href(
 						$author$project$Spa$Generated$Route$toString(
 							$author$project$Spa$Generated$Route$Projects__Id_String(
-								{ap: project.ap})))
+								{ad: project.ad})))
 					]),
 				_List_fromArray(
 					[
@@ -10448,7 +10467,7 @@ var $author$project$Pages$Top$displayProject = function (project) {
 						$elm$html$Html$img,
 						_List_fromArray(
 							[
-								$elm$html$Html$Attributes$src(project.am)
+								$elm$html$Html$Attributes$src(project.aa)
 							]),
 						_List_Nil)
 					]))
@@ -10832,7 +10851,7 @@ var $author$project$Pages$Top$filterProjects = function (model) {
 	return A2(
 		$elm$core$List$filter,
 		function (x) {
-			return A2($elm$core$List$member, model.N, x.aj);
+			return A2($elm$core$List$member, model.N, x.X);
 		},
 		$author$project$Content$projects);
 };
@@ -10893,7 +10912,7 @@ var $author$project$Pages$Top$listCategory = F2(
 										A2(
 											$elm$core$List$map,
 											function (x) {
-												return x.aj;
+												return x.X;
 											},
 											$author$project$Content$projects)))) + ')'))
 						]))
@@ -10964,7 +10983,7 @@ var $author$project$Pages$Top$mergeCategories = $elm_community$list_extra$List$E
 		A2(
 			$elm$core$List$map,
 			function (project) {
-				return project.aj;
+				return project.X;
 			},
 			$author$project$Content$projects)));
 var $elm$core$List$sortBy = _List_sortBy;
@@ -10977,7 +10996,7 @@ var $author$project$Pages$Top$listCategories = function (model) {
 		$author$project$Pages$Top$listCategory(model),
 		$elm$core$List$sort($author$project$Pages$Top$mergeCategories));
 };
-var $author$project$Content$top = {J: 'lorem ipsum dolor sit amet', aP: 'My Portfolio'};
+var $author$project$Content$top = {F: 'lorem ipsum dolor sit amet', aP: 'My Portfolio'};
 var $author$project$Pages$Top$view = function (model) {
 	return {
 		bT: _List_fromArray(
@@ -11179,11 +11198,11 @@ var $author$project$Spa$Generated$Pages$upgrade = F3(
 				}
 			};
 		};
-		return {I: bundle_, b6: init_, cA: update_};
+		return {J: bundle_, b6: init_, cA: update_};
 	});
 var $author$project$Spa$Generated$Pages$pages = {
-	ag: A3($author$project$Spa$Generated$Pages$upgrade, $author$project$Spa$Generated$Pages$About__Model, $author$project$Spa$Generated$Pages$About__Msg, $author$project$Pages$About$page),
-	ak: A3($author$project$Spa$Generated$Pages$upgrade, $author$project$Spa$Generated$Pages$Contact__Model, $author$project$Spa$Generated$Pages$Contact__Msg, $author$project$Pages$Contact$page),
+	al: A3($author$project$Spa$Generated$Pages$upgrade, $author$project$Spa$Generated$Pages$About__Model, $author$project$Spa$Generated$Pages$About__Msg, $author$project$Pages$About$page),
+	ao: A3($author$project$Spa$Generated$Pages$upgrade, $author$project$Spa$Generated$Pages$Contact__Model, $author$project$Spa$Generated$Pages$Contact__Msg, $author$project$Pages$Contact$page),
 	at: A3($author$project$Spa$Generated$Pages$upgrade, $author$project$Spa$Generated$Pages$NotFound__Model, $author$project$Spa$Generated$Pages$NotFound__Msg, $author$project$Pages$NotFound$page),
 	ax: A3($author$project$Spa$Generated$Pages$upgrade, $author$project$Spa$Generated$Pages$Projects__Id_String__Model, $author$project$Spa$Generated$Pages$Projects__Id_String__Msg, $author$project$Pages$Projects$Id_String$page),
 	aA: A3($author$project$Spa$Generated$Pages$upgrade, $author$project$Spa$Generated$Pages$Top__Model, $author$project$Spa$Generated$Pages$Top__Msg, $author$project$Pages$Top$page)
@@ -11193,9 +11212,9 @@ var $author$project$Spa$Generated$Pages$init = function (route) {
 		case 0:
 			return $author$project$Spa$Generated$Pages$pages.aA.b6(0);
 		case 1:
-			return $author$project$Spa$Generated$Pages$pages.ag.b6(0);
+			return $author$project$Spa$Generated$Pages$pages.al.b6(0);
 		case 2:
-			return $author$project$Spa$Generated$Pages$pages.ak.b6(0);
+			return $author$project$Spa$Generated$Pages$pages.ao.b6(0);
 		case 3:
 			return $author$project$Spa$Generated$Pages$pages.at.b6(0);
 		default:
@@ -11230,19 +11249,19 @@ var $author$project$Spa$Generated$Pages$bundle = function (bigModel) {
 	switch (bigModel.$) {
 		case 0:
 			var model = bigModel.a;
-			return $author$project$Spa$Generated$Pages$pages.aA.I(model);
+			return $author$project$Spa$Generated$Pages$pages.aA.J(model);
 		case 1:
 			var model = bigModel.a;
-			return $author$project$Spa$Generated$Pages$pages.ag.I(model);
+			return $author$project$Spa$Generated$Pages$pages.al.J(model);
 		case 2:
 			var model = bigModel.a;
-			return $author$project$Spa$Generated$Pages$pages.ak.I(model);
+			return $author$project$Spa$Generated$Pages$pages.ao.J(model);
 		case 3:
 			var model = bigModel.a;
-			return $author$project$Spa$Generated$Pages$pages.at.I(model);
+			return $author$project$Spa$Generated$Pages$pages.at.J(model);
 		default:
 			var model = bigModel.a;
-			return $author$project$Spa$Generated$Pages$pages.ax.I(model);
+			return $author$project$Spa$Generated$Pages$pages.ax.J(model);
 	}
 };
 var $author$project$Spa$Generated$Pages$subscriptions = function (model) {
@@ -11259,7 +11278,7 @@ var $author$project$Main$subscriptions = function (model) {
 				A2(
 				$elm$core$Platform$Sub$map,
 				$author$project$Main$Pages,
-				$author$project$Spa$Generated$Pages$subscriptions(model.C))
+				$author$project$Spa$Generated$Pages$subscriptions(model.D))
 			]));
 };
 var $author$project$Spa$Document$toBrowserDocument = function (doc) {
@@ -11341,7 +11360,7 @@ var $author$project$Spa$Generated$Pages$update = F2(
 					if (_v0.b.$ === 1) {
 						var msg = _v0.a.a;
 						var model = _v0.b.a;
-						return A2($author$project$Spa$Generated$Pages$pages.ag.cA, msg, model);
+						return A2($author$project$Spa$Generated$Pages$pages.al.cA, msg, model);
 					} else {
 						break _v0$5;
 					}
@@ -11349,7 +11368,7 @@ var $author$project$Spa$Generated$Pages$update = F2(
 					if (_v0.b.$ === 2) {
 						var msg = _v0.a.a;
 						var model = _v0.b.a;
-						return A2($author$project$Spa$Generated$Pages$pages.ak.cA, msg, model);
+						return A2($author$project$Spa$Generated$Pages$pages.ao.cA, msg, model);
 					} else {
 						break _v0$5;
 					}
@@ -11419,7 +11438,7 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							C: page,
+							D: page,
 							y: A2($author$project$Spa$Generated$Pages$save, page, shared)
 						}),
 					A2($elm$core$Platform$Cmd$map, $author$project$Main$Pages, pageCmd));
@@ -11428,13 +11447,13 @@ var $author$project$Main$update = F2(
 				var _v3 = A2($author$project$Shared$update, sharedMsg, model.y);
 				var shared = _v3.a;
 				var sharedCmd = _v3.b;
-				var _v4 = A2($author$project$Spa$Generated$Pages$load, model.C, shared);
+				var _v4 = A2($author$project$Spa$Generated$Pages$load, model.D, shared);
 				var page = _v4.a;
 				var pageCmd = _v4.b;
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
-						{C: page, y: shared}),
+						{D: page, y: shared}),
 					$elm$core$Platform$Cmd$batch(
 						_List_fromArray(
 							[
@@ -11443,14 +11462,14 @@ var $author$project$Main$update = F2(
 							])));
 			default:
 				var pageMsg = msg.a;
-				var _v5 = A2($author$project$Spa$Generated$Pages$update, pageMsg, model.C);
+				var _v5 = A2($author$project$Spa$Generated$Pages$update, pageMsg, model.D);
 				var page = _v5.a;
 				var pageCmd = _v5.b;
 				var shared = A2($author$project$Spa$Generated$Pages$save, page, model.y);
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
-						{C: page, y: shared}),
+						{D: page, y: shared}),
 					A2($elm$core$Platform$Cmd$map, $author$project$Main$Pages, pageCmd));
 		}
 	});
@@ -11597,7 +11616,7 @@ var $author$project$Shared$displayBody = F2(
 	});
 var $author$project$Shared$view = F2(
 	function (_v0, model) {
-		var page = _v0.C;
+		var page = _v0.D;
 		var toMsg = _v0.cz;
 		return {
 			bT: A2($author$project$Shared$displayBody, page, model),
@@ -11611,10 +11630,10 @@ var $author$project$Main$view = function (model) {
 	return A2(
 		$author$project$Shared$view,
 		{
-			C: A2(
+			D: A2(
 				$author$project$Spa$Document$map,
 				$author$project$Main$Pages,
-				$author$project$Spa$Generated$Pages$view(model.C)),
+				$author$project$Spa$Generated$Pages$view(model.D)),
 			cz: $author$project$Main$Shared
 		},
 		model.y);
