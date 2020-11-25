@@ -230,12 +230,12 @@ a:visited:not(#exclude) {
 }
 
 .left-menu-item:hover {
-  border: 1px solid #ddb30e;
+  border-bottom: 4px solid #ddb30e;
 }
 
 .left-menu-item-selected {
   font-weight: 800;
-  border: 1px solid #ddb30e;
+  border-bottom: 4px solid #ddb30e;
 }
 
 /* Main area */
