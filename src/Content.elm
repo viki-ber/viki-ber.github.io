@@ -49,7 +49,7 @@ projects =
               , value = "October 2020"
               }
             , { name = "Tools"
-              , value = "Photoshop, Illustrator, XD, Rotato"
+              , value = "Photoshop, Illustrator, XD"
               }
               , { name = "Try:"
               , value = "<a href='https://xd.adobe.com/view/7e240d0c-6c57-4a8c-9c84-46f290a352e8-2b77/'>Interactive Prototype</a>"
@@ -79,7 +79,7 @@ projects =
               , value = "October 2020"
               }
             , { name = "Tools:"
-              , value = "Photoshop, XD, Illustrator, Rotato"
+              , value = "Photoshop, Illustrator, XD"
               }
               , { name = "Try:"
               , value = "<a href='https://xd.adobe.com/view/037c0fc6-01c4-41d5-a0d8-a77733748a4b-562f/'>Interactive Prototype</a>"
@@ -109,7 +109,7 @@ projects =
               , value = "November 2020"
               }
             , { name = "Tools:"
-              , value = "HTML, CSS, Photoshop (for muckups only)"
+              , value = "HTML, CSS"
               }
               
             ]
