@@ -134,6 +134,9 @@ projects =
             , { name = "Tools:"
               , value = "XD"
               }
+              ,{ name = "Try:"
+              , value = "<a href='https://xd.adobe.com/view/0dbb5502-96cc-444c-b7c8-53267224f761-58e8/'>Interactive Prototype</a>"
+              }
               
             ]
       , content =
