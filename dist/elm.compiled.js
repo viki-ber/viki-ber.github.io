@@ -9995,7 +9995,7 @@ var $author$project$Content$projects = _List_fromArray(
 		ac: _List_fromArray(
 			[
 				{k: 'Date', w: 'October 2020'},
-				{k: 'Tools', w: 'Photoshop, Illustrator, XD, Rotato'},
+				{k: 'Tools', w: 'Photoshop, Illustrator, XD'},
 				{k: 'Try:', w: '<a href=\'https://xd.adobe.com/view/7e240d0c-6c57-4a8c-9c84-46f290a352e8-2b77/\'>Interactive Prototype</a>'}
 			]),
 		ad: 'terraventure',
@@ -10017,7 +10017,7 @@ var $author$project$Content$projects = _List_fromArray(
 		ac: _List_fromArray(
 			[
 				{k: 'Date:', w: 'October 2020'},
-				{k: 'Tools:', w: 'Photoshop, XD, Illustrator, Rotato'},
+				{k: 'Tools:', w: 'Photoshop, Illustrator, XD'},
 				{k: 'Try:', w: '<a href=\'https://xd.adobe.com/view/037c0fc6-01c4-41d5-a0d8-a77733748a4b-562f/\'>Interactive Prototype</a>'}
 			]),
 		ad: 'esca',
@@ -10036,7 +10036,7 @@ var $author$project$Content$projects = _List_fromArray(
 		ac: _List_fromArray(
 			[
 				{k: 'Date:', w: 'November 2020'},
-				{k: 'Tools:', w: 'HTML, CSS, Photoshop (for muckups only)'}
+				{k: 'Tools:', w: 'HTML, CSS'}
 			]),
 		ad: 'fika',
 		k: 'It\'s fika time'
