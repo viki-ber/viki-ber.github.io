@@ -5335,7 +5335,7 @@ var $elm$core$Basics$composeR = F3(
 	});
 var $author$project$Main$Model = F2(
 	function (shared, page) {
-		return {D: page, y: shared};
+		return {D: page, z: shared};
 	});
 var $author$project$Main$Pages = function (a) {
 	return {$: 3, a: a};
@@ -5347,7 +5347,7 @@ var $elm$core$Platform$Cmd$batch = _Platform_batch;
 var $author$project$Spa$Generated$Route$NotFound = {$: 3};
 var $elm$url$Url$Parser$State = F5(
 	function (visited, unvisited, params, frag, value) {
-		return {K: frag, cn: params, I: unvisited, z: value, O: visited};
+		return {K: frag, cn: params, I: unvisited, w: value, O: visited};
 	});
 var $elm$url$Url$Parser$getFirstMatch = function (states) {
 	getFirstMatch:
@@ -5359,10 +5359,10 @@ var $elm$url$Url$Parser$getFirstMatch = function (states) {
 			var rest = states.b;
 			var _v1 = state.I;
 			if (!_v1.b) {
-				return $elm$core$Maybe$Just(state.z);
+				return $elm$core$Maybe$Just(state.w);
 			} else {
 				if ((_v1.a === '') && (!_v1.b.b)) {
-					return $elm$core$Maybe$Just(state.z);
+					return $elm$core$Maybe$Just(state.w);
 				} else {
 					var $temp$states = rest;
 					states = $temp$states;
@@ -5992,7 +5992,7 @@ var $elm$url$Url$Parser$mapState = F2(
 		var unvisited = _v0.I;
 		var params = _v0.cn;
 		var frag = _v0.K;
-		var value = _v0.z;
+		var value = _v0.w;
 		return A5(
 			$elm$url$Url$Parser$State,
 			visited,
@@ -6009,7 +6009,7 @@ var $elm$url$Url$Parser$map = F2(
 			var unvisited = _v1.I;
 			var params = _v1.cn;
 			var frag = _v1.K;
-			var value = _v1.z;
+			var value = _v1.w;
 			return A2(
 				$elm$core$List$map,
 				$elm$url$Url$Parser$mapState(value),
@@ -6050,7 +6050,7 @@ var $elm$url$Url$Parser$s = function (str) {
 		var unvisited = _v0.I;
 		var params = _v0.cn;
 		var frag = _v0.K;
-		var value = _v0.z;
+		var value = _v0.w;
 		if (!unvisited.b) {
 			return _List_Nil;
 		} else {
@@ -6087,7 +6087,7 @@ var $elm$url$Url$Parser$custom = F2(
 			var unvisited = _v0.I;
 			var params = _v0.cn;
 			var frag = _v0.K;
-			var value = _v0.z;
+			var value = _v0.w;
 			if (!unvisited.b) {
 				return _List_Nil;
 			} else {
@@ -9976,7 +9976,7 @@ var $elm$core$Array$get = F2(
 			A2($elm$core$Elm$JsArray$unsafeGet, $elm$core$Array$bitMask & index, tail)) : $elm$core$Maybe$Just(
 			A3($elm$core$Array$getHelp, startShift, index, tree)));
 	});
-var $author$project$Pages$Projects$Id_String$notFound = {X: _List_Nil, F: _List_Nil, _: 'Not found', aa: '', ac: _List_Nil, ad: 'not_found', m: 'NOT FOUND'};
+var $author$project$Pages$Projects$Id_String$notFound = {X: _List_Nil, F: _List_Nil, _: 'Not found', aa: '', ac: _List_Nil, ad: 'not_found', k: 'NOT FOUND'};
 var $author$project$Content$projects = _List_fromArray(
 	[
 		{
@@ -9984,81 +9984,82 @@ var $author$project$Content$projects = _List_fromArray(
 			['Branding', 'UX/UI', 'Graphic Design', 'All']),
 		F: _List_fromArray(
 			[
-				{k: '/img/first.jpg'},
-				{k: '/img/graphic_profile_light.jpg'},
-				{k: '/img/graphic_profile_dark.jpg'},
-				{k: '/img/mockup_2.jpg'},
-				{k: '/img/terraventure/movie2.mp4'}
+				{l: '/img/first.jpg'},
+				{l: '/img/graphic_profile_light.jpg'},
+				{l: '/img/graphic_profile_dark.jpg'},
+				{l: '/img/mockup_2.jpg'},
+				{l: '/img/terraventure/movie2.mp4'}
 			]),
 		_: '<strong></strong> This brief asked to create a branding and UI design for a movie streaming service specialising in outdoor adventure movies. Main inspiration for the design came from modern outdoor, travel and adventure magazines.',
 		aa: '/img/first.jpg',
 		ac: _List_fromArray(
 			[
-				{m: 'Date', z: 'October 2020'},
-				{m: 'Tools', z: 'Photoshop, Illustrator, XD, Rotato'},
-				{m: 'Try:', z: '<a href=\'https://xd.adobe.com/view/7e240d0c-6c57-4a8c-9c84-46f290a352e8-2b77/\'>Interactive Prototype</a>'}
+				{k: 'Date', w: 'October 2020'},
+				{k: 'Tools', w: 'Photoshop, Illustrator, XD, Rotato'},
+				{k: 'Try:', w: '<a href=\'https://xd.adobe.com/view/7e240d0c-6c57-4a8c-9c84-46f290a352e8-2b77/\'>Interactive Prototype</a>'}
 			]),
 		ad: 'terraventure',
-		m: 'Terra Venture'
+		k: 'Terra Venture'
 	},
 		{
 		X: _List_fromArray(
 			['Branding', 'UX/UI', 'Graphic Design', 'All']),
 		F: _List_fromArray(
 			[
-				{k: '/img/esca/logo.mp4'},
-				{k: '/img/esca/page2.jpg'},
-				{k: '/img/esca/micro.mp4'},
-				{k: '/img/esca/ui_movie.mp4'},
-				{k: '/img/esca/page3.jpg'}
+				{l: '/img/esca/logo.mp4'},
+				{l: '/img/esca/page2.jpg'},
+				{l: '/img/esca/micro.mp4'},
+				{l: '/img/esca/ui_movie.mp4'},
+				{l: '/img/esca/page3.jpg'}
 			]),
 		_: 'The brief for this project was to create a branding and an e-commerce website for a company selling premium food products',
 		aa: '/img/esca/display.png',
 		ac: _List_fromArray(
 			[
-				{m: 'Date:', z: 'October 2020'},
-				{m: 'Tools:', z: 'Photoshop, XD, Illustrator, Rotato'},
-				{m: 'Try:', z: '<a href=\'https://xd.adobe.com/view/037c0fc6-01c4-41d5-a0d8-a77733748a4b-562f/\'>Interactive Prototype</a>'}
+				{k: 'Date:', w: 'October 2020'},
+				{k: 'Tools:', w: 'Photoshop, XD, Illustrator, Rotato'},
+				{k: 'Try:', w: '<a href=\'https://xd.adobe.com/view/037c0fc6-01c4-41d5-a0d8-a77733748a4b-562f/\'>Interactive Prototype</a>'}
 			]),
 		ad: 'esca',
-		m: 'Esca'
+		k: 'Esca'
 	},
 		{
 		X: _List_fromArray(
 			['Graphic Design', 'All']),
 		F: _List_fromArray(
 			[
-				{k: '/img/fikatime/image1.jpg'},
-				{k: '/img/fikatime/image2.jpg'}
+				{l: '/img/fikatime/image1.jpg'},
+				{l: '/img/fikatime/image2.jpg'}
 			]),
 		_: 'This creative brief asked to produce any piece of design, adhering to only one constraint - the design had to be produced using only HTML and CSS languages. I chose to create a set of graphical elements inspired by Swedish folk art. These elements can then be mixed and matched to produce various patters that can be applied to different everyday objects. ',
 		aa: '/img/fikatime/display.jpg',
 		ac: _List_fromArray(
 			[
-				{m: 'Date:', z: 'November 2020'},
-				{m: 'Tools:', z: 'HTML, CSS, Photoshop (for muckups only)'}
+				{k: 'Date:', w: 'November 2020'},
+				{k: 'Tools:', w: 'HTML, CSS, Photoshop (for muckups only)'}
 			]),
 		ad: 'fika',
-		m: 'It\'s fika time'
+		k: 'It\'s fika time'
 	},
 		{
 		X: _List_fromArray(
 			['Graphic Design', 'All', 'UX/UI']),
 		F: _List_fromArray(
 			[
-				{k: '/img/colourgrabber/movie1.mp4'},
-				{k: '/img/colourgrabber/image1.jpg'},
-				{k: '/img/colourgrabber/movie2.mp4'}
+				{l: '/img/colourgrabber/movie1.mp4'},
+				{l: '/img/colourgrabber/image1.jpg'},
+				{l: '/img/colourgrabber/movie2.mp4'}
 			]),
 		_: 'In this brief I had to create a device specific graphic user interface and its assets. I chose to create an interface for a colour capturing application and used neumorphic style as inspiration for a clean and minimatistic look, where the captured colour is the main focus. ',
 		aa: '/img/colourgrabber/display.png',
 		ac: _List_fromArray(
 			[
-				{m: 'Date:', z: 'November 2020'},
-				{m: 'Tools:', z: 'XD'}
+				{k: 'Date:', w: 'November 2020'},
+				{k: 'Tools:', w: 'XD'},
+				{k: 'Try:', w: '<a href=\'https://xd.adobe.com/view/0dbb5502-96cc-444c-b7c8-53267224f761-58e8/\'>Interactive Prototype</a>'}
 			]),
 		ad: 'colourgrabber',
-		m: 'Colour Grabber'
+		k: 'Colour Grabber'
 	}
 	]);
 var $author$project$Pages$Projects$Id_String$getProject = function (id) {
@@ -10174,7 +10175,7 @@ var $author$project$Pages$Projects$Id_String$content = function (media) {
 		A2(
 			$elm$core$List$map,
 			function (x) {
-				return $author$project$Pages$Projects$Id_String$renderMedia(x.k);
+				return $author$project$Pages$Projects$Id_String$renderMedia(x.l);
 			},
 			media.F));
 };
@@ -10209,9 +10210,9 @@ var $author$project$Pages$Projects$Id_String$factsContainer = function (project)
 									_List_Nil,
 									_List_fromArray(
 										[
-											$elm$html$Html$text(x.m + ' ')
+											$elm$html$Html$text(x.k + ' ')
 										])),
-									$author$project$Components$HtmlRenderer$htmlRenderer(x.z)
+									$author$project$Components$HtmlRenderer$htmlRenderer(x.w)
 								]));
 					},
 					project.ac))
@@ -10236,7 +10237,7 @@ var $author$project$Pages$Projects$Id_String$presentProject = function (project)
 					_List_Nil,
 					_List_fromArray(
 						[
-							$elm$html$Html$text(project.m)
+							$elm$html$Html$text(project.k)
 						])),
 					A2(
 					$elm$html$Html$label,
@@ -10340,7 +10341,7 @@ var $author$project$Pages$Projects$Id_String$view = function (_v0) {
 							]))
 					]))
 			]),
-		aP: $author$project$Pages$Projects$Id_String$getProject(params.ad).m
+		aP: $author$project$Pages$Projects$Id_String$getProject(params.ad).k
 	};
 };
 var $author$project$Pages$Projects$Id_String$page = $author$project$Spa$Page$static(
@@ -11274,7 +11275,7 @@ var $author$project$Main$subscriptions = function (model) {
 				A2(
 				$elm$core$Platform$Sub$map,
 				$author$project$Main$Shared,
-				$author$project$Shared$subscriptions(model.y)),
+				$author$project$Shared$subscriptions(model.z)),
 				A2(
 				$elm$core$Platform$Sub$map,
 				$author$project$Main$Pages,
@@ -11407,7 +11408,7 @@ var $author$project$Main$update = F2(
 								[
 									A2(
 									$elm$browser$Browser$Navigation$pushUrl,
-									model.y.b8,
+									model.z.b8,
 									$elm$url$Url$toString(url)),
 									A2(
 									$elm$core$Task$perform,
@@ -11424,7 +11425,7 @@ var $author$project$Main$update = F2(
 				}
 			case 1:
 				var url = msg.a;
-				var original = model.y;
+				var original = model.z;
 				var shared = _Utils_update(
 					original,
 					{cB: url});
@@ -11439,12 +11440,12 @@ var $author$project$Main$update = F2(
 						model,
 						{
 							D: page,
-							y: A2($author$project$Spa$Generated$Pages$save, page, shared)
+							z: A2($author$project$Spa$Generated$Pages$save, page, shared)
 						}),
 					A2($elm$core$Platform$Cmd$map, $author$project$Main$Pages, pageCmd));
 			case 2:
 				var sharedMsg = msg.a;
-				var _v3 = A2($author$project$Shared$update, sharedMsg, model.y);
+				var _v3 = A2($author$project$Shared$update, sharedMsg, model.z);
 				var shared = _v3.a;
 				var sharedCmd = _v3.b;
 				var _v4 = A2($author$project$Spa$Generated$Pages$load, model.D, shared);
@@ -11453,7 +11454,7 @@ var $author$project$Main$update = F2(
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
-						{D: page, y: shared}),
+						{D: page, z: shared}),
 					$elm$core$Platform$Cmd$batch(
 						_List_fromArray(
 							[
@@ -11465,11 +11466,11 @@ var $author$project$Main$update = F2(
 				var _v5 = A2($author$project$Spa$Generated$Pages$update, pageMsg, model.D);
 				var page = _v5.a;
 				var pageCmd = _v5.b;
-				var shared = A2($author$project$Spa$Generated$Pages$save, page, model.y);
+				var shared = A2($author$project$Spa$Generated$Pages$save, page, model.z);
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
-						{D: page, y: shared}),
+						{D: page, z: shared}),
 					A2($elm$core$Platform$Cmd$map, $author$project$Main$Pages, pageCmd));
 		}
 	});
@@ -11636,7 +11637,7 @@ var $author$project$Main$view = function (model) {
 				$author$project$Spa$Generated$Pages$view(model.D)),
 			cz: $author$project$Main$Shared
 		},
-		model.y);
+		model.z);
 };
 var $author$project$Main$main = $elm$browser$Browser$application(
 	{
