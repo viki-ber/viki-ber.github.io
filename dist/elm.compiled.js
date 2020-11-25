@@ -9810,7 +9810,7 @@ var $author$project$Pages$About$view = function (_v0) {
 };
 var $author$project$Pages$About$page = $author$project$Spa$Page$static(
 	{cC: $author$project$Pages$About$view});
-var $author$project$Content$contact = {F: 'I am happy to hear about possible work orders or potential collaborations. If you would like to see my professional CV, do not hesitate to ask. You can drop me a line on:<br /><br /><span class=\"email-link\"><a href=\"mailto:hello@viktorija.graphics\">hello@viktorija.graphics</a></span><br /><br />You are also welcome to contact me via my social media accounts.', aP: 'Contact Me'};
+var $author$project$Content$contact = {F: 'I am happy to hear about possible work orders or potential collaborations. If you would like to see my professional CV, do not hesitate to ask. You can drop me a line on:<br /><br /><span class=\"email-link\"><a href=\"mailto:vika.ber@gmail.com\">vika.ber@gmail.com</a></span><br /><br />You are also welcome to contact me via my social media accounts.', aP: 'Contact Me'};
 var $author$project$Pages$Contact$view = function (_v0) {
 	var params = _v0.cn;
 	return {
