@@ -120,9 +120,33 @@ projects =
               ,{ graphic = "/img/fikatime/image2.jpg"
               }
               
-            
             ]
       }
+       ,{ name = "Colour Grabber"
+      , id = "colourgrabber"
+      , categories = [  "Graphic Design", "All", "UX/UI" ]
+      , display = "/img/colourgrabber/display.png"
+      , description = "In this brief I had to create a device specific graphic user interface and its assets. I chose to create an interface for a colour capturing application and used neumorphic style as inspiration for a clean and minimatistic look, where the captured colour is the main focus. "
+      , facts =
+            [  { name = "Date:"
+              , value = "November 2020"
+              }
+            , { name = "Tools:"
+              , value = "XD"
+              }
+              
+            ]
+      , content =
+            [ { graphic = "/img/colourgrabber/movie1.mp4"
+              }
+              
+              ,{ graphic = "/img/colourgrabber/image1.jpg"
+              }
+              ,{ graphic = "/img/colourgrabber/movie2.mp4"
+              }
+              
+            ]
+       }
    
 
     --   { name = "Name of the project"
