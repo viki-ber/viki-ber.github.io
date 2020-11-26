@@ -62,9 +62,20 @@ page =
 
 displayProject : Project -> Html msg
 displayProject project =
-    div []
+    div [ class "project" ]
         [ a [ class "link", href (Route.toString (Route.Projects__Id_String { id = project.id })) ]
-            [ img [ src project.display ] [] ]
+            [ img [ src project.display ] []
+            , div [ class "project-infobox" ]
+                [ div [ class "title" ] [ text project.name ]
+                , div [ class "subtitle" ]
+                    [ text
+                        (List.filter (\x -> not (x == "All")) project.categories
+                            |> List.intersperse " | "
+                            |> List.foldl (++) ""
+                        )
+                    ]
+                ]
+            ]
         ]
 
 
