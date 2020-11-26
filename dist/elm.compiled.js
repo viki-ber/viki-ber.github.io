@@ -10420,6 +10420,24 @@ var $author$project$Pages$Top$calcRows = function (projects) {
 	return $elm$core$Basics$floor(
 		$elm$core$List$length($author$project$Content$projects) / 3);
 };
+var $elm$core$List$intersperse = F2(
+	function (sep, xs) {
+		if (!xs.b) {
+			return _List_Nil;
+		} else {
+			var hd = xs.a;
+			var tl = xs.b;
+			var step = F2(
+				function (x, rest) {
+					return A2(
+						$elm$core$List$cons,
+						sep,
+						A2($elm$core$List$cons, x, rest));
+				});
+			var spersed = A3($elm$core$List$foldr, step, _List_Nil, tl);
+			return A2($elm$core$List$cons, hd, spersed);
+		}
+	});
 var $elm$core$String$append = _String_append;
 var $author$project$Spa$Generated$Route$toString = function (route) {
 	var segments = function () {
@@ -10449,7 +10467,10 @@ var $author$project$Spa$Generated$Route$toString = function (route) {
 var $author$project$Pages$Top$displayProject = function (project) {
 	return A2(
 		$elm$html$Html$div,
-		_List_Nil,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$class('project')
+			]),
 		_List_fromArray(
 			[
 				A2(
@@ -10470,7 +10491,49 @@ var $author$project$Pages$Top$displayProject = function (project) {
 							[
 								$elm$html$Html$Attributes$src(project.aa)
 							]),
-						_List_Nil)
+						_List_Nil),
+						A2(
+						$elm$html$Html$div,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('project-infobox')
+							]),
+						_List_fromArray(
+							[
+								A2(
+								$elm$html$Html$div,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('title')
+									]),
+								_List_fromArray(
+									[
+										$elm$html$Html$text(project.k)
+									])),
+								A2(
+								$elm$html$Html$div,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('subtitle')
+									]),
+								_List_fromArray(
+									[
+										$elm$html$Html$text(
+										A3(
+											$elm$core$List$foldl,
+											$elm$core$Basics$append,
+											'',
+											A2(
+												$elm$core$List$intersperse,
+												' | ',
+												A2(
+													$elm$core$List$filter,
+													function (x) {
+														return !(x === 'All');
+													},
+													project.X))))
+									]))
+							]))
 					]))
 			]));
 };
