@@ -6229,7 +6229,7 @@ var $author$project$Spa$Page$static = function (page) {
 		cC: page.cC
 	};
 };
-var $author$project$Content$about = {F: 'This is me.<br /><br />Chef, turned food developer, turned graphic designer. <br /><br />Ever since I can remember, art has always played a huge part in my life - spending hours drawing in my room, visiting art galleries and exhibitions, as well as finishing one of Lithuania’s most prestigious art schools. <br /><br />When my career took me on a route working with food, I embraced it as a creative form of expression and truly enjoyed every moment of it.<br /><br />However, my passion for art, and especially graphic design, has never left me. And so here I am today - with a strong determination to learn and face challenges on the route to being the best designer that I can be.<br />', aP: 'About Me'};
+var $author$project$Content$about = {F: 'Graphic designer and illustrator based in Gothenburg, Sweden. <br /><br /> Trained at Jönköping and Linneaus universities. <br /><br /> Previous experience in food product and brand development.<br /><br /> Favourite colours - yellow, blue and grey.<br /><br /> Dream collaboration - Stefan Sagmeister.<br /><br /> Dream brief - design an issue of Lucky Peach magazine.<br /><br />', aP: 'About Me'};
 var $elm$json$Json$Encode$string = _Json_wrap;
 var $elm$html$Html$Attributes$stringProperty = F2(
 	function (key, string) {
