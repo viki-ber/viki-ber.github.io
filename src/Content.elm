@@ -150,6 +150,31 @@ projects =
               
             ]
        }
+       ,{ name = "OFFcenter magazine"
+      , id = "offcenter"
+      , categories = [ "Graphic Design", "All", "Print" ]
+      , display = "/img/offcenter/display.jpg"
+      , description = "The brief for this university project was to design and print a magazine about design, featuring at least a couple of Adobe tutorials and an article about some sort of printing technique. The rest was up to us. We chose to produce a magazine celebrating different and non-main-stream design and designers. For the project we produced all the graphical elements, wrote the content and even designed our own fully functional typeface for the title and headings. Finally we got the magazine printed at a proffessional printhouse with a 50 copy print run."
+      , facts =
+            [  { name = "Date:"
+              , value = "May 2020"
+              }
+            , { name = "Tools:"
+              , value = "Photoshop, Illustrator, Indesign"
+              }
+              , { name = "Collaboration:"
+              , value = "Maria Arango-Kure, Linda Hammarstrand"
+              }
+              , { name = "Try:"
+              , value = "<a href='https://drive.google.com/file/d/1ktjONkSPHLeHc-1Go4Igoikuo26Evu-F/view?usp=sharing'>Read the full magazine here</a>"
+              }
+            ]
+      , content =
+            [ { graphic = "/img/offcenter/main.jpg"
+              }
+              
+            ]
+      }
    
 
     --   { name = "Name of the project"
