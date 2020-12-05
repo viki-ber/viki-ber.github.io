@@ -62,10 +62,12 @@ subscriptions model =
 -- VIEW
 
 
+shouldShowBanner : Model -> Bool
 shouldShowBanner page =
     Route.toString Route.Top == page.url.path
 
 
+displayBody : Document msg -> Model -> List (Html msg)
 displayBody page model =
     if shouldShowBanner model then
         [ div [ class "filler" ]
