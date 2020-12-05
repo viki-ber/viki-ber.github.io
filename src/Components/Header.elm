@@ -11,7 +11,7 @@ view =
     Components.Grid.row
         [ div [ class "top-container", id "home" ]
             [ div [ class "menu-container" ]
-                [ div [ class "menu-item" ] [ a [ href (Route.toString Route.Top ++ "#") ] [ text "Projects" ] ] -- Yeah taking a ugly shortcut here to hide the main banner
+                [ div [ class "menu-item" ] [ a [ href (Route.toString Route.Projects) ] [ text "Projects" ] ]
                 , div [ class "menu-item" ] [ a [ href (Route.toString Route.About) ] [ text "About" ] ]
                 , div [ class "menu-item" ] [ a [ href (Route.toString Route.Contact) ] [ text "Contact" ] ]
                 ]

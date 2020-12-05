@@ -62,13 +62,12 @@ subscriptions model =
 -- VIEW
 
 
-shouldShowBanner url =
-    -- Part of ugly shortcut to hide banner on non-direct links
-    Url.toString url == "http://localhost:8000/" || Url.toString url == "https://viktorija.graphics/"
+shouldShowBanner page =
+    Route.toString Route.Top == page.url.path
 
 
 displayBody page model =
-    if shouldShowBanner model.url then
+    if shouldShowBanner model then
         [ div [ class "filler" ]
             [ div [ class "logo" ] []
             ]
