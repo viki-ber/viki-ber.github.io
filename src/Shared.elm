@@ -15,6 +15,7 @@ import Html.Attributes exposing (class, href, src)
 import Spa.Document exposing (Document)
 import Spa.Generated.Route as Route exposing (Route)
 import Url exposing (Url)
+import Utils.Title exposing (formatTitle)
 
 
 
@@ -92,6 +93,6 @@ view :
     -> Model
     -> Document msg
 view { page, toMsg } model =
-    { title = page.title
+    { title = formatTitle page.title
     , body = displayBody page model
     }

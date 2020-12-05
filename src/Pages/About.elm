@@ -40,7 +40,7 @@ view { params } =
     , body =
         [ div [ class "grid-row" ]
             [ div [ class "main-body" ]
-                [ div [ class "about-container", class "adjust-for-grid-right" ]
+                [ div [ class "about-container" ]
                     [ div [ class "about-box" ]
                         [ div [ class "about-photo" ] []
                         , div [ class "about-text" ]
