@@ -9781,8 +9781,7 @@ var $author$project$Pages$About$view = function (_v0) {
 								$elm$html$Html$div,
 								_List_fromArray(
 									[
-										$elm$html$Html$Attributes$class('about-container'),
-										$elm$html$Html$Attributes$class('adjust-for-grid-right')
+										$elm$html$Html$Attributes$class('about-container')
 									]),
 								_List_fromArray(
 									[
@@ -9821,7 +9820,14 @@ var $author$project$Pages$About$view = function (_v0) {
 };
 var $author$project$Pages$About$page = $author$project$Spa$Page$static(
 	{cD: $author$project$Pages$About$view});
-var $author$project$Content$contact = {z: 'I am happy to hear about possible work orders or potential collaborations. If you would like to see my professional CV, do not hesitate to ask. You can drop me a line on:<br /><br /><span class=\"email-link\"><a href=\"mailto:vika.ber@gmail.com\">vika.ber@gmail.com</a></span><br /><br />You are also welcome to contact me via my social media accounts.', aM: 'Contact Me'};
+var $elm$html$Html$a = _VirtualDom_node('a');
+var $author$project$Content$contact = {z: 'I am happy to hear about possible work orders or potential collaborations. If you would like to see my professional CV, do not hesitate to ask. You can drop me a line on:<br /><br /><span class=\"email-link\"><a href=\"mailto:viktorija.graphics@outlook.com\">viktorija.graphics@outlook.com</a></span><br /><br />You are also welcome to contact me via my social media accounts.', aM: 'Contact Me'};
+var $elm$html$Html$Attributes$href = function (url) {
+	return A2(
+		$elm$html$Html$Attributes$stringProperty,
+		'href',
+		_VirtualDom_noJavaScriptUri(url));
+};
 var $author$project$Pages$Contact$view = function (_v0) {
 	var params = _v0.cn;
 	return {
@@ -9868,6 +9874,49 @@ var $author$project$Pages$Contact$view = function (_v0) {
 												_List_fromArray(
 													[
 														$author$project$Components$HtmlRenderer$htmlRenderer($author$project$Content$contact.z)
+													])),
+												A2(
+												$elm$html$Html$div,
+												_List_fromArray(
+													[
+														$elm$html$Html$Attributes$class('social-media')
+													]),
+												_List_fromArray(
+													[
+														A2(
+														$elm$html$Html$div,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$class('social-media-logo')
+															]),
+														_List_fromArray(
+															[
+																A2(
+																$elm$html$Html$a,
+																_List_fromArray(
+																	[
+																		$elm$html$Html$Attributes$class('logo-linkedin'),
+																		$elm$html$Html$Attributes$href('https://se.linkedin.com/in/viktorija-bernataviciute-72456785')
+																	]),
+																_List_Nil)
+															])),
+														A2(
+														$elm$html$Html$div,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$class('social-media-logo')
+															]),
+														_List_fromArray(
+															[
+																A2(
+																$elm$html$Html$a,
+																_List_fromArray(
+																	[
+																		$elm$html$Html$Attributes$class('logo-instagram'),
+																		$elm$html$Html$Attributes$href('https://www.instagram.com/viktorija.graphics/')
+																	]),
+																_List_Nil)
+															]))
 													]))
 											]))
 									]))
@@ -10042,7 +10091,6 @@ var $author$project$Components$Imagegrid$calcRows = function (projects) {
 	return $elm$core$Basics$floor(
 		$elm$core$List$length($author$project$Content$projects) / 3);
 };
-var $elm$html$Html$a = _VirtualDom_node('a');
 var $elm$core$List$filter = F2(
 	function (isGood, list) {
 		return A3(
@@ -10054,12 +10102,6 @@ var $elm$core$List$filter = F2(
 			_List_Nil,
 			list);
 	});
-var $elm$html$Html$Attributes$href = function (url) {
-	return A2(
-		$elm$html$Html$Attributes$stringProperty,
-		'href',
-		_VirtualDom_noJavaScriptUri(url));
-};
 var $elm$html$Html$img = _VirtualDom_node('img');
 var $elm$core$List$intersperse = F2(
 	function (sep, xs) {
@@ -11750,13 +11792,16 @@ var $author$project$Shared$displayBody = F2(
 					]))
 			]);
 	});
+var $author$project$Utils$Title$formatTitle = function (title) {
+	return 'Viktorija | ' + title;
+};
 var $author$project$Shared$view = F2(
 	function (_v0, model) {
 		var page = _v0.D;
 		var toMsg = _v0.cA;
 		return {
 			bR: A2($author$project$Shared$displayBody, page, model),
-			aM: page.aM
+			aM: $author$project$Utils$Title$formatTitle(page.aM)
 		};
 	});
 var $author$project$Spa$Generated$Pages$view = function (model) {

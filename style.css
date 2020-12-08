@@ -146,12 +146,19 @@ a:visited:not(#exclude) {
   transform: translateX(0px);
 }
 
-.logo-container {
+.social-media {
+  margin: 1em;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.social-media-logo {
   display: flex;
   /* border: 1px solid black; */
 }
 
-.logo-container > a {
+.social-media-logo > a {
   width: 30px;
   height: 30px;
   background-position: center; /* Center the image */
@@ -162,13 +169,13 @@ a:visited:not(#exclude) {
 }
 
 @media all and (max-width: 1199px) {
-  .logo-container > a {
+  .social-media-logo > a {
     width: 26px;
     height: 26px;
   }
 }
 
-.logo-container > a:hover {
+.social-media-logo > a:hover {
   opacity: 1;
 }
 
@@ -382,6 +389,12 @@ a:visited:not(#exclude) {
   /* border: 1px solid black; */
 }
 
+@media all and (max-width: 1199px) {
+  .about-container {
+    justify-content: center;
+  }
+}
+
 .about-box {
   border: 3px solid #ddb30e;
   display: flex;
@@ -392,8 +405,7 @@ a:visited:not(#exclude) {
 @media all and (max-width: 1199px) {
   .about-box {
     flex-direction: column;
-    width: 100%;
-    margin-left: 8px;
+    width: 95%;
   }
 }
 
@@ -434,44 +446,36 @@ a:visited:not(#exclude) {
 /* CONTACT PAGE ------------------------------------------------------------- */
 
 .contact-box {
-  margin-top: 5em;
-  margin-left: 5em;
+  margin: 5em auto;
   display: flex;
   flex-direction: column;
   width: 1000px;
-  height: 380px;
-  background-image: linear-gradient(
-    to right,
-    rgba(221, 179, 14, 1) 45%,
-    rgba(255, 0, 0, 0) 45%
-  );
+  background-color: rgba(221, 179, 14, 1);
   /* border: 1px solid black; */
 }
 
 @media all and (max-width: 1199px) {
   .contact-box {
-    margin: auto;
-    width: 80%;
-    background-image: linear-gradient(
-      to right,
-      rgba(221, 179, 14, 1) 90%,
-      rgba(255, 0, 0, 0) 90%
-    );
+    flex-direction: column;
+    width: 95%;
   }
 }
 
 .contact-content {
-  margin-top: 2em;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  margin: 2em;
   border: 3px solid black;
-  margin-left: 5%;
+  /* margin-left: 5%; */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact-text {
   width: 30%;
-  margin-left: 5%;
   text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
   /* border: 1px solid black; */
 }
 
