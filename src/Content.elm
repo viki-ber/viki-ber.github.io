@@ -18,7 +18,7 @@ about =
 contact : { title : String, content : String }
 contact =
     { title = "Contact Me"
-    , content = "I am happy to hear about possible work orders or potential collaborations. If you would like to see my professional CV, do not hesitate to ask. You can drop me a line on:<br /><br /><span class=\"email-link\"><a href=\"mailto:vika.ber@gmail.com\">vika.ber@gmail.com</a></span><br /><br />You are also welcome to contact me via my social media accounts."
+    , content = "I am happy to hear about possible work orders or potential collaborations. If you would like to see my professional CV, do not hesitate to ask. You can drop me a line on:<br /><br /><span class=\"email-link\"><a href=\"mailto:viktorija.graphics@outlook.com\">viktorija.graphics@outlook.com</a></span><br /><br />You are also welcome to contact me via my social media accounts."
     }
 
 
