@@ -19,32 +19,32 @@ groupProjects projects =
             [ [] ]
 
         1 ->
-            [ calculateGrid (List.Extra.groupsOfVarying [ 1 ] projects) False ]
+            [ calculateGrid (List.Extra.groupsOfVarying [ 1 ] projects) ]
 
         2 ->
-            [ calculateGrid (List.Extra.groupsOfVarying [ 1, 1 ] projects) False ]
+            [ calculateGrid (List.Extra.groupsOfVarying [ 1, 1 ] projects) ]
 
         3 ->
-            [ calculateGrid (List.Extra.groupsOfVarying [ 1, 1 ] (List.take 2 projects)) True
-            , calculateGrid (List.Extra.groupsOfVarying [ 1 ] (List.drop 2 projects)) False
+            [ calculateGrid (List.Extra.groupsOfVarying [ 1, 1 ] (List.take 2 projects))
+            , calculateGrid (List.Extra.groupsOfVarying [ 1 ] (List.drop 2 projects))
             ]
 
         4 ->
-            [ calculateGrid (List.Extra.groupsOfVarying [ 2, 2 ] projects) False ]
+            [ calculateGrid (List.Extra.groupsOfVarying [ 2, 2 ] projects) ]
 
         5 ->
-            [ calculateGrid (List.Extra.groupsOfVarying [ 1, 1 ] (List.take 2 projects)) True
-            , calculateGrid (List.Extra.groupsOfVarying [ 1, 1, 1 ] (List.drop 2 projects)) False
+            [ calculateGrid (List.Extra.groupsOfVarying [ 1, 1 ] (List.take 2 projects))
+            , calculateGrid (List.Extra.groupsOfVarying [ 1, 1, 1 ] (List.drop 2 projects))
             ]
 
         6 ->
-            [ calculateGrid (List.Extra.groupsOfVarying [ 1, 1 ] (List.take 2 projects)) True
-            , calculateGrid (List.Extra.groupsOfVarying [ 2, 2 ] (List.drop 2 projects)) False
+            [ calculateGrid (List.Extra.groupsOfVarying [ 1, 1 ] (List.take 2 projects))
+            , calculateGrid (List.Extra.groupsOfVarying [ 2, 2 ] (List.drop 2 projects))
             ]
 
         _ ->
-            [ calculateGrid (List.Extra.groupsOfVarying [ 1, 1 ] (List.take 2 projects)) True
-            , calculateGrid (List.Extra.groupsOfVarying [ calcRows projects, calcRows projects, calcRows projects ] (List.drop 2 projects)) False
+            [ calculateGrid (List.Extra.groupsOfVarying [ 1, 1 ] (List.take 2 projects))
+            , calculateGrid (List.Extra.groupsOfVarying [ calcRows projects, calcRows projects, calcRows projects ] (List.drop 2 projects))
             ]
 
 
@@ -53,8 +53,8 @@ calcRows projects =
     floor (toFloat (List.length Content.projects) / 3)
 
 
-calculateGrid : List (List Project) -> Bool -> List (Html msg)
-calculateGrid projects isToplevel =
+calculateGrid : List (List Project) -> List (Html msg)
+calculateGrid projects =
     case List.length projects of
         0 ->
             []
@@ -63,7 +63,7 @@ calculateGrid projects isToplevel =
             displayGrid [ class "column-one" ] projects
 
         2 ->
-            displayGrid (displayTwoColumn isToplevel) projects
+            displayGrid [ class "column-two", class "column-two-fixed-height" ] projects
 
         _ ->
             displayGrid [ class "column-three" ] projects
@@ -77,16 +77,6 @@ displayGrid style projects =
                 (List.map (\y -> displayProject y) x)
         )
         projects
-
-
-displayTwoColumn : Bool -> List (Attribute msg)
-displayTwoColumn isTopLevel =
-    case isTopLevel of
-        False ->
-            [ class "column-two" ]
-
-        True ->
-            [ class "column-two", class "column-two-fixed-height" ]
 
 
 displayProject : Project -> Html msg
