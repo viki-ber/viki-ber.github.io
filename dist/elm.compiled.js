@@ -10246,49 +10246,38 @@ var $author$project$Components$Imagegrid$displayGrid = F2(
 			},
 			projects);
 	});
-var $author$project$Components$Imagegrid$displayTwoColumn = function (isTopLevel) {
-	if (!isTopLevel) {
-		return _List_fromArray(
-			[
-				$elm$html$Html$Attributes$class('column-two')
-			]);
-	} else {
-		return _List_fromArray(
-			[
-				$elm$html$Html$Attributes$class('column-two'),
-				$elm$html$Html$Attributes$class('column-two-fixed-height')
-			]);
+var $author$project$Components$Imagegrid$calculateGrid = function (projects) {
+	var _v0 = $elm$core$List$length(projects);
+	switch (_v0) {
+		case 0:
+			return _List_Nil;
+		case 1:
+			return A2(
+				$author$project$Components$Imagegrid$displayGrid,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('column-one')
+					]),
+				projects);
+		case 2:
+			return A2(
+				$author$project$Components$Imagegrid$displayGrid,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('column-two'),
+						$elm$html$Html$Attributes$class('column-two-fixed-height')
+					]),
+				projects);
+		default:
+			return A2(
+				$author$project$Components$Imagegrid$displayGrid,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('column-three')
+					]),
+				projects);
 	}
 };
-var $author$project$Components$Imagegrid$calculateGrid = F2(
-	function (projects, isToplevel) {
-		var _v0 = $elm$core$List$length(projects);
-		switch (_v0) {
-			case 0:
-				return _List_Nil;
-			case 1:
-				return A2(
-					$author$project$Components$Imagegrid$displayGrid,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$class('column-one')
-						]),
-					projects);
-			case 2:
-				return A2(
-					$author$project$Components$Imagegrid$displayGrid,
-					$author$project$Components$Imagegrid$displayTwoColumn(isToplevel),
-					projects);
-			default:
-				return A2(
-					$author$project$Components$Imagegrid$displayGrid,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$class('column-three')
-						]),
-					projects);
-		}
-	});
 var $elm$core$List$drop = F2(
 	function (n, list) {
 		drop:
@@ -10480,112 +10469,91 @@ var $author$project$Components$Imagegrid$groupProjects = function (projects) {
 		case 1:
 			return _List_fromArray(
 				[
-					A2(
-					$author$project$Components$Imagegrid$calculateGrid,
+					$author$project$Components$Imagegrid$calculateGrid(
 					A2(
 						$elm_community$list_extra$List$Extra$groupsOfVarying,
 						_List_fromArray(
 							[1]),
-						projects),
-					false)
+						projects))
 				]);
 		case 2:
 			return _List_fromArray(
 				[
-					A2(
-					$author$project$Components$Imagegrid$calculateGrid,
+					$author$project$Components$Imagegrid$calculateGrid(
 					A2(
 						$elm_community$list_extra$List$Extra$groupsOfVarying,
 						_List_fromArray(
 							[1, 1]),
-						projects),
-					false)
+						projects))
 				]);
 		case 3:
 			return _List_fromArray(
 				[
-					A2(
-					$author$project$Components$Imagegrid$calculateGrid,
+					$author$project$Components$Imagegrid$calculateGrid(
 					A2(
 						$elm_community$list_extra$List$Extra$groupsOfVarying,
 						_List_fromArray(
 							[1, 1]),
-						A2($elm$core$List$take, 2, projects)),
-					true),
-					A2(
-					$author$project$Components$Imagegrid$calculateGrid,
+						A2($elm$core$List$take, 2, projects))),
+					$author$project$Components$Imagegrid$calculateGrid(
 					A2(
 						$elm_community$list_extra$List$Extra$groupsOfVarying,
 						_List_fromArray(
 							[1]),
-						A2($elm$core$List$drop, 2, projects)),
-					false)
+						A2($elm$core$List$drop, 2, projects)))
 				]);
 		case 4:
 			return _List_fromArray(
 				[
-					A2(
-					$author$project$Components$Imagegrid$calculateGrid,
+					$author$project$Components$Imagegrid$calculateGrid(
 					A2(
 						$elm_community$list_extra$List$Extra$groupsOfVarying,
 						_List_fromArray(
 							[2, 2]),
-						projects),
-					false)
+						projects))
 				]);
 		case 5:
 			return _List_fromArray(
 				[
-					A2(
-					$author$project$Components$Imagegrid$calculateGrid,
+					$author$project$Components$Imagegrid$calculateGrid(
 					A2(
 						$elm_community$list_extra$List$Extra$groupsOfVarying,
 						_List_fromArray(
 							[1, 1]),
-						A2($elm$core$List$take, 2, projects)),
-					true),
-					A2(
-					$author$project$Components$Imagegrid$calculateGrid,
+						A2($elm$core$List$take, 2, projects))),
+					$author$project$Components$Imagegrid$calculateGrid(
 					A2(
 						$elm_community$list_extra$List$Extra$groupsOfVarying,
 						_List_fromArray(
 							[1, 1, 1]),
-						A2($elm$core$List$drop, 2, projects)),
-					false)
+						A2($elm$core$List$drop, 2, projects)))
 				]);
 		case 6:
 			return _List_fromArray(
 				[
-					A2(
-					$author$project$Components$Imagegrid$calculateGrid,
+					$author$project$Components$Imagegrid$calculateGrid(
 					A2(
 						$elm_community$list_extra$List$Extra$groupsOfVarying,
 						_List_fromArray(
 							[1, 1]),
-						A2($elm$core$List$take, 2, projects)),
-					true),
-					A2(
-					$author$project$Components$Imagegrid$calculateGrid,
+						A2($elm$core$List$take, 2, projects))),
+					$author$project$Components$Imagegrid$calculateGrid(
 					A2(
 						$elm_community$list_extra$List$Extra$groupsOfVarying,
 						_List_fromArray(
 							[2, 2]),
-						A2($elm$core$List$drop, 2, projects)),
-					false)
+						A2($elm$core$List$drop, 2, projects)))
 				]);
 		default:
 			return _List_fromArray(
 				[
-					A2(
-					$author$project$Components$Imagegrid$calculateGrid,
+					$author$project$Components$Imagegrid$calculateGrid(
 					A2(
 						$elm_community$list_extra$List$Extra$groupsOfVarying,
 						_List_fromArray(
 							[1, 1]),
-						A2($elm$core$List$take, 2, projects)),
-					true),
-					A2(
-					$author$project$Components$Imagegrid$calculateGrid,
+						A2($elm$core$List$take, 2, projects))),
+					$author$project$Components$Imagegrid$calculateGrid(
 					A2(
 						$elm_community$list_extra$List$Extra$groupsOfVarying,
 						_List_fromArray(
@@ -10594,8 +10562,7 @@ var $author$project$Components$Imagegrid$groupProjects = function (projects) {
 								$author$project$Components$Imagegrid$calcRows(projects),
 								$author$project$Components$Imagegrid$calcRows(projects)
 							]),
-						A2($elm$core$List$drop, 2, projects)),
-					false)
+						A2($elm$core$List$drop, 2, projects)))
 				]);
 	}
 };
