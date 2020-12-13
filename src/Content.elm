@@ -218,6 +218,34 @@ projects =
               
             ]
       }
+      ,{ name = "Inform - Educate - Entertain"
+      , id = "retro"
+      , categories = [ "All", "Print", "Illustration" ]
+      , display = "/img/retro/display.jpg"
+      , description = "A personal illustration project of various retro objects, inspired by a Public Service Broadcasting album Inform - Educate - Entertain."
+      , facts =
+            [  { name = "Date:"
+              , value = "November 2019"
+              }
+            , { name = "Tools:"
+              , value = "Photoshop, Illustrator"
+              }
+              
+            ]
+      , content =
+            [ { graphic = "/img/retro/display.jpg"
+              }
+              ,{ graphic = "/img/retro/image2.jpg"
+              }
+               ,{ graphic = "/img/retro/tape.jpg"
+              }
+               ,{ graphic = "/img/retro/polaroid.jpg"
+              }
+               ,{ graphic = "/img/retro/vinyl.jpg"
+              }
+              
+            ]
+      }
    
 
     --   { name = "Name of the project"
