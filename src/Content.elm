@@ -175,6 +175,49 @@ projects =
               
             ]
       }
+      ,{ name = "The Hop Brothers Brewery"
+      , id = "hopbrothers"
+      , categories = [ "Graphic Design", "All", "Branding", "Illustration" ]
+      , display = "/img/hopbrothers/display.jpg"
+      , description = "The brief for this project asked to create branding, a brand identity design manual and product packaging, for a small craft brewery ran by two brothers. Main inspiration for the design's artwork came from classic style tattoos, which alongside bright colours and witty product names, will help the brand stand out on the shop shelves."
+      , facts =
+            [  { name = "Date:"
+              , value = "March 2020"
+              }
+            , { name = "Tools:"
+              , value = "Photoshop, Illustrator"
+              }
+             
+            ]
+      , content =
+            [ { graphic = "/img/hopbrothers/display.jpg"
+              }
+              ,{ graphic = "/img/hopbrothers/image1.jpg"
+              }
+              ,{ graphic = "/img/hopbrothers/image2.jpg"
+              }
+              ,{ graphic = "/img/hopbrothers/image3.jpg"
+              }
+              ,{ graphic = "/img/hopbrothers/image4.jpg"
+              }
+               ,{ graphic = "/img/hopbrothers/image5_2.jpg"
+              }
+              ,{ graphic = "/img/hopbrothers/image5.jpg"
+              }
+              
+              ,{ graphic = "/img/hopbrothers/image6.jpg"
+              }
+              ,{ graphic = "/img/hopbrothers/image7.jpg"
+              }
+              ,{ graphic = "/img/hopbrothers/image8.jpg"
+              }
+              ,{ graphic = "/img/hopbrothers/image9.jpg"
+              }
+              ,{ graphic = "/img/hopbrothers/image10.jpg"
+              }
+              
+            ]
+      }
    
 
     --   { name = "Name of the project"
