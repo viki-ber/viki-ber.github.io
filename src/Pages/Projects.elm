@@ -67,8 +67,7 @@ view model =
         [ div [ class "grid-row", class "grid-top-margin" ]
             [ div [ class "main-body" ]
                 [ div [ class "left-container-menu" ] (listCategories model.selection Selection)
-                , div [ class "row" ]
-                    (displayProjects (filterProjects model.selection))
+                , div [] (displayProjects (filterProjects model.selection))
                 ]
             ]
         ]

@@ -45,13 +45,13 @@ projects =
       , display = "/img/first.jpg"
       , description = "<strong></strong> This brief asked to create a branding and UI design for a movie streaming service specialising in outdoor adventure movies. Main inspiration for the design came from modern outdoor, travel and adventure magazines."
       , facts =
-            [  { name = "Date"
+            [ { name = "Date"
               , value = "October 2020"
               }
             , { name = "Tools"
               , value = "Photoshop, Illustrator, XD"
               }
-              , { name = "Try:"
+            , { name = "Try:"
               , value = "<a href='https://xd.adobe.com/view/7e240d0c-6c57-4a8c-9c84-46f290a352e8-2b77/'>Interactive Prototype</a>"
               }
             ]
@@ -68,185 +68,170 @@ projects =
               }
             ]
       }
-
-      ,{ name = "Esca"
+    , { name = "Esca"
       , id = "esca"
       , categories = [ "Branding", "UX/UI", "Graphic Design", "All" ]
       , display = "/img/esca/display.png"
       , description = "The brief for this project was to create a branding and an e-commerce website for a company selling premium food products"
       , facts =
-            [  { name = "Date:"
+            [ { name = "Date:"
               , value = "October 2020"
               }
             , { name = "Tools:"
               , value = "Photoshop, Illustrator, XD"
               }
-              , { name = "Try:"
+            , { name = "Try:"
               , value = "<a href='https://xd.adobe.com/view/037c0fc6-01c4-41d5-a0d8-a77733748a4b-562f/'>Interactive Prototype</a>"
               }
             ]
       , content =
             [ { graphic = "/img/esca/logo.mp4"
               }
-              
-              ,{ graphic = "/img/esca/page2.jpg"
+            , { graphic = "/img/esca/page2.jpg"
               }
-              ,{ graphic = "/img/esca/micro.mp4"
+            , { graphic = "/img/esca/micro.mp4"
               }
-              ,{ graphic = "/img/esca/ui_movie.mp4"
+            , { graphic = "/img/esca/ui_movie.mp4"
               }
             , { graphic = "/img/esca/page3.jpg"
               }
             ]
       }
-              ,{ name = "It's fika time"
+    , { name = "It's fika time"
       , id = "fika"
-      , categories = [  "Graphic Design", "All" ]
+      , categories = [ "Graphic Design", "All" ]
       , display = "/img/fikatime/display.jpg"
       , description = "This creative brief asked to produce any piece of design, adhering to only one constraint - the design had to be produced using only HTML and CSS languages. I chose to create a set of graphical elements inspired by Swedish folk art. These elements can then be mixed and matched to produce various patters that can be applied to different everyday objects. "
       , facts =
-            [  { name = "Date:"
+            [ { name = "Date:"
               , value = "November 2020"
               }
             , { name = "Tools:"
               , value = "HTML, CSS"
               }
-              
             ]
       , content =
             [ { graphic = "/img/fikatime/image1.jpg"
               }
-              
-              ,{ graphic = "/img/fikatime/image2.jpg"
+            , { graphic = "/img/fikatime/image2.jpg"
               }
-              
             ]
       }
-       ,{ name = "Colour Grabber"
+    , { name = "Colour Grabber"
       , id = "colourgrabber"
-      , categories = [  "Graphic Design", "All", "UX/UI" ]
+      , categories = [ "Graphic Design", "All", "UX/UI" ]
       , display = "/img/colourgrabber/display.png"
       , description = "In this brief I had to create a device specific graphic user interface and its assets. I chose to create an interface for a colour capturing application and used neumorphic style as inspiration for a clean and minimatistic look, where the captured colour is the main focus. "
       , facts =
-            [  { name = "Date:"
+            [ { name = "Date:"
               , value = "November 2020"
               }
             , { name = "Tools:"
               , value = "XD"
               }
-              ,{ name = "Try:"
+            , { name = "Try:"
               , value = "<a href='https://xd.adobe.com/view/0dbb5502-96cc-444c-b7c8-53267224f761-58e8/'>Interactive Prototype</a>"
               }
-              
             ]
       , content =
             [ { graphic = "/img/colourgrabber/movie1.mp4"
               }
-              
-              ,{ graphic = "/img/colourgrabber/image1.jpg"
+            , { graphic = "/img/colourgrabber/image1.jpg"
               }
-              ,{ graphic = "/img/colourgrabber/movie2.mp4"
+            , { graphic = "/img/colourgrabber/movie2.mp4"
               }
-              
             ]
-       }
-       ,{ name = "OFFcenter magazine"
+      }
+    , { name = "OFFcenter magazine"
       , id = "offcenter"
       , categories = [ "Graphic Design", "All", "Print" ]
       , display = "/img/offcenter/display2.jpg"
       , description = "The brief for this university project was to design and print a magazine about design, featuring at least a couple of Adobe tutorials and an article about some sort of printing technique. The rest was up to us. We chose to produce a magazine celebrating different and non-main-stream design and designers. For the project we produced all the graphical elements, wrote the content and even designed our own fully functional typeface for the title and headings. Finally we got the magazine printed at a proffessional printhouse with a 50 copy print run."
       , facts =
-            [  { name = "Date:"
+            [ { name = "Date:"
               , value = "May 2020"
               }
             , { name = "Tools:"
               , value = "Photoshop, Illustrator, Indesign"
               }
-              , { name = "Collaboration:"
+            , { name = "Collaboration:"
               , value = "Maria Arango-Kure, Linda Hammarstrand"
               }
-              , { name = "Try:"
+            , { name = "Try:"
               , value = "<a href='https://drive.google.com/file/d/1ktjONkSPHLeHc-1Go4Igoikuo26Evu-F/view?usp=sharing'>Read the full magazine here</a>"
               }
             ]
       , content =
             [ { graphic = "/img/offcenter/main.jpg"
               }
-              
             ]
       }
-      ,{ name = "The Hop Brothers Brewery"
+    , { name = "The Hop Brothers Brewery"
       , id = "hopbrothers"
       , categories = [ "Graphic Design", "All", "Branding", "Illustration" ]
       , display = "/img/hopbrothers/display.jpg"
       , description = "The brief for this project asked to create branding, a brand identity design manual and product packaging, for a small craft brewery ran by two brothers. Main inspiration for the design's artwork came from classic style tattoos, which alongside bright colours and witty product names, will help the brand stand out on the shop shelves."
       , facts =
-            [  { name = "Date:"
+            [ { name = "Date:"
               , value = "March 2020"
               }
             , { name = "Tools:"
               , value = "Photoshop, Illustrator"
               }
-             
             ]
       , content =
             [ { graphic = "/img/hopbrothers/display.jpg"
               }
-              ,{ graphic = "/img/hopbrothers/image1.jpg"
+            , { graphic = "/img/hopbrothers/image1.jpg"
               }
-              ,{ graphic = "/img/hopbrothers/image2.jpg"
+            , { graphic = "/img/hopbrothers/image2.jpg"
               }
-              ,{ graphic = "/img/hopbrothers/image3.jpg"
+            , { graphic = "/img/hopbrothers/image3.jpg"
               }
-              ,{ graphic = "/img/hopbrothers/image4.jpg"
+            , { graphic = "/img/hopbrothers/image4.jpg"
               }
-               ,{ graphic = "/img/hopbrothers/image5_2.jpg"
+            , { graphic = "/img/hopbrothers/image5_2.jpg"
               }
-              ,{ graphic = "/img/hopbrothers/image5.jpg"
+            , { graphic = "/img/hopbrothers/image5.jpg"
               }
-              
-              ,{ graphic = "/img/hopbrothers/image6.jpg"
+            , { graphic = "/img/hopbrothers/image6.jpg"
               }
-              ,{ graphic = "/img/hopbrothers/image7.jpg"
+            , { graphic = "/img/hopbrothers/image7.jpg"
               }
-              ,{ graphic = "/img/hopbrothers/image8.jpg"
+            , { graphic = "/img/hopbrothers/image8.jpg"
               }
-              ,{ graphic = "/img/hopbrothers/image9.jpg"
+            , { graphic = "/img/hopbrothers/image9.jpg"
               }
-              ,{ graphic = "/img/hopbrothers/image10.jpg"
+            , { graphic = "/img/hopbrothers/image10.jpg"
               }
-              
             ]
       }
-      ,{ name = "Inform - Educate - Entertain"
+    , { name = "Inform - Educate - Entertain"
       , id = "retro"
       , categories = [ "All", "Print", "Illustration" ]
       , display = "/img/retro/display.jpg"
       , description = "A personal illustration project of various retro objects, inspired by a Public Service Broadcasting album Inform - Educate - Entertain."
       , facts =
-            [  { name = "Date:"
+            [ { name = "Date:"
               , value = "November 2019"
               }
             , { name = "Tools:"
               , value = "Photoshop, Illustrator"
               }
-              
             ]
       , content =
             [ { graphic = "/img/retro/display.jpg"
               }
-              ,{ graphic = "/img/retro/image2.jpg"
+            , { graphic = "/img/retro/image2.jpg"
               }
-               ,{ graphic = "/img/retro/tape.jpg"
+            , { graphic = "/img/retro/tape.jpg"
               }
-               ,{ graphic = "/img/retro/polaroid.jpg"
+            , { graphic = "/img/retro/polaroid.jpg"
               }
-               ,{ graphic = "/img/retro/vinyl.jpg"
+            , { graphic = "/img/retro/vinyl.jpg"
               }
-              
             ]
       }
-   
 
     --   { name = "Name of the project"
     --   , id = "name_of_url"
@@ -272,3 +257,17 @@ projects =
     --         ]
     --   }
     ]
+
+
+defaultProject : Project
+defaultProject =
+    { name = ""
+    , id = ""
+    , categories = []
+    , display = ""
+    , description = ""
+    , facts =
+        []
+    , content =
+        []
+    }
