@@ -265,7 +265,7 @@ a:visited:not(#exclude) {
 .row {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 4px;
+  width: 100%;
 }
 
 @media all and (max-width: 1199px) {
@@ -310,7 +310,6 @@ a:visited:not(#exclude) {
 }
 
 .project img {
-  margin-top: 8px;
   vertical-align: middle;
   width: 100%;
   opacity: 1;
@@ -491,6 +490,19 @@ a:visited:not(#exclude) {
 
 /* PROJECT PAGE ------------------------------------------------------------- */
 
+.project {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+@media all and (max-width: 1199px) {
+  .project {
+    box-sizing: border-box;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
 .project-header {
   display: flex;
   justify-content: space-between;
@@ -652,6 +664,13 @@ input:checked ~ .project-details {
   width: 60%;
   -webkit-animation: flicker-in-1 2s linear both;
   animation: flicker-in-1 2s linear both;
+}
+
+@supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices, as "background-attachment: fixed; is not supported by those devices" */
+  .filler .logo {
+    background-attachment: scroll;
+  }
 }
 
 .filler .arrow {

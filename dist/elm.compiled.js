@@ -11079,10 +11079,7 @@ var $author$project$Pages$Top$view = function (model) {
 								A2($author$project$Components$CategoryList$listCategories, model.ac, $elm$core$Basics$identity)),
 								A2(
 								$elm$html$Html$div,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$class('row')
-									]),
+								_List_Nil,
 								$author$project$Components$Imagegrid$displayProjects(
 									$author$project$Components$Imagegrid$filterProjects(model.ac)))
 							]))
