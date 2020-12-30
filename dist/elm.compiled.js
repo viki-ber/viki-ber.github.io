@@ -5335,7 +5335,7 @@ var $elm$core$Basics$composeR = F3(
 	});
 var $author$project$Main$Model = F2(
 	function (shared, page) {
-		return {D: page, z: shared};
+		return {F: page, z: shared};
 	});
 var $author$project$Main$Pages = function (a) {
 	return {$: 3, a: a};
@@ -6240,7 +6240,7 @@ var $author$project$Spa$Page$static = function (page) {
 		cD: page.cD
 	};
 };
-var $author$project$Content$about = {v: 'Graphic designer and illustrator based in Gothenburg, Sweden. <br /><br /> Trained at Jönköping and Linneaus universities. <br /><br /> Previous experience in food product and brand development.<br /><br /> Favourite colours - yellow, blue and grey.<br /><br /> Dream collaboration - Stefan Sagmeister.<br /><br /> Dream brief - design an issue of Lucky Peach magazine.<br /><br />', aM: 'About Me'};
+var $author$project$Content$about = {r: 'Graphic designer and illustrator based in Gothenburg, Sweden. <br /><br /> Trained at Jönköping and Linneaus universities. <br /><br /> Previous experience in food product and brand development.<br /><br /> Favourite colours - yellow, blue and grey.<br /><br /> Dream collaboration - Stefan Sagmeister.<br /><br /> Dream brief - design an issue of Lucky Peach magazine.<br /><br />', aM: 'About Me'};
 var $elm$json$Json$Encode$string = _Json_wrap;
 var $elm$html$Html$Attributes$stringProperty = F2(
 	function (key, string) {
@@ -9808,7 +9808,7 @@ var $author$project$Pages$About$view = function (_v0) {
 													]),
 												_List_fromArray(
 													[
-														$author$project$Components$HtmlRenderer$htmlRenderer($author$project$Content$about.v)
+														$author$project$Components$HtmlRenderer$htmlRenderer($author$project$Content$about.r)
 													]))
 											]))
 									]))
@@ -9821,7 +9821,7 @@ var $author$project$Pages$About$view = function (_v0) {
 var $author$project$Pages$About$page = $author$project$Spa$Page$static(
 	{cD: $author$project$Pages$About$view});
 var $elm$html$Html$a = _VirtualDom_node('a');
-var $author$project$Content$contact = {v: 'I am happy to hear about possible work orders or potential collaborations. If you would like to see my professional CV, do not hesitate to ask. You can drop me a line on:<br /><br /><span class=\"email-link\"><a href=\"mailto:viktorija.graphics@outlook.com\">viktorija.graphics@outlook.com</a></span><br /><br />You are also welcome to contact me via my social media accounts.', aM: 'Contact Me'};
+var $author$project$Content$contact = {r: 'I am happy to hear about possible work orders or potential collaborations. If you would like to see my professional CV, do not hesitate to ask. You can drop me a line on:<br /><br /><span class=\"email-link\"><a href=\"mailto:viktorija.graphics@outlook.com\">viktorija.graphics@outlook.com</a></span><br /><br />You are also welcome to contact me via my social media accounts.', aM: 'Contact Me'};
 var $elm$html$Html$Attributes$href = function (url) {
 	return A2(
 		$elm$html$Html$Attributes$stringProperty,
@@ -9873,7 +9873,7 @@ var $author$project$Pages$Contact$view = function (_v0) {
 													]),
 												_List_fromArray(
 													[
-														$author$project$Components$HtmlRenderer$htmlRenderer($author$project$Content$contact.v)
+														$author$project$Components$HtmlRenderer$htmlRenderer($author$project$Content$contact.r)
 													])),
 												A2(
 												$elm$html$Html$div,
@@ -9983,163 +9983,6 @@ var $author$project$Pages$Projects$update = F2(
 			{ac: x});
 	});
 var $author$project$Pages$Projects$Selection = $elm$core$Basics$identity;
-var $author$project$Content$projects = _List_fromArray(
-	[
-		{
-		aR: _List_fromArray(
-			['Branding', 'UX/UI', 'Graphic Design', 'All']),
-		v: _List_fromArray(
-			[
-				{c: '/img/first.jpg'},
-				{c: '/img/graphic_profile_light.jpg'},
-				{c: '/img/graphic_profile_dark.jpg'},
-				{c: '/img/mockup_2.jpg'},
-				{c: '/img/terraventure/movie2.mp4'}
-			]),
-		G: '<strong></strong> This brief asked to create a branding and UI design for a movie streaming service specialising in outdoor adventure movies. Main inspiration for the design came from modern outdoor, travel and adventure magazines.',
-		bX: '/img/first.jpg',
-		H: _List_fromArray(
-			[
-				{b9: 'Date', i: 'October 2020'},
-				{b9: 'Tools', i: 'Photoshop, Illustrator, XD'},
-				{b9: 'Try:', i: '<a href=\'https://xd.adobe.com/view/7e240d0c-6c57-4a8c-9c84-46f290a352e8-2b77/\'>Interactive Prototype</a>'}
-			]),
-		a5: 'terraventure',
-		b9: 'Terra Venture'
-	},
-		{
-		aR: _List_fromArray(
-			['Branding', 'UX/UI', 'Graphic Design', 'All']),
-		v: _List_fromArray(
-			[
-				{c: '/img/esca/logo.mp4'},
-				{c: '/img/esca/page2.jpg'},
-				{c: '/img/esca/micro.mp4'},
-				{c: '/img/esca/ui_movie.mp4'},
-				{c: '/img/esca/page3.jpg'}
-			]),
-		G: 'The brief for this project was to create a branding and an e-commerce website for a company selling premium food products',
-		bX: '/img/esca/display.png',
-		H: _List_fromArray(
-			[
-				{b9: 'Date:', i: 'October 2020'},
-				{b9: 'Tools:', i: 'Photoshop, Illustrator, XD'},
-				{b9: 'Try:', i: '<a href=\'https://xd.adobe.com/view/037c0fc6-01c4-41d5-a0d8-a77733748a4b-562f/\'>Interactive Prototype</a>'}
-			]),
-		a5: 'esca',
-		b9: 'Esca'
-	},
-		{
-		aR: _List_fromArray(
-			['Graphic Design', 'All']),
-		v: _List_fromArray(
-			[
-				{c: '/img/fikatime/image1.jpg'},
-				{c: '/img/fikatime/image2.jpg'}
-			]),
-		G: 'This creative brief asked to produce any piece of design, adhering to only one constraint - the design had to be produced using only HTML and CSS languages. I chose to create a set of graphical elements inspired by Swedish folk art. These elements can then be mixed and matched to produce various patters that can be applied to different everyday objects. ',
-		bX: '/img/fikatime/display.jpg',
-		H: _List_fromArray(
-			[
-				{b9: 'Date:', i: 'November 2020'},
-				{b9: 'Tools:', i: 'HTML, CSS'}
-			]),
-		a5: 'fika',
-		b9: 'It\'s fika time'
-	},
-		{
-		aR: _List_fromArray(
-			['Graphic Design', 'All', 'UX/UI']),
-		v: _List_fromArray(
-			[
-				{c: '/img/colourgrabber/movie1.mp4'},
-				{c: '/img/colourgrabber/image1.jpg'},
-				{c: '/img/colourgrabber/movie2.mp4'}
-			]),
-		G: 'In this brief I had to create a device specific graphic user interface and its assets. I chose to create an interface for a colour capturing application and used neumorphic style as inspiration for a clean and minimatistic look, where the captured colour is the main focus. ',
-		bX: '/img/colourgrabber/display.png',
-		H: _List_fromArray(
-			[
-				{b9: 'Date:', i: 'November 2020'},
-				{b9: 'Tools:', i: 'XD'},
-				{b9: 'Try:', i: '<a href=\'https://xd.adobe.com/view/0dbb5502-96cc-444c-b7c8-53267224f761-58e8/\'>Interactive Prototype</a>'}
-			]),
-		a5: 'colourgrabber',
-		b9: 'Colour Grabber'
-	},
-		{
-		aR: _List_fromArray(
-			['Graphic Design', 'All', 'Print']),
-		v: _List_fromArray(
-			[
-				{c: '/img/offcenter/main.jpg'}
-			]),
-		G: 'The brief for this university project was to design and print a magazine about design, featuring at least a couple of Adobe tutorials and an article about some sort of printing technique. The rest was up to us. We chose to produce a magazine celebrating different and non-main-stream design and designers. For the project we produced all the graphical elements, wrote the content and even designed our own fully functional typeface for the title and headings. Finally we got the magazine printed at a proffessional printhouse with a 50 copy print run.',
-		bX: '/img/offcenter/display2.jpg',
-		H: _List_fromArray(
-			[
-				{b9: 'Date:', i: 'May 2020'},
-				{b9: 'Tools:', i: 'Photoshop, Illustrator, Indesign'},
-				{b9: 'Collaboration:', i: 'Maria Arango-Kure, Linda Hammarstrand'},
-				{b9: 'Try:', i: '<a href=\'https://drive.google.com/file/d/1ktjONkSPHLeHc-1Go4Igoikuo26Evu-F/view?usp=sharing\'>Read the full magazine here</a>'}
-			]),
-		a5: 'offcenter',
-		b9: 'OFFcenter magazine'
-	},
-		{
-		aR: _List_fromArray(
-			['Graphic Design', 'All', 'Branding', 'Illustration']),
-		v: _List_fromArray(
-			[
-				{c: '/img/hopbrothers/display.jpg'},
-				{c: '/img/hopbrothers/image1.jpg'},
-				{c: '/img/hopbrothers/image2.jpg'},
-				{c: '/img/hopbrothers/image3.jpg'},
-				{c: '/img/hopbrothers/image4.jpg'},
-				{c: '/img/hopbrothers/image5_2.jpg'},
-				{c: '/img/hopbrothers/image5.jpg'},
-				{c: '/img/hopbrothers/image6.jpg'},
-				{c: '/img/hopbrothers/image7.jpg'},
-				{c: '/img/hopbrothers/image8.jpg'},
-				{c: '/img/hopbrothers/image9.jpg'},
-				{c: '/img/hopbrothers/image10.jpg'}
-			]),
-		G: 'The brief for this project asked to create branding, a brand identity design manual and product packaging, for a small craft brewery ran by two brothers. Main inspiration for the design\'s artwork came from classic style tattoos, which alongside bright colours and witty product names, will help the brand stand out on the shop shelves.',
-		bX: '/img/hopbrothers/display.jpg',
-		H: _List_fromArray(
-			[
-				{b9: 'Date:', i: 'March 2020'},
-				{b9: 'Tools:', i: 'Photoshop, Illustrator'}
-			]),
-		a5: 'hopbrothers',
-		b9: 'The Hop Brothers Brewery'
-	},
-		{
-		aR: _List_fromArray(
-			['All', 'Print', 'Illustration']),
-		v: _List_fromArray(
-			[
-				{c: '/img/retro/display.jpg'},
-				{c: '/img/retro/image2.jpg'},
-				{c: '/img/retro/tape.jpg'},
-				{c: '/img/retro/polaroid.jpg'},
-				{c: '/img/retro/vinyl.jpg'}
-			]),
-		G: 'A personal illustration project of various retro objects, inspired by a Public Service Broadcasting album Inform - Educate - Entertain.',
-		bX: '/img/retro/display.jpg',
-		H: _List_fromArray(
-			[
-				{b9: 'Date:', i: 'November 2019'},
-				{b9: 'Tools:', i: 'Photoshop, Illustrator'}
-			]),
-		a5: 'retro',
-		b9: 'Inform - Educate - Entertain'
-	}
-	]);
-var $author$project$Components$Imagegrid$calcRows = function (projects) {
-	return $elm$core$Basics$floor(
-		$elm$core$List$length($author$project$Content$projects) / 3);
-};
 var $elm$core$List$filter = F2(
 	function (isGood, list) {
 		return A3(
@@ -10205,95 +10048,99 @@ var $author$project$Spa$Generated$Route$toString = function (route) {
 		'/',
 		A2($elm$core$String$join, '/', segments));
 };
-var $author$project$Components$Imagegrid$displayProject = function (project) {
-	return A2(
-		$elm$html$Html$div,
-		_List_fromArray(
-			[
-				$elm$html$Html$Attributes$class('project')
-			]),
-		_List_fromArray(
-			[
-				A2(
-				$elm$html$Html$a,
+var $author$project$Components$Imagegrid$displayProject = F2(
+	function (project, style) {
+		return A2(
+			$elm$html$Html$div,
+			_Utils_ap(
 				_List_fromArray(
 					[
-						$elm$html$Html$Attributes$class('link'),
-						$elm$html$Html$Attributes$href(
-						$author$project$Spa$Generated$Route$toString(
-							$author$project$Spa$Generated$Route$Projects__Id_String(
-								{a5: project.a5})))
+						$elm$html$Html$Attributes$class('project')
 					]),
-				_List_fromArray(
-					[
-						A2(
-						$elm$html$Html$img,
-						_List_fromArray(
-							[
-								$elm$html$Html$Attributes$src(project.bX)
-							]),
-						_List_Nil),
-						A2(
-						$elm$html$Html$div,
-						_List_fromArray(
-							[
-								$elm$html$Html$Attributes$class('project-infobox')
-							]),
-						_List_fromArray(
-							[
-								A2(
-								$elm$html$Html$div,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$class('title')
-									]),
-								_List_fromArray(
-									[
-										$elm$html$Html$text(project.b9)
-									])),
-								A2(
-								$elm$html$Html$div,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$class('subtitle')
-									]),
-								_List_fromArray(
-									[
-										$elm$html$Html$text(
-										A3(
-											$elm$core$List$foldl,
-											$elm$core$Basics$append,
-											'',
-											A2(
-												$elm$core$List$intersperse,
-												' | ',
+				style),
+			_List_fromArray(
+				[
+					A2(
+					$elm$html$Html$a,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$class('link'),
+							$elm$html$Html$Attributes$href(
+							$author$project$Spa$Generated$Route$toString(
+								$author$project$Spa$Generated$Route$Projects__Id_String(
+									{a5: project.a5})))
+						]),
+					_List_fromArray(
+						[
+							A2(
+							$elm$html$Html$img,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$src(project.bX)
+								]),
+							_List_Nil),
+							A2(
+							$elm$html$Html$div,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$class('project-infobox')
+								]),
+							_List_fromArray(
+								[
+									A2(
+									$elm$html$Html$div,
+									_List_fromArray(
+										[
+											$elm$html$Html$Attributes$class('title')
+										]),
+									_List_fromArray(
+										[
+											$elm$html$Html$text(project.b9)
+										])),
+									A2(
+									$elm$html$Html$div,
+									_List_fromArray(
+										[
+											$elm$html$Html$Attributes$class('subtitle')
+										]),
+									_List_fromArray(
+										[
+											$elm$html$Html$text(
+											A3(
+												$elm$core$List$foldl,
+												$elm$core$Basics$append,
+												'',
 												A2(
-													$elm$core$List$filter,
-													function (x) {
-														return !(x === 'All');
-													},
-													project.aR))))
-									]))
-							]))
-					]))
-			]));
-};
+													$elm$core$List$intersperse,
+													' | ',
+													A2(
+														$elm$core$List$filter,
+														function (x) {
+															return !(x === 'All');
+														},
+														project.aR))))
+										]))
+								]))
+						]))
+				]));
+	});
 var $author$project$Components$Imagegrid$displayGrid = F2(
 	function (style, projects) {
-		return A2(
-			$elm$core$List$map,
-			function (x) {
-				return A2(
-					$elm$html$Html$div,
-					style,
-					A2(
-						$elm$core$List$map,
-						function (y) {
-							return $author$project$Components$Imagegrid$displayProject(y);
-						},
-						x));
-			},
-			projects);
+		return _List_fromArray(
+			[
+				A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('row')
+					]),
+				A2(
+					$elm$core$List$map,
+					function (y) {
+						return A2($author$project$Components$Imagegrid$displayProject, y, style);
+					},
+					projects))
+			]);
 	});
 var $author$project$Components$Imagegrid$calculateGrid = function (projects) {
 	var _v0 = $elm$core$List$length(projects);
@@ -10322,7 +10169,8 @@ var $author$project$Components$Imagegrid$calculateGrid = function (projects) {
 				$author$project$Components$Imagegrid$displayGrid,
 				_List_fromArray(
 					[
-						$elm$html$Html$Attributes$class('column-three')
+						$elm$html$Html$Attributes$class('column-three'),
+						$elm$html$Html$Attributes$class('column-two-fixed-height')
 					]),
 				projects);
 	}
@@ -10474,151 +10322,179 @@ var $elm$core$List$take = F2(
 	function (n, list) {
 		return A3($elm$core$List$takeFast, 0, n, list);
 	});
-var $elm_community$list_extra$List$Extra$splitAt = F2(
-	function (n, xs) {
-		return _Utils_Tuple2(
-			A2($elm$core$List$take, n, xs),
-			A2($elm$core$List$drop, n, xs));
-	});
-var $elm_community$list_extra$List$Extra$groupsOfVarying_ = F3(
-	function (listOflengths, list, accu) {
-		groupsOfVarying_:
-		while (true) {
-			var _v0 = _Utils_Tuple2(listOflengths, list);
-			if (_v0.a.b && _v0.b.b) {
-				var _v1 = _v0.a;
-				var length = _v1.a;
-				var tailLengths = _v1.b;
-				var _v2 = _v0.b;
-				var _v3 = A2($elm_community$list_extra$List$Extra$splitAt, length, list);
-				var head = _v3.a;
-				var tail = _v3.b;
-				var $temp$listOflengths = tailLengths,
-					$temp$list = tail,
-					$temp$accu = A2($elm$core$List$cons, head, accu);
-				listOflengths = $temp$listOflengths;
-				list = $temp$list;
-				accu = $temp$accu;
-				continue groupsOfVarying_;
-			} else {
-				return $elm$core$List$reverse(accu);
-			}
-		}
-	});
-var $elm_community$list_extra$List$Extra$groupsOfVarying = F2(
-	function (listOflengths, list) {
-		return A3($elm_community$list_extra$List$Extra$groupsOfVarying_, listOflengths, list, _List_Nil);
+var $elm_community$list_extra$List$Extra$greedyGroupsOfWithStep = F3(
+	function (size, step, xs) {
+		var xs_ = A2($elm$core$List$drop, step, xs);
+		var okayXs = $elm$core$List$length(xs) > 0;
+		var okayArgs = (size > 0) && (step > 0);
+		return (okayArgs && okayXs) ? A2(
+			$elm$core$List$cons,
+			A2($elm$core$List$take, size, xs),
+			A3($elm_community$list_extra$List$Extra$greedyGroupsOfWithStep, size, step, xs_)) : _List_Nil;
 	});
 var $author$project$Components$Imagegrid$groupProjects = function (projects) {
-	var _v0 = $elm$core$List$length(projects);
-	switch (_v0) {
-		case 0:
-			return _List_fromArray(
-				[_List_Nil]);
-		case 1:
-			return _List_fromArray(
-				[
-					$author$project$Components$Imagegrid$calculateGrid(
-					A2(
-						$elm_community$list_extra$List$Extra$groupsOfVarying,
-						_List_fromArray(
-							[1]),
-						projects))
-				]);
-		case 2:
-			return _List_fromArray(
-				[
-					$author$project$Components$Imagegrid$calculateGrid(
-					A2(
-						$elm_community$list_extra$List$Extra$groupsOfVarying,
-						_List_fromArray(
-							[1, 1]),
-						projects))
-				]);
-		case 3:
-			return _List_fromArray(
-				[
-					$author$project$Components$Imagegrid$calculateGrid(
-					A2(
-						$elm_community$list_extra$List$Extra$groupsOfVarying,
-						_List_fromArray(
-							[1, 1]),
-						A2($elm$core$List$take, 2, projects))),
-					$author$project$Components$Imagegrid$calculateGrid(
-					A2(
-						$elm_community$list_extra$List$Extra$groupsOfVarying,
-						_List_fromArray(
-							[1]),
-						A2($elm$core$List$drop, 2, projects)))
-				]);
-		case 4:
-			return _List_fromArray(
-				[
-					$author$project$Components$Imagegrid$calculateGrid(
-					A2(
-						$elm_community$list_extra$List$Extra$groupsOfVarying,
-						_List_fromArray(
-							[2, 2]),
-						projects))
-				]);
-		case 5:
-			return _List_fromArray(
-				[
-					$author$project$Components$Imagegrid$calculateGrid(
-					A2(
-						$elm_community$list_extra$List$Extra$groupsOfVarying,
-						_List_fromArray(
-							[1, 1]),
-						A2($elm$core$List$take, 2, projects))),
-					$author$project$Components$Imagegrid$calculateGrid(
-					A2(
-						$elm_community$list_extra$List$Extra$groupsOfVarying,
-						_List_fromArray(
-							[1, 1, 1]),
-						A2($elm$core$List$drop, 2, projects)))
-				]);
-		case 6:
-			return _List_fromArray(
-				[
-					$author$project$Components$Imagegrid$calculateGrid(
-					A2(
-						$elm_community$list_extra$List$Extra$groupsOfVarying,
-						_List_fromArray(
-							[1, 1]),
-						A2($elm$core$List$take, 2, projects))),
-					$author$project$Components$Imagegrid$calculateGrid(
-					A2(
-						$elm_community$list_extra$List$Extra$groupsOfVarying,
-						_List_fromArray(
-							[2, 2]),
-						A2($elm$core$List$drop, 2, projects)))
-				]);
-		default:
-			return _List_fromArray(
-				[
-					$author$project$Components$Imagegrid$calculateGrid(
-					A2(
-						$elm_community$list_extra$List$Extra$groupsOfVarying,
-						_List_fromArray(
-							[1, 1]),
-						A2($elm$core$List$take, 2, projects))),
-					$author$project$Components$Imagegrid$calculateGrid(
-					A2(
-						$elm_community$list_extra$List$Extra$groupsOfVarying,
-						_List_fromArray(
-							[
-								$author$project$Components$Imagegrid$calcRows(projects),
-								$author$project$Components$Imagegrid$calcRows(projects),
-								$author$project$Components$Imagegrid$calcRows(projects)
-							]),
-						A2($elm$core$List$drop, 2, projects)))
-				]);
-	}
+	return A2(
+		$elm$core$List$map,
+		$author$project$Components$Imagegrid$calculateGrid,
+		A3($elm_community$list_extra$List$Extra$greedyGroupsOfWithStep, 2, 2, projects));
 };
 var $author$project$Components$Imagegrid$displayProjects = function (projects) {
 	return $elm$core$List$concat(
 		$author$project$Components$Imagegrid$groupProjects(projects));
 };
+var $author$project$Content$projects = _List_fromArray(
+	[
+		{
+		aR: _List_fromArray(
+			['Branding', 'UX/UI', 'Graphic Design', 'All']),
+		r: _List_fromArray(
+			[
+				{c: '/img/first.jpg'},
+				{c: '/img/graphic_profile_light.jpg'},
+				{c: '/img/graphic_profile_dark.jpg'},
+				{c: '/img/mockup_2.jpg'},
+				{c: '/img/terraventure/movie2.mp4'}
+			]),
+		B: '<strong></strong> This brief asked to create a branding and UI design for a movie streaming service specialising in outdoor adventure movies. Main inspiration for the design came from modern outdoor, travel and adventure magazines.',
+		bX: '/img/first.jpg',
+		C: _List_fromArray(
+			[
+				{b9: 'Date', i: 'October 2020'},
+				{b9: 'Tools', i: 'Photoshop, Illustrator, XD'},
+				{b9: 'Try:', i: '<a href=\'https://xd.adobe.com/view/7e240d0c-6c57-4a8c-9c84-46f290a352e8-2b77/\'>Interactive Prototype</a>'}
+			]),
+		a5: 'terraventure',
+		b9: 'Terra Venture'
+	},
+		{
+		aR: _List_fromArray(
+			['Branding', 'UX/UI', 'Graphic Design', 'All']),
+		r: _List_fromArray(
+			[
+				{c: '/img/esca/logo.mp4'},
+				{c: '/img/esca/page2.jpg'},
+				{c: '/img/esca/micro.mp4'},
+				{c: '/img/esca/ui_movie.mp4'},
+				{c: '/img/esca/page3.jpg'}
+			]),
+		B: 'The brief for this project was to create a branding and an e-commerce website for a company selling premium food products',
+		bX: '/img/esca/display.png',
+		C: _List_fromArray(
+			[
+				{b9: 'Date:', i: 'October 2020'},
+				{b9: 'Tools:', i: 'Photoshop, Illustrator, XD'},
+				{b9: 'Try:', i: '<a href=\'https://xd.adobe.com/view/037c0fc6-01c4-41d5-a0d8-a77733748a4b-562f/\'>Interactive Prototype</a>'}
+			]),
+		a5: 'esca',
+		b9: 'Esca'
+	},
+		{
+		aR: _List_fromArray(
+			['Graphic Design', 'All']),
+		r: _List_fromArray(
+			[
+				{c: '/img/fikatime/image1.jpg'},
+				{c: '/img/fikatime/image2.jpg'}
+			]),
+		B: 'This creative brief asked to produce any piece of design, adhering to only one constraint - the design had to be produced using only HTML and CSS languages. I chose to create a set of graphical elements inspired by Swedish folk art. These elements can then be mixed and matched to produce various patters that can be applied to different everyday objects. ',
+		bX: '/img/fikatime/display.jpg',
+		C: _List_fromArray(
+			[
+				{b9: 'Date:', i: 'November 2020'},
+				{b9: 'Tools:', i: 'HTML, CSS'}
+			]),
+		a5: 'fika',
+		b9: 'It\'s fika time'
+	},
+		{
+		aR: _List_fromArray(
+			['Graphic Design', 'All', 'UX/UI']),
+		r: _List_fromArray(
+			[
+				{c: '/img/colourgrabber/movie1.mp4'},
+				{c: '/img/colourgrabber/image1.jpg'},
+				{c: '/img/colourgrabber/movie2.mp4'}
+			]),
+		B: 'In this brief I had to create a device specific graphic user interface and its assets. I chose to create an interface for a colour capturing application and used neumorphic style as inspiration for a clean and minimatistic look, where the captured colour is the main focus. ',
+		bX: '/img/colourgrabber/display.png',
+		C: _List_fromArray(
+			[
+				{b9: 'Date:', i: 'November 2020'},
+				{b9: 'Tools:', i: 'XD'},
+				{b9: 'Try:', i: '<a href=\'https://xd.adobe.com/view/0dbb5502-96cc-444c-b7c8-53267224f761-58e8/\'>Interactive Prototype</a>'}
+			]),
+		a5: 'colourgrabber',
+		b9: 'Colour Grabber'
+	},
+		{
+		aR: _List_fromArray(
+			['Graphic Design', 'All', 'Print']),
+		r: _List_fromArray(
+			[
+				{c: '/img/offcenter/main.jpg'}
+			]),
+		B: 'The brief for this university project was to design and print a magazine about design, featuring at least a couple of Adobe tutorials and an article about some sort of printing technique. The rest was up to us. We chose to produce a magazine celebrating different and non-main-stream design and designers. For the project we produced all the graphical elements, wrote the content and even designed our own fully functional typeface for the title and headings. Finally we got the magazine printed at a proffessional printhouse with a 50 copy print run.',
+		bX: '/img/offcenter/display2.jpg',
+		C: _List_fromArray(
+			[
+				{b9: 'Date:', i: 'May 2020'},
+				{b9: 'Tools:', i: 'Photoshop, Illustrator, Indesign'},
+				{b9: 'Collaboration:', i: 'Maria Arango-Kure, Linda Hammarstrand'},
+				{b9: 'Try:', i: '<a href=\'https://drive.google.com/file/d/1ktjONkSPHLeHc-1Go4Igoikuo26Evu-F/view?usp=sharing\'>Read the full magazine here</a>'}
+			]),
+		a5: 'offcenter',
+		b9: 'OFFcenter magazine'
+	},
+		{
+		aR: _List_fromArray(
+			['Graphic Design', 'All', 'Branding', 'Illustration']),
+		r: _List_fromArray(
+			[
+				{c: '/img/hopbrothers/display.jpg'},
+				{c: '/img/hopbrothers/image1.jpg'},
+				{c: '/img/hopbrothers/image2.jpg'},
+				{c: '/img/hopbrothers/image3.jpg'},
+				{c: '/img/hopbrothers/image4.jpg'},
+				{c: '/img/hopbrothers/image5_2.jpg'},
+				{c: '/img/hopbrothers/image5.jpg'},
+				{c: '/img/hopbrothers/image6.jpg'},
+				{c: '/img/hopbrothers/image7.jpg'},
+				{c: '/img/hopbrothers/image8.jpg'},
+				{c: '/img/hopbrothers/image9.jpg'},
+				{c: '/img/hopbrothers/image10.jpg'}
+			]),
+		B: 'The brief for this project asked to create branding, a brand identity design manual and product packaging, for a small craft brewery ran by two brothers. Main inspiration for the design\'s artwork came from classic style tattoos, which alongside bright colours and witty product names, will help the brand stand out on the shop shelves.',
+		bX: '/img/hopbrothers/display.jpg',
+		C: _List_fromArray(
+			[
+				{b9: 'Date:', i: 'March 2020'},
+				{b9: 'Tools:', i: 'Photoshop, Illustrator'}
+			]),
+		a5: 'hopbrothers',
+		b9: 'The Hop Brothers Brewery'
+	},
+		{
+		aR: _List_fromArray(
+			['All', 'Print', 'Illustration']),
+		r: _List_fromArray(
+			[
+				{c: '/img/retro/display.jpg'},
+				{c: '/img/retro/image2.jpg'},
+				{c: '/img/retro/tape.jpg'},
+				{c: '/img/retro/polaroid.jpg'},
+				{c: '/img/retro/vinyl.jpg'}
+			]),
+		B: 'A personal illustration project of various retro objects, inspired by a Public Service Broadcasting album Inform - Educate - Entertain.',
+		bX: '/img/retro/display.jpg',
+		C: _List_fromArray(
+			[
+				{b9: 'Date:', i: 'November 2019'},
+				{b9: 'Tools:', i: 'Photoshop, Illustrator'}
+			]),
+		a5: 'retro',
+		b9: 'Inform - Educate - Entertain'
+	}
+	]);
 var $author$project$Components$Imagegrid$filterProjects = function (selection) {
 	return A2(
 		$elm$core$List$filter,
@@ -10769,7 +10645,7 @@ var $author$project$Components$CategoryList$listCategories = F2(
 			A2($author$project$Components$CategoryList$listCategory, selection, toMsg),
 			$elm$core$List$sort($author$project$Components$CategoryList$mergeCategories));
 	});
-var $author$project$Content$top = {v: 'lorem ipsum dolor sit amet', aM: 'My Portfolio'};
+var $author$project$Content$top = {r: 'lorem ipsum dolor sit amet', aM: 'My Portfolio'};
 var $author$project$Pages$Projects$view = function (model) {
 	return {
 		bR: _List_fromArray(
@@ -10800,10 +10676,7 @@ var $author$project$Pages$Projects$view = function (model) {
 								A2($author$project$Components$CategoryList$listCategories, model.ac, $elm$core$Basics$identity)),
 								A2(
 								$elm$html$Html$div,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$class('row')
-									]),
+								_List_Nil,
 								$author$project$Components$Imagegrid$displayProjects(
 									$author$project$Components$Imagegrid$filterProjects(model.ac)))
 							]))
@@ -10891,7 +10764,7 @@ var $elm$core$Array$get = F2(
 			A2($elm$core$Elm$JsArray$unsafeGet, $elm$core$Array$bitMask & index, tail)) : $elm$core$Maybe$Just(
 			A3($elm$core$Array$getHelp, startShift, index, tree)));
 	});
-var $author$project$Pages$Projects$Id_String$notFound = {aR: _List_Nil, v: _List_Nil, G: 'Not found', bX: '', H: _List_Nil, a5: 'not_found', b9: 'NOT FOUND'};
+var $author$project$Pages$Projects$Id_String$notFound = {aR: _List_Nil, r: _List_Nil, B: 'Not found', bX: '', C: _List_Nil, a5: 'not_found', b9: 'NOT FOUND'};
 var $author$project$Pages$Projects$Id_String$getProject = function (id) {
 	return A2(
 		$elm$core$Maybe$withDefault,
@@ -10994,7 +10867,7 @@ var $author$project$Pages$Projects$Id_String$content = function (media) {
 			function (x) {
 				return $author$project$Pages$Projects$Id_String$renderMedia(x.c);
 			},
-			media.v));
+			media.r));
 };
 var $elm$html$Html$b = _VirtualDom_node('b');
 var $elm$html$Html$li = _VirtualDom_node('li');
@@ -11032,7 +10905,7 @@ var $author$project$Pages$Projects$Id_String$factsContainer = function (project)
 									$author$project$Components$HtmlRenderer$htmlRenderer(x.i)
 								]));
 					},
-					project.H))
+					project.C))
 			]));
 };
 var $elm$html$Html$Attributes$for = $elm$html$Html$Attributes$stringProperty('htmlFor');
@@ -11098,7 +10971,7 @@ var $author$project$Pages$Projects$Id_String$presentProject = function (project)
 						]),
 					_List_fromArray(
 						[
-							$author$project$Components$HtmlRenderer$htmlRenderer(project.G)
+							$author$project$Components$HtmlRenderer$htmlRenderer(project.B)
 						])),
 					$author$project$Pages$Projects$Id_String$factsContainer(project)
 				])),
@@ -11376,7 +11249,7 @@ var $author$project$Spa$Generated$Pages$upgrade = F3(
 				}
 			};
 		};
-		return {F: bundle_, b5: init_, cB: update_};
+		return {H: bundle_, b5: init_, cB: update_};
 	});
 var $author$project$Spa$Generated$Pages$pages = {
 	ah: A3($author$project$Spa$Generated$Pages$upgrade, $author$project$Spa$Generated$Pages$About__Model, $author$project$Spa$Generated$Pages$About__Msg, $author$project$Pages$About$page),
@@ -11430,22 +11303,22 @@ var $author$project$Spa$Generated$Pages$bundle = function (bigModel) {
 	switch (bigModel.$) {
 		case 0:
 			var model = bigModel.a;
-			return $author$project$Spa$Generated$Pages$pages.ax.F(model);
+			return $author$project$Spa$Generated$Pages$pages.ax.H(model);
 		case 1:
 			var model = bigModel.a;
-			return $author$project$Spa$Generated$Pages$pages.ah.F(model);
+			return $author$project$Spa$Generated$Pages$pages.ah.H(model);
 		case 2:
 			var model = bigModel.a;
-			return $author$project$Spa$Generated$Pages$pages.ak.F(model);
+			return $author$project$Spa$Generated$Pages$pages.ak.H(model);
 		case 3:
 			var model = bigModel.a;
-			return $author$project$Spa$Generated$Pages$pages.ap.F(model);
+			return $author$project$Spa$Generated$Pages$pages.ap.H(model);
 		case 4:
 			var model = bigModel.a;
-			return $author$project$Spa$Generated$Pages$pages.at.F(model);
+			return $author$project$Spa$Generated$Pages$pages.at.H(model);
 		default:
 			var model = bigModel.a;
-			return $author$project$Spa$Generated$Pages$pages.au.F(model);
+			return $author$project$Spa$Generated$Pages$pages.au.H(model);
 	}
 };
 var $author$project$Spa$Generated$Pages$subscriptions = function (model) {
@@ -11462,7 +11335,7 @@ var $author$project$Main$subscriptions = function (model) {
 				A2(
 				$elm$core$Platform$Sub$map,
 				$author$project$Main$Pages,
-				$author$project$Spa$Generated$Pages$subscriptions(model.D))
+				$author$project$Spa$Generated$Pages$subscriptions(model.F))
 			]));
 };
 var $author$project$Spa$Document$toBrowserDocument = function (doc) {
@@ -11630,7 +11503,7 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{
-							D: page,
+							F: page,
 							z: A2($author$project$Spa$Generated$Pages$save, page, shared)
 						}),
 					A2($elm$core$Platform$Cmd$map, $author$project$Main$Pages, pageCmd));
@@ -11639,13 +11512,13 @@ var $author$project$Main$update = F2(
 				var _v3 = A2($author$project$Shared$update, sharedMsg, model.z);
 				var shared = _v3.a;
 				var sharedCmd = _v3.b;
-				var _v4 = A2($author$project$Spa$Generated$Pages$load, model.D, shared);
+				var _v4 = A2($author$project$Spa$Generated$Pages$load, model.F, shared);
 				var page = _v4.a;
 				var pageCmd = _v4.b;
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
-						{D: page, z: shared}),
+						{F: page, z: shared}),
 					$elm$core$Platform$Cmd$batch(
 						_List_fromArray(
 							[
@@ -11654,14 +11527,14 @@ var $author$project$Main$update = F2(
 							])));
 			default:
 				var pageMsg = msg.a;
-				var _v5 = A2($author$project$Spa$Generated$Pages$update, pageMsg, model.D);
+				var _v5 = A2($author$project$Spa$Generated$Pages$update, pageMsg, model.F);
 				var page = _v5.a;
 				var pageCmd = _v5.b;
 				var shared = A2($author$project$Spa$Generated$Pages$save, page, model.z);
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
-						{D: page, z: shared}),
+						{F: page, z: shared}),
 					A2($elm$core$Platform$Cmd$map, $author$project$Main$Pages, pageCmd));
 		}
 	});
@@ -11813,7 +11686,7 @@ var $author$project$Utils$Title$formatTitle = function (title) {
 };
 var $author$project$Shared$view = F2(
 	function (_v0, model) {
-		var page = _v0.D;
+		var page = _v0.F;
 		var toMsg = _v0.cA;
 		return {
 			bR: A2($author$project$Shared$displayBody, page, model),
@@ -11827,10 +11700,10 @@ var $author$project$Main$view = function (model) {
 	return A2(
 		$author$project$Shared$view,
 		{
-			D: A2(
+			F: A2(
 				$author$project$Spa$Document$map,
 				$author$project$Main$Pages,
-				$author$project$Spa$Generated$Pages$view(model.D)),
+				$author$project$Spa$Generated$Pages$view(model.F)),
 			cA: $author$project$Main$Shared
 		},
 		model.z);
