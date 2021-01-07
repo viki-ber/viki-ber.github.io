@@ -232,6 +232,33 @@ projects =
               }
             ]
       }
+      , { name = "Two Wheeled Art"
+      , id = "TWA"
+      , categories = [ "All", "Print", "Illustration" ]
+      , display = "/img/TWA/display.jpg"
+      , description = "Two Wheeled Art is my illustration shop hosted on Etsy platform, specialising in bespoke illustrations of motorcycles and bicycles. Each illustration is produced to order, following pictures provided by the customer."
+      , facts =
+            [ { name = "Date:"
+              , value = "2018 - ongoing"
+              }
+            , { name = "Tools:"
+              , value = "Photoshop, Wacom drawing display"
+              }
+              , { name = "Visit:"
+              , value = "<a href='https://www.etsy.com/se-en/shop/TwoWheeledArt?ref=search_shop_redirect'>Two Wheeled Art Shop</a>"
+              }
+              ]
+      , content =
+            [ { graphic = "/img/TWA/image3.jpg"
+              }
+            , { graphic = "/img/TWA/image1.jpg"
+              }
+            , { graphic = "/img/TWA/image2.jpg"
+              }
+            , { graphic = "/img/TWA/image4.jpg"
+              }
+            ]
+      }
 
     --   { name = "Name of the project"
     --   , id = "name_of_url"
