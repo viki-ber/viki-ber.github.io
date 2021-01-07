@@ -4951,7 +4951,7 @@ var $elm$core$Array$treeFromBuilder = F2(
 	});
 var $elm$core$Array$builderToArray = F2(
 	function (reverseNodeList, builder) {
-		if (!builder.h) {
+		if (!builder.i) {
 			return A4(
 				$elm$core$Array$Array_elm_builtin,
 				$elm$core$Elm$JsArray$length(builder.j),
@@ -4959,11 +4959,11 @@ var $elm$core$Array$builderToArray = F2(
 				$elm$core$Elm$JsArray$empty,
 				builder.j);
 		} else {
-			var treeLen = builder.h * $elm$core$Array$branchFactor;
+			var treeLen = builder.i * $elm$core$Array$branchFactor;
 			var depth = $elm$core$Basics$floor(
 				A2($elm$core$Basics$logBase, $elm$core$Array$branchFactor, treeLen - 1));
 			var correctNodeList = reverseNodeList ? $elm$core$List$reverse(builder.k) : builder.k;
-			var tree = A2($elm$core$Array$treeFromBuilder, correctNodeList, builder.h);
+			var tree = A2($elm$core$Array$treeFromBuilder, correctNodeList, builder.i);
 			return A4(
 				$elm$core$Array$Array_elm_builtin,
 				$elm$core$Elm$JsArray$length(builder.j) + treeLen,
@@ -4982,7 +4982,7 @@ var $elm$core$Array$initializeHelp = F5(
 				return A2(
 					$elm$core$Array$builderToArray,
 					false,
-					{k: nodeList, h: (len / $elm$core$Array$branchFactor) | 0, j: tail});
+					{k: nodeList, i: (len / $elm$core$Array$branchFactor) | 0, j: tail});
 			} else {
 				var leaf = $elm$core$Array$Leaf(
 					A3($elm$core$Elm$JsArray$initialize, $elm$core$Array$branchFactor, fromIndex, fn));
@@ -5335,7 +5335,7 @@ var $elm$core$Basics$composeR = F3(
 	});
 var $author$project$Main$Model = F2(
 	function (shared, page) {
-		return {F: page, z: shared};
+		return {F: page, B: shared};
 	});
 var $author$project$Main$Pages = function (a) {
 	return {$: 3, a: a};
@@ -5347,7 +5347,7 @@ var $elm$core$Platform$Cmd$batch = _Platform_batch;
 var $author$project$Spa$Generated$Route$NotFound = {$: 3};
 var $elm$url$Url$Parser$State = F5(
 	function (visited, unvisited, params, frag, value) {
-		return {L: frag, cn: params, K: unvisited, i: value, O: visited};
+		return {L: frag, cn: params, K: unvisited, g: value, O: visited};
 	});
 var $elm$url$Url$Parser$getFirstMatch = function (states) {
 	getFirstMatch:
@@ -5359,10 +5359,10 @@ var $elm$url$Url$Parser$getFirstMatch = function (states) {
 			var rest = states.b;
 			var _v1 = state.K;
 			if (!_v1.b) {
-				return $elm$core$Maybe$Just(state.i);
+				return $elm$core$Maybe$Just(state.g);
 			} else {
 				if ((_v1.a === '') && (!_v1.b.b)) {
-					return $elm$core$Maybe$Just(state.i);
+					return $elm$core$Maybe$Just(state.g);
 				} else {
 					var $temp$states = rest;
 					states = $temp$states;
@@ -5993,7 +5993,7 @@ var $elm$url$Url$Parser$mapState = F2(
 		var unvisited = _v0.K;
 		var params = _v0.cn;
 		var frag = _v0.L;
-		var value = _v0.i;
+		var value = _v0.g;
 		return A5(
 			$elm$url$Url$Parser$State,
 			visited,
@@ -6010,7 +6010,7 @@ var $elm$url$Url$Parser$map = F2(
 			var unvisited = _v1.K;
 			var params = _v1.cn;
 			var frag = _v1.L;
-			var value = _v1.i;
+			var value = _v1.g;
 			return A2(
 				$elm$core$List$map,
 				$elm$url$Url$Parser$mapState(value),
@@ -6051,7 +6051,7 @@ var $elm$url$Url$Parser$s = function (str) {
 		var unvisited = _v0.K;
 		var params = _v0.cn;
 		var frag = _v0.L;
-		var value = _v0.i;
+		var value = _v0.g;
 		if (!unvisited.b) {
 			return _List_Nil;
 		} else {
@@ -6088,7 +6088,7 @@ var $elm$url$Url$Parser$custom = F2(
 			var unvisited = _v0.K;
 			var params = _v0.cn;
 			var frag = _v0.L;
-			var value = _v0.i;
+			var value = _v0.g;
 			if (!unvisited.b) {
 				return _List_Nil;
 			} else {
@@ -6240,7 +6240,7 @@ var $author$project$Spa$Page$static = function (page) {
 		cD: page.cD
 	};
 };
-var $author$project$Content$about = {r: 'Graphic designer and illustrator based in Gothenburg, Sweden. <br /><br /> Trained at Jönköping and Linneaus universities. <br /><br /> Previous experience in food product and brand development.<br /><br /> Favourite colours - yellow, blue and grey.<br /><br /> Dream collaboration - Stefan Sagmeister.<br /><br /> Dream brief - design an issue of Lucky Peach magazine.<br /><br />', aM: 'About Me'};
+var $author$project$Content$about = {o: 'Graphic designer and illustrator based in Gothenburg, Sweden. <br /><br /> Trained at Jönköping and Linneaus universities. <br /><br /> Previous experience in food product and brand development.<br /><br /> Favourite colours - yellow, blue and grey.<br /><br /> Dream collaboration - Stefan Sagmeister.<br /><br /> Dream brief - design an issue of Lucky Peach magazine.<br /><br />', aM: 'About Me'};
 var $elm$json$Json$Encode$string = _Json_wrap;
 var $elm$html$Html$Attributes$stringProperty = F2(
 	function (key, string) {
@@ -9808,7 +9808,7 @@ var $author$project$Pages$About$view = function (_v0) {
 													]),
 												_List_fromArray(
 													[
-														$author$project$Components$HtmlRenderer$htmlRenderer($author$project$Content$about.r)
+														$author$project$Components$HtmlRenderer$htmlRenderer($author$project$Content$about.o)
 													]))
 											]))
 									]))
@@ -9821,7 +9821,7 @@ var $author$project$Pages$About$view = function (_v0) {
 var $author$project$Pages$About$page = $author$project$Spa$Page$static(
 	{cD: $author$project$Pages$About$view});
 var $elm$html$Html$a = _VirtualDom_node('a');
-var $author$project$Content$contact = {r: 'I am happy to hear about possible work orders or potential collaborations. If you would like to see my professional CV, do not hesitate to ask. You can drop me a line on:<br /><br /><span class=\"email-link\"><a href=\"mailto:viktorija.graphics@outlook.com\">viktorija.graphics@outlook.com</a></span><br /><br />You are also welcome to contact me via my social media accounts.', aM: 'Contact Me'};
+var $author$project$Content$contact = {o: 'I am happy to hear about possible work orders or potential collaborations. If you would like to see my professional CV, do not hesitate to ask. You can drop me a line on:<br /><br /><span class=\"email-link\"><a href=\"mailto:viktorija.graphics@outlook.com\">viktorija.graphics@outlook.com</a></span><br /><br />You are also welcome to contact me via my social media accounts.', aM: 'Contact Me'};
 var $elm$html$Html$Attributes$href = function (url) {
 	return A2(
 		$elm$html$Html$Attributes$stringProperty,
@@ -9873,7 +9873,7 @@ var $author$project$Pages$Contact$view = function (_v0) {
 													]),
 												_List_fromArray(
 													[
-														$author$project$Components$HtmlRenderer$htmlRenderer($author$project$Content$contact.r)
+														$author$project$Components$HtmlRenderer$htmlRenderer($author$project$Content$contact.o)
 													])),
 												A2(
 												$elm$html$Html$div,
@@ -10347,7 +10347,7 @@ var $author$project$Content$projects = _List_fromArray(
 		{
 		aR: _List_fromArray(
 			['Branding', 'UX/UI', 'Graphic Design', 'All']),
-		r: _List_fromArray(
+		o: _List_fromArray(
 			[
 				{c: '/img/first.jpg'},
 				{c: '/img/graphic_profile_light.jpg'},
@@ -10355,13 +10355,13 @@ var $author$project$Content$projects = _List_fromArray(
 				{c: '/img/mockup_2.jpg'},
 				{c: '/img/terraventure/movie2.mp4'}
 			]),
-		B: '<strong></strong> This brief asked to create a branding and UI design for a movie streaming service specialising in outdoor adventure movies. Main inspiration for the design came from modern outdoor, travel and adventure magazines.',
+		x: '<strong></strong> This brief asked to create a branding and UI design for a movie streaming service specialising in outdoor adventure movies. Main inspiration for the design came from modern outdoor, travel and adventure magazines.',
 		bX: '/img/first.jpg',
-		C: _List_fromArray(
+		y: _List_fromArray(
 			[
-				{b9: 'Date', i: 'October 2020'},
-				{b9: 'Tools', i: 'Photoshop, Illustrator, XD'},
-				{b9: 'Try:', i: '<a href=\'https://xd.adobe.com/view/7e240d0c-6c57-4a8c-9c84-46f290a352e8-2b77/\'>Interactive Prototype</a>'}
+				{b9: 'Date', g: 'October 2020'},
+				{b9: 'Tools', g: 'Photoshop, Illustrator, XD'},
+				{b9: 'Try:', g: '<a href=\'https://xd.adobe.com/view/7e240d0c-6c57-4a8c-9c84-46f290a352e8-2b77/\'>Interactive Prototype</a>'}
 			]),
 		a5: 'terraventure',
 		b9: 'Terra Venture'
@@ -10369,7 +10369,7 @@ var $author$project$Content$projects = _List_fromArray(
 		{
 		aR: _List_fromArray(
 			['Branding', 'UX/UI', 'Graphic Design', 'All']),
-		r: _List_fromArray(
+		o: _List_fromArray(
 			[
 				{c: '/img/esca/logo.mp4'},
 				{c: '/img/esca/page2.jpg'},
@@ -10377,13 +10377,13 @@ var $author$project$Content$projects = _List_fromArray(
 				{c: '/img/esca/ui_movie.mp4'},
 				{c: '/img/esca/page3.jpg'}
 			]),
-		B: 'The brief for this project was to create a branding and an e-commerce website for a company selling premium food products',
+		x: 'The brief for this project was to create a branding and an e-commerce website for a company selling premium food products',
 		bX: '/img/esca/display.png',
-		C: _List_fromArray(
+		y: _List_fromArray(
 			[
-				{b9: 'Date:', i: 'October 2020'},
-				{b9: 'Tools:', i: 'Photoshop, Illustrator, XD'},
-				{b9: 'Try:', i: '<a href=\'https://xd.adobe.com/view/037c0fc6-01c4-41d5-a0d8-a77733748a4b-562f/\'>Interactive Prototype</a>'}
+				{b9: 'Date:', g: 'October 2020'},
+				{b9: 'Tools:', g: 'Photoshop, Illustrator, XD'},
+				{b9: 'Try:', g: '<a href=\'https://xd.adobe.com/view/037c0fc6-01c4-41d5-a0d8-a77733748a4b-562f/\'>Interactive Prototype</a>'}
 			]),
 		a5: 'esca',
 		b9: 'Esca'
@@ -10391,17 +10391,17 @@ var $author$project$Content$projects = _List_fromArray(
 		{
 		aR: _List_fromArray(
 			['Graphic Design', 'All']),
-		r: _List_fromArray(
+		o: _List_fromArray(
 			[
 				{c: '/img/fikatime/image1.jpg'},
 				{c: '/img/fikatime/image2.jpg'}
 			]),
-		B: 'This creative brief asked to produce any piece of design, adhering to only one constraint - the design had to be produced using only HTML and CSS languages. I chose to create a set of graphical elements inspired by Swedish folk art. These elements can then be mixed and matched to produce various patters that can be applied to different everyday objects. ',
+		x: 'This creative brief asked to produce any piece of design, adhering to only one constraint - the design had to be produced using only HTML and CSS languages. I chose to create a set of graphical elements inspired by Swedish folk art. These elements can then be mixed and matched to produce various patters that can be applied to different everyday objects. ',
 		bX: '/img/fikatime/display.jpg',
-		C: _List_fromArray(
+		y: _List_fromArray(
 			[
-				{b9: 'Date:', i: 'November 2020'},
-				{b9: 'Tools:', i: 'HTML, CSS'}
+				{b9: 'Date:', g: 'November 2020'},
+				{b9: 'Tools:', g: 'HTML, CSS'}
 			]),
 		a5: 'fika',
 		b9: 'It\'s fika time'
@@ -10409,19 +10409,19 @@ var $author$project$Content$projects = _List_fromArray(
 		{
 		aR: _List_fromArray(
 			['Graphic Design', 'All', 'UX/UI']),
-		r: _List_fromArray(
+		o: _List_fromArray(
 			[
 				{c: '/img/colourgrabber/movie1.mp4'},
 				{c: '/img/colourgrabber/image1.jpg'},
 				{c: '/img/colourgrabber/movie2.mp4'}
 			]),
-		B: 'In this brief I had to create a device specific graphic user interface and its assets. I chose to create an interface for a colour capturing application and used neumorphic style as inspiration for a clean and minimatistic look, where the captured colour is the main focus. ',
+		x: 'In this brief I had to create a device specific graphic user interface and its assets. I chose to create an interface for a colour capturing application and used neumorphic style as inspiration for a clean and minimatistic look, where the captured colour is the main focus. ',
 		bX: '/img/colourgrabber/display.png',
-		C: _List_fromArray(
+		y: _List_fromArray(
 			[
-				{b9: 'Date:', i: 'November 2020'},
-				{b9: 'Tools:', i: 'XD'},
-				{b9: 'Try:', i: '<a href=\'https://xd.adobe.com/view/0dbb5502-96cc-444c-b7c8-53267224f761-58e8/\'>Interactive Prototype</a>'}
+				{b9: 'Date:', g: 'November 2020'},
+				{b9: 'Tools:', g: 'XD'},
+				{b9: 'Try:', g: '<a href=\'https://xd.adobe.com/view/0dbb5502-96cc-444c-b7c8-53267224f761-58e8/\'>Interactive Prototype</a>'}
 			]),
 		a5: 'colourgrabber',
 		b9: 'Colour Grabber'
@@ -10429,18 +10429,18 @@ var $author$project$Content$projects = _List_fromArray(
 		{
 		aR: _List_fromArray(
 			['Graphic Design', 'All', 'Print']),
-		r: _List_fromArray(
+		o: _List_fromArray(
 			[
 				{c: '/img/offcenter/main.jpg'}
 			]),
-		B: 'The brief for this university project was to design and print a magazine about design, featuring at least a couple of Adobe tutorials and an article about some sort of printing technique. The rest was up to us. We chose to produce a magazine celebrating different and non-main-stream design and designers. For the project we produced all the graphical elements, wrote the content and even designed our own fully functional typeface for the title and headings. Finally we got the magazine printed at a proffessional printhouse with a 50 copy print run.',
+		x: 'The brief for this university project was to design and print a magazine about design, featuring at least a couple of Adobe tutorials and an article about some sort of printing technique. The rest was up to us. We chose to produce a magazine celebrating different and non-main-stream design and designers. For the project we produced all the graphical elements, wrote the content and even designed our own fully functional typeface for the title and headings. Finally we got the magazine printed at a proffessional printhouse with a 50 copy print run.',
 		bX: '/img/offcenter/display2.jpg',
-		C: _List_fromArray(
+		y: _List_fromArray(
 			[
-				{b9: 'Date:', i: 'May 2020'},
-				{b9: 'Tools:', i: 'Photoshop, Illustrator, Indesign'},
-				{b9: 'Collaboration:', i: 'Maria Arango-Kure, Linda Hammarstrand'},
-				{b9: 'Try:', i: '<a href=\'https://drive.google.com/file/d/1ktjONkSPHLeHc-1Go4Igoikuo26Evu-F/view?usp=sharing\'>Read the full magazine here</a>'}
+				{b9: 'Date:', g: 'May 2020'},
+				{b9: 'Tools:', g: 'Photoshop, Illustrator, Indesign'},
+				{b9: 'Collaboration:', g: 'Maria Arango-Kure, Linda Hammarstrand'},
+				{b9: 'Try:', g: '<a href=\'https://drive.google.com/file/d/1ktjONkSPHLeHc-1Go4Igoikuo26Evu-F/view?usp=sharing\'>Read the full magazine here</a>'}
 			]),
 		a5: 'offcenter',
 		b9: 'OFFcenter magazine'
@@ -10448,7 +10448,7 @@ var $author$project$Content$projects = _List_fromArray(
 		{
 		aR: _List_fromArray(
 			['Graphic Design', 'All', 'Branding', 'Illustration']),
-		r: _List_fromArray(
+		o: _List_fromArray(
 			[
 				{c: '/img/hopbrothers/display.jpg'},
 				{c: '/img/hopbrothers/image1.jpg'},
@@ -10463,12 +10463,12 @@ var $author$project$Content$projects = _List_fromArray(
 				{c: '/img/hopbrothers/image9.jpg'},
 				{c: '/img/hopbrothers/image10.jpg'}
 			]),
-		B: 'The brief for this project asked to create branding, a brand identity design manual and product packaging, for a small craft brewery ran by two brothers. Main inspiration for the design\'s artwork came from classic style tattoos, which alongside bright colours and witty product names, will help the brand stand out on the shop shelves.',
+		x: 'The brief for this project asked to create branding, a brand identity design manual and product packaging, for a small craft brewery ran by two brothers. Main inspiration for the design\'s artwork came from classic style tattoos, which alongside bright colours and witty product names, will help the brand stand out on the shop shelves.',
 		bX: '/img/hopbrothers/display.jpg',
-		C: _List_fromArray(
+		y: _List_fromArray(
 			[
-				{b9: 'Date:', i: 'March 2020'},
-				{b9: 'Tools:', i: 'Photoshop, Illustrator'}
+				{b9: 'Date:', g: 'March 2020'},
+				{b9: 'Tools:', g: 'Photoshop, Illustrator'}
 			]),
 		a5: 'hopbrothers',
 		b9: 'The Hop Brothers Brewery'
@@ -10476,7 +10476,7 @@ var $author$project$Content$projects = _List_fromArray(
 		{
 		aR: _List_fromArray(
 			['All', 'Print', 'Illustration']),
-		r: _List_fromArray(
+		o: _List_fromArray(
 			[
 				{c: '/img/retro/display.jpg'},
 				{c: '/img/retro/image2.jpg'},
@@ -10484,15 +10484,36 @@ var $author$project$Content$projects = _List_fromArray(
 				{c: '/img/retro/polaroid.jpg'},
 				{c: '/img/retro/vinyl.jpg'}
 			]),
-		B: 'A personal illustration project of various retro objects, inspired by a Public Service Broadcasting album Inform - Educate - Entertain.',
+		x: 'A personal illustration project of various retro objects, inspired by a Public Service Broadcasting album Inform - Educate - Entertain.',
 		bX: '/img/retro/display.jpg',
-		C: _List_fromArray(
+		y: _List_fromArray(
 			[
-				{b9: 'Date:', i: 'November 2019'},
-				{b9: 'Tools:', i: 'Photoshop, Illustrator'}
+				{b9: 'Date:', g: 'November 2019'},
+				{b9: 'Tools:', g: 'Photoshop, Illustrator'}
 			]),
 		a5: 'retro',
 		b9: 'Inform - Educate - Entertain'
+	},
+		{
+		aR: _List_fromArray(
+			['All', 'Print', 'Illustration']),
+		o: _List_fromArray(
+			[
+				{c: '/img/TWA/image3.jpg'},
+				{c: '/img/TWA/image1.jpg'},
+				{c: '/img/TWA/image2.jpg'},
+				{c: '/img/TWA/image4.jpg'}
+			]),
+		x: 'Two Wheeled Art is my illustration shop hosted on Etsy platform, specialising in bespoke illustrations of motorcycles and bicycles. Each illustration is produced to order, following pictures provided by the customer.',
+		bX: '/img/TWA/display.jpg',
+		y: _List_fromArray(
+			[
+				{b9: 'Date:', g: '2018 - ongoing'},
+				{b9: 'Tools:', g: 'Photoshop, Wacom drawing display'},
+				{b9: 'Visit:', g: '<a href=\'https://www.etsy.com/se-en/shop/TwoWheeledArt?ref=search_shop_redirect\'>Two Wheeled Art Shop</a>'}
+			]),
+		a5: 'TWA',
+		b9: 'Two Wheeled Art'
 	}
 	]);
 var $author$project$Components$Imagegrid$filterProjects = function (selection) {
@@ -10645,7 +10666,7 @@ var $author$project$Components$CategoryList$listCategories = F2(
 			A2($author$project$Components$CategoryList$listCategory, selection, toMsg),
 			$elm$core$List$sort($author$project$Components$CategoryList$mergeCategories));
 	});
-var $author$project$Content$top = {r: 'lorem ipsum dolor sit amet', aM: 'My Portfolio'};
+var $author$project$Content$top = {o: 'lorem ipsum dolor sit amet', aM: 'My Portfolio'};
 var $author$project$Pages$Projects$view = function (model) {
 	return {
 		bR: _List_fromArray(
@@ -10700,7 +10721,7 @@ var $elm$core$Array$fromListHelp = F3(
 				return A2(
 					$elm$core$Array$builderToArray,
 					true,
-					{k: nodeList, h: nodeListSize, j: jsArray});
+					{k: nodeList, i: nodeListSize, j: jsArray});
 			} else {
 				var $temp$list = remainingItems,
 					$temp$nodeList = A2(
@@ -10764,7 +10785,7 @@ var $elm$core$Array$get = F2(
 			A2($elm$core$Elm$JsArray$unsafeGet, $elm$core$Array$bitMask & index, tail)) : $elm$core$Maybe$Just(
 			A3($elm$core$Array$getHelp, startShift, index, tree)));
 	});
-var $author$project$Pages$Projects$Id_String$notFound = {aR: _List_Nil, r: _List_Nil, B: 'Not found', bX: '', C: _List_Nil, a5: 'not_found', b9: 'NOT FOUND'};
+var $author$project$Pages$Projects$Id_String$notFound = {aR: _List_Nil, o: _List_Nil, x: 'Not found', bX: '', y: _List_Nil, a5: 'not_found', b9: 'NOT FOUND'};
 var $author$project$Pages$Projects$Id_String$getProject = function (id) {
 	return A2(
 		$elm$core$Maybe$withDefault,
@@ -10867,7 +10888,7 @@ var $author$project$Pages$Projects$Id_String$content = function (media) {
 			function (x) {
 				return $author$project$Pages$Projects$Id_String$renderMedia(x.c);
 			},
-			media.r));
+			media.o));
 };
 var $elm$html$Html$b = _VirtualDom_node('b');
 var $elm$html$Html$li = _VirtualDom_node('li');
@@ -10902,10 +10923,10 @@ var $author$project$Pages$Projects$Id_String$factsContainer = function (project)
 										[
 											$elm$html$Html$text(x.b9 + ' ')
 										])),
-									$author$project$Components$HtmlRenderer$htmlRenderer(x.i)
+									$author$project$Components$HtmlRenderer$htmlRenderer(x.g)
 								]));
 					},
-					project.C))
+					project.y))
 			]));
 };
 var $elm$html$Html$Attributes$for = $elm$html$Html$Attributes$stringProperty('htmlFor');
@@ -10971,7 +10992,7 @@ var $author$project$Pages$Projects$Id_String$presentProject = function (project)
 						]),
 					_List_fromArray(
 						[
-							$author$project$Components$HtmlRenderer$htmlRenderer(project.B)
+							$author$project$Components$HtmlRenderer$htmlRenderer(project.x)
 						])),
 					$author$project$Pages$Projects$Id_String$factsContainer(project)
 				])),
@@ -11328,7 +11349,7 @@ var $author$project$Main$subscriptions = function (model) {
 				A2(
 				$elm$core$Platform$Sub$map,
 				$author$project$Main$Shared,
-				$author$project$Shared$subscriptions(model.z)),
+				$author$project$Shared$subscriptions(model.B)),
 				A2(
 				$elm$core$Platform$Sub$map,
 				$author$project$Main$Pages,
@@ -11469,7 +11490,7 @@ var $author$project$Main$update = F2(
 								[
 									A2(
 									$elm$browser$Browser$Navigation$pushUrl,
-									model.z.b7,
+									model.B.b7,
 									$elm$url$Url$toString(url)),
 									A2(
 									$elm$core$Task$perform,
@@ -11486,7 +11507,7 @@ var $author$project$Main$update = F2(
 				}
 			case 1:
 				var url = msg.a;
-				var original = model.z;
+				var original = model.B;
 				var shared = _Utils_update(
 					original,
 					{cC: url});
@@ -11501,12 +11522,12 @@ var $author$project$Main$update = F2(
 						model,
 						{
 							F: page,
-							z: A2($author$project$Spa$Generated$Pages$save, page, shared)
+							B: A2($author$project$Spa$Generated$Pages$save, page, shared)
 						}),
 					A2($elm$core$Platform$Cmd$map, $author$project$Main$Pages, pageCmd));
 			case 2:
 				var sharedMsg = msg.a;
-				var _v3 = A2($author$project$Shared$update, sharedMsg, model.z);
+				var _v3 = A2($author$project$Shared$update, sharedMsg, model.B);
 				var shared = _v3.a;
 				var sharedCmd = _v3.b;
 				var _v4 = A2($author$project$Spa$Generated$Pages$load, model.F, shared);
@@ -11515,7 +11536,7 @@ var $author$project$Main$update = F2(
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
-						{F: page, z: shared}),
+						{F: page, B: shared}),
 					$elm$core$Platform$Cmd$batch(
 						_List_fromArray(
 							[
@@ -11527,11 +11548,11 @@ var $author$project$Main$update = F2(
 				var _v5 = A2($author$project$Spa$Generated$Pages$update, pageMsg, model.F);
 				var page = _v5.a;
 				var pageCmd = _v5.b;
-				var shared = A2($author$project$Spa$Generated$Pages$save, page, model.z);
+				var shared = A2($author$project$Spa$Generated$Pages$save, page, model.B);
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
-						{F: page, z: shared}),
+						{F: page, B: shared}),
 					A2($elm$core$Platform$Cmd$map, $author$project$Main$Pages, pageCmd));
 		}
 	});
@@ -11703,7 +11724,7 @@ var $author$project$Main$view = function (model) {
 				$author$project$Spa$Generated$Pages$view(model.F)),
 			cA: $author$project$Main$Shared
 		},
-		model.z);
+		model.B);
 };
 var $author$project$Main$main = $elm$browser$Browser$application(
 	{
