@@ -10376,7 +10376,7 @@ var $author$project$Content$projects = _List_fromArray(
 		bX: '/img/first.jpg',
 		x: _List_fromArray(
 			[
-				{b9: 'Date', f: 'October 2020'},
+				{b9: 'Date', f: 'October 2021'},
 				{b9: 'Tools', f: 'Photoshop, Illustrator, XD'},
 				{b9: 'Try:', f: '<a href=\'https://xd.adobe.com/view/7e240d0c-6c57-4a8c-9c84-46f290a352e8-2b77/\'>Interactive Prototype</a>'}
 			]),
