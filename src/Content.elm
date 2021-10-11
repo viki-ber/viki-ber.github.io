@@ -39,32 +39,21 @@ type alias Project =
 
 projects : List Project
 projects =
-    [ { name = "Terra Venture"
-      , id = "terraventure"
-      , categories = [ "Branding", "UX/UI", "Graphic Design", "All" ]
-      , display = "/img/first.jpg"
-      , description = "<strong></strong> This brief asked to create a branding and UI design for a movie streaming service specialising in outdoor adventure movies. Main inspiration for the design came from modern outdoor, travel and adventure magazines."
+    [ { name = "Mathjälpen"
+      , id = "mathjalpen"
+      , categories = [ "Branding", "Illustration", "Graphic Design", "All" ]
+      , display = "/img/mathjalpen/main_image.jpg"
+      , description = "<strong></strong> Ätbart is a non-profit organisation, based in Skaraborg municipality in Sweden, fighting food waste. One of their initiatives, called Mathjälpen (translates “food help”), works in partnership with all major local food retailers to redistribute edible food waste to people in financial difficulties. Organisation volunteers do regular pick-ups every few days from food stores of food products that are bound for waste (because of damaged packaging or short expiration date remaining, for example), pack them into well balanced food bags and hand these out to people in need in local communities. For this project, I worked with Ätbart to create visual identity for Mathjälpen, as well as a package of various marketing materials that their partner stores could use in their premises to promote their involvement in this initiative. Moreover, I developed a manual for the use of this marketing package, with examples and tips for best ways to display it."
       , facts =
             [ { name = "Date"
-              , value = "October 2020"
+              , value = "Spring 2021"
               }
             , { name = "Tools"
-              , value = "Photoshop, Illustrator, XD"
-              }
-            , { name = "Try:"
-              , value = "<a href='https://xd.adobe.com/view/7e240d0c-6c57-4a8c-9c84-46f290a352e8-2b77/'>Interactive Prototype</a>"
+              , value = "Photoshop, Illustrator, InDesign"
               }
             ]
       , content =
-            [ { graphic = "/img/first.jpg"
-              }
-            , { graphic = "/img/graphic_profile_light.jpg"
-              }
-            , { graphic = "/img/graphic_profile_dark.jpg"
-              }
-            , { graphic = "/img/mockup_2.jpg"
-              }
-            , { graphic = "/img/terraventure/movie2.mp4"
+            [ { graphic = "/img/mathjalpen/image_1.jpg"
               }
             ]
       }
