@@ -64,12 +64,12 @@ projects =
       , description = "<strong></strong> This brief asked to create a branding and UI design for a movie streaming service specialising in outdoor adventure movies. Main inspiration for the design came from modern outdoor, travel and adventure magazines."
       , facts =
             [ { name = "Date"
-              , value = "October 2020"
+              , value = "October 2021"
               }
             , { name = "Tools"
               , value = "Photoshop, Illustrator, XD"
               }
-            , { name = "Try:"
+               , { name = "Try:"
               , value = "<a href='https://xd.adobe.com/view/7e240d0c-6c57-4a8c-9c84-46f290a352e8-2b77/'>Interactive Prototype</a>"
               }
             ]
