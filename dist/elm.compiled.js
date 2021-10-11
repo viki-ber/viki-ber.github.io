@@ -5347,7 +5347,7 @@ var $elm$core$Platform$Cmd$batch = _Platform_batch;
 var $author$project$Spa$Generated$Route$NotFound = {$: 3};
 var $elm$url$Url$Parser$State = F5(
 	function (visited, unvisited, params, frag, value) {
-		return {L: frag, cn: params, K: unvisited, g: value, O: visited};
+		return {L: frag, cn: params, K: unvisited, f: value, O: visited};
 	});
 var $elm$url$Url$Parser$getFirstMatch = function (states) {
 	getFirstMatch:
@@ -5359,10 +5359,10 @@ var $elm$url$Url$Parser$getFirstMatch = function (states) {
 			var rest = states.b;
 			var _v1 = state.K;
 			if (!_v1.b) {
-				return $elm$core$Maybe$Just(state.g);
+				return $elm$core$Maybe$Just(state.f);
 			} else {
 				if ((_v1.a === '') && (!_v1.b.b)) {
-					return $elm$core$Maybe$Just(state.g);
+					return $elm$core$Maybe$Just(state.f);
 				} else {
 					var $temp$states = rest;
 					states = $temp$states;
@@ -5993,7 +5993,7 @@ var $elm$url$Url$Parser$mapState = F2(
 		var unvisited = _v0.K;
 		var params = _v0.cn;
 		var frag = _v0.L;
-		var value = _v0.g;
+		var value = _v0.f;
 		return A5(
 			$elm$url$Url$Parser$State,
 			visited,
@@ -6010,7 +6010,7 @@ var $elm$url$Url$Parser$map = F2(
 			var unvisited = _v1.K;
 			var params = _v1.cn;
 			var frag = _v1.L;
-			var value = _v1.g;
+			var value = _v1.f;
 			return A2(
 				$elm$core$List$map,
 				$elm$url$Url$Parser$mapState(value),
@@ -6051,7 +6051,7 @@ var $elm$url$Url$Parser$s = function (str) {
 		var unvisited = _v0.K;
 		var params = _v0.cn;
 		var frag = _v0.L;
-		var value = _v0.g;
+		var value = _v0.f;
 		if (!unvisited.b) {
 			return _List_Nil;
 		} else {
@@ -6088,7 +6088,7 @@ var $elm$url$Url$Parser$custom = F2(
 			var unvisited = _v0.K;
 			var params = _v0.cn;
 			var frag = _v0.L;
-			var value = _v0.g;
+			var value = _v0.f;
 			if (!unvisited.b) {
 				return _List_Nil;
 			} else {
@@ -10351,15 +10351,37 @@ var $author$project$Content$projects = _List_fromArray(
 			[
 				{c: '/img/mathjalpen/image_1.jpg'}
 			]),
-		x: '<strong></strong> Ätbart is a non-profit organisation, based in Skaraborg municipality in Sweden, fighting food waste. One of their initiatives, called Mathjälpen (translates “food help”), works in partnership with all major local food retailers to redistribute edible food waste to people in financial difficulties. Organisation volunteers do regular pick-ups every few days from food stores of food products that are bound for waste (because of damaged packaging or short expiration date remaining, for example), pack them into well balanced food bags and hand these out to people in need in local communities. For this project, I worked with Ätbart to create visual identity for Mathjälpen, as well as a package of various marketing materials that their partner stores could use in their premises to promote their involvement in this initiative. Moreover, I developed a manual for the use of this marketing package, with examples and tips for best ways to display it.',
+		w: '<strong></strong> Ätbart is a non-profit organisation, based in Skaraborg municipality in Sweden, fighting food waste. One of their initiatives, called Mathjälpen (translates “food help”), works in partnership with all major local food retailers to redistribute edible food waste to people in financial difficulties. Organisation volunteers do regular pick-ups every few days from food stores of food products that are bound for waste (because of damaged packaging or short expiration date remaining, for example), pack them into well balanced food bags and hand these out to people in need in local communities. For this project, I worked with Ätbart to create visual identity for Mathjälpen, as well as a package of various marketing materials that their partner stores could use in their premises to promote their involvement in this initiative. Moreover, I developed a manual for the use of this marketing package, with examples and tips for best ways to display it.',
 		bX: '/img/mathjalpen/main_image.jpg',
-		y: _List_fromArray(
+		x: _List_fromArray(
 			[
-				{b9: 'Date', g: 'Spring 2021'},
-				{b9: 'Tools', g: 'Photoshop, Illustrator, InDesign'}
+				{b9: 'Date', f: 'Spring 2021'},
+				{b9: 'Tools', f: 'Photoshop, Illustrator, InDesign'}
 			]),
 		a5: 'mathjalpen',
 		b9: 'Mathjälpen'
+	},
+		{
+		aR: _List_fromArray(
+			['Branding', 'UX/UI', 'Graphic Design', 'All']),
+		o: _List_fromArray(
+			[
+				{c: '/img/first.jpg'},
+				{c: '/img/graphic_profile_light.jpg'},
+				{c: '/img/graphic_profile_dark.jpg'},
+				{c: '/img/mockup_2.jpg'},
+				{c: '/img/terraventure/movie2.mp4'}
+			]),
+		w: '<strong></strong> This brief asked to create a branding and UI design for a movie streaming service specialising in outdoor adventure movies. Main inspiration for the design came from modern outdoor, travel and adventure magazines.',
+		bX: '/img/first.jpg',
+		x: _List_fromArray(
+			[
+				{b9: 'Date', f: 'October 2020'},
+				{b9: 'Tools', f: 'Photoshop, Illustrator, XD'},
+				{b9: 'Try:', f: '<a href=\'https://xd.adobe.com/view/7e240d0c-6c57-4a8c-9c84-46f290a352e8-2b77/\'>Interactive Prototype</a>'}
+			]),
+		a5: 'terraventure',
+		b9: 'Terra Venture'
 	},
 		{
 		aR: _List_fromArray(
@@ -10372,13 +10394,13 @@ var $author$project$Content$projects = _List_fromArray(
 				{c: '/img/esca/ui_movie.mp4'},
 				{c: '/img/esca/page3.jpg'}
 			]),
-		x: 'The brief for this project was to create a branding and an e-commerce website for a company selling premium food products',
+		w: 'The brief for this project was to create a branding and an e-commerce website for a company selling premium food products',
 		bX: '/img/esca/display.png',
-		y: _List_fromArray(
+		x: _List_fromArray(
 			[
-				{b9: 'Date:', g: 'October 2020'},
-				{b9: 'Tools:', g: 'Photoshop, Illustrator, XD'},
-				{b9: 'Try:', g: '<a href=\'https://xd.adobe.com/view/037c0fc6-01c4-41d5-a0d8-a77733748a4b-562f/\'>Interactive Prototype</a>'}
+				{b9: 'Date:', f: 'October 2020'},
+				{b9: 'Tools:', f: 'Photoshop, Illustrator, XD'},
+				{b9: 'Try:', f: '<a href=\'https://xd.adobe.com/view/037c0fc6-01c4-41d5-a0d8-a77733748a4b-562f/\'>Interactive Prototype</a>'}
 			]),
 		a5: 'esca',
 		b9: 'Esca'
@@ -10391,12 +10413,12 @@ var $author$project$Content$projects = _List_fromArray(
 				{c: '/img/fikatime/image1.jpg'},
 				{c: '/img/fikatime/image2.jpg'}
 			]),
-		x: 'This creative brief asked to produce any piece of design, adhering to only one constraint - the design had to be produced using only HTML and CSS languages. I chose to create a set of graphical elements inspired by Swedish folk art. These elements can then be mixed and matched to produce various patters that can be applied to different everyday objects. ',
+		w: 'This creative brief asked to produce any piece of design, adhering to only one constraint - the design had to be produced using only HTML and CSS languages. I chose to create a set of graphical elements inspired by Swedish folk art. These elements can then be mixed and matched to produce various patters that can be applied to different everyday objects. ',
 		bX: '/img/fikatime/display.jpg',
-		y: _List_fromArray(
+		x: _List_fromArray(
 			[
-				{b9: 'Date:', g: 'November 2020'},
-				{b9: 'Tools:', g: 'HTML, CSS'}
+				{b9: 'Date:', f: 'November 2020'},
+				{b9: 'Tools:', f: 'HTML, CSS'}
 			]),
 		a5: 'fika',
 		b9: 'It\'s fika time'
@@ -10410,13 +10432,13 @@ var $author$project$Content$projects = _List_fromArray(
 				{c: '/img/colourgrabber/image1.jpg'},
 				{c: '/img/colourgrabber/movie2.mp4'}
 			]),
-		x: 'In this brief I had to create a device specific graphic user interface and its assets. I chose to create an interface for a colour capturing application and used neumorphic style as inspiration for a clean and minimatistic look, where the captured colour is the main focus. ',
+		w: 'In this brief I had to create a device specific graphic user interface and its assets. I chose to create an interface for a colour capturing application and used neumorphic style as inspiration for a clean and minimatistic look, where the captured colour is the main focus. ',
 		bX: '/img/colourgrabber/display.png',
-		y: _List_fromArray(
+		x: _List_fromArray(
 			[
-				{b9: 'Date:', g: 'November 2020'},
-				{b9: 'Tools:', g: 'XD'},
-				{b9: 'Try:', g: '<a href=\'https://xd.adobe.com/view/0dbb5502-96cc-444c-b7c8-53267224f761-58e8/\'>Interactive Prototype</a>'}
+				{b9: 'Date:', f: 'November 2020'},
+				{b9: 'Tools:', f: 'XD'},
+				{b9: 'Try:', f: '<a href=\'https://xd.adobe.com/view/0dbb5502-96cc-444c-b7c8-53267224f761-58e8/\'>Interactive Prototype</a>'}
 			]),
 		a5: 'colourgrabber',
 		b9: 'Colour Grabber'
@@ -10428,14 +10450,14 @@ var $author$project$Content$projects = _List_fromArray(
 			[
 				{c: '/img/offcenter/main.jpg'}
 			]),
-		x: 'The brief for this university project was to design and print a magazine about design, featuring at least a couple of Adobe tutorials and an article about some sort of printing technique. The rest was up to us. We chose to produce a magazine celebrating different and non-main-stream design and designers. For the project we produced all the graphical elements, wrote the content and even designed our own fully functional typeface for the title and headings. Finally we got the magazine printed at a proffessional printhouse with a 50 copy print run.',
+		w: 'The brief for this university project was to design and print a magazine about design, featuring at least a couple of Adobe tutorials and an article about some sort of printing technique. The rest was up to us. We chose to produce a magazine celebrating different and non-main-stream design and designers. For the project we produced all the graphical elements, wrote the content and even designed our own fully functional typeface for the title and headings. Finally we got the magazine printed at a proffessional printhouse with a 50 copy print run.',
 		bX: '/img/offcenter/display2.jpg',
-		y: _List_fromArray(
+		x: _List_fromArray(
 			[
-				{b9: 'Date:', g: 'May 2020'},
-				{b9: 'Tools:', g: 'Photoshop, Illustrator, Indesign'},
-				{b9: 'Collaboration:', g: 'Maria Arango-Kure, Linda Hammarstrand'},
-				{b9: 'Try:', g: '<a href=\'https://drive.google.com/file/d/1ktjONkSPHLeHc-1Go4Igoikuo26Evu-F/view?usp=sharing\'>Read the full magazine here</a>'}
+				{b9: 'Date:', f: 'May 2020'},
+				{b9: 'Tools:', f: 'Photoshop, Illustrator, Indesign'},
+				{b9: 'Collaboration:', f: 'Maria Arango-Kure, Linda Hammarstrand'},
+				{b9: 'Try:', f: '<a href=\'https://drive.google.com/file/d/1ktjONkSPHLeHc-1Go4Igoikuo26Evu-F/view?usp=sharing\'>Read the full magazine here</a>'}
 			]),
 		a5: 'offcenter',
 		b9: 'OFFcenter magazine'
@@ -10458,12 +10480,12 @@ var $author$project$Content$projects = _List_fromArray(
 				{c: '/img/hopbrothers/image9.jpg'},
 				{c: '/img/hopbrothers/image10.jpg'}
 			]),
-		x: 'The brief for this project asked to create branding, a brand identity design manual and product packaging, for a small craft brewery ran by two brothers. Main inspiration for the design\'s artwork came from classic style tattoos, which alongside bright colours and witty product names, will help the brand stand out on the shop shelves.',
+		w: 'The brief for this project asked to create branding, a brand identity design manual and product packaging, for a small craft brewery ran by two brothers. Main inspiration for the design\'s artwork came from classic style tattoos, which alongside bright colours and witty product names, will help the brand stand out on the shop shelves.',
 		bX: '/img/hopbrothers/display.jpg',
-		y: _List_fromArray(
+		x: _List_fromArray(
 			[
-				{b9: 'Date:', g: 'March 2020'},
-				{b9: 'Tools:', g: 'Photoshop, Illustrator'}
+				{b9: 'Date:', f: 'March 2020'},
+				{b9: 'Tools:', f: 'Photoshop, Illustrator'}
 			]),
 		a5: 'hopbrothers',
 		b9: 'The Hop Brothers Brewery'
@@ -10479,12 +10501,12 @@ var $author$project$Content$projects = _List_fromArray(
 				{c: '/img/retro/polaroid.jpg'},
 				{c: '/img/retro/vinyl.jpg'}
 			]),
-		x: 'A personal illustration project of various retro objects, inspired by a Public Service Broadcasting album Inform - Educate - Entertain.',
+		w: 'A personal illustration project of various retro objects, inspired by a Public Service Broadcasting album Inform - Educate - Entertain.',
 		bX: '/img/retro/display.jpg',
-		y: _List_fromArray(
+		x: _List_fromArray(
 			[
-				{b9: 'Date:', g: 'November 2019'},
-				{b9: 'Tools:', g: 'Photoshop, Illustrator'}
+				{b9: 'Date:', f: 'November 2019'},
+				{b9: 'Tools:', f: 'Photoshop, Illustrator'}
 			]),
 		a5: 'retro',
 		b9: 'Inform - Educate - Entertain'
@@ -10499,13 +10521,13 @@ var $author$project$Content$projects = _List_fromArray(
 				{c: '/img/TWA/image2.jpg'},
 				{c: '/img/TWA/image4.jpg'}
 			]),
-		x: 'Two Wheeled Art is my illustration shop hosted on Etsy platform, specialising in bespoke illustrations of motorcycles and bicycles. Each illustration is produced to order, following pictures provided by the customer.',
+		w: 'Two Wheeled Art is my illustration shop hosted on Etsy platform, specialising in bespoke illustrations of motorcycles and bicycles. Each illustration is produced to order, following pictures provided by the customer.',
 		bX: '/img/TWA/display.jpg',
-		y: _List_fromArray(
+		x: _List_fromArray(
 			[
-				{b9: 'Date:', g: '2018 - ongoing'},
-				{b9: 'Tools:', g: 'Photoshop, Wacom drawing display'},
-				{b9: 'Visit:', g: '<a href=\'https://www.etsy.com/se-en/shop/TwoWheeledArt?ref=search_shop_redirect\'>Two Wheeled Art Shop</a>'}
+				{b9: 'Date:', f: '2018 - ongoing'},
+				{b9: 'Tools:', f: 'Photoshop, Wacom drawing display'},
+				{b9: 'Visit:', f: '<a href=\'https://www.etsy.com/se-en/shop/TwoWheeledArt?ref=search_shop_redirect\'>Two Wheeled Art Shop</a>'}
 			]),
 		a5: 'TWA',
 		b9: 'Two Wheeled Art'
@@ -10780,7 +10802,7 @@ var $elm$core$Array$get = F2(
 			A2($elm$core$Elm$JsArray$unsafeGet, $elm$core$Array$bitMask & index, tail)) : $elm$core$Maybe$Just(
 			A3($elm$core$Array$getHelp, startShift, index, tree)));
 	});
-var $author$project$Pages$Projects$Id_String$notFound = {aR: _List_Nil, o: _List_Nil, x: 'Not found', bX: '', y: _List_Nil, a5: 'not_found', b9: 'NOT FOUND'};
+var $author$project$Pages$Projects$Id_String$notFound = {aR: _List_Nil, o: _List_Nil, w: 'Not found', bX: '', x: _List_Nil, a5: 'not_found', b9: 'NOT FOUND'};
 var $author$project$Pages$Projects$Id_String$getProject = function (id) {
 	return A2(
 		$elm$core$Maybe$withDefault,
@@ -10918,10 +10940,10 @@ var $author$project$Pages$Projects$Id_String$factsContainer = function (project)
 										[
 											$elm$html$Html$text(x.b9 + ' ')
 										])),
-									$author$project$Components$HtmlRenderer$htmlRenderer(x.g)
+									$author$project$Components$HtmlRenderer$htmlRenderer(x.f)
 								]));
 					},
-					project.y))
+					project.x))
 			]));
 };
 var $elm$html$Html$Attributes$for = $elm$html$Html$Attributes$stringProperty('htmlFor');
@@ -10987,7 +11009,7 @@ var $author$project$Pages$Projects$Id_String$presentProject = function (project)
 						]),
 					_List_fromArray(
 						[
-							$author$project$Components$HtmlRenderer$htmlRenderer(project.x)
+							$author$project$Components$HtmlRenderer$htmlRenderer(project.w)
 						])),
 					$author$project$Pages$Projects$Id_String$factsContainer(project)
 				])),
