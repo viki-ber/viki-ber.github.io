@@ -6333,7 +6333,7 @@ var $elm$core$Basics$negate = function (n) {
 var $elm$parser$Parser$Advanced$chompIf = F2(
 	function (isGood, expecting) {
 		return function (s) {
-			var newOffset = A3($elm$parser$Parser$Advanced$isSubChar, isGood, s.c, s.a);
+			var newOffset = A3($elm$parser$Parser$Advanced$isSubChar, isGood, s.b, s.a);
 			return _Utils_eq(newOffset, -1) ? A2(
 				$elm$parser$Parser$Advanced$Bad,
 				false,
@@ -6341,11 +6341,11 @@ var $elm$parser$Parser$Advanced$chompIf = F2(
 				$elm$parser$Parser$Advanced$Good,
 				true,
 				0,
-				{aT: 1, d: s.d, e: s.e, c: s.c + 1, bu: s.bu + 1, a: s.a}) : A3(
+				{aT: 1, d: s.d, e: s.e, b: s.b + 1, bu: s.bu + 1, a: s.a}) : A3(
 				$elm$parser$Parser$Advanced$Good,
 				true,
 				0,
-				{aT: s.aT + 1, d: s.d, e: s.e, c: newOffset, bu: s.bu, a: s.a}));
+				{aT: s.aT + 1, d: s.d, e: s.e, b: newOffset, bu: s.bu, a: s.a}));
 		};
 	});
 var $elm$parser$Parser$chompIf = function (isGood) {
@@ -6359,9 +6359,9 @@ var $elm$parser$Parser$Advanced$chompWhileHelp = F5(
 			if (_Utils_eq(newOffset, -1)) {
 				return A3(
 					$elm$parser$Parser$Advanced$Good,
-					_Utils_cmp(s0.c, offset) < 0,
+					_Utils_cmp(s0.b, offset) < 0,
 					0,
-					{aT: col, d: s0.d, e: s0.e, c: offset, bu: row, a: s0.a});
+					{aT: col, d: s0.d, e: s0.e, b: offset, bu: row, a: s0.a});
 			} else {
 				if (_Utils_eq(newOffset, -2)) {
 					var $temp$isGood = isGood,
@@ -6393,7 +6393,7 @@ var $elm$parser$Parser$Advanced$chompWhileHelp = F5(
 	});
 var $elm$parser$Parser$Advanced$chompWhile = function (isGood) {
 	return function (s) {
-		return A5($elm$parser$Parser$Advanced$chompWhileHelp, isGood, s.c, s.bu, s.aT, s);
+		return A5($elm$parser$Parser$Advanced$chompWhileHelp, isGood, s.b, s.bu, s.aT, s);
 	};
 };
 var $elm$parser$Parser$chompWhile = $elm$parser$Parser$Advanced$chompWhile;
@@ -6458,7 +6458,7 @@ var $elm$parser$Parser$Advanced$mapChompedString = F2(
 					p,
 					A2(
 						func,
-						A3($elm$core$String$slice, s0.c, s1.c, s0.a),
+						A3($elm$core$String$slice, s0.b, s1.b, s0.a),
 						a),
 					s1);
 			}
@@ -6540,7 +6540,7 @@ var $elm$parser$Parser$Advanced$chompUntil = function (_v0) {
 	var str = _v0.a;
 	var expecting = _v0.b;
 	return function (s) {
-		var _v1 = A5($elm$parser$Parser$Advanced$findSubString, str, s.c, s.bu, s.aT, s.a);
+		var _v1 = A5($elm$parser$Parser$Advanced$findSubString, str, s.b, s.bu, s.aT, s.a);
 		var newOffset = _v1.a;
 		var newRow = _v1.b;
 		var newCol = _v1.c;
@@ -6549,9 +6549,9 @@ var $elm$parser$Parser$Advanced$chompUntil = function (_v0) {
 			false,
 			A4($elm$parser$Parser$Advanced$fromInfo, newRow, newCol, expecting, s.d)) : A3(
 			$elm$parser$Parser$Advanced$Good,
-			_Utils_cmp(s.c, newOffset) < 0,
+			_Utils_cmp(s.b, newOffset) < 0,
 			0,
-			{aT: newCol, d: s.d, e: s.e, c: newOffset, bu: newRow, a: s.a});
+			{aT: newCol, d: s.d, e: s.e, b: newOffset, bu: newRow, a: s.a});
 	};
 };
 var $elm$parser$Parser$Expecting = function (a) {
@@ -6582,7 +6582,7 @@ var $elm$parser$Parser$Advanced$token = function (_v0) {
 	var expecting = _v0.b;
 	var progress = !$elm$core$String$isEmpty(str);
 	return function (s) {
-		var _v1 = A5($elm$parser$Parser$Advanced$isSubString, str, s.c, s.bu, s.aT, s.a);
+		var _v1 = A5($elm$parser$Parser$Advanced$isSubString, str, s.b, s.bu, s.aT, s.a);
 		var newOffset = _v1.a;
 		var newRow = _v1.b;
 		var newCol = _v1.c;
@@ -6593,7 +6593,7 @@ var $elm$parser$Parser$Advanced$token = function (_v0) {
 			$elm$parser$Parser$Advanced$Good,
 			progress,
 			0,
-			{aT: newCol, d: s.d, e: s.e, c: newOffset, bu: newRow, a: s.a});
+			{aT: newCol, d: s.d, e: s.e, b: newOffset, bu: newRow, a: s.a});
 	};
 };
 var $elm$parser$Parser$token = function (str) {
@@ -9220,7 +9220,7 @@ var $elm$parser$Parser$Advanced$consumeBase = _Parser_consumeBase;
 var $elm$parser$Parser$Advanced$consumeBase16 = _Parser_consumeBase16;
 var $elm$parser$Parser$Advanced$bumpOffset = F2(
 	function (newOffset, s) {
-		return {aT: s.aT + (newOffset - s.c), d: s.d, e: s.e, c: newOffset, bu: s.bu, a: s.a};
+		return {aT: s.aT + (newOffset - s.b), d: s.d, e: s.e, b: newOffset, bu: s.bu, a: s.a};
 	});
 var $elm$parser$Parser$Advanced$chompBase10 = _Parser_chompBase10;
 var $elm$parser$Parser$Advanced$isAsciiCode = _Parser_isAsciiCode;
@@ -9256,7 +9256,7 @@ var $elm$parser$Parser$Advanced$finalizeInt = F5(
 			var toValue = handler.a;
 			return _Utils_eq(startOffset, endOffset) ? A2(
 				$elm$parser$Parser$Advanced$Bad,
-				_Utils_cmp(s.c, startOffset) < 0,
+				_Utils_cmp(s.b, startOffset) < 0,
 				A2($elm$parser$Parser$Advanced$fromState, s, invalid)) : A3(
 				$elm$parser$Parser$Advanced$Good,
 				true,
@@ -9273,16 +9273,16 @@ var $elm$parser$Parser$Advanced$finalizeFloat = F6(
 			return A2(
 				$elm$parser$Parser$Advanced$Bad,
 				true,
-				A4($elm$parser$Parser$Advanced$fromInfo, s.bu, s.aT - (floatOffset + s.c), invalid, s.d));
+				A4($elm$parser$Parser$Advanced$fromInfo, s.bu, s.aT - (floatOffset + s.b), invalid, s.d));
 		} else {
-			if (_Utils_eq(s.c, floatOffset)) {
+			if (_Utils_eq(s.b, floatOffset)) {
 				return A2(
 					$elm$parser$Parser$Advanced$Bad,
 					false,
 					A2($elm$parser$Parser$Advanced$fromState, s, expecting));
 			} else {
 				if (_Utils_eq(intOffset, floatOffset)) {
-					return A5($elm$parser$Parser$Advanced$finalizeInt, invalid, intSettings, s.c, intPair, s);
+					return A5($elm$parser$Parser$Advanced$finalizeInt, invalid, intSettings, s.b, intPair, s);
 				} else {
 					if (floatSettings.$ === 1) {
 						var x = floatSettings.a;
@@ -9293,7 +9293,7 @@ var $elm$parser$Parser$Advanced$finalizeFloat = F6(
 					} else {
 						var toValue = floatSettings.a;
 						var _v1 = $elm$core$String$toFloat(
-							A3($elm$core$String$slice, s.c, floatOffset, s.a));
+							A3($elm$core$String$slice, s.b, floatOffset, s.a));
 						if (_v1.$ === 1) {
 							return A2(
 								$elm$parser$Parser$Advanced$Bad,
@@ -9314,8 +9314,8 @@ var $elm$parser$Parser$Advanced$finalizeFloat = F6(
 	});
 var $elm$parser$Parser$Advanced$number = function (c) {
 	return function (s) {
-		if (A3($elm$parser$Parser$Advanced$isAsciiCode, 48, s.c, s.a)) {
-			var zeroOffset = s.c + 1;
+		if (A3($elm$parser$Parser$Advanced$isAsciiCode, 48, s.b, s.a)) {
+			var zeroOffset = s.b + 1;
 			var baseOffset = zeroOffset + 1;
 			return A3($elm$parser$Parser$Advanced$isAsciiCode, 120, zeroOffset, s.a) ? A5(
 				$elm$parser$Parser$Advanced$finalizeInt,
@@ -9350,7 +9350,7 @@ var $elm$parser$Parser$Advanced$number = function (c) {
 				c.aZ,
 				c.a7,
 				c.a_,
-				A3($elm$parser$Parser$Advanced$consumeBase, 10, s.c, s.a),
+				A3($elm$parser$Parser$Advanced$consumeBase, 10, s.b, s.a),
 				s);
 		}
 	};
@@ -9671,7 +9671,7 @@ var $elm$parser$Parser$Advanced$run = F2(
 	function (_v0, src) {
 		var parse = _v0;
 		var _v1 = parse(
-			{aT: 1, d: _List_Nil, e: 1, c: 0, bu: 1, a: src});
+			{aT: 1, d: _List_Nil, e: 1, b: 0, bu: 1, a: src});
 		if (!_v1.$) {
 			var value = _v1.b;
 			return $elm$core$Result$Ok(value);
@@ -10346,14 +10346,31 @@ var $author$project$Content$projects = _List_fromArray(
 	[
 		{
 		aR: _List_fromArray(
+			['Branding', 'Illustration', 'Graphic Design', 'All']),
+		o: _List_fromArray(
+			[
+				{c: '/img/mathjalpen/image_1.jpg'}
+			]),
+		w: '<strong></strong> Ätbart is a non-profit organisation, based in Skaraborg municipality in Sweden, fighting food waste. One of their initiatives, called Mathjälpen (translates “food help”), works in partnership with all major local food retailers to redistribute edible food waste to people in financial difficulties. Organisation volunteers do regular pick-ups every few days from food stores of food products that are bound for waste (because of damaged packaging or short expiration date remaining, for example), pack them into well balanced food bags and hand these out to people in need in local communities. For this project, I worked with Ätbart to create visual identity for Mathjälpen, as well as a package of various marketing materials that their partner stores could use in their premises to promote their involvement in this initiative. Moreover, I developed a manual for the use of this marketing package, with examples and tips for best ways to display it.',
+		bX: '/img/mathjalpen/main_image.jpg',
+		x: _List_fromArray(
+			[
+				{b9: 'Date', f: 'Spring 2021'},
+				{b9: 'Tools', f: 'Photoshop, Illustrator, InDesign'}
+			]),
+		a5: 'mathjalpen',
+		b9: 'Mathjälpen'
+	},
+		{
+		aR: _List_fromArray(
 			['Branding', 'UX/UI', 'Graphic Design', 'All']),
 		o: _List_fromArray(
 			[
-				{b: '/img/first.jpg'},
-				{b: '/img/graphic_profile_light.jpg'},
-				{b: '/img/graphic_profile_dark.jpg'},
-				{b: '/img/mockup_2.jpg'},
-				{b: '/img/terraventure/movie2.mp4'}
+				{c: '/img/first.jpg'},
+				{c: '/img/graphic_profile_light.jpg'},
+				{c: '/img/graphic_profile_dark.jpg'},
+				{c: '/img/mockup_2.jpg'},
+				{c: '/img/terraventure/movie2.mp4'}
 			]),
 		w: '<strong></strong> This brief asked to create a branding and UI design for a movie streaming service specialising in outdoor adventure movies. Main inspiration for the design came from modern outdoor, travel and adventure magazines.',
 		bX: '/img/first.jpg',
@@ -10371,33 +10388,11 @@ var $author$project$Content$projects = _List_fromArray(
 			['Branding', 'UX/UI', 'Graphic Design', 'All']),
 		o: _List_fromArray(
 			[
-				{b: '/img/first.jpg'},
-				{b: '/img/graphic_profile_light.jpg'},
-				{b: '/img/graphic_profile_dark.jpg'},
-				{b: '/img/mockup_2.jpg'},
-				{b: '/img/terraventure/movie2.mp4'}
-			]),
-		w: '<strong></strong> This brief asked to create a branding and UI design for a movie streaming service specialising in outdoor adventure movies. Main inspiration for the design came from modern outdoor, travel and adventure magazines.',
-		bX: '/img/first.jpg',
-		x: _List_fromArray(
-			[
-				{b9: 'Date', f: 'October 2020'},
-				{b9: 'Tools', f: 'Photoshop, Illustrator, XD'},
-				{b9: 'Try:', f: '<a href=\'https://xd.adobe.com/view/7e240d0c-6c57-4a8c-9c84-46f290a352e8-2b77/\'>Interactive Prototype</a>'}
-			]),
-		a5: 'terraventure',
-		b9: 'Terra Venture'
-	},
-		{
-		aR: _List_fromArray(
-			['Branding', 'UX/UI', 'Graphic Design', 'All']),
-		o: _List_fromArray(
-			[
-				{b: '/img/esca/logo.mp4'},
-				{b: '/img/esca/page2.jpg'},
-				{b: '/img/esca/micro.mp4'},
-				{b: '/img/esca/ui_movie.mp4'},
-				{b: '/img/esca/page3.jpg'}
+				{c: '/img/esca/logo.mp4'},
+				{c: '/img/esca/page2.jpg'},
+				{c: '/img/esca/micro.mp4'},
+				{c: '/img/esca/ui_movie.mp4'},
+				{c: '/img/esca/page3.jpg'}
 			]),
 		w: 'The brief for this project was to create a branding and an e-commerce website for a company selling premium food products',
 		bX: '/img/esca/display.png',
@@ -10415,8 +10410,8 @@ var $author$project$Content$projects = _List_fromArray(
 			['Graphic Design', 'All']),
 		o: _List_fromArray(
 			[
-				{b: '/img/fikatime/image1.jpg'},
-				{b: '/img/fikatime/image2.jpg'}
+				{c: '/img/fikatime/image1.jpg'},
+				{c: '/img/fikatime/image2.jpg'}
 			]),
 		w: 'This creative brief asked to produce any piece of design, adhering to only one constraint - the design had to be produced using only HTML and CSS languages. I chose to create a set of graphical elements inspired by Swedish folk art. These elements can then be mixed and matched to produce various patters that can be applied to different everyday objects. ',
 		bX: '/img/fikatime/display.jpg',
@@ -10433,9 +10428,9 @@ var $author$project$Content$projects = _List_fromArray(
 			['Graphic Design', 'All', 'UX/UI']),
 		o: _List_fromArray(
 			[
-				{b: '/img/colourgrabber/movie1.mp4'},
-				{b: '/img/colourgrabber/image1.jpg'},
-				{b: '/img/colourgrabber/movie2.mp4'}
+				{c: '/img/colourgrabber/movie1.mp4'},
+				{c: '/img/colourgrabber/image1.jpg'},
+				{c: '/img/colourgrabber/movie2.mp4'}
 			]),
 		w: 'In this brief I had to create a device specific graphic user interface and its assets. I chose to create an interface for a colour capturing application and used neumorphic style as inspiration for a clean and minimatistic look, where the captured colour is the main focus. ',
 		bX: '/img/colourgrabber/display.png',
@@ -10453,7 +10448,7 @@ var $author$project$Content$projects = _List_fromArray(
 			['Graphic Design', 'All', 'Print']),
 		o: _List_fromArray(
 			[
-				{b: '/img/offcenter/main.jpg'}
+				{c: '/img/offcenter/main.jpg'}
 			]),
 		w: 'The brief for this university project was to design and print a magazine about design, featuring at least a couple of Adobe tutorials and an article about some sort of printing technique. The rest was up to us. We chose to produce a magazine celebrating different and non-main-stream design and designers. For the project we produced all the graphical elements, wrote the content and even designed our own fully functional typeface for the title and headings. Finally we got the magazine printed at a proffessional printhouse with a 50 copy print run.',
 		bX: '/img/offcenter/display2.jpg',
@@ -10472,18 +10467,18 @@ var $author$project$Content$projects = _List_fromArray(
 			['Graphic Design', 'All', 'Branding', 'Illustration']),
 		o: _List_fromArray(
 			[
-				{b: '/img/hopbrothers/display.jpg'},
-				{b: '/img/hopbrothers/image1.jpg'},
-				{b: '/img/hopbrothers/image2.jpg'},
-				{b: '/img/hopbrothers/image3.jpg'},
-				{b: '/img/hopbrothers/image4.jpg'},
-				{b: '/img/hopbrothers/image5_2.jpg'},
-				{b: '/img/hopbrothers/image5.jpg'},
-				{b: '/img/hopbrothers/image6.jpg'},
-				{b: '/img/hopbrothers/image7.jpg'},
-				{b: '/img/hopbrothers/image8.jpg'},
-				{b: '/img/hopbrothers/image9.jpg'},
-				{b: '/img/hopbrothers/image10.jpg'}
+				{c: '/img/hopbrothers/display.jpg'},
+				{c: '/img/hopbrothers/image1.jpg'},
+				{c: '/img/hopbrothers/image2.jpg'},
+				{c: '/img/hopbrothers/image3.jpg'},
+				{c: '/img/hopbrothers/image4.jpg'},
+				{c: '/img/hopbrothers/image5_2.jpg'},
+				{c: '/img/hopbrothers/image5.jpg'},
+				{c: '/img/hopbrothers/image6.jpg'},
+				{c: '/img/hopbrothers/image7.jpg'},
+				{c: '/img/hopbrothers/image8.jpg'},
+				{c: '/img/hopbrothers/image9.jpg'},
+				{c: '/img/hopbrothers/image10.jpg'}
 			]),
 		w: 'The brief for this project asked to create branding, a brand identity design manual and product packaging, for a small craft brewery ran by two brothers. Main inspiration for the design\'s artwork came from classic style tattoos, which alongside bright colours and witty product names, will help the brand stand out on the shop shelves.',
 		bX: '/img/hopbrothers/display.jpg',
@@ -10500,11 +10495,11 @@ var $author$project$Content$projects = _List_fromArray(
 			['All', 'Print', 'Illustration']),
 		o: _List_fromArray(
 			[
-				{b: '/img/retro/display.jpg'},
-				{b: '/img/retro/image2.jpg'},
-				{b: '/img/retro/tape.jpg'},
-				{b: '/img/retro/polaroid.jpg'},
-				{b: '/img/retro/vinyl.jpg'}
+				{c: '/img/retro/display.jpg'},
+				{c: '/img/retro/image2.jpg'},
+				{c: '/img/retro/tape.jpg'},
+				{c: '/img/retro/polaroid.jpg'},
+				{c: '/img/retro/vinyl.jpg'}
 			]),
 		w: 'A personal illustration project of various retro objects, inspired by a Public Service Broadcasting album Inform - Educate - Entertain.',
 		bX: '/img/retro/display.jpg',
@@ -10521,10 +10516,10 @@ var $author$project$Content$projects = _List_fromArray(
 			['All', 'Print', 'Illustration']),
 		o: _List_fromArray(
 			[
-				{b: '/img/TWA/image3.jpg'},
-				{b: '/img/TWA/image1.jpg'},
-				{b: '/img/TWA/image2.jpg'},
-				{b: '/img/TWA/image4.jpg'}
+				{c: '/img/TWA/image3.jpg'},
+				{c: '/img/TWA/image1.jpg'},
+				{c: '/img/TWA/image2.jpg'},
+				{c: '/img/TWA/image4.jpg'}
 			]),
 		w: 'Two Wheeled Art is my illustration shop hosted on Etsy platform, specialising in bespoke illustrations of motorcycles and bicycles. Each illustration is produced to order, following pictures provided by the customer.',
 		bX: '/img/TWA/display.jpg',
@@ -10908,7 +10903,7 @@ var $author$project$Pages$Projects$Id_String$content = function (media) {
 		A2(
 			$elm$core$List$map,
 			function (x) {
-				return $author$project$Pages$Projects$Id_String$renderMedia(x.b);
+				return $author$project$Pages$Projects$Id_String$renderMedia(x.c);
 			},
 			media.o));
 };
