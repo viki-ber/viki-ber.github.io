@@ -6240,7 +6240,7 @@ var $author$project$Spa$Page$static = function (page) {
 		cD: page.cD
 	};
 };
-var $author$project$Content$about = {o: 'Hi! My name is Viktorija, I am a graphic designer and illustrator based in Gothenburg, Sweden. <br /><br /> Trained at Jönköping and Linneaus universities. <br /><br /> Previous experience in food product and brand development.<br /><br /> Favourite colours - yellow, blue and grey.<br /><br /> Dream collaboration - Stefan Sagmeister.<br /><br /> Dream brief - design an issue of Lucky Peach magazine.<br /><br />', aM: 'About Me'};
+var $author$project$Content$about = {m: 'Hi! My name is Viktorija, I am a graphic designer and illustrator based in Gothenburg, Sweden. <br /><br /> Trained at Jönköping and Linneaus universities. <br /><br /> Previous experience in food product and brand development.<br /><br /> Favourite colours - yellow, blue and grey.<br /><br /> Dream collaboration - Stefan Sagmeister.<br /><br /> Dream brief - design an issue of Lucky Peach magazine.<br /><br />', aM: 'About Me'};
 var $elm$json$Json$Encode$string = _Json_wrap;
 var $elm$html$Html$Attributes$stringProperty = F2(
 	function (key, string) {
@@ -9808,7 +9808,7 @@ var $author$project$Pages$About$view = function (_v0) {
 													]),
 												_List_fromArray(
 													[
-														$author$project$Components$HtmlRenderer$htmlRenderer($author$project$Content$about.o)
+														$author$project$Components$HtmlRenderer$htmlRenderer($author$project$Content$about.m)
 													]))
 											]))
 									]))
@@ -9821,7 +9821,7 @@ var $author$project$Pages$About$view = function (_v0) {
 var $author$project$Pages$About$page = $author$project$Spa$Page$static(
 	{cD: $author$project$Pages$About$view});
 var $elm$html$Html$a = _VirtualDom_node('a');
-var $author$project$Content$contact = {o: 'I am happy to hear about possible work orders or potential collaborations. If you would like to see my professional CV, do not hesitate to ask. You can drop me a line on:<br /><br /><span class=\"email-link\"><a href=\"mailto:viktorija.graphics@outlook.com\">viktorija.graphics@outlook.com</a></span><br /><br />You are also welcome to contact me via my social media accounts.', aM: 'Contact Me'};
+var $author$project$Content$contact = {m: 'I am happy to hear about possible work orders or potential collaborations. If you would like to see my professional CV, do not hesitate to ask. You can drop me a line on:<br /><br /><span class=\"email-link\"><a href=\"mailto:viktorija.graphics@outlook.com\">viktorija.graphics@outlook.com</a></span><br /><br />You are also welcome to contact me via my social media accounts.', aM: 'Contact Me'};
 var $elm$html$Html$Attributes$href = function (url) {
 	return A2(
 		$elm$html$Html$Attributes$stringProperty,
@@ -9873,7 +9873,7 @@ var $author$project$Pages$Contact$view = function (_v0) {
 													]),
 												_List_fromArray(
 													[
-														$author$project$Components$HtmlRenderer$htmlRenderer($author$project$Content$contact.o)
+														$author$project$Components$HtmlRenderer$htmlRenderer($author$project$Content$contact.m)
 													])),
 												A2(
 												$elm$html$Html$div,
@@ -10346,14 +10346,31 @@ var $author$project$Content$projects = _List_fromArray(
 	[
 		{
 		aR: _List_fromArray(
+			['UX/UI', 'Graphic Design', 'All']),
+		m: _List_fromArray(
+			[
+				{c: '/img/atbart/main_image.png'}
+			]),
+		s: '<strong></strong> Ätbart is a non-profit organisation, based in Skaraborg municipality in Sweden, fighting food waste. I have been hired to do a complete re-design of their website. I started this project by holding a brainstorming discussion together with the Ätbart team to establish a new structure for the website. This session was very appreciated by the client, as well as very productive, as we could quickly establish the website layout that met both client’s wishes, as well as UX and IA best practices. The old website had a lot of content, relevant to different user groups, therefore it was vital to create a very user-friendly information structure. For the design, I followed Ätbart’s brand manual (which I helped to curate in another project), as well as created bespoke elements, such as small illustrations and icons. The design was then handed over to the web developer as an XD prototype, including a full asset library and guide. My goal was to create a clear and easy-to-use website, making sure that each specific user could easily find information relevant to them. I aimed for a visual solution that was clean and conveyed the important work the organisation was doing, at the same time reflecting their fun and lively side. .',
+		bX: '/img/atbart/mockup_1.png',
+		v: _List_fromArray(
+			[
+				{b9: 'Date', f: 'Autumn 2021'},
+				{b9: 'Tools', f: 'Adobe XD, Illustrator'}
+			]),
+		a5: 'atbart',
+		b9: 'Ätbart'
+	},
+		{
+		aR: _List_fromArray(
 			['Branding', 'Illustration', 'Graphic Design', 'All']),
-		o: _List_fromArray(
+		m: _List_fromArray(
 			[
 				{c: '/img/mathjalpen/image_1.jpg'}
 			]),
-		w: '<strong></strong> Ätbart is a non-profit organisation, based in Skaraborg municipality in Sweden, fighting food waste. One of their initiatives, called Mathjälpen (translates “food help”), works in partnership with all major local food retailers to redistribute edible food waste to people in financial difficulties. Organisation volunteers do regular pick-ups every few days from food stores of food products that are bound for waste (because of damaged packaging or short expiration date remaining, for example), pack them into well balanced food bags and hand these out to people in need in local communities. For this project, I worked with Ätbart to create visual identity for Mathjälpen, as well as a package of various marketing materials that their partner stores could use in their premises to promote their involvement in this initiative. Moreover, I developed a manual for the use of this marketing package, with examples and tips for best ways to display it.',
+		s: '<strong></strong> Ätbart is a non-profit organisation, based in Skaraborg municipality in Sweden, fighting food waste. One of their initiatives, called Mathjälpen (translates “food help”), works in partnership with all major local food retailers to redistribute edible food waste to people in financial difficulties. Organisation volunteers do regular pick-ups every few days from food stores of food products that are bound for waste (because of damaged packaging or short expiration date remaining, for example), pack them into well balanced food bags and hand these out to people in need in local communities. For this project, I worked with Ätbart to create visual identity for Mathjälpen, as well as a package of various marketing materials that their partner stores could use in their premises to promote their involvement in this initiative. Moreover, I developed a manual for the use of this marketing package, with examples and tips for best ways to display it.',
 		bX: '/img/mathjalpen/main_image.jpg',
-		x: _List_fromArray(
+		v: _List_fromArray(
 			[
 				{b9: 'Date', f: 'Spring 2021'},
 				{b9: 'Tools', f: 'Photoshop, Illustrator, InDesign'}
@@ -10364,7 +10381,7 @@ var $author$project$Content$projects = _List_fromArray(
 		{
 		aR: _List_fromArray(
 			['Branding', 'UX/UI', 'Graphic Design', 'All']),
-		o: _List_fromArray(
+		m: _List_fromArray(
 			[
 				{c: '/img/first.jpg'},
 				{c: '/img/graphic_profile_light.jpg'},
@@ -10372,9 +10389,9 @@ var $author$project$Content$projects = _List_fromArray(
 				{c: '/img/mockup_2.jpg'},
 				{c: '/img/terraventure/movie2.mp4'}
 			]),
-		w: '<strong></strong> This brief asked to create a branding and UI design for a movie streaming service specialising in outdoor adventure movies. Main inspiration for the design came from modern outdoor, travel and adventure magazines.',
+		s: '<strong></strong> This brief asked to create a branding and UI design for a movie streaming service specialising in outdoor adventure movies. Main inspiration for the design came from modern outdoor, travel and adventure magazines.',
 		bX: '/img/first.jpg',
-		x: _List_fromArray(
+		v: _List_fromArray(
 			[
 				{b9: 'Date', f: 'October 2021'},
 				{b9: 'Tools', f: 'Photoshop, Illustrator, XD'},
@@ -10386,7 +10403,7 @@ var $author$project$Content$projects = _List_fromArray(
 		{
 		aR: _List_fromArray(
 			['Branding', 'UX/UI', 'Graphic Design', 'All']),
-		o: _List_fromArray(
+		m: _List_fromArray(
 			[
 				{c: '/img/esca/logo.mp4'},
 				{c: '/img/esca/page2.jpg'},
@@ -10394,9 +10411,9 @@ var $author$project$Content$projects = _List_fromArray(
 				{c: '/img/esca/ui_movie.mp4'},
 				{c: '/img/esca/page3.jpg'}
 			]),
-		w: 'The brief for this project was to create a branding and an e-commerce website for a company selling premium food products',
+		s: 'The brief for this project was to create a branding and an e-commerce website for a company selling premium food products',
 		bX: '/img/esca/display.png',
-		x: _List_fromArray(
+		v: _List_fromArray(
 			[
 				{b9: 'Date:', f: 'October 2020'},
 				{b9: 'Tools:', f: 'Photoshop, Illustrator, XD'},
@@ -10408,14 +10425,14 @@ var $author$project$Content$projects = _List_fromArray(
 		{
 		aR: _List_fromArray(
 			['Graphic Design', 'All']),
-		o: _List_fromArray(
+		m: _List_fromArray(
 			[
 				{c: '/img/fikatime/image1.jpg'},
 				{c: '/img/fikatime/image2.jpg'}
 			]),
-		w: 'This creative brief asked to produce any piece of design, adhering to only one constraint - the design had to be produced using only HTML and CSS languages. I chose to create a set of graphical elements inspired by Swedish folk art. These elements can then be mixed and matched to produce various patters that can be applied to different everyday objects. ',
+		s: 'This creative brief asked to produce any piece of design, adhering to only one constraint - the design had to be produced using only HTML and CSS languages. I chose to create a set of graphical elements inspired by Swedish folk art. These elements can then be mixed and matched to produce various patters that can be applied to different everyday objects. ',
 		bX: '/img/fikatime/display.jpg',
-		x: _List_fromArray(
+		v: _List_fromArray(
 			[
 				{b9: 'Date:', f: 'November 2020'},
 				{b9: 'Tools:', f: 'HTML, CSS'}
@@ -10426,15 +10443,15 @@ var $author$project$Content$projects = _List_fromArray(
 		{
 		aR: _List_fromArray(
 			['Graphic Design', 'All', 'UX/UI']),
-		o: _List_fromArray(
+		m: _List_fromArray(
 			[
 				{c: '/img/colourgrabber/movie1.mp4'},
 				{c: '/img/colourgrabber/image1.jpg'},
 				{c: '/img/colourgrabber/movie2.mp4'}
 			]),
-		w: 'In this brief I had to create a device specific graphic user interface and its assets. I chose to create an interface for a colour capturing application and used neumorphic style as inspiration for a clean and minimatistic look, where the captured colour is the main focus. ',
+		s: 'In this brief I had to create a device specific graphic user interface and its assets. I chose to create an interface for a colour capturing application and used neumorphic style as inspiration for a clean and minimatistic look, where the captured colour is the main focus. ',
 		bX: '/img/colourgrabber/display.png',
-		x: _List_fromArray(
+		v: _List_fromArray(
 			[
 				{b9: 'Date:', f: 'November 2020'},
 				{b9: 'Tools:', f: 'XD'},
@@ -10446,13 +10463,13 @@ var $author$project$Content$projects = _List_fromArray(
 		{
 		aR: _List_fromArray(
 			['Graphic Design', 'All', 'Print']),
-		o: _List_fromArray(
+		m: _List_fromArray(
 			[
 				{c: '/img/offcenter/main.jpg'}
 			]),
-		w: 'The brief for this university project was to design and print a magazine about design, featuring at least a couple of Adobe tutorials and an article about some sort of printing technique. The rest was up to us. We chose to produce a magazine celebrating different and non-main-stream design and designers. For the project we produced all the graphical elements, wrote the content and even designed our own fully functional typeface for the title and headings. Finally we got the magazine printed at a proffessional printhouse with a 50 copy print run.',
+		s: 'The brief for this university project was to design and print a magazine about design, featuring at least a couple of Adobe tutorials and an article about some sort of printing technique. The rest was up to us. We chose to produce a magazine celebrating different and non-main-stream design and designers. For the project we produced all the graphical elements, wrote the content and even designed our own fully functional typeface for the title and headings. Finally we got the magazine printed at a proffessional printhouse with a 50 copy print run.',
 		bX: '/img/offcenter/display2.jpg',
-		x: _List_fromArray(
+		v: _List_fromArray(
 			[
 				{b9: 'Date:', f: 'May 2020'},
 				{b9: 'Tools:', f: 'Photoshop, Illustrator, Indesign'},
@@ -10465,7 +10482,7 @@ var $author$project$Content$projects = _List_fromArray(
 		{
 		aR: _List_fromArray(
 			['Graphic Design', 'All', 'Branding', 'Illustration']),
-		o: _List_fromArray(
+		m: _List_fromArray(
 			[
 				{c: '/img/hopbrothers/display.jpg'},
 				{c: '/img/hopbrothers/image1.jpg'},
@@ -10480,9 +10497,9 @@ var $author$project$Content$projects = _List_fromArray(
 				{c: '/img/hopbrothers/image9.jpg'},
 				{c: '/img/hopbrothers/image10.jpg'}
 			]),
-		w: 'The brief for this project asked to create branding, a brand identity design manual and product packaging, for a small craft brewery ran by two brothers. Main inspiration for the design\'s artwork came from classic style tattoos, which alongside bright colours and witty product names, will help the brand stand out on the shop shelves.',
+		s: 'The brief for this project asked to create branding, a brand identity design manual and product packaging, for a small craft brewery ran by two brothers. Main inspiration for the design\'s artwork came from classic style tattoos, which alongside bright colours and witty product names, will help the brand stand out on the shop shelves.',
 		bX: '/img/hopbrothers/display.jpg',
-		x: _List_fromArray(
+		v: _List_fromArray(
 			[
 				{b9: 'Date:', f: 'March 2020'},
 				{b9: 'Tools:', f: 'Photoshop, Illustrator'}
@@ -10493,7 +10510,7 @@ var $author$project$Content$projects = _List_fromArray(
 		{
 		aR: _List_fromArray(
 			['All', 'Print', 'Illustration']),
-		o: _List_fromArray(
+		m: _List_fromArray(
 			[
 				{c: '/img/retro/display.jpg'},
 				{c: '/img/retro/image2.jpg'},
@@ -10501,9 +10518,9 @@ var $author$project$Content$projects = _List_fromArray(
 				{c: '/img/retro/polaroid.jpg'},
 				{c: '/img/retro/vinyl.jpg'}
 			]),
-		w: 'A personal illustration project of various retro objects, inspired by a Public Service Broadcasting album Inform - Educate - Entertain.',
+		s: 'A personal illustration project of various retro objects, inspired by a Public Service Broadcasting album Inform - Educate - Entertain.',
 		bX: '/img/retro/display.jpg',
-		x: _List_fromArray(
+		v: _List_fromArray(
 			[
 				{b9: 'Date:', f: 'November 2019'},
 				{b9: 'Tools:', f: 'Photoshop, Illustrator'}
@@ -10514,16 +10531,16 @@ var $author$project$Content$projects = _List_fromArray(
 		{
 		aR: _List_fromArray(
 			['All', 'Print', 'Illustration']),
-		o: _List_fromArray(
+		m: _List_fromArray(
 			[
 				{c: '/img/TWA/image3.jpg'},
 				{c: '/img/TWA/image1.jpg'},
 				{c: '/img/TWA/image2.jpg'},
 				{c: '/img/TWA/image4.jpg'}
 			]),
-		w: 'Two Wheeled Art is my illustration shop hosted on Etsy platform, specialising in bespoke illustrations of motorcycles and bicycles. Each illustration is produced to order, following pictures provided by the customer.',
+		s: 'Two Wheeled Art is my illustration shop hosted on Etsy platform, specialising in bespoke illustrations of motorcycles and bicycles. Each illustration is produced to order, following pictures provided by the customer.',
 		bX: '/img/TWA/display.jpg',
-		x: _List_fromArray(
+		v: _List_fromArray(
 			[
 				{b9: 'Date:', f: '2018 - ongoing'},
 				{b9: 'Tools:', f: 'Photoshop, Wacom drawing display'},
@@ -10683,7 +10700,7 @@ var $author$project$Components$CategoryList$listCategories = F2(
 			A2($author$project$Components$CategoryList$listCategory, selection, toMsg),
 			$elm$core$List$sort($author$project$Components$CategoryList$mergeCategories));
 	});
-var $author$project$Content$top = {o: 'lorem ipsum dolor sit amet', aM: 'My Portfolio'};
+var $author$project$Content$top = {m: 'lorem ipsum dolor sit amet', aM: 'My Portfolio'};
 var $author$project$Pages$Projects$view = function (model) {
 	return {
 		bR: _List_fromArray(
@@ -10802,7 +10819,7 @@ var $elm$core$Array$get = F2(
 			A2($elm$core$Elm$JsArray$unsafeGet, $elm$core$Array$bitMask & index, tail)) : $elm$core$Maybe$Just(
 			A3($elm$core$Array$getHelp, startShift, index, tree)));
 	});
-var $author$project$Pages$Projects$Id_String$notFound = {aR: _List_Nil, o: _List_Nil, w: 'Not found', bX: '', x: _List_Nil, a5: 'not_found', b9: 'NOT FOUND'};
+var $author$project$Pages$Projects$Id_String$notFound = {aR: _List_Nil, m: _List_Nil, s: 'Not found', bX: '', v: _List_Nil, a5: 'not_found', b9: 'NOT FOUND'};
 var $author$project$Pages$Projects$Id_String$getProject = function (id) {
 	return A2(
 		$elm$core$Maybe$withDefault,
@@ -10905,7 +10922,7 @@ var $author$project$Pages$Projects$Id_String$content = function (media) {
 			function (x) {
 				return $author$project$Pages$Projects$Id_String$renderMedia(x.c);
 			},
-			media.o));
+			media.m));
 };
 var $elm$html$Html$b = _VirtualDom_node('b');
 var $elm$html$Html$li = _VirtualDom_node('li');
@@ -10943,7 +10960,7 @@ var $author$project$Pages$Projects$Id_String$factsContainer = function (project)
 									$author$project$Components$HtmlRenderer$htmlRenderer(x.f)
 								]));
 					},
-					project.x))
+					project.v))
 			]));
 };
 var $elm$html$Html$Attributes$for = $elm$html$Html$Attributes$stringProperty('htmlFor');
@@ -11009,7 +11026,7 @@ var $author$project$Pages$Projects$Id_String$presentProject = function (project)
 						]),
 					_List_fromArray(
 						[
-							$author$project$Components$HtmlRenderer$htmlRenderer(project.w)
+							$author$project$Components$HtmlRenderer$htmlRenderer(project.s)
 						])),
 					$author$project$Pages$Projects$Id_String$factsContainer(project)
 				])),
