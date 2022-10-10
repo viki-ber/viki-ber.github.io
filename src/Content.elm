@@ -51,6 +51,9 @@ projects =
             , { name = "Tools"
               , value = "Adobe XD, Illustrator"
               }
+               , { name = "Try the desktop prototype:"
+              , value = "<a href='https://xd.adobe.com/view/ce9b68ec-4116-44d8-a0ba-611c4822fd88-9bc8/'>Interactive Prototype</a>"
+              }
             ]
       , content =
             [ { graphic = "/img/atbart/main_image.png"
