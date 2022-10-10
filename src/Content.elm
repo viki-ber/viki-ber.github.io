@@ -39,7 +39,25 @@ type alias Project =
 
 projects : List Project
 projects =
-    [ { name = "Mathjälpen"
+    [ { name = "Ätbart"
+      , id = "atbart"
+      , categories = [ "UX/UI", "Graphic Design", "All" ]
+      , display = "/img/atbart/mockup_1.png"
+      , description = "<strong></strong> Ätbart is a non-profit organisation, based in Skaraborg municipality in Sweden, fighting food waste. I have been hired to do a complete re-design of their website. I started this project by holding a brainstorming discussion together with the Ätbart team to establish a new structure for the website. This session was very appreciated by the client, as well as very productive, as we could quickly establish the website layout that met both client’s wishes, as well as UX and IA best practices. The old website had a lot of content, relevant to different user groups, therefore it was vital to create a very user-friendly information structure. For the design, I followed Ätbart’s brand manual (which I helped to curate in another project), as well as created bespoke elements, such as small illustrations and icons. The design was then handed over to the web developer as an XD prototype, including a full asset library and guide. My goal was to create a clear and easy-to-use website, making sure that each specific user could easily find information relevant to them. I aimed for a visual solution that was clean and conveyed the important work the organisation was doing, at the same time reflecting their fun and lively side. ."
+      , facts =
+            [ { name = "Date"
+              , value = "Autumn 2021"
+              }
+            , { name = "Tools"
+              , value = "Adobe XD, Illustrator"
+              }
+            ]
+      , content =
+            [ { graphic = "/img/atbart/main_image.png"
+              }
+            ]
+      }
+      ,{ name = "Mathjälpen"
       , id = "mathjalpen"
       , categories = [ "Branding", "Illustration", "Graphic Design", "All" ]
       , display = "/img/mathjalpen/main_image.jpg"
