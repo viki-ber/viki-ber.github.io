@@ -10357,7 +10357,9 @@ var $author$project$Content$projects = _List_fromArray(
 			[
 				{b9: 'Date', e: 'Autumn 2021'},
 				{b9: 'Tools', e: 'Adobe XD, Illustrator'},
-				{b9: 'Try the desktop prototype:', e: '<a href=\'https://xd.adobe.com/view/ce9b68ec-4116-44d8-a0ba-611c4822fd88-9bc8/\'>Interactive Prototype</a>'}
+				{b9: 'Try the desktop prototype:', e: '<a href=\'https://xd.adobe.com/view/ce9b68ec-4116-44d8-a0ba-611c4822fd88-9bc8/\'>Interactive Prototype</a>'},
+				{b9: 'Try the mobile prototype:', e: '<a href=\'https://xd.adobe.com/view/d1d7604b-3402-40ed-a083-74c96852cc45-8484/\'>Interactive Prototype</a>'},
+				{b9: 'Visit the website:', e: '<a href=\'https://atbart.org/\'>www.atbart.org</a>'}
 			]),
 		a5: 'atbart',
 		b9: 'Ätbart'
