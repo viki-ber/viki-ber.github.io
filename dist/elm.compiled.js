@@ -5347,7 +5347,7 @@ var $elm$core$Platform$Cmd$batch = _Platform_batch;
 var $author$project$Spa$Generated$Route$NotFound = {$: 3};
 var $elm$url$Url$Parser$State = F5(
 	function (visited, unvisited, params, frag, value) {
-		return {L: frag, cn: params, K: unvisited, e: value, O: visited};
+		return {L: frag, cn: params, K: unvisited, d: value, O: visited};
 	});
 var $elm$url$Url$Parser$getFirstMatch = function (states) {
 	getFirstMatch:
@@ -5359,10 +5359,10 @@ var $elm$url$Url$Parser$getFirstMatch = function (states) {
 			var rest = states.b;
 			var _v1 = state.K;
 			if (!_v1.b) {
-				return $elm$core$Maybe$Just(state.e);
+				return $elm$core$Maybe$Just(state.d);
 			} else {
 				if ((_v1.a === '') && (!_v1.b.b)) {
-					return $elm$core$Maybe$Just(state.e);
+					return $elm$core$Maybe$Just(state.d);
 				} else {
 					var $temp$states = rest;
 					states = $temp$states;
@@ -5993,7 +5993,7 @@ var $elm$url$Url$Parser$mapState = F2(
 		var unvisited = _v0.K;
 		var params = _v0.cn;
 		var frag = _v0.L;
-		var value = _v0.e;
+		var value = _v0.d;
 		return A5(
 			$elm$url$Url$Parser$State,
 			visited,
@@ -6010,7 +6010,7 @@ var $elm$url$Url$Parser$map = F2(
 			var unvisited = _v1.K;
 			var params = _v1.cn;
 			var frag = _v1.L;
-			var value = _v1.e;
+			var value = _v1.d;
 			return A2(
 				$elm$core$List$map,
 				$elm$url$Url$Parser$mapState(value),
@@ -6051,7 +6051,7 @@ var $elm$url$Url$Parser$s = function (str) {
 		var unvisited = _v0.K;
 		var params = _v0.cn;
 		var frag = _v0.L;
-		var value = _v0.e;
+		var value = _v0.d;
 		if (!unvisited.b) {
 			return _List_Nil;
 		} else {
@@ -6088,7 +6088,7 @@ var $elm$url$Url$Parser$custom = F2(
 			var unvisited = _v0.K;
 			var params = _v0.cn;
 			var frag = _v0.L;
-			var value = _v0.e;
+			var value = _v0.d;
 			if (!unvisited.b) {
 				return _List_Nil;
 			} else {
@@ -6324,7 +6324,7 @@ var $elm$parser$Parser$Advanced$fromState = F2(
 		return A2(
 			$elm$parser$Parser$Advanced$AddRight,
 			$elm$parser$Parser$Advanced$Empty,
-			A4($elm$parser$Parser$Advanced$DeadEnd, s.bu, s.aT, x, s.d));
+			A4($elm$parser$Parser$Advanced$DeadEnd, s.bu, s.aT, x, s.e));
 	});
 var $elm$parser$Parser$Advanced$isSubChar = _Parser_isSubChar;
 var $elm$core$Basics$negate = function (n) {
@@ -6341,11 +6341,11 @@ var $elm$parser$Parser$Advanced$chompIf = F2(
 				$elm$parser$Parser$Advanced$Good,
 				true,
 				0,
-				{aT: 1, d: s.d, f: s.f, b: s.b + 1, bu: s.bu + 1, a: s.a}) : A3(
+				{aT: 1, e: s.e, f: s.f, b: s.b + 1, bu: s.bu + 1, a: s.a}) : A3(
 				$elm$parser$Parser$Advanced$Good,
 				true,
 				0,
-				{aT: s.aT + 1, d: s.d, f: s.f, b: newOffset, bu: s.bu, a: s.a}));
+				{aT: s.aT + 1, e: s.e, f: s.f, b: newOffset, bu: s.bu, a: s.a}));
 		};
 	});
 var $elm$parser$Parser$chompIf = function (isGood) {
@@ -6361,7 +6361,7 @@ var $elm$parser$Parser$Advanced$chompWhileHelp = F5(
 					$elm$parser$Parser$Advanced$Good,
 					_Utils_cmp(s0.b, offset) < 0,
 					0,
-					{aT: col, d: s0.d, f: s0.f, b: offset, bu: row, a: s0.a});
+					{aT: col, e: s0.e, f: s0.f, b: offset, bu: row, a: s0.a});
 			} else {
 				if (_Utils_eq(newOffset, -2)) {
 					var $temp$isGood = isGood,
@@ -6547,11 +6547,11 @@ var $elm$parser$Parser$Advanced$chompUntil = function (_v0) {
 		return _Utils_eq(newOffset, -1) ? A2(
 			$elm$parser$Parser$Advanced$Bad,
 			false,
-			A4($elm$parser$Parser$Advanced$fromInfo, newRow, newCol, expecting, s.d)) : A3(
+			A4($elm$parser$Parser$Advanced$fromInfo, newRow, newCol, expecting, s.e)) : A3(
 			$elm$parser$Parser$Advanced$Good,
 			_Utils_cmp(s.b, newOffset) < 0,
 			0,
-			{aT: newCol, d: s.d, f: s.f, b: newOffset, bu: newRow, a: s.a});
+			{aT: newCol, e: s.e, f: s.f, b: newOffset, bu: newRow, a: s.a});
 	};
 };
 var $elm$parser$Parser$Expecting = function (a) {
@@ -6593,7 +6593,7 @@ var $elm$parser$Parser$Advanced$token = function (_v0) {
 			$elm$parser$Parser$Advanced$Good,
 			progress,
 			0,
-			{aT: newCol, d: s.d, f: s.f, b: newOffset, bu: newRow, a: s.a});
+			{aT: newCol, e: s.e, f: s.f, b: newOffset, bu: newRow, a: s.a});
 	};
 };
 var $elm$parser$Parser$token = function (str) {
@@ -9220,7 +9220,7 @@ var $elm$parser$Parser$Advanced$consumeBase = _Parser_consumeBase;
 var $elm$parser$Parser$Advanced$consumeBase16 = _Parser_consumeBase16;
 var $elm$parser$Parser$Advanced$bumpOffset = F2(
 	function (newOffset, s) {
-		return {aT: s.aT + (newOffset - s.b), d: s.d, f: s.f, b: newOffset, bu: s.bu, a: s.a};
+		return {aT: s.aT + (newOffset - s.b), e: s.e, f: s.f, b: newOffset, bu: s.bu, a: s.a};
 	});
 var $elm$parser$Parser$Advanced$chompBase10 = _Parser_chompBase10;
 var $elm$parser$Parser$Advanced$isAsciiCode = _Parser_isAsciiCode;
@@ -9273,7 +9273,7 @@ var $elm$parser$Parser$Advanced$finalizeFloat = F6(
 			return A2(
 				$elm$parser$Parser$Advanced$Bad,
 				true,
-				A4($elm$parser$Parser$Advanced$fromInfo, s.bu, s.aT - (floatOffset + s.b), invalid, s.d));
+				A4($elm$parser$Parser$Advanced$fromInfo, s.bu, s.aT - (floatOffset + s.b), invalid, s.e));
 		} else {
 			if (_Utils_eq(s.b, floatOffset)) {
 				return A2(
@@ -9671,7 +9671,7 @@ var $elm$parser$Parser$Advanced$run = F2(
 	function (_v0, src) {
 		var parse = _v0;
 		var _v1 = parse(
-			{aT: 1, d: _List_Nil, f: 1, b: 0, bu: 1, a: src});
+			{aT: 1, e: _List_Nil, f: 1, b: 0, bu: 1, a: src});
 		if (!_v1.$) {
 			var value = _v1.b;
 			return $elm$core$Result$Ok(value);
@@ -10346,20 +10346,41 @@ var $author$project$Content$projects = _List_fromArray(
 	[
 		{
 		aR: _List_fromArray(
+			['UX/UI', 'Graphic Design', 'All', 'Academic Writing', 'User Research']),
+		m: _List_fromArray(
+			[
+				{c: '/img/thesis/main_image.png'},
+				{c: '/img/thesis/video.mp4'}
+			]),
+		p: '<strong></strong> Sustainable web design is the practice of designing digital products and services to prioritise the health of our home planet. At its core, it is concerned with reducing carbon emissions and the energy consumption of web services. <br /><br />In recent years, the web development industry has been aiming to make websites more sustainable through green hosting and sustainable approaches in both back-end and front-end levels of websites. However, switching to sustainably designed websites would require a change in user behaviour, which might be one of the main reasons lower-impact websites are not being introduced more widely. <br /><br />The purpose of the study was to evaluate and improve existing sustainable web design guidelines in order to make lower-impact websites more attractive to users. Due to the steady exponential growth of the e-commerce sector, grocery shopping websites was chosen as a context. <br /><br />Surveys and focus groups were used to evaluate users\' experience and attitudes toward existing lower-impact websites. The gathered data identified improvements to the existing sustainable web design guidelines, which then were applied to build a high-fidelity prototype of a lower-impact grocery e-commerce website. A follow-up usability testing was carried out to evaluate the UX of the prototype, which indicated what would make a lower-impact website more attractive to users. <br /><br />The study proposes a strategy of combining the existing sustainable web design guidelines with certain behaviour change theories to facilitate a smoother transition towards lower-impact websites.<br /><br />Follow the links on the side to read the full study or try out the prototype.',
+		bX: '/img/thesis/cover_image.png',
+		q: _List_fromArray(
+			[
+				{b9: 'Date:', d: 'Spring 2022'},
+				{b9: 'Tools:', d: 'Figma, Illustrator, Various User Research Methods'},
+				{b9: 'Collaboration:', d: 'Ráhel Anna Balogh'},
+				{b9: 'Try the prototype:', d: '<a href=\'https://www.figma.com/proto/D6Zl3duTJnBVKbnOfoO9wh/Thesis-project?page-id=0%3A1&node-id=310%3A12429&starting-point-node-id=310%3A12429/\'>Interactive Prototype</a>'},
+				{b9: 'Read the full study:', d: '<a href=\'http://hj.diva-portal.org/smash/get/diva2:1672889/FULLTEXT01.pdf\'>Sustainable web design in the e-commercde sector</a>'}
+			]),
+		a5: 'thesis',
+		b9: 'Sustainable web design'
+	},
+		{
+		aR: _List_fromArray(
 			['UX/UI', 'Graphic Design', 'All']),
 		m: _List_fromArray(
 			[
 				{c: '/img/atbart/main_image.png'}
 			]),
-		s: '<strong></strong> Ätbart is a non-profit organisation, based in Skaraborg municipality in Sweden, fighting food waste. I have been hired to do a complete re-design of their website. I started this project by holding a brainstorming discussion together with the Ätbart team to establish a new structure for the website. This session was very appreciated by the client, as well as very productive, as we could quickly establish the website layout that met both client’s wishes, as well as UX and IA best practices. The old website had a lot of content, relevant to different user groups, therefore it was vital to create a very user-friendly information structure. For the design, I followed Ätbart’s brand manual (which I helped to curate in another project), as well as created bespoke elements, such as small illustrations and icons. The design was then handed over to the web developer as an XD prototype, including a full asset library and guide. My goal was to create a clear and easy-to-use website, making sure that each specific user could easily find information relevant to them. I aimed for a visual solution that was clean and conveyed the important work the organisation was doing, at the same time reflecting their fun and lively side. .',
+		p: '<strong></strong> Ätbart is a non-profit organisation, based in Skaraborg municipality in Sweden, fighting food waste. I have been hired to do a complete re-design of their website. <br /><br />I started this project by holding a brainstorming discussion together with the Ätbart team to establish a new structure for the website. This session was very appreciated by the client, as well as very productive, as we could quickly establish the website layout that met both client’s wishes, as well as UX and IA best practices. The old website had a lot of content, relevant to different user groups, therefore it was vital to create a very user-friendly information structure. <br /><br />For the design, I followed Ätbart’s brand manual (which I helped to curate in another project), as well as created bespoke elements, such as small illustrations and icons. The design was then handed over to the web developer as an XD prototype, including a full asset library and guide.<br /><br />My goal was to create a clear and easy-to-use website, making sure that each specific user could easily find information relevant to them. I aimed for a visual solution that was clean and conveyed the important work the organisation was doing, at the same time reflecting their fun and lively side. .',
 		bX: '/img/atbart/mockup_1.png',
-		v: _List_fromArray(
+		q: _List_fromArray(
 			[
-				{b9: 'Date', e: 'Autumn 2021'},
-				{b9: 'Tools', e: 'Adobe XD, Illustrator'},
-				{b9: 'Try the desktop prototype:', e: '<a href=\'https://xd.adobe.com/view/ce9b68ec-4116-44d8-a0ba-611c4822fd88-9bc8/\'>Interactive Prototype</a>'},
-				{b9: 'Try the mobile prototype:', e: '<a href=\'https://xd.adobe.com/view/d1d7604b-3402-40ed-a083-74c96852cc45-8484/\'>Interactive Prototype</a>'},
-				{b9: 'Visit the website:', e: '<a href=\'https://atbart.org/\'>www.atbart.org</a>'}
+				{b9: 'Date', d: 'Autumn 2021'},
+				{b9: 'Tools', d: 'Adobe XD, Illustrator'},
+				{b9: 'Try the desktop prototype:', d: '<a href=\'https://xd.adobe.com/view/ce9b68ec-4116-44d8-a0ba-611c4822fd88-9bc8/\'>Interactive Prototype</a>'},
+				{b9: 'Try the mobile prototype:', d: '<a href=\'https://xd.adobe.com/view/d1d7604b-3402-40ed-a083-74c96852cc45-8484/\'>Interactive Prototype</a>'},
+				{b9: 'Visit the website:', d: '<a href=\'https://atbart.org/\'>www.atbart.org</a>'}
 			]),
 		a5: 'atbart',
 		b9: 'Ätbart'
@@ -10371,12 +10392,12 @@ var $author$project$Content$projects = _List_fromArray(
 			[
 				{c: '/img/mathjalpen/image_1.jpg'}
 			]),
-		s: '<strong></strong> Ätbart is a non-profit organisation, based in Skaraborg municipality in Sweden, fighting food waste. One of their initiatives, called Mathjälpen (translates “food help”), works in partnership with all major local food retailers to redistribute edible food waste to people in financial difficulties. Organisation volunteers do regular pick-ups every few days from food stores of food products that are bound for waste (because of damaged packaging or short expiration date remaining, for example), pack them into well balanced food bags and hand these out to people in need in local communities. For this project, I worked with Ätbart to create visual identity for Mathjälpen, as well as a package of various marketing materials that their partner stores could use in their premises to promote their involvement in this initiative. Moreover, I developed a manual for the use of this marketing package, with examples and tips for best ways to display it.',
+		p: '<strong></strong> Ätbart is a non-profit organisation, based in Skaraborg municipality in Sweden, fighting food waste. One of their initiatives, called Mathjälpen (translates “food help”), works in partnership with all major local food retailers to redistribute edible food waste to people in financial difficulties. Organisation volunteers do regular pick-ups every few days from food stores of food products that are bound for waste (because of damaged packaging or short expiration date remaining, for example), pack them into well balanced food bags and hand these out to people in need in local communities. For this project, I worked with Ätbart to create visual identity for Mathjälpen, as well as a package of various marketing materials that their partner stores could use in their premises to promote their involvement in this initiative. Moreover, I developed a manual for the use of this marketing package, with examples and tips for best ways to display it.',
 		bX: '/img/mathjalpen/main_image.jpg',
-		v: _List_fromArray(
+		q: _List_fromArray(
 			[
-				{b9: 'Date', e: 'Spring 2021'},
-				{b9: 'Tools', e: 'Photoshop, Illustrator, InDesign'}
+				{b9: 'Date', d: 'Spring 2021'},
+				{b9: 'Tools', d: 'Photoshop, Illustrator, InDesign'}
 			]),
 		a5: 'mathjalpen',
 		b9: 'Mathjälpen'
@@ -10392,13 +10413,13 @@ var $author$project$Content$projects = _List_fromArray(
 				{c: '/img/mockup_2.jpg'},
 				{c: '/img/terraventure/movie2.mp4'}
 			]),
-		s: '<strong></strong> This brief asked to create a branding and UI design for a movie streaming service specialising in outdoor adventure movies. Main inspiration for the design came from modern outdoor, travel and adventure magazines.',
+		p: '<strong></strong> This brief asked to create a branding and UI design for a movie streaming service specialising in outdoor adventure movies. Main inspiration for the design came from modern outdoor, travel and adventure magazines.',
 		bX: '/img/first.jpg',
-		v: _List_fromArray(
+		q: _List_fromArray(
 			[
-				{b9: 'Date', e: 'October 2021'},
-				{b9: 'Tools', e: 'Photoshop, Illustrator, XD'},
-				{b9: 'Try:', e: '<a href=\'https://xd.adobe.com/view/7e240d0c-6c57-4a8c-9c84-46f290a352e8-2b77/\'>Interactive Prototype</a>'}
+				{b9: 'Date', d: 'October 2021'},
+				{b9: 'Tools', d: 'Photoshop, Illustrator, XD'},
+				{b9: 'Try:', d: '<a href=\'https://xd.adobe.com/view/7e240d0c-6c57-4a8c-9c84-46f290a352e8-2b77/\'>Interactive Prototype</a>'}
 			]),
 		a5: 'terraventure',
 		b9: 'Terra Venture'
@@ -10414,13 +10435,13 @@ var $author$project$Content$projects = _List_fromArray(
 				{c: '/img/esca/ui_movie.mp4'},
 				{c: '/img/esca/page3.jpg'}
 			]),
-		s: 'The brief for this project was to create a branding and an e-commerce website for a company selling premium food products',
+		p: 'The brief for this project was to create a branding and an e-commerce website for a company selling premium food products',
 		bX: '/img/esca/display.png',
-		v: _List_fromArray(
+		q: _List_fromArray(
 			[
-				{b9: 'Date:', e: 'October 2020'},
-				{b9: 'Tools:', e: 'Photoshop, Illustrator, XD'},
-				{b9: 'Try:', e: '<a href=\'https://xd.adobe.com/view/037c0fc6-01c4-41d5-a0d8-a77733748a4b-562f/\'>Interactive Prototype</a>'}
+				{b9: 'Date:', d: 'October 2020'},
+				{b9: 'Tools:', d: 'Photoshop, Illustrator, XD'},
+				{b9: 'Try:', d: '<a href=\'https://xd.adobe.com/view/037c0fc6-01c4-41d5-a0d8-a77733748a4b-562f/\'>Interactive Prototype</a>'}
 			]),
 		a5: 'esca',
 		b9: 'Esca'
@@ -10433,12 +10454,12 @@ var $author$project$Content$projects = _List_fromArray(
 				{c: '/img/fikatime/image1.jpg'},
 				{c: '/img/fikatime/image2.jpg'}
 			]),
-		s: 'This creative brief asked to produce any piece of design, adhering to only one constraint - the design had to be produced using only HTML and CSS languages. I chose to create a set of graphical elements inspired by Swedish folk art. These elements can then be mixed and matched to produce various patters that can be applied to different everyday objects. ',
+		p: 'This creative brief asked to produce any piece of design, adhering to only one constraint - the design had to be produced using only HTML and CSS languages. I chose to create a set of graphical elements inspired by Swedish folk art. These elements can then be mixed and matched to produce various patters that can be applied to different everyday objects. ',
 		bX: '/img/fikatime/display.jpg',
-		v: _List_fromArray(
+		q: _List_fromArray(
 			[
-				{b9: 'Date:', e: 'November 2020'},
-				{b9: 'Tools:', e: 'HTML, CSS'}
+				{b9: 'Date:', d: 'November 2020'},
+				{b9: 'Tools:', d: 'HTML, CSS'}
 			]),
 		a5: 'fika',
 		b9: 'It\'s fika time'
@@ -10452,13 +10473,13 @@ var $author$project$Content$projects = _List_fromArray(
 				{c: '/img/colourgrabber/image1.jpg'},
 				{c: '/img/colourgrabber/movie2.mp4'}
 			]),
-		s: 'In this brief I had to create a device specific graphic user interface and its assets. I chose to create an interface for a colour capturing application and used neumorphic style as inspiration for a clean and minimatistic look, where the captured colour is the main focus. ',
+		p: 'In this brief I had to create a device specific graphic user interface and its assets. I chose to create an interface for a colour capturing application and used neumorphic style as inspiration for a clean and minimatistic look, where the captured colour is the main focus. ',
 		bX: '/img/colourgrabber/display.png',
-		v: _List_fromArray(
+		q: _List_fromArray(
 			[
-				{b9: 'Date:', e: 'November 2020'},
-				{b9: 'Tools:', e: 'XD'},
-				{b9: 'Try:', e: '<a href=\'https://xd.adobe.com/view/0dbb5502-96cc-444c-b7c8-53267224f761-58e8/\'>Interactive Prototype</a>'}
+				{b9: 'Date:', d: 'November 2020'},
+				{b9: 'Tools:', d: 'XD'},
+				{b9: 'Try:', d: '<a href=\'https://xd.adobe.com/view/0dbb5502-96cc-444c-b7c8-53267224f761-58e8/\'>Interactive Prototype</a>'}
 			]),
 		a5: 'colourgrabber',
 		b9: 'Colour Grabber'
@@ -10470,14 +10491,14 @@ var $author$project$Content$projects = _List_fromArray(
 			[
 				{c: '/img/offcenter/main.jpg'}
 			]),
-		s: 'The brief for this university project was to design and print a magazine about design, featuring at least a couple of Adobe tutorials and an article about some sort of printing technique. The rest was up to us. We chose to produce a magazine celebrating different and non-main-stream design and designers. For the project we produced all the graphical elements, wrote the content and even designed our own fully functional typeface for the title and headings. Finally we got the magazine printed at a proffessional printhouse with a 50 copy print run.',
+		p: 'The brief for this university project was to design and print a magazine about design, featuring at least a couple of Adobe tutorials and an article about some sort of printing technique. The rest was up to us. We chose to produce a magazine celebrating different and non-main-stream design and designers. For the project we produced all the graphical elements, wrote the content and even designed our own fully functional typeface for the title and headings. Finally we got the magazine printed at a proffessional printhouse with a 50 copy print run.',
 		bX: '/img/offcenter/display2.jpg',
-		v: _List_fromArray(
+		q: _List_fromArray(
 			[
-				{b9: 'Date:', e: 'May 2020'},
-				{b9: 'Tools:', e: 'Photoshop, Illustrator, Indesign'},
-				{b9: 'Collaboration:', e: 'Maria Arango-Kure, Linda Hammarstrand'},
-				{b9: 'Try:', e: '<a href=\'https://drive.google.com/file/d/1ktjONkSPHLeHc-1Go4Igoikuo26Evu-F/view?usp=sharing\'>Read the full magazine here</a>'}
+				{b9: 'Date:', d: 'May 2020'},
+				{b9: 'Tools:', d: 'Photoshop, Illustrator, Indesign'},
+				{b9: 'Collaboration:', d: 'Maria Arango-Kure, Linda Hammarstrand'},
+				{b9: 'Try:', d: '<a href=\'https://drive.google.com/file/d/1ktjONkSPHLeHc-1Go4Igoikuo26Evu-F/view?usp=sharing\'>Read the full magazine here</a>'}
 			]),
 		a5: 'offcenter',
 		b9: 'OFFcenter magazine'
@@ -10500,12 +10521,12 @@ var $author$project$Content$projects = _List_fromArray(
 				{c: '/img/hopbrothers/image9.jpg'},
 				{c: '/img/hopbrothers/image10.jpg'}
 			]),
-		s: 'The brief for this project asked to create branding, a brand identity design manual and product packaging, for a small craft brewery ran by two brothers. Main inspiration for the design\'s artwork came from classic style tattoos, which alongside bright colours and witty product names, will help the brand stand out on the shop shelves.',
+		p: 'The brief for this project asked to create branding, a brand identity design manual and product packaging, for a small craft brewery ran by two brothers. Main inspiration for the design\'s artwork came from classic style tattoos, which alongside bright colours and witty product names, will help the brand stand out on the shop shelves.',
 		bX: '/img/hopbrothers/display.jpg',
-		v: _List_fromArray(
+		q: _List_fromArray(
 			[
-				{b9: 'Date:', e: 'March 2020'},
-				{b9: 'Tools:', e: 'Photoshop, Illustrator'}
+				{b9: 'Date:', d: 'March 2020'},
+				{b9: 'Tools:', d: 'Photoshop, Illustrator'}
 			]),
 		a5: 'hopbrothers',
 		b9: 'The Hop Brothers Brewery'
@@ -10521,12 +10542,12 @@ var $author$project$Content$projects = _List_fromArray(
 				{c: '/img/retro/polaroid.jpg'},
 				{c: '/img/retro/vinyl.jpg'}
 			]),
-		s: 'A personal illustration project of various retro objects, inspired by a Public Service Broadcasting album Inform - Educate - Entertain.',
+		p: 'A personal illustration project of various retro objects, inspired by a Public Service Broadcasting album Inform - Educate - Entertain.',
 		bX: '/img/retro/display.jpg',
-		v: _List_fromArray(
+		q: _List_fromArray(
 			[
-				{b9: 'Date:', e: 'November 2019'},
-				{b9: 'Tools:', e: 'Photoshop, Illustrator'}
+				{b9: 'Date:', d: 'November 2019'},
+				{b9: 'Tools:', d: 'Photoshop, Illustrator'}
 			]),
 		a5: 'retro',
 		b9: 'Inform - Educate - Entertain'
@@ -10541,13 +10562,13 @@ var $author$project$Content$projects = _List_fromArray(
 				{c: '/img/TWA/image2.jpg'},
 				{c: '/img/TWA/image4.jpg'}
 			]),
-		s: 'Two Wheeled Art is my illustration shop hosted on Etsy platform, specialising in bespoke illustrations of motorcycles and bicycles. Each illustration is produced to order, following pictures provided by the customer.',
+		p: 'Two Wheeled Art is my illustration shop hosted on Etsy platform, specialising in bespoke illustrations of motorcycles and bicycles. Each illustration is produced to order, following pictures provided by the customer.',
 		bX: '/img/TWA/display.jpg',
-		v: _List_fromArray(
+		q: _List_fromArray(
 			[
-				{b9: 'Date:', e: '2018 - ongoing'},
-				{b9: 'Tools:', e: 'Photoshop, Wacom drawing display'},
-				{b9: 'Visit:', e: '<a href=\'https://www.etsy.com/se-en/shop/TwoWheeledArt?ref=search_shop_redirect\'>Two Wheeled Art Shop</a>'}
+				{b9: 'Date:', d: '2018 - ongoing'},
+				{b9: 'Tools:', d: 'Photoshop, Wacom drawing display'},
+				{b9: 'Visit:', d: '<a href=\'https://www.etsy.com/se-en/shop/TwoWheeledArt?ref=search_shop_redirect\'>Two Wheeled Art Shop</a>'}
 			]),
 		a5: 'TWA',
 		b9: 'Two Wheeled Art'
@@ -10822,7 +10843,7 @@ var $elm$core$Array$get = F2(
 			A2($elm$core$Elm$JsArray$unsafeGet, $elm$core$Array$bitMask & index, tail)) : $elm$core$Maybe$Just(
 			A3($elm$core$Array$getHelp, startShift, index, tree)));
 	});
-var $author$project$Pages$Projects$Id_String$notFound = {aR: _List_Nil, m: _List_Nil, s: 'Not found', bX: '', v: _List_Nil, a5: 'not_found', b9: 'NOT FOUND'};
+var $author$project$Pages$Projects$Id_String$notFound = {aR: _List_Nil, m: _List_Nil, p: 'Not found', bX: '', q: _List_Nil, a5: 'not_found', b9: 'NOT FOUND'};
 var $author$project$Pages$Projects$Id_String$getProject = function (id) {
 	return A2(
 		$elm$core$Maybe$withDefault,
@@ -10960,10 +10981,10 @@ var $author$project$Pages$Projects$Id_String$factsContainer = function (project)
 										[
 											$elm$html$Html$text(x.b9 + ' ')
 										])),
-									$author$project$Components$HtmlRenderer$htmlRenderer(x.e)
+									$author$project$Components$HtmlRenderer$htmlRenderer(x.d)
 								]));
 					},
-					project.v))
+					project.q))
 			]));
 };
 var $elm$html$Html$Attributes$for = $elm$html$Html$Attributes$stringProperty('htmlFor');
@@ -11029,7 +11050,7 @@ var $author$project$Pages$Projects$Id_String$presentProject = function (project)
 						]),
 					_List_fromArray(
 						[
-							$author$project$Components$HtmlRenderer$htmlRenderer(project.s)
+							$author$project$Components$HtmlRenderer$htmlRenderer(project.p)
 						])),
 					$author$project$Pages$Projects$Id_String$factsContainer(project)
 				])),
