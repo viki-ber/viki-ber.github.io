@@ -39,11 +39,41 @@ type alias Project =
 
 projects : List Project
 projects =
-    [ { name = "Ätbart"
+    [ { name = "Sustainable web design"
+      , id = "thesis"
+      , categories = [ "UX/UI", "Graphic Design", "All", "Academic Writing", "User Research" ]
+      , display = "/img/thesis/cover_image.png"
+      , description = "<strong></strong> Sustainable web design is the practice of designing digital products and services to prioritise the health of our home planet. At its core, it is concerned with reducing carbon emissions and the energy consumption of web services. <br /><br />In recent years, the web development industry has been aiming to make websites more sustainable through green hosting and sustainable approaches in both back-end and front-end levels of websites. However, switching to sustainably designed websites would require a change in user behaviour, which might be one of the main reasons lower-impact websites are not being introduced more widely. <br /><br />The purpose of the study was to evaluate and improve existing sustainable web design guidelines in order to make lower-impact websites more attractive to users. Due to the steady exponential growth of the e-commerce sector, grocery shopping websites was chosen as a context. <br /><br />Surveys and focus groups were used to evaluate users' experience and attitudes toward existing lower-impact websites. The gathered data identified improvements to the existing sustainable web design guidelines, which then were applied to build a high-fidelity prototype of a lower-impact grocery e-commerce website. A follow-up usability testing was carried out to evaluate the UX of the prototype, which indicated what would make a lower-impact website more attractive to users. <br /><br />The study proposes a strategy of combining the existing sustainable web design guidelines with certain behaviour change theories to facilitate a smoother transition towards lower-impact websites.<br /><br />Follow the links on the side to read the full study or try out the prototype."
+      , facts =
+            [ { name = "Date:"
+              , value = "Spring 2022"
+              }
+            , { name = "Tools:"
+              , value = "Figma, Illustrator, Various User Research Methods"
+              }
+               ,{ name = "Collaboration:"
+              , value = "Ráhel Anna Balogh"
+              }
+               , { name = "Try the prototype:"
+              , value = "<a href='https://www.figma.com/proto/D6Zl3duTJnBVKbnOfoO9wh/Thesis-project?page-id=0%3A1&node-id=310%3A12429&starting-point-node-id=310%3A12429/'>Interactive Prototype</a>"
+              }
+              , { name = "Read the full study:"
+              , value = "<a href='http://hj.diva-portal.org/smash/get/diva2:1672889/FULLTEXT01.pdf'>Sustainable web design in the e-commercde sector</a>"
+              }
+              
+            ]
+      , content =
+            [ { graphic = "/img/thesis/main_image.png"
+              }
+              ,{ graphic = "/img/thesis/video.mp4"
+              }
+            ]
+      }
+      ,{ name = "Ätbart"
       , id = "atbart"
       , categories = [ "UX/UI", "Graphic Design", "All" ]
       , display = "/img/atbart/mockup_1.png"
-      , description = "<strong></strong> Ätbart is a non-profit organisation, based in Skaraborg municipality in Sweden, fighting food waste. I have been hired to do a complete re-design of their website. I started this project by holding a brainstorming discussion together with the Ätbart team to establish a new structure for the website. This session was very appreciated by the client, as well as very productive, as we could quickly establish the website layout that met both client’s wishes, as well as UX and IA best practices. The old website had a lot of content, relevant to different user groups, therefore it was vital to create a very user-friendly information structure. For the design, I followed Ätbart’s brand manual (which I helped to curate in another project), as well as created bespoke elements, such as small illustrations and icons. The design was then handed over to the web developer as an XD prototype, including a full asset library and guide. My goal was to create a clear and easy-to-use website, making sure that each specific user could easily find information relevant to them. I aimed for a visual solution that was clean and conveyed the important work the organisation was doing, at the same time reflecting their fun and lively side. ."
+      , description = "<strong></strong> Ätbart is a non-profit organisation, based in Skaraborg municipality in Sweden, fighting food waste. I have been hired to do a complete re-design of their website. <br /><br />I started this project by holding a brainstorming discussion together with the Ätbart team to establish a new structure for the website. This session was very appreciated by the client, as well as very productive, as we could quickly establish the website layout that met both client’s wishes, as well as UX and IA best practices. The old website had a lot of content, relevant to different user groups, therefore it was vital to create a very user-friendly information structure. <br /><br />For the design, I followed Ätbart’s brand manual (which I helped to curate in another project), as well as created bespoke elements, such as small illustrations and icons. The design was then handed over to the web developer as an XD prototype, including a full asset library and guide.<br /><br />My goal was to create a clear and easy-to-use website, making sure that each specific user could easily find information relevant to them. I aimed for a visual solution that was clean and conveyed the important work the organisation was doing, at the same time reflecting their fun and lively side. ."
       , facts =
             [ { name = "Date"
               , value = "Autumn 2021"
