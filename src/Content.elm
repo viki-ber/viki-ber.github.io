@@ -39,7 +39,30 @@ type alias Project =
 
 projects : List Project
 projects =
-    [ { name = "Sustainable web design"
+    [ { name = "Svenska Kaffeveckan 2023"
+      , id = "kw"
+      , categories = [ "UX/UI", "Graphic Design", "All", "Branding" ]
+      , display = "/img/kaffeveckan/main.png"
+      , description = "<strong></strong>Branding and website design for an upcoming large-scale festival of the Swedish Coffee industry. The branding is designed with the intention to communicate the multi-faceted world of speciality coffee and its tightly knit but highly varied community. The initial website is designed as a teaser of an upcoming event - to get the audience curious, as well as attract various coffee businesses to join the festival with their event. The website is built with a Squarespace CMS, to make it easy and quick to populate with more relevant information as the event date gets nearer."
+      , facts =
+            [ { name = "Date:"
+              , value = "Autumn 2023"
+              }
+            , { name = "Tools:"
+              , value = "Illustrator, Photoshop, CMS: Squarespace"
+              }
+              , { name = "Visit the website:"
+              , value = "<a href='https://www.kaffeveckan.se/'>Svenska Kaffeveckan 2023</a>"
+              }
+              
+            ]
+      , content =
+            [ { graphic = "/img/kaffeveckan/kw-images.png"
+              }
+              
+            ]
+      }
+      ,{ name = "Sustainable web design"
       , id = "thesis"
       , categories = [ "UX/UI", "Graphic Design", "All", "Academic Writing", "User Research" ]
       , display = "/img/thesis/cover_image.png"
