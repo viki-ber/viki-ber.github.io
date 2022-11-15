@@ -4962,7 +4962,7 @@ var $elm$core$Array$builderToArray = F2(
 			var treeLen = builder.i * $elm$core$Array$branchFactor;
 			var depth = $elm$core$Basics$floor(
 				A2($elm$core$Basics$logBase, $elm$core$Array$branchFactor, treeLen - 1));
-			var correctNodeList = reverseNodeList ? $elm$core$List$reverse(builder.k) : builder.k;
+			var correctNodeList = reverseNodeList ? $elm$core$List$reverse(builder.l) : builder.l;
 			var tree = A2($elm$core$Array$treeFromBuilder, correctNodeList, builder.i);
 			return A4(
 				$elm$core$Array$Array_elm_builtin,
@@ -4982,7 +4982,7 @@ var $elm$core$Array$initializeHelp = F5(
 				return A2(
 					$elm$core$Array$builderToArray,
 					false,
-					{k: nodeList, i: (len / $elm$core$Array$branchFactor) | 0, j: tail});
+					{l: nodeList, i: (len / $elm$core$Array$branchFactor) | 0, j: tail});
 			} else {
 				var leaf = $elm$core$Array$Leaf(
 					A3($elm$core$Elm$JsArray$initialize, $elm$core$Array$branchFactor, fromIndex, fn));
@@ -6240,7 +6240,7 @@ var $author$project$Spa$Page$static = function (page) {
 		cD: page.cD
 	};
 };
-var $author$project$Content$about = {m: 'Hi! My name is Viktorija, I am a graphic designer and illustrator based in Gothenburg, Sweden. <br /><br /> Trained at Jönköping and Linneaus universities. <br /><br /> Previous experience in food product and brand development.<br /><br /> Favourite colours - yellow, blue and grey.<br /><br /> Dream collaboration - Stefan Sagmeister.<br /><br /> Dream brief - design an issue of Lucky Peach magazine.<br /><br />', aM: 'About Me'};
+var $author$project$Content$about = {k: 'Hi! My name is Viktorija, I am a graphic designer and illustrator based in Gothenburg, Sweden. <br /><br /> Trained at Jönköping and Linneaus universities. <br /><br /> Previous experience in food product and brand development.<br /><br /> Favourite colours - yellow, blue and grey.<br /><br /> Dream collaboration - Stefan Sagmeister.<br /><br /> Dream brief - design an issue of Lucky Peach magazine.<br /><br />', aM: 'About Me'};
 var $elm$json$Json$Encode$string = _Json_wrap;
 var $elm$html$Html$Attributes$stringProperty = F2(
 	function (key, string) {
@@ -6333,7 +6333,7 @@ var $elm$core$Basics$negate = function (n) {
 var $elm$parser$Parser$Advanced$chompIf = F2(
 	function (isGood, expecting) {
 		return function (s) {
-			var newOffset = A3($elm$parser$Parser$Advanced$isSubChar, isGood, s.b, s.a);
+			var newOffset = A3($elm$parser$Parser$Advanced$isSubChar, isGood, s.c, s.a);
 			return _Utils_eq(newOffset, -1) ? A2(
 				$elm$parser$Parser$Advanced$Bad,
 				false,
@@ -6341,11 +6341,11 @@ var $elm$parser$Parser$Advanced$chompIf = F2(
 				$elm$parser$Parser$Advanced$Good,
 				true,
 				0,
-				{aT: 1, e: s.e, f: s.f, b: s.b + 1, bu: s.bu + 1, a: s.a}) : A3(
+				{aT: 1, e: s.e, f: s.f, c: s.c + 1, bu: s.bu + 1, a: s.a}) : A3(
 				$elm$parser$Parser$Advanced$Good,
 				true,
 				0,
-				{aT: s.aT + 1, e: s.e, f: s.f, b: newOffset, bu: s.bu, a: s.a}));
+				{aT: s.aT + 1, e: s.e, f: s.f, c: newOffset, bu: s.bu, a: s.a}));
 		};
 	});
 var $elm$parser$Parser$chompIf = function (isGood) {
@@ -6359,9 +6359,9 @@ var $elm$parser$Parser$Advanced$chompWhileHelp = F5(
 			if (_Utils_eq(newOffset, -1)) {
 				return A3(
 					$elm$parser$Parser$Advanced$Good,
-					_Utils_cmp(s0.b, offset) < 0,
+					_Utils_cmp(s0.c, offset) < 0,
 					0,
-					{aT: col, e: s0.e, f: s0.f, b: offset, bu: row, a: s0.a});
+					{aT: col, e: s0.e, f: s0.f, c: offset, bu: row, a: s0.a});
 			} else {
 				if (_Utils_eq(newOffset, -2)) {
 					var $temp$isGood = isGood,
@@ -6393,7 +6393,7 @@ var $elm$parser$Parser$Advanced$chompWhileHelp = F5(
 	});
 var $elm$parser$Parser$Advanced$chompWhile = function (isGood) {
 	return function (s) {
-		return A5($elm$parser$Parser$Advanced$chompWhileHelp, isGood, s.b, s.bu, s.aT, s);
+		return A5($elm$parser$Parser$Advanced$chompWhileHelp, isGood, s.c, s.bu, s.aT, s);
 	};
 };
 var $elm$parser$Parser$chompWhile = $elm$parser$Parser$Advanced$chompWhile;
@@ -6458,7 +6458,7 @@ var $elm$parser$Parser$Advanced$mapChompedString = F2(
 					p,
 					A2(
 						func,
-						A3($elm$core$String$slice, s0.b, s1.b, s0.a),
+						A3($elm$core$String$slice, s0.c, s1.c, s0.a),
 						a),
 					s1);
 			}
@@ -6540,7 +6540,7 @@ var $elm$parser$Parser$Advanced$chompUntil = function (_v0) {
 	var str = _v0.a;
 	var expecting = _v0.b;
 	return function (s) {
-		var _v1 = A5($elm$parser$Parser$Advanced$findSubString, str, s.b, s.bu, s.aT, s.a);
+		var _v1 = A5($elm$parser$Parser$Advanced$findSubString, str, s.c, s.bu, s.aT, s.a);
 		var newOffset = _v1.a;
 		var newRow = _v1.b;
 		var newCol = _v1.c;
@@ -6549,9 +6549,9 @@ var $elm$parser$Parser$Advanced$chompUntil = function (_v0) {
 			false,
 			A4($elm$parser$Parser$Advanced$fromInfo, newRow, newCol, expecting, s.e)) : A3(
 			$elm$parser$Parser$Advanced$Good,
-			_Utils_cmp(s.b, newOffset) < 0,
+			_Utils_cmp(s.c, newOffset) < 0,
 			0,
-			{aT: newCol, e: s.e, f: s.f, b: newOffset, bu: newRow, a: s.a});
+			{aT: newCol, e: s.e, f: s.f, c: newOffset, bu: newRow, a: s.a});
 	};
 };
 var $elm$parser$Parser$Expecting = function (a) {
@@ -6582,7 +6582,7 @@ var $elm$parser$Parser$Advanced$token = function (_v0) {
 	var expecting = _v0.b;
 	var progress = !$elm$core$String$isEmpty(str);
 	return function (s) {
-		var _v1 = A5($elm$parser$Parser$Advanced$isSubString, str, s.b, s.bu, s.aT, s.a);
+		var _v1 = A5($elm$parser$Parser$Advanced$isSubString, str, s.c, s.bu, s.aT, s.a);
 		var newOffset = _v1.a;
 		var newRow = _v1.b;
 		var newCol = _v1.c;
@@ -6593,7 +6593,7 @@ var $elm$parser$Parser$Advanced$token = function (_v0) {
 			$elm$parser$Parser$Advanced$Good,
 			progress,
 			0,
-			{aT: newCol, e: s.e, f: s.f, b: newOffset, bu: newRow, a: s.a});
+			{aT: newCol, e: s.e, f: s.f, c: newOffset, bu: newRow, a: s.a});
 	};
 };
 var $elm$parser$Parser$token = function (str) {
@@ -9220,7 +9220,7 @@ var $elm$parser$Parser$Advanced$consumeBase = _Parser_consumeBase;
 var $elm$parser$Parser$Advanced$consumeBase16 = _Parser_consumeBase16;
 var $elm$parser$Parser$Advanced$bumpOffset = F2(
 	function (newOffset, s) {
-		return {aT: s.aT + (newOffset - s.b), e: s.e, f: s.f, b: newOffset, bu: s.bu, a: s.a};
+		return {aT: s.aT + (newOffset - s.c), e: s.e, f: s.f, c: newOffset, bu: s.bu, a: s.a};
 	});
 var $elm$parser$Parser$Advanced$chompBase10 = _Parser_chompBase10;
 var $elm$parser$Parser$Advanced$isAsciiCode = _Parser_isAsciiCode;
@@ -9256,7 +9256,7 @@ var $elm$parser$Parser$Advanced$finalizeInt = F5(
 			var toValue = handler.a;
 			return _Utils_eq(startOffset, endOffset) ? A2(
 				$elm$parser$Parser$Advanced$Bad,
-				_Utils_cmp(s.b, startOffset) < 0,
+				_Utils_cmp(s.c, startOffset) < 0,
 				A2($elm$parser$Parser$Advanced$fromState, s, invalid)) : A3(
 				$elm$parser$Parser$Advanced$Good,
 				true,
@@ -9273,16 +9273,16 @@ var $elm$parser$Parser$Advanced$finalizeFloat = F6(
 			return A2(
 				$elm$parser$Parser$Advanced$Bad,
 				true,
-				A4($elm$parser$Parser$Advanced$fromInfo, s.bu, s.aT - (floatOffset + s.b), invalid, s.e));
+				A4($elm$parser$Parser$Advanced$fromInfo, s.bu, s.aT - (floatOffset + s.c), invalid, s.e));
 		} else {
-			if (_Utils_eq(s.b, floatOffset)) {
+			if (_Utils_eq(s.c, floatOffset)) {
 				return A2(
 					$elm$parser$Parser$Advanced$Bad,
 					false,
 					A2($elm$parser$Parser$Advanced$fromState, s, expecting));
 			} else {
 				if (_Utils_eq(intOffset, floatOffset)) {
-					return A5($elm$parser$Parser$Advanced$finalizeInt, invalid, intSettings, s.b, intPair, s);
+					return A5($elm$parser$Parser$Advanced$finalizeInt, invalid, intSettings, s.c, intPair, s);
 				} else {
 					if (floatSettings.$ === 1) {
 						var x = floatSettings.a;
@@ -9293,7 +9293,7 @@ var $elm$parser$Parser$Advanced$finalizeFloat = F6(
 					} else {
 						var toValue = floatSettings.a;
 						var _v1 = $elm$core$String$toFloat(
-							A3($elm$core$String$slice, s.b, floatOffset, s.a));
+							A3($elm$core$String$slice, s.c, floatOffset, s.a));
 						if (_v1.$ === 1) {
 							return A2(
 								$elm$parser$Parser$Advanced$Bad,
@@ -9314,8 +9314,8 @@ var $elm$parser$Parser$Advanced$finalizeFloat = F6(
 	});
 var $elm$parser$Parser$Advanced$number = function (c) {
 	return function (s) {
-		if (A3($elm$parser$Parser$Advanced$isAsciiCode, 48, s.b, s.a)) {
-			var zeroOffset = s.b + 1;
+		if (A3($elm$parser$Parser$Advanced$isAsciiCode, 48, s.c, s.a)) {
+			var zeroOffset = s.c + 1;
 			var baseOffset = zeroOffset + 1;
 			return A3($elm$parser$Parser$Advanced$isAsciiCode, 120, zeroOffset, s.a) ? A5(
 				$elm$parser$Parser$Advanced$finalizeInt,
@@ -9350,7 +9350,7 @@ var $elm$parser$Parser$Advanced$number = function (c) {
 				c.aZ,
 				c.a7,
 				c.a_,
-				A3($elm$parser$Parser$Advanced$consumeBase, 10, s.b, s.a),
+				A3($elm$parser$Parser$Advanced$consumeBase, 10, s.c, s.a),
 				s);
 		}
 	};
@@ -9671,7 +9671,7 @@ var $elm$parser$Parser$Advanced$run = F2(
 	function (_v0, src) {
 		var parse = _v0;
 		var _v1 = parse(
-			{aT: 1, e: _List_Nil, f: 1, b: 0, bu: 1, a: src});
+			{aT: 1, e: _List_Nil, f: 1, c: 0, bu: 1, a: src});
 		if (!_v1.$) {
 			var value = _v1.b;
 			return $elm$core$Result$Ok(value);
@@ -9808,7 +9808,7 @@ var $author$project$Pages$About$view = function (_v0) {
 													]),
 												_List_fromArray(
 													[
-														$author$project$Components$HtmlRenderer$htmlRenderer($author$project$Content$about.m)
+														$author$project$Components$HtmlRenderer$htmlRenderer($author$project$Content$about.k)
 													]))
 											]))
 									]))
@@ -9821,7 +9821,7 @@ var $author$project$Pages$About$view = function (_v0) {
 var $author$project$Pages$About$page = $author$project$Spa$Page$static(
 	{cD: $author$project$Pages$About$view});
 var $elm$html$Html$a = _VirtualDom_node('a');
-var $author$project$Content$contact = {m: 'I am happy to hear about possible work orders or potential collaborations. If you would like to see my professional CV, do not hesitate to ask. You can drop me a line on:<br /><br /><span class=\"email-link\"><a href=\"mailto:viktorija.graphics@outlook.com\">viktorija.graphics@outlook.com</a></span><br /><br />You are also welcome to contact me via my social media accounts.', aM: 'Contact Me'};
+var $author$project$Content$contact = {k: 'I am happy to hear about possible work orders or potential collaborations. If you would like to see my professional CV, do not hesitate to ask. You can drop me a line on:<br /><br /><span class=\"email-link\"><a href=\"mailto:viktorija.graphics@outlook.com\">viktorija.graphics@outlook.com</a></span><br /><br />You are also welcome to contact me via my social media accounts.', aM: 'Contact Me'};
 var $elm$html$Html$Attributes$href = function (url) {
 	return A2(
 		$elm$html$Html$Attributes$stringProperty,
@@ -9873,7 +9873,7 @@ var $author$project$Pages$Contact$view = function (_v0) {
 													]),
 												_List_fromArray(
 													[
-														$author$project$Components$HtmlRenderer$htmlRenderer($author$project$Content$contact.m)
+														$author$project$Components$HtmlRenderer$htmlRenderer($author$project$Content$contact.k)
 													])),
 												A2(
 												$elm$html$Html$div,
@@ -10346,11 +10346,29 @@ var $author$project$Content$projects = _List_fromArray(
 	[
 		{
 		aR: _List_fromArray(
-			['UX/UI', 'Graphic Design', 'All', 'Academic Writing', 'User Research']),
-		m: _List_fromArray(
+			['UX/UI', 'Graphic Design', 'All', 'Branding']),
+		k: _List_fromArray(
 			[
-				{c: '/img/thesis/main_image.png'},
-				{c: '/img/thesis/video.mp4'}
+				{b: '/img/kaffeveckan/kw-images.png'}
+			]),
+		p: '<strong></strong>Branding and website design for an upcoming large-scale festival of the Swedish Coffee industry. The branding is designed with the intention to communicate the multi-faceted world of speciality coffee and its tightly knit but highly varied community. The initial website is designed as a teaser of an upcoming event - to get the audience curious, as well as attract various coffee businesses to join the festival with their event. The website is built with a Squarespace CMS, to make it easy and quick to populate with more relevant information as the event date gets nearer.',
+		bX: '/img/kaffeveckan/main.png',
+		q: _List_fromArray(
+			[
+				{b9: 'Date:', d: 'Autumn 2023'},
+				{b9: 'Tools:', d: 'Illustrator, Photoshop, CMS: Squarespace'},
+				{b9: 'Visit the website:', d: '<a href=\'https://www.kaffeveckan.se/\'>Svenska Kaffeveckan 2023</a>'}
+			]),
+		a5: 'kw',
+		b9: 'Svenska Kaffeveckan 2023'
+	},
+		{
+		aR: _List_fromArray(
+			['UX/UI', 'Graphic Design', 'All', 'Academic Writing', 'User Research']),
+		k: _List_fromArray(
+			[
+				{b: '/img/thesis/main_image.png'},
+				{b: '/img/thesis/video.mp4'}
 			]),
 		p: '<strong></strong> Sustainable web design is the practice of designing digital products and services to prioritise the health of our home planet. At its core, it is concerned with reducing carbon emissions and the energy consumption of web services. <br /><br />In recent years, the web development industry has been aiming to make websites more sustainable through green hosting and sustainable approaches in both back-end and front-end levels of websites. However, switching to sustainably designed websites would require a change in user behaviour, which might be one of the main reasons lower-impact websites are not being introduced more widely. <br /><br />The purpose of the study was to evaluate and improve existing sustainable web design guidelines in order to make lower-impact websites more attractive to users. Due to the steady exponential growth of the e-commerce sector, grocery shopping websites was chosen as a context. <br /><br />Surveys and focus groups were used to evaluate users\' experience and attitudes toward existing lower-impact websites. The gathered data identified improvements to the existing sustainable web design guidelines, which then were applied to build a high-fidelity prototype of a lower-impact grocery e-commerce website. A follow-up usability testing was carried out to evaluate the UX of the prototype, which indicated what would make a lower-impact website more attractive to users. <br /><br />The study proposes a strategy of combining the existing sustainable web design guidelines with certain behaviour change theories to facilitate a smoother transition towards lower-impact websites.<br /><br />Follow the links on the side to read the full study or try out the prototype.',
 		bX: '/img/thesis/cover_image.png',
@@ -10368,9 +10386,9 @@ var $author$project$Content$projects = _List_fromArray(
 		{
 		aR: _List_fromArray(
 			['UX/UI', 'Graphic Design', 'All']),
-		m: _List_fromArray(
+		k: _List_fromArray(
 			[
-				{c: '/img/atbart/main_image.png'}
+				{b: '/img/atbart/main_image.png'}
 			]),
 		p: '<strong></strong> Ätbart is a non-profit organisation, based in Skaraborg municipality in Sweden, fighting food waste. I have been hired to do a complete re-design of their website. <br /><br />I started this project by holding a brainstorming discussion together with the Ätbart team to establish a new structure for the website. This session was very appreciated by the client, as well as very productive, as we could quickly establish the website layout that met both client’s wishes, as well as UX and IA best practices. The old website had a lot of content, relevant to different user groups, therefore it was vital to create a very user-friendly information structure. <br /><br />For the design, I followed Ätbart’s brand manual (which I helped to curate in another project), as well as created bespoke elements, such as small illustrations and icons. The design was then handed over to the web developer as an XD prototype, including a full asset library and guide.<br /><br />My goal was to create a clear and easy-to-use website, making sure that each specific user could easily find information relevant to them. I aimed for a visual solution that was clean and conveyed the important work the organisation was doing, at the same time reflecting their fun and lively side. .',
 		bX: '/img/atbart/mockup_1.png',
@@ -10388,9 +10406,9 @@ var $author$project$Content$projects = _List_fromArray(
 		{
 		aR: _List_fromArray(
 			['Branding', 'Illustration', 'Graphic Design', 'All']),
-		m: _List_fromArray(
+		k: _List_fromArray(
 			[
-				{c: '/img/mathjalpen/image_1.jpg'}
+				{b: '/img/mathjalpen/image_1.jpg'}
 			]),
 		p: '<strong></strong> Ätbart is a non-profit organisation, based in Skaraborg municipality in Sweden, fighting food waste. One of their initiatives, called Mathjälpen (translates “food help”), works in partnership with all major local food retailers to redistribute edible food waste to people in financial difficulties. Organisation volunteers do regular pick-ups every few days from food stores of food products that are bound for waste (because of damaged packaging or short expiration date remaining, for example), pack them into well balanced food bags and hand these out to people in need in local communities. For this project, I worked with Ätbart to create visual identity for Mathjälpen, as well as a package of various marketing materials that their partner stores could use in their premises to promote their involvement in this initiative. Moreover, I developed a manual for the use of this marketing package, with examples and tips for best ways to display it.',
 		bX: '/img/mathjalpen/main_image.jpg',
@@ -10405,13 +10423,13 @@ var $author$project$Content$projects = _List_fromArray(
 		{
 		aR: _List_fromArray(
 			['Branding', 'UX/UI', 'Graphic Design', 'All']),
-		m: _List_fromArray(
+		k: _List_fromArray(
 			[
-				{c: '/img/first.jpg'},
-				{c: '/img/graphic_profile_light.jpg'},
-				{c: '/img/graphic_profile_dark.jpg'},
-				{c: '/img/mockup_2.jpg'},
-				{c: '/img/terraventure/movie2.mp4'}
+				{b: '/img/first.jpg'},
+				{b: '/img/graphic_profile_light.jpg'},
+				{b: '/img/graphic_profile_dark.jpg'},
+				{b: '/img/mockup_2.jpg'},
+				{b: '/img/terraventure/movie2.mp4'}
 			]),
 		p: '<strong></strong> This brief asked to create a branding and UI design for a movie streaming service specialising in outdoor adventure movies. Main inspiration for the design came from modern outdoor, travel and adventure magazines.',
 		bX: '/img/first.jpg',
@@ -10427,13 +10445,13 @@ var $author$project$Content$projects = _List_fromArray(
 		{
 		aR: _List_fromArray(
 			['Branding', 'UX/UI', 'Graphic Design', 'All']),
-		m: _List_fromArray(
+		k: _List_fromArray(
 			[
-				{c: '/img/esca/logo.mp4'},
-				{c: '/img/esca/page2.jpg'},
-				{c: '/img/esca/micro.mp4'},
-				{c: '/img/esca/ui_movie.mp4'},
-				{c: '/img/esca/page3.jpg'}
+				{b: '/img/esca/logo.mp4'},
+				{b: '/img/esca/page2.jpg'},
+				{b: '/img/esca/micro.mp4'},
+				{b: '/img/esca/ui_movie.mp4'},
+				{b: '/img/esca/page3.jpg'}
 			]),
 		p: 'The brief for this project was to create a branding and an e-commerce website for a company selling premium food products',
 		bX: '/img/esca/display.png',
@@ -10449,10 +10467,10 @@ var $author$project$Content$projects = _List_fromArray(
 		{
 		aR: _List_fromArray(
 			['Graphic Design', 'All']),
-		m: _List_fromArray(
+		k: _List_fromArray(
 			[
-				{c: '/img/fikatime/image1.jpg'},
-				{c: '/img/fikatime/image2.jpg'}
+				{b: '/img/fikatime/image1.jpg'},
+				{b: '/img/fikatime/image2.jpg'}
 			]),
 		p: 'This creative brief asked to produce any piece of design, adhering to only one constraint - the design had to be produced using only HTML and CSS languages. I chose to create a set of graphical elements inspired by Swedish folk art. These elements can then be mixed and matched to produce various patters that can be applied to different everyday objects. ',
 		bX: '/img/fikatime/display.jpg',
@@ -10467,11 +10485,11 @@ var $author$project$Content$projects = _List_fromArray(
 		{
 		aR: _List_fromArray(
 			['Graphic Design', 'All', 'UX/UI']),
-		m: _List_fromArray(
+		k: _List_fromArray(
 			[
-				{c: '/img/colourgrabber/movie1.mp4'},
-				{c: '/img/colourgrabber/image1.jpg'},
-				{c: '/img/colourgrabber/movie2.mp4'}
+				{b: '/img/colourgrabber/movie1.mp4'},
+				{b: '/img/colourgrabber/image1.jpg'},
+				{b: '/img/colourgrabber/movie2.mp4'}
 			]),
 		p: 'In this brief I had to create a device specific graphic user interface and its assets. I chose to create an interface for a colour capturing application and used neumorphic style as inspiration for a clean and minimatistic look, where the captured colour is the main focus. ',
 		bX: '/img/colourgrabber/display.png',
@@ -10487,9 +10505,9 @@ var $author$project$Content$projects = _List_fromArray(
 		{
 		aR: _List_fromArray(
 			['Graphic Design', 'All', 'Print']),
-		m: _List_fromArray(
+		k: _List_fromArray(
 			[
-				{c: '/img/offcenter/main.jpg'}
+				{b: '/img/offcenter/main.jpg'}
 			]),
 		p: 'The brief for this university project was to design and print a magazine about design, featuring at least a couple of Adobe tutorials and an article about some sort of printing technique. The rest was up to us. We chose to produce a magazine celebrating different and non-main-stream design and designers. For the project we produced all the graphical elements, wrote the content and even designed our own fully functional typeface for the title and headings. Finally we got the magazine printed at a proffessional printhouse with a 50 copy print run.',
 		bX: '/img/offcenter/display2.jpg',
@@ -10506,20 +10524,20 @@ var $author$project$Content$projects = _List_fromArray(
 		{
 		aR: _List_fromArray(
 			['Graphic Design', 'All', 'Branding', 'Illustration']),
-		m: _List_fromArray(
+		k: _List_fromArray(
 			[
-				{c: '/img/hopbrothers/display.jpg'},
-				{c: '/img/hopbrothers/image1.jpg'},
-				{c: '/img/hopbrothers/image2.jpg'},
-				{c: '/img/hopbrothers/image3.jpg'},
-				{c: '/img/hopbrothers/image4.jpg'},
-				{c: '/img/hopbrothers/image5_2.jpg'},
-				{c: '/img/hopbrothers/image5.jpg'},
-				{c: '/img/hopbrothers/image6.jpg'},
-				{c: '/img/hopbrothers/image7.jpg'},
-				{c: '/img/hopbrothers/image8.jpg'},
-				{c: '/img/hopbrothers/image9.jpg'},
-				{c: '/img/hopbrothers/image10.jpg'}
+				{b: '/img/hopbrothers/display.jpg'},
+				{b: '/img/hopbrothers/image1.jpg'},
+				{b: '/img/hopbrothers/image2.jpg'},
+				{b: '/img/hopbrothers/image3.jpg'},
+				{b: '/img/hopbrothers/image4.jpg'},
+				{b: '/img/hopbrothers/image5_2.jpg'},
+				{b: '/img/hopbrothers/image5.jpg'},
+				{b: '/img/hopbrothers/image6.jpg'},
+				{b: '/img/hopbrothers/image7.jpg'},
+				{b: '/img/hopbrothers/image8.jpg'},
+				{b: '/img/hopbrothers/image9.jpg'},
+				{b: '/img/hopbrothers/image10.jpg'}
 			]),
 		p: 'The brief for this project asked to create branding, a brand identity design manual and product packaging, for a small craft brewery ran by two brothers. Main inspiration for the design\'s artwork came from classic style tattoos, which alongside bright colours and witty product names, will help the brand stand out on the shop shelves.',
 		bX: '/img/hopbrothers/display.jpg',
@@ -10534,13 +10552,13 @@ var $author$project$Content$projects = _List_fromArray(
 		{
 		aR: _List_fromArray(
 			['All', 'Print', 'Illustration']),
-		m: _List_fromArray(
+		k: _List_fromArray(
 			[
-				{c: '/img/retro/display.jpg'},
-				{c: '/img/retro/image2.jpg'},
-				{c: '/img/retro/tape.jpg'},
-				{c: '/img/retro/polaroid.jpg'},
-				{c: '/img/retro/vinyl.jpg'}
+				{b: '/img/retro/display.jpg'},
+				{b: '/img/retro/image2.jpg'},
+				{b: '/img/retro/tape.jpg'},
+				{b: '/img/retro/polaroid.jpg'},
+				{b: '/img/retro/vinyl.jpg'}
 			]),
 		p: 'A personal illustration project of various retro objects, inspired by a Public Service Broadcasting album Inform - Educate - Entertain.',
 		bX: '/img/retro/display.jpg',
@@ -10555,12 +10573,12 @@ var $author$project$Content$projects = _List_fromArray(
 		{
 		aR: _List_fromArray(
 			['All', 'Print', 'Illustration']),
-		m: _List_fromArray(
+		k: _List_fromArray(
 			[
-				{c: '/img/TWA/image3.jpg'},
-				{c: '/img/TWA/image1.jpg'},
-				{c: '/img/TWA/image2.jpg'},
-				{c: '/img/TWA/image4.jpg'}
+				{b: '/img/TWA/image3.jpg'},
+				{b: '/img/TWA/image1.jpg'},
+				{b: '/img/TWA/image2.jpg'},
+				{b: '/img/TWA/image4.jpg'}
 			]),
 		p: 'Two Wheeled Art is my illustration shop hosted on Etsy platform, specialising in bespoke illustrations of motorcycles and bicycles. Each illustration is produced to order, following pictures provided by the customer.',
 		bX: '/img/TWA/display.jpg',
@@ -10724,7 +10742,7 @@ var $author$project$Components$CategoryList$listCategories = F2(
 			A2($author$project$Components$CategoryList$listCategory, selection, toMsg),
 			$elm$core$List$sort($author$project$Components$CategoryList$mergeCategories));
 	});
-var $author$project$Content$top = {m: 'lorem ipsum dolor sit amet', aM: 'My Portfolio'};
+var $author$project$Content$top = {k: 'lorem ipsum dolor sit amet', aM: 'My Portfolio'};
 var $author$project$Pages$Projects$view = function (model) {
 	return {
 		bR: _List_fromArray(
@@ -10779,7 +10797,7 @@ var $elm$core$Array$fromListHelp = F3(
 				return A2(
 					$elm$core$Array$builderToArray,
 					true,
-					{k: nodeList, i: nodeListSize, j: jsArray});
+					{l: nodeList, i: nodeListSize, j: jsArray});
 			} else {
 				var $temp$list = remainingItems,
 					$temp$nodeList = A2(
@@ -10843,7 +10861,7 @@ var $elm$core$Array$get = F2(
 			A2($elm$core$Elm$JsArray$unsafeGet, $elm$core$Array$bitMask & index, tail)) : $elm$core$Maybe$Just(
 			A3($elm$core$Array$getHelp, startShift, index, tree)));
 	});
-var $author$project$Pages$Projects$Id_String$notFound = {aR: _List_Nil, m: _List_Nil, p: 'Not found', bX: '', q: _List_Nil, a5: 'not_found', b9: 'NOT FOUND'};
+var $author$project$Pages$Projects$Id_String$notFound = {aR: _List_Nil, k: _List_Nil, p: 'Not found', bX: '', q: _List_Nil, a5: 'not_found', b9: 'NOT FOUND'};
 var $author$project$Pages$Projects$Id_String$getProject = function (id) {
 	return A2(
 		$elm$core$Maybe$withDefault,
@@ -10944,9 +10962,9 @@ var $author$project$Pages$Projects$Id_String$content = function (media) {
 		A2(
 			$elm$core$List$map,
 			function (x) {
-				return $author$project$Pages$Projects$Id_String$renderMedia(x.c);
+				return $author$project$Pages$Projects$Id_String$renderMedia(x.b);
 			},
-			media.m));
+			media.k));
 };
 var $elm$html$Html$b = _VirtualDom_node('b');
 var $elm$html$Html$li = _VirtualDom_node('li');
